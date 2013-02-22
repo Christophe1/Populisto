@@ -1,0 +1,678 @@
+/*
+ *= require_self
+ *= require chosen
+ *= require _bootstrap
+ *= require email_invitation
+*/
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "compass/css3";
+@import "compass/css3/border-radius";
+
+$wizardTabsBorderWidth: 5px;
+$wizardTabsBorderColor: #B7CBE9;
+$wizardTabsBorder:      $wizardTabsBorderWidth solid $wizardTabsBorderColor;
+$wizardTabWidth:        ceil(($gridRowWidth - 2 * $wizardTabsBorderWidth) / 2);
+$wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidth);
+
+html { height: 100% !important }
+
+body {
+
+  background-color: #eee !important;
+
+  > .container {
+    padding: 0px 0 50px 0;
+  }
+
+  .page-content {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 5px;
+    @include border-radius(7px, 7px);
+  }
+
+}
+
+.header {
+  background-color: white;
+  @include border-radius(0px 0px 7px 7px, 0px 0px 7px 7px);
+  margin-bottom: 5px;
+
+  .top-line {
+    height: 55px;
+    position: relative;
+
+    .brand {
+      float: left;
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 250px;
+    }
+
+    .slogan {
+      float: right;
+      margin: 16px 5px 0 0;
+      font-size: 14px;
+
+      .fb-avatar {
+        width: 16px;
+        margin-right: 2px;
+      }
+    }
+
+  }
+
+  .second-line {
+
+    height: 55px;
+
+    .menu-item {
+      float: right;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .invites-count {
+      float: left;
+      margin-top: 20px;
+      margin-left: 12px;
+    }
+
+    .user-panel {
+      float: right;
+      margin-top: 7px;
+      width: 100px;
+
+      .fb-avatar {
+        width: 30px;
+      }
+
+      .fb-logout {
+        background: none;
+        border: none;
+        outline: none;
+        color: #08C;
+      }
+
+      .fb-logout:hover {
+        text-decoration: underline;
+      }
+    }
+    @include clearfix();
+  }
+
+  @include clearfix();
+}
+
+.control-group.chosen {
+  .help-inline {
+    margin-top: -20px;
+  }
+}
+
+.control-group.error {
+  .chzn-container {
+    input, input:focus {
+      border: none;
+      border-color: none;
+      @include border-radius(0);
+      @include box-shadow(none);
+    }
+  }
+
+  .chzn-container-multi .chzn-choices {
+    color: $errorText;
+    border-color: $errorText;
+  }
+}
+
+.sign-in
+{
+  text-align: center;
+
+  p {
+    font-size: 20px;
+  }
+
+  .create-account-note {
+    color: red;
+
+    a, a:visited {
+      color: red;
+      text-decoration: underline;
+    }
+  }
+
+  .not-on-facebook-note a {
+    color: blue;
+  }
+}
+
+.map-page {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .greetings {
+    width: 60%;
+    margin: 10px auto 30px;
+  }
+
+  .address-area {
+    margin: 10px auto;
+
+    #address_autocomplete {
+      width: 780px;
+    }
+
+  }
+
+  #map_canvas {
+    height: 600px;
+    width: 800px;
+    margin-top: 0.6em;
+    margin-bottom: 10px;
+    img {
+        max-width: none;
+    }
+  }
+
+  #map-next-link {
+    float: right;
+  }
+}
+
+.find-something {
+  .greetings {
+    width: 60%;
+    margin: 5px auto;
+    text-align: center;
+  }
+
+  #map_canvas {
+    height: 480px;
+    width: 640px;
+    margin: 0 auto;
+    img {
+        max-width: none;
+    }
+  }
+
+  .search-area {
+    width: 640px;
+    margin: 10px auto;
+    .search-box {
+      margin-top: 15px;
+      .control-group.grouped_chosen {
+        float: left;
+        display: inline;
+        width: 540px;
+
+        .control-label {
+          display: block;
+          float: none;
+          width: auto;
+        }
+        #review_search_ids_chzn {
+          margin-left: -25px;
+        }
+      }
+      .search-button {
+        float: right;
+        margin-right: 48px;
+        margin-top: 28px;
+      }
+    }
+  }
+
+  .area {
+    .breadcrumb{
+      padding: 0;
+    }
+
+    margin: 0 auto;
+    width: 870px;
+
+    h4 {
+      margin: 10px 0 10px 10px;
+    }
+
+    .review {
+
+      background-color: #F5F5F5;
+
+      .left-part {
+        width: 70px;
+        float: left;
+        padding: 10px;
+      }
+
+      .right-part {
+        float: left;
+        padding: 10px;
+        width: 758px;
+
+        .review-text {
+          padding: 10px 0;
+        }
+
+        .remove-from-your-page {
+          float: right;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.add-to-your-page, .remove-from-your-page {
+  float: right;
+}
+
+.time-ago {
+  font-size: 10px;
+}
+
+.grey {
+  color: #777;
+}
+
+#my_films {
+  .actions {
+    padding: $baseLineHeight 0;
+    margin-bottom: $baseLineHeight;
+    background-color: $formActionsBackground;
+    border-bottom: 1px solid #ddd;
+    @include clearfix();
+  }
+}
+
+/* for FireFox */
+input.btn::-moz-focus-inner,
+button.btn::-moz-focus-inner,
+a.btn::-moz-focus-inner {
+    border : 0px;
+}
+
+/* for IE8 */
+input.btn:focus,
+button.btn:focus,
+a.btn:focus {
+    outline : none;
+}
+
+/* IE */
+.legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $baseLineHeight * 1.5;
+  font-size: $baseFontSize * 1.5;
+  line-height: $baseLineHeight * 2;
+  color: $grayDark;
+  border: 0;
+  border-bottom: 1px solid #eee;
+
+  // Small
+  small {
+    font-size: $baseLineHeight * .75;
+    color: $grayLight;
+  }
+}
+
+.legend + .control-group,
+.control-group.first {
+  margin-top: $baseLineHeight;
+  -webkit-margin-top-collapse: separate;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+
+/* Overlay */
+#simplemodal-overlay {
+  background-color:#aaa; cursor:wait;
+}
+
+/* Container */
+#simplemodal-container {
+  width: 450px;
+  height: auto !important;
+  background-color: #fff;
+  padding: 10px;
+  @include border-radius(12px);
+  
+}
+
+#review-page {
+  .review-text {
+    margin: 10px auto 30px;
+    width: 500px;
+  }
+  .review-form {
+
+    width: 410px;
+    margin: 0 auto;
+
+
+    .inputs {
+      .control-group.chosen .help-inline {
+        margin-top: 3px;
+      }
+      input, textarea, select {
+        width: 410px;
+      }
+      textarea {
+        height: 200px;
+      }
+      .review-comments-example {
+        margin-top: -10px;
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+
+    .actions {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+
+      input, a {
+        display: inline-block;
+      }
+      @include clearfix();
+    }
+    #review_name, #review_phone, #review_address, #review_comment{
+      width: 400px;
+    }
+
+  }
+}
+
+.perfect-review-example {
+  padding: 10px;
+}
+
+.login-page {
+
+  width: 400px;
+  margin: 0 auto;
+
+  .facebook-section {
+    position: relative;
+    padding: 15px 15px 0;
+    .fb-login {
+      width: 315px;
+      margin: 15px auto;
+      display: block;
+    }
+    .fb-notes {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    .or-devider {
+      position: absolute;
+      bottom: -36px;
+      left: 180px;
+      background-color: white;
+      width: 40px;
+      height: 30px;
+      text-align: center;
+      @include border-radius(15px);
+      font-size: 17px;
+      line-height: 26px;
+    }
+  }
+
+  .sign-in-section {
+    background-color: #DFDFDF;
+    padding: 15px;
+    .explanation {
+      text-align: center;
+      margin: 7px;
+      font-size: 14px;
+    }
+    .inputs {
+      input.string, input.password {
+        width: 360px;
+      }
+    }
+    .actions {
+      text-align: center;
+    }
+
+    .links {
+      color: #848484;
+      a {
+        color: #848484;
+      }
+    }
+    .links.centralized {
+      text-align: center;
+    }
+    @include border-radius(0 0 8px 8px);
+
+  }
+
+  border: 1px solid #eee;
+  @include border-radius(10px);
+
+}
+
+.users-page {
+
+  .user-info {
+
+    .your_page_label {
+      font-size: 18px;
+    }
+    .avatar {
+      height: 120px;
+      margin: 0 10px 10px 0;
+      float: left;
+    }
+    .stats {
+      width: 850px;
+      margin: 7px 0px;
+    }
+    #your_location {
+      .location-label {
+        margin-bottom: 0px;
+      }
+      .address-visible-toggle {
+        float: left;
+        margin-right: 5px;
+      }
+      #share_label, #keep_private_label {
+        float: left;
+        margin: 1px 25px 0px 0px;
+      }
+      #your_location_message{
+        color: green;
+      }
+    }
+  }
+
+  .reviews {
+    .breadcrumb {
+      position: relative;
+    }
+
+    .breadcrumb:hover {
+      border-color:  #0099CC;  
+      opacity: 0.9;
+      .edit_review_link {
+        position: absolute;
+        display: block;
+        top: 5px;
+        right: 5px;
+        color: #0099CC;
+      }
+    }  
+    .edit_review_link {
+      display: none;
+    }
+    .posted_at {
+      color: #888888;
+      font-style: italic;
+      margin: 5px 0px;
+    }    
+    .category_name{
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .comment {
+      dislay: table-row;
+      .more-info {
+        display: table-cell;
+        width: 70px;
+      }
+      .comment-content {
+        display: table-cell;
+        white-space: pre-line;
+      }
+    }
+    
+  }
+
+  .edit_review_form {
+    form {
+      margin: 0;
+    }
+    .inputs{
+      display: table-row;
+    #except_comment {
+      display: table-cell;
+      width:40%;
+    }
+    #comment{
+      padding-left: 30px;
+    }
+    }
+    #review_name, #review_phone, #review_address {
+      width: 333px;
+    }
+    select {
+      width: 343px;
+    }
+    .edit_review_info{
+      .edit-label{
+        display: block;
+      }
+    }
+    textarea {
+      width: 100%;
+      height: 195px;
+    }
+    .cancel-edit{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: #0099CC;
+    }
+
+    .control-group {
+      display:inline;
+      .controls {
+        display: inherit;
+      }
+    }
+    span#address_validation {
+      color: #B94A48;
+    }
+
+    .edit_button_group{
+      margin-left: 25px;
+      .save_review{
+        float: right;
+        margin-left: inherit;
+        margin-right: -10px;
+      }
+      .delete_review {
+        float: right;
+        margin-left: inherit;
+      }
+      .keep_private_label{
+        float: right;        
+        margin: 5px 0px 0px 5px;
+      }
+      .keep_private_button{
+        float: right;
+        margin: 7px 0px 0px 25px;
+      }
+      .share_label{        
+        float: right;        
+        margin: 5px 0px 0px 5px;
+      }
+      .share_button{
+        float: right;
+        margin: 7px 0px 0px 25px;
+      }
+    }
+  }
+
+  
+
+}
+
+#popup_close {
+  position: absolute;
+  color: #0099CC;
+  top: 7px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#validation {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: red;
+}
+
+.following-followers-popup {
+  .following_list,   .followers_list {
+    width: 50%;
+    float: left;
+    .followed_user {
+      .info {
+        width: 60%;
+        float: left;
+        .avatar {
+          float: left;
+        }
+        .user-name {
+          margin: 10px 0px 0px 5px;
+        }
+      }
+      .follow_form {
+        position: relative;
+        top: 11px;
+        display: inline;
+      }
+    }
+  }
+}
+
+.select-label {
+  float: right;
+  color: #A8A8A8;
+  font-style: italic;
+}
+
+.follow_form {
+  .btn {
+    width: 100px;
+  }
+}

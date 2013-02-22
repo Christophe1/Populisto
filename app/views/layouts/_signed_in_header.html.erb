@@ -1,0 +1,35 @@
+<div class="header">
+
+  <div class='top-line'>
+
+    <%= link_to(image_tag('logo.jpg', :alt => t('application.title')), root_path, :class => 'brand') %>
+    <% if current_user.registration_complete? %>
+
+        <p class="slogan">
+            <%= friends_avatars(current_user, 4) %> <%= welcome_text %>
+        </p>
+    <% end %>
+  </div>
+
+  <% if current_user.registration_complete? %>
+      <div class='second-line'>
+        <div class="invites-count">
+          <%= I18n.t('email_invites.invites_sent', :number => current_user.invites_count).html_safe %>
+        </div>
+
+        <div class="user-panel">
+          <%= fb_avatar(current_user)  %>
+          <%= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
+        </div>
+
+        <!-- <%= fb_login_button(image_tag("fblogin.png"), :class => 'menu-item fb-login') unless current_user.added_fb_account? %> -->
+
+        <%= link_to I18n.t('layout.write_smth'), reviews_path, :class => 'btn menu-item'  %>
+        <%= link_to I18n.t('layout.find_something_link'), find_path, :class => 'btn menu-item'  %>
+
+        <%= link_to I18n.t('layout.your_page_link'), user_path(current_user), :class => 'btn menu-item' %>
+
+      </div>
+  <% end %>
+
+</div>

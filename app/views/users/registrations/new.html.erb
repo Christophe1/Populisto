@@ -1,0 +1,46 @@
+<div class="login-page">
+
+    <div class='facebook-section'>
+      <h2><%= I18n.t('sign_in.login_text') %></h2>
+
+      <%= fb_login_button(image_tag("Facebook-orig.png")) %>
+
+      <div class='fb-notes'>
+        <%= raw I18n.t('sign_in.login_notes') %>
+      </div>
+
+      <div class="or-devider">
+        <%= I18n.t('sign_in.or') %>
+      </div>
+
+    </div>
+
+    <div class='sign-in-section'>
+
+        <div class="explanation">
+          <%= I18n.t('sign_in.create_account_text') %>
+        </div>
+
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => ''}) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="inputs">
+            <%= f.input :first_name, :required => true, :autofocus => true %>
+            <%= f.input :last_name, :required => true %>
+            <%= f.input :email, :required => true %>
+            <%= f.input :password, :required => true %>
+            <%= f.input :password_confirmation, :required => true %>
+          </div>
+
+          <div class="actions">
+            <%= f.button :submit, I18n.t('home.register.create_account_button') %>
+          </div>
+        <% end %>
+
+        <div class='links centralized'>
+          <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
+        </div>
+
+    </div>
+
+</div>
