@@ -4,6 +4,7 @@ class UsersController < FrontEndController
   before_filter :find_user
 
   def show    
+    @review = Review.new
     @reviews = @user.reviews
   end
 

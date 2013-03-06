@@ -77,22 +77,30 @@ en:
       create_account_button: "Create Account"
       title: "Register a new Account"
   sign_in:
-    login_text: 'Log in...'
+    login_text: 'Log in to Populisto!'
     login_notes: "- We won't automatically post to your wall<br/>- One less password to remember"
     or: "Or"
-    sign_in_button: "Log In"
+    sign_in_button: "LOG IN"
+    sign_up_button: "SIGN UP"
     email_address_placeholder: 'Email Address'
     password_placeholder: 'Password'
-    forgot_password: 'Forgot Password?'
+    forgot_password: 'Forgot your Password?'
     sign_up: 'Need an account?'
     sign_in: 'Already on Populisto!? Log in now'
-    create_account_text: 'Create an account using email address'
+    create_account_text: 'Create an account using your email address'
+  create_account:
+    first_name: "First name"
+    second_name: "Second name"
+    email_address: "Email"
+    password: "Password"
+    password_confirmation: "Confirm password"
   layout:
     your_page_link: 'Your Page'
     find_something_link: 'Find Something'
     write_smth: 'Write Something Up'
   map:
-    next_link: 'Next'
+    yes_link: 'Yes'
+    no_link: 'No'
     address_validation: "Address can't be blank!"
   my_films:
     title: "My films"
@@ -108,7 +116,7 @@ en:
     review_title: "%{user} about %{genres}"
     empty_search_results: "No results have appeared for that search. Be a populisto and enter one yourself!"
   map_page:
-    greetings: "Hi %{user_name}. First, please tell us where you live. This information won't be displayed to anyone unless you want it to be. If you don't want to give us your exact address details then that's ok, but the more accurate you are, the more effective your results will be."
+    greetings: "Hi %{user_name}. <p><p> First, thanks for signing up! Next, please tell us where you live. We won't display this to anyone unless you want us to - if you don't want to give us your exact address details that's ok, but the more accurate you are, the more effective your results will be when searching for that buthcer, baker or candlestick maker!"
   write_review:
     text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>A Plumber? A Doctor? A restaurant? Share it with friends to help them find something. Or store it personally for your own information'
     submit_button: 'Post to Your Page'
@@ -123,9 +131,10 @@ en:
   find_something:
     greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto.'
     change_range_20: 'Change to 10km?'
-    change_range_10: 'Chagne to 20km?'
+    change_range_10: 'Change to 20km?'
+    search_help: 'What are you looking for? Select from the list or start typing the name of someone to see their page.'
     search_placeholder: 'Start typing to get suggestions.'
-    search_label: 'What are you looking for? Search the address books of people in your area.'
+    search_label: 'Category'
     button_text: 'Go'
     my_area_title: 'In Your Area:'
     outside_area_title: 'Outside Your Area:'

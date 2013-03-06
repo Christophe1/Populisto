@@ -1,7 +1,9 @@
+
+
 <div class='map-page'>
 
   <div class="greetings">
-    <%= I18n.t('map_page.greetings', :user_name => current_user.first_name) %>
+    <%= I18n.t('map_page.greetings', :user_name => current_user.first_name).html_safe %>
   </div>
 
   <div class='address-area'>
@@ -18,10 +20,27 @@
   </div>
 
   <div id="map_canvas"></div>
+  
+  <div id="info_window" style="display:none">
 
-  <%= link_to I18n.t('map.next_link'), '#', :class => 'btn', :id => 'map-next-link' %>
+  <%#= link_to I18n.t('map.next_link'), '#', :class => 'btn', :id => 'map-next-link' %>
 
   <div class="clearfix"></div>
+
+	<div id = "correct_area">
+	Is this the correct area?
+	</div>
+	
+	<br><br><br>
+	<div id="no_link">
+ 	<%= link_to I18n.t('map.no_link'), '#', :class => 'map-no-link' %>
+		<!--<a href="#">No</a>-->
+	</div>
+	
+	<div id="yes_link">
+		<%= link_to I18n.t('map.yes_link'), '#', :class => 'map-yes-link' %>
+		<!--<a href="#">Yes</a>-->
+	</div>
 
 </div>
 
@@ -41,13 +60,25 @@
       types: ['geocode']
     };
 
-    autocomplete = new google.maps.places.Autocomplete(input, options);
+   autocomplete = new google.maps.places.Autocomplete(input, options);
     autocomplete.bindTo('bounds', map);
-
-    var infowindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({
+    
+    var contentstring = $('#info_window').html();
+    
+ <%#   var myOptions = {content:'<div id="No_link"><a href=http://www.rosk.com>No</a></div><div id="Yes_link"><a href="#">Yes</a></div>,
+    alignBottom:true,
+    closeBoxURL: ""  
+    };%>
+     
+var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
+  
+ 
+  
+   var marker = new google.maps.Marker({
       map: map
     });
+    
+    
 
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
       var place = autocomplete.getPlace();
@@ -58,16 +89,11 @@
           map.setZoom(11);
       }
       marker.setPosition(place.geometry.location);
-
-      for(i=0; i<place.address_components.length; i++)
-        if(place.address_components[i].types[0] == 'locality')
-          var city = place.address_components[i].short_name;
-      $('#user_city').val(city);
       $('#user_lat').val(place.geometry.location.lat());
       $('#user_lng').val(place.geometry.location.lng());
       $('#changed').val('1');
 
-      infowindow.setContent(place.name);     
+   //   infowindow.setContent(place.name);
       infowindow.open(map, marker);
     });
 

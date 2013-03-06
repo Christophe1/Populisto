@@ -13,6 +13,7 @@ class HomeController < FrontEndController
   end
 
   def map
+    @review = Review.new
   end
 
   def update_address

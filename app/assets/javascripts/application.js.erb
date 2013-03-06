@@ -106,18 +106,23 @@ $(function() {
        return (key != 13);
     });
 
-    $('#map-next-link').click(function(e) {
+    $('.map-yes-link').live('click', function(e) {
         e.preventDefault();
-        if (confirm('Is this right? If not, please try typing in your address again.')) {
+    
             $('#address_form').submit();
-        } else {
+
+             });
+    
+    $('.map-no-link').live('click', function(e) {
+        e.preventDefault();
+
             $('#address_autocomplete').val('').focus();
             $('#user_lat').val('');
             $('#user_lng').val('');
             $('#user_city').val('');
             $('#changed').val('0');
             initialize_google_maps();
-        }
+    
     });
 
     $('.email-invite-link').click(function(e) {

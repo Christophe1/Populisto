@@ -1,4 +1,5 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"„{"content_type"application/javascript"source"/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"Â{"required_assets_digest"%4d90342674b0c56ddcca2757b23c31bc"
+class"BundledAsset"digest"%c56be6c3ce1cf9402fa999084a732430"lengthiÅ"content_type"application/javascript"_version"%9f3b95dd7ea3030dc35985c0a8020862"pathname"4$root/app/assets/javascripts/application.js.erb"source"Å/*!
  * jQuery JavaScript Library v1.7.2
  * http://jquery.com/
  *
@@ -15231,18 +15232,23 @@ $(function() {
        return (key != 13);
     });
 
-    $('#map-next-link').click(function(e) {
+    $('.map-yes-link').live('click', function(e) {
         e.preventDefault();
-        if (confirm('Is this right? If not, please try typing in your address again.')) {
+    
             $('#address_form').submit();
-        } else {
+
+             });
+    
+    $('.map-no-link').live('click', function(e) {
+        e.preventDefault();
+
             $('#address_autocomplete').val('').focus();
             $('#user_lat').val('');
             $('#user_lng').val('');
             $('#user_city').val('');
             $('#changed').val('0');
             initialize_google_maps();
-        }
+    
     });
 
     $('.email-invite-link').click(function(e) {
@@ -15383,6 +15389,5 @@ function showNewContent(container, content) {
     });
 }
 ;
-"required_assets_digest"%0125d8bcb0fd9b217eb73564b6acba13"
-mtime"2013-02-20T16:40:36+00:00"
-class"BundledAsset"_version"%9f3b95dd7ea3030dc35985c0a8020862"pathname"4$root/app/assets/javascripts/application.js.erb"digest"%6bca2d446082a56415ef565a84779ba4"lengthi"logical_path"application.js:@created_atf1361489967.9019301 π9:@expires_in0
+"
+mtime"2013-02-25T00:35:11+00:00"logical_path"application.js:@created_atf1361841889.70297 ˝v:@expires_in0
