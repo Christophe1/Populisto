@@ -14,8 +14,9 @@
 <body style="background-color: #ffffff !important;">
   <%= render :partial => 'layouts/fb_init' %>
   <div class="container">
-    <%= render :partial => 'layouts/header' %>
-
+    <%= render :partial => 'layouts/header' if user_signed_in? && current_user.registration_complete? %>
+   <%#  if user_signed_in? && current_user.registration_complete? %>
+   <%# if current_user.registration_complete? if user_signed_in?%>
     <%= render :partial => 'layouts/messages' %>
     <div class='page-content'>
         <%= content_for?(:body) ? yield(:body) : yield %>

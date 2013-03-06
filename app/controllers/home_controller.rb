@@ -8,6 +8,8 @@ class HomeController < FrontEndController
 
   after_filter :update_distances_to_other_users, :only => :update_address
 
+
+
   def index
     render 'users/sessions/new', :layout => 'devise'
   end

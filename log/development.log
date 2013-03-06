@@ -11490,3 +11490,1859 @@ Geokit is using the domain: localhost
   Rendered layouts/_header.html.erb (2.2ms)
   Rendered layouts/_messages.html.erb (0.2ms)
 Completed 200 OK in 76ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:30:32 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (328.6ms)
+  Rendered layouts/_fb_init.html.erb (0.5ms)
+  Rendered layouts/_signed_out_header.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 711ms (Views: 690.5ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:31:56 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (33.4ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_signed_out_header.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 351ms (Views: 349.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:36:20 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (36.3ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_out_header.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (9.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:36:44 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (37.7ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_out_header.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:38:10 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (295.9ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_signed_out_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 359ms (Views: 350.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:39:37 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (37.1ms)
+  Rendered layouts/_fb_init.html.erb (1.1ms)
+  Rendered layouts/_signed_out_header.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 91ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:41:01 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (33.1ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 86ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:41:28 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (38.1ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_out_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 94ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:41:47 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (39.0ms)
+  Rendered layouts/_fb_init.html.erb (0.6ms)
+  Rendered layouts/_signed_out_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (255.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 329ms (Views: 322.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:41:59 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (47.0ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=DQ5AydgbXRY5UyoHEYkJcxSkSw7o7wsNGa4OqapttRU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUQ3eDc2ZENicGRrR2g2b3l1WEFxeUJZcVozdGhNWEtwV1BXcS14NGs4VXpxb2VOSXJQNWx5SW9DX1EtSVZDRkZKUW1RaVJxeVFhZVNpM0dUZVJBV2Rod3R1RWdwdEh2MENTLVdoWlV6MHJ4cmdnSHJnQ0l0NGRDckp4U2pHYkhla204UmFyeFhab0g4SXRjSUNHSzc0WHB2Z0lMbkhQc3E1US01SzRiWEZYRC1tNnNsb1FpR05UbmVBVGE3eTlMbHFPRkVRc1FWNkU2Q3IwRnJYaVZiaGEiLCJpc3N1ZWRfYXQiOjEzNjI1NzczNDcsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 13:42:27 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"DQ5AydgbXRY5UyoHEYkJcxSkSw7o7wsNGa4OqapttRU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUQ3eDc2ZENicGRrR2g2b3l1WEFxeUJZcVozdGhNWEtwV1BXcS14NGs4VXpxb2VOSXJQNWx5SW9DX1EtSVZDRkZKUW1RaVJxeVFhZVNpM0dUZVJBV2Rod3R1RWdwdEh2MENTLVdoWlV6MHJ4cmdnSHJnQ0l0NGRDckp4U2pHYkhla204UmFyeFhab0g4SXRjSUNHSzc0WHB2Z0lMbkhQc3E1US01SzRiWEZYRC1tNnNsb1FpR05UbmVBVGE3eTlMbHFPRkVRc1FWNkU2Q3IwRnJYaVZiaGEiLCJpc3N1ZWRfYXQiOjEzNjI1NzczNDcsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (9.6ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 13:42:28', '2013-03-06 13:42:28', 'harris.christophe@gmail.com', '$2a$10$FqeotRdV3xyxFvuwRvuVU.polPkslOFMJ6qopcgBoJ51Mp2F5vmBa', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 13:42:28')[0m
+  [1m[35m (193.5ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.5ms)
+Completed 200 OK in 436ms (Views: 65.8ms | ActiveRecord: 205.4ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 13:42:29 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (2.7ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 60.5ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 13:43:43 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 63.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 13:44:08 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (3.3ms)
+  Rendered layouts/_header.html.erb (260.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 330ms (Views: 321.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 13:44:16 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.4ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 20)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (411.0ms)
+  Rendered layouts/admin/_navigation.html.erb (5.0ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 747ms (Views: 710.3ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 13:44:18 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.2ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 20)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (16.2ms)
+  Rendered layouts/admin/_navigation.html.erb (2.9ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 56.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/admin/users/20" for 127.0.0.1 at Wed Mar 06 13:44:23 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"20"}
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (3.6ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  [1m[35mFilmUser Load (0.4ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (20)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFriendRelation Load (0.2ms)[0m  SELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290
+  [1m[36mEmailInvite Load (0.4ms)[0m  [1mSELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 20[0m
+  [1m[35mSQL (42.7ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 20
+  [1m[36m (103.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 554ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 13:44:23 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (1.1ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (18.5ms)
+  Rendered layouts/admin/_navigation.html.erb (3.1ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 46.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:44:29 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (16.1ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 435ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for #<#<Class:0x7f03a68af420>:0x7f03a68dd000>):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if registration_complete? %>
+    18: 
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826827957460'
+  app/controllers/home_controller.rb:12:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:44:29 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (5.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (31.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 512ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for #<#<Class:0x7f03a68af420>:0x7f03a672d110>):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if registration_complete? %>
+    18: 
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826827957460'
+  app/controllers/home_controller.rb:12:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:44:50 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (1.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (249.3ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 302ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: 
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826826834540'
+  app/controllers/home_controller.rb:12:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:46:09 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (30.1ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 66.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Mar 06 13:46:38 +0000 2013
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"LOG IN", "authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "utf8"=>"✓", "user"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"harris.christophe@gmail.com"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 84ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"LOG IN", "authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "utf8"=>"✓", "user"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"harris.christophe@gmail.com"}}
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/sessions/new.html.erb within layouts/devise (22.2ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 404ms (Views: 270.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 13:46:56 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (46.4ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 106ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Mar 06 13:47:02 +0000 2013
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Create Account", "authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"", "password"=>"[FILTERED]", "email"=>"", "first_name"=>""}}
+Geokit is using the domain: localhost
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (25.4ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Mar 06 13:47:20 +0000 2013
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Create Account", "authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"Harris", "password"=>"[FILTERED]", "email"=>"info@rosk.ie", "first_name"=>"Christophe"}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.7ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'info@rosk.ie' LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = '6yVJmGVxiMJvKtL1nPFJ' LIMIT 1[0m
+  [1m[35mSQL (12.2ms)[0m  INSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, '2013-03-06 13:47:20', '6yVJmGVxiMJvKtL1nPFJ', NULL, '2013-03-06 13:47:20', 'info@rosk.ie', '$2a$10$S9XtFabYVxWon0I4YSaou.4K1dF24pN.O2iWeDYefxIg.xAZ4HvEy', NULL, 'Christophe', 0, 'Harris', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2013-03-06 13:47:20')
+  Rendered users/mailer/confirmation_instructions.html.erb (1.5ms)
+
+Sent mail to info@rosk.ie (366ms)
+Date: Wed, 06 Mar 2013 13:47:20 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: info@rosk.ie
+Message-ID: <513748e8d1c88_116b3f81d33576243768a@ubuntu.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome Christophe Harris!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=6yVJmGVxiMJvKtL1nPFJ">Confirm my account</a></p>
+
+  [1m[36m (232.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 902ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:47:21 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (39.7ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=6yVJmGVxiMJvKtL1nPFJ" for 127.0.0.1 at Wed Mar 06 13:47:29 +0000 2013
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"6yVJmGVxiMJvKtL1nPFJ"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = '6yVJmGVxiMJvKtL1nPFJ' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (16.5ms)[0m  UPDATE `users` SET `confirmed_at` = '2013-03-06 13:47:29', `confirmation_token` = NULL, `updated_at` = '2013-03-06 13:47:29' WHERE `users`.`id` = 21
+  [1m[36m (106.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/home/map
+Completed 302 Found in 138ms (ActiveRecord: 124.1ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 13:47:29 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_signed_in_header.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 165.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 13:55:15 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (5.4ms)
+  Rendered layouts/_header.html.erb (7.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 71.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 13:55:30 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.4ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 21)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (17.9ms)
+  Rendered layouts/admin/_navigation.html.erb (2.9ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/admin/users/21" for 127.0.0.1 at Wed Mar 06 13:55:36 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"21"}
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (3.1ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  [1m[35mFilmUser Load (3.2ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (21)
+  [1m[36m (6.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFriendRelation Load (1.3ms)[0m  SELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` IS NULL
+  [1m[36mEmailInvite Load (2.9ms)[0m  [1mSELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 21[0m
+  [1m[35mSQL (4.9ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 21
+  [1m[36m (119.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 179ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 13:55:36 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.2ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (27.4ms)
+  Rendered layouts/admin/_navigation.html.erb (9.5ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 92ms (Views: 80.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:55:40 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (16.0ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%#if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826826474080'
+  app/controllers/home_controller.rb:12:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:57:27 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (63.7ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+Completed 500 Internal Server Error in 514ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%#if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826826474080'
+  app/controllers/home_controller.rb:19:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 13:58:26 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+Completed 500 Internal Server Error in 312ms
+
+NoMethodError (undefined method `address' for #<HomeController:0x7f03a6474950>):
+  app/controllers/home_controller.rb:17:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (197.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 14:04:32 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (242.2ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 646ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%#if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826826474080'
+  app/controllers/home_controller.rb:14:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 14:06:28 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (34.2ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_out_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (20.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 92.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 14:07:12 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (38.0ms)
+  Rendered layouts/_fb_init.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 365ms (Views: 362.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=sbtNUg0E68Tw_OhD2iT-vX1RRCYKSOZWMjIh7lr826A.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUNFd1hoOUNWbXM1ZEU0YlhjZzk3cVJxS181ZnNBUVdLS0pKa3pac09wLVpFMUNSU2NZdUFQaUJZVmE5UVdNSFVwRFBVY3hTYmtyYklKR285anhmRUxna0ZIVV9WcjFncmliTnRmd1ZLSXJMSGM4NzUzMVRFQkcyNlh1R1BtZnk1TVlxV0dKYXEzOEJfV05mV0xERUZPTEFaUnRwWjhRTzlPdDhMeldjM2xWQVQwNFVKN2M4Uk50dmxMandJeU4tVmo1WDVLbnBfdnJyVEltSVB0VUI2bk8iLCJpc3N1ZWRfYXQiOjEzNjI1Nzg4NDAsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 14:07:20 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"sbtNUg0E68Tw_OhD2iT-vX1RRCYKSOZWMjIh7lr826A.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUNFd1hoOUNWbXM1ZEU0YlhjZzk3cVJxS181ZnNBUVdLS0pKa3pac09wLVpFMUNSU2NZdUFQaUJZVmE5UVdNSFVwRFBVY3hTYmtyYklKR285anhmRUxna0ZIVV9WcjFncmliTnRmd1ZLSXJMSGM4NzUzMVRFQkcyNlh1R1BtZnk1TVlxV0dKYXEzOEJfV05mV0xERUZPTEFaUnRwWjhRTzlPdDhMeldjM2xWQVQwNFVKN2M4Uk50dmxMandJeU4tVmo1WDVLbnBfdnJyVEltSVB0VUI2bk8iLCJpc3N1ZWRfYXQiOjEzNjI1Nzg4NDAsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (25.4ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 14:07:21', '2013-03-06 14:07:21', 'harris.christophe@gmail.com', '$2a$10$3B.5XuwUluSf/a.FiUR9LuizRETXnBv81EDG1FbO/msvkM/4T.00K', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 14:07:21')[0m
+  [1m[35m (212.2ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.1ms)
+Completed 200 OK in 454ms (Views: 68.0ms | ActiveRecord: 240.0ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 14:07:21 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 466ms (Views: 47.9ms | ActiveRecord: 125.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:07:58 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+Redirected to http://localhost:3000/home/map
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 14:07:58 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 14:08:07 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.4ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 22)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (360.4ms)
+  Rendered layouts/admin/_navigation.html.erb (3.7ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 652ms (Views: 383.5ms | ActiveRecord: 15.7ms)
+
+
+Started DELETE "/admin/users/22" for 127.0.0.1 at Wed Mar 06 14:08:12 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"22"}
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mFilmUser Load (0.8ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (22)
+  [1m[36m (6.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFriendRelation Load (0.2ms)[0m  SELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290
+  [1m[36mEmailInvite Load (0.5ms)[0m  [1mSELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 22[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 22
+  [1m[36m (112.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 246ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 14:08:12 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (1.1ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (16.9ms)
+  Rendered layouts/admin/_navigation.html.erb (7.4ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 54.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 14:08:16 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (69.6ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 317ms (Views: 314.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:08:19 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (30.3ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 109ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:18:54 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (18.1ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+Completed 500 Internal Server Error in 418ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%# if current_user.registration_complete? if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826772876120'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:25:21 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (25.2ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%# if current_user.registration_complete? if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826772044920'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:25:25 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (29.4ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+Completed 500 Internal Server Error in 322ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%# if current_user.registration_complete? if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826772044920'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:28:08 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (17.4ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 471ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%# if current_user.registration_complete? if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826772425020'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (225.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (236.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:32:46 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (20.3ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 86ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 14:33:23 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (227.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 500 Internal Server Error in 359ms
+
+ActionView::Template::Error (undefined method `registration_complete?' for nil:NilClass):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current_user.registration_complete? %>
+    18: <%# if current_user.registration_complete? if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826772223360'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 06 15:03:21 +0000 2013
+Processing by Devise::RegistrationsController#new as HTML
+Geokit is using the domain: localhost
+DEPRECATION WARNING: Layout found at "devise" for DeviseController but parent controller set layout to :layout_by_resource. Please explicitly set your layout to "devise" or set it to nil to force a dynamic lookup. (called from realtime at /usr/lib/ruby/1.8/benchmark.rb:308)
+  Rendered users/registrations/new.html.erb within layouts/devise (22.2ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 873ms (Views: 291.7ms | ActiveRecord: 225.7ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=0AmU9Z8g4sCdupYLlb4KgQpyiRKo-MoLKMOkJoUsTZY.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUJXbmx6TlQyQnI5QnBaT2d0cDBaamR4cnc4QjY1OGZoaEF3Y2ZxbksxYUxKTHVLV0tKX3gyenNMenI2NHlKb3J5VTgzcVVRMzAtdkFRT0hJMWFYQ2lRMnNRclp4SFRLRTZiTDNLWXZsRFdpZEhHUzQ2SGtXUWtaTkdYakVnTjVoY09aRVN2RzlfT1pZQ2FfaG5CUnlxYXUxYWVfZFRiZGlzQWJCTFpISVZoaXhGSUIwTGEwWUVlZFRraTVrSzZnVUtPTDlnVkVQN2R6b3VLaDZGaUpPRTciLCJpc3N1ZWRfYXQiOjEzNjI1ODIyMDgsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 15:03:28 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"0AmU9Z8g4sCdupYLlb4KgQpyiRKo-MoLKMOkJoUsTZY.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUJXbmx6TlQyQnI5QnBaT2d0cDBaamR4cnc4QjY1OGZoaEF3Y2ZxbksxYUxKTHVLV0tKX3gyenNMenI2NHlKb3J5VTgzcVVRMzAtdkFRT0hJMWFYQ2lRMnNRclp4SFRLRTZiTDNLWXZsRFdpZEhHUzQ2SGtXUWtaTkdYakVnTjVoY09aRVN2RzlfT1pZQ2FfaG5CUnlxYXUxYWVfZFRiZGlzQWJCTFpISVZoaXhGSUIwTGEwWUVlZFRraTVrSzZnVUtPTDlnVkVQN2R6b3VLaDZGaUpPRTciLCJpc3N1ZWRfYXQiOjEzNjI1ODIyMDgsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (38.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (24.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (29.2ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (40.7ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 15:03:29', '2013-03-06 15:03:30', 'harris.christophe@gmail.com', '$2a$10$IzNBSl1MVLJ587rzKGfxYOeTRMegkTffbwdBv3.c0MYF70GC1a2.6', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 15:03:30')[0m
+  [1m[35m (355.6ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.2ms)
+Completed 200 OK in 667ms (Views: 8.4ms | ActiveRecord: 488.8ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:03:30 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_signed_in_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 421ms (Views: 56.2ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:27:52 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (17.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 144ms (Views: 121.5ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:28:02 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+Redirected to http://localhost:3000/home/map
+Filter chain halted as :check_if_user_not_signed_in rendered or redirected
+Completed 302 Found in 38ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:28:02 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:28:06 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (55.6ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (1.1ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 23)
+  [1m[36mEXPLAIN (13.1ms)[0m  [1mEXPLAIN SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mEXPLAIN (0.6ms)[0m  EXPLAIN SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 23)
+EXPLAIN for: SELECT  `users`.* FROM `users`  LIMIT 10 OFFSET 0
++----+-------------+-------+------+---------------+------+---------+------+------+-------+
+| id | select_type | table | type | possible_keys | key  | key_len | ref  | rows | Extra |
++----+-------------+-------+------+---------------+------+---------+------+------+-------+
+|  1 | SIMPLE      | users | ALL  | NULL          | NULL | NULL    | NULL |    2 |       |
++----+-------------+-------+------+---------------+------+---------+------+------+-------+
+1 row in set (0.01 sec)
+
+EXPLAIN for: SELECT `films_users`.* FROM `films_users`  WHERE `films_users`.`user_id` IN (2, 23)
++----+-------------+-------------+------+---------------+------+---------+------+------+-------------+
+| id | select_type | table       | type | possible_keys | key  | key_len | ref  | rows | Extra       |
++----+-------------+-------------+------+---------------+------+---------+------+------+-------------+
+|  1 | SIMPLE      | films_users | ALL  | NULL          | NULL | NULL    | NULL |    1 | Using where |
++----+-------------+-------------+------+---------------+------+---------+------+------+-------------+
+1 row in set (0.00 sec)
+
+  Rendered admin/users/index.html.erb within layouts/admin/application (640.4ms)
+  Rendered layouts/admin/_navigation.html.erb (3.7ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 1062ms (Views: 624.3ms | ActiveRecord: 134.3ms)
+
+
+Started DELETE "/admin/users/23" for 127.0.0.1 at Wed Mar 06 15:28:15 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"23"}
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.7ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  [1m[36mFilmUser Load (3.5ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (23)[0m
+  [1m[35m (10.4ms)[0m  BEGIN
+  [1m[36mFriendRelation Load (0.3ms)[0m  [1mSELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290[0m
+  [1m[35mEmailInvite Load (0.4ms)[0m  SELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 23
+  [1m[36mSQL (32.2ms)[0m  [1mDELETE FROM `users` WHERE `users`.`id` = 23[0m
+  [1m[35m (139.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 563ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 15:28:15 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (1.8ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.2ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)
+  Rendered admin/users/index.html.erb within layouts/admin/application (25.0ms)
+  Rendered layouts/admin/_navigation.html.erb (3.2ms)
+  Rendered layouts/_breadcrumbs.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 60.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:28:19 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (16.2ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+Completed 500 Internal Server Error in 563ms
+
+ActionView::Template::Error (undefined local variable or method `current' for #<#<Class:0x7f039ffcf338>:0x7f039fff32d8>):
+    14: <body style="background-color: #ffffff !important;">
+    15:   <%= render :partial => 'layouts/fb_init' %>
+    16:   <div class="container">
+    17:     <%= render :partial => 'layouts/header' if current.user && current_user.registration_complete? %>
+    18: <%# if current_user.registration_complete? if user_signed_in?%>
+    19:     <%= render :partial => 'layouts/messages' %>
+    20:     <div class='page-content'>
+  app/views/layouts/devise.html.erb:17:in `_app_views_layouts_devise_html_erb__1278549386_69826772931480'
+  app/controllers/home_controller.rb:14:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:28:57 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (37.3ms)
+  Rendered layouts/_fb_init.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 67.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=SD-kc3wow-rwZFODipqCepkuzvLlUABKuEFJo_RunFc.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUIwVkxzN21UV2stWGNqWEZUdXNLSkdEVV9yOXlaNEFYVjMwb3pWLUczbkFTcC1tVTNXalBpVERscy1pVVFua0VYSThMSEZKQ3ZLdmJjbmZxTjFZbm0zajZUVFZYbDNialREUHZPRmNldjg2dzhVODg0N0t2ZWlKaG5tQmRTbWtwU3FFNTVCQnNjbFJ1bEVwNjQyNVgzdk5ubnRNOXU2WGdwc3d0YmU1eUxVd3p2djNKcXpNLWx6SXhZOG9qcm5yXzFBWjM4WlBfbExvb1VOTUJkdzUtaUQiLCJpc3N1ZWRfYXQiOjEzNjI1ODM3NDUsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 15:29:05 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"SD-kc3wow-rwZFODipqCepkuzvLlUABKuEFJo_RunFc.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUIwVkxzN21UV2stWGNqWEZUdXNLSkdEVV9yOXlaNEFYVjMwb3pWLUczbkFTcC1tVTNXalBpVERscy1pVVFua0VYSThMSEZKQ3ZLdmJjbmZxTjFZbm0zajZUVFZYbDNialREUHZPRmNldjg2dzhVODg0N0t2ZWlKaG5tQmRTbWtwU3FFNTVCQnNjbFJ1bEVwNjQyNVgzdk5ubnRNOXU2WGdwc3d0YmU1eUxVd3p2djNKcXpNLWx6SXhZOG9qcm5yXzFBWjM4WlBfbExvb1VOTUJkdzUtaUQiLCJpc3N1ZWRfYXQiOjEzNjI1ODM3NDUsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (11.3ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 15:29:06', '2013-03-06 15:29:07', 'harris.christophe@gmail.com', '$2a$10$sSeVg.CVc4E0D7NkYUVxB.GEgBCU0Ge7zasPER6XzE/d7OKkji6Pe', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 15:29:07')[0m
+  [1m[35m (173.3ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.2ms)
+Completed 200 OK in 574ms (Views: 220.7ms | ActiveRecord: 186.0ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:29:07 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 24 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 52.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:30:50 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (11.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 24 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 67.6ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:30:57 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.4ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 24)
+  Rendered admin/users/index.html.erb within layouts/admin/application (18.6ms)
+  Rendered layouts/admin/_navigation.html.erb (3.1ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/admin/users/24" for 127.0.0.1 at Wed Mar 06 15:31:02 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"24"}
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (2.4ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (3.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 24 LIMIT 1
+  [1m[36mFilmUser Load (1.7ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (24)[0m
+  [1m[35m (3.4ms)[0m  BEGIN
+  [1m[36mFriendRelation Load (5.2ms)[0m  [1mSELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290[0m
+  [1m[35mEmailInvite Load (4.5ms)[0m  SELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 24
+  [1m[36mSQL (2.9ms)[0m  [1mDELETE FROM `users` WHERE `users`.`id` = 24[0m
+  [1m[35m (125.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 174ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 15:31:02 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (12.7ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)
+  Rendered admin/users/index.html.erb within layouts/admin/application (50.4ms)
+  Rendered layouts/admin/_navigation.html.erb (4.6ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 99ms (Views: 73.8ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:31:06 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (5.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 24 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (36.9ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 85ms (Views: 77.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=rzb8ks-mNsDYieMKJcXnk5VE3NzAuWct38pFx2DmWMk.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUURDM3E1UnRXamh4LWJxYUdleW13c2NUODhmblo3RF9GZllfOFpXajFyV1ZoQVBoR05FNE1tWmFQWnh6UEtweGkxZXR1bHd5MmVKSzNoRUJZcmtMNXlmTFpMek90RW0ycVp1Rzg1VnRoYWZZclU5SjJBck94cEtQOVR4d2F4cWsxQW1PSE9vYTVGaV83THRsYUpUVGxWbldRcXhldDBLY0VYelJQRjdnSDVDdjRfaDlPYlM4RE9CQXdZc0QwQ1ozSUF1OUZ4Z3lmNk5ENVpmcGVxTDhLRlkiLCJpc3N1ZWRfYXQiOjEzNjI1ODM4NzIsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 15:31:12 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"rzb8ks-mNsDYieMKJcXnk5VE3NzAuWct38pFx2DmWMk.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUURDM3E1UnRXamh4LWJxYUdleW13c2NUODhmblo3RF9GZllfOFpXajFyV1ZoQVBoR05FNE1tWmFQWnh6UEtweGkxZXR1bHd5MmVKSzNoRUJZcmtMNXlmTFpMek90RW0ycVp1Rzg1VnRoYWZZclU5SjJBck94cEtQOVR4d2F4cWsxQW1PSE9vYTVGaV83THRsYUpUVGxWbldRcXhldDBLY0VYelJQRjdnSDVDdjRfaDlPYlM4RE9CQXdZc0QwQ1ozSUF1OUZ4Z3lmNk5ENVpmcGVxTDhLRlkiLCJpc3N1ZWRfYXQiOjEzNjI1ODM4NzIsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 15:31:12', '2013-03-06 15:31:13', 'harris.christophe@gmail.com', '$2a$10$Y/McYVeyz6IHzcw41QW6PubR4B7jQS9fDXQa7JTJkLhcaNRORRzzq', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 15:31:13')
+  [1m[36m (90.2ms)[0m  [1mCOMMIT[0m
+  Rendered users/omniauth_callbacks/success.js.erb (0.1ms)
+Completed 200 OK in 215ms (Views: 6.7ms | ActiveRecord: 93.3ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:31:13 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (5.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_signed_in_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 308ms (Views: 299.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:34:00 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_fb_init.html.erb (4.4ms)
+  Rendered layouts/_signed_in_header.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 93.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:34:24 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (89.9ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.9ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 25)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (119.9ms)
+  Rendered layouts/admin/_navigation.html.erb (3.1ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 52.4ms | ActiveRecord: 91.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:34:25 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (0.2ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 25)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (31.7ms)
+  Rendered layouts/admin/_navigation.html.erb (6.4ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 79ms (Views: 65.8ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/admin/users/25" for 127.0.0.1 at Wed Mar 06 15:34:31 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"25"}
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (3.0ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  [1m[35mFilmUser Load (6.7ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (25)
+  [1m[36m (13.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFriendRelation Load (0.8ms)[0m  SELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290
+  [1m[36mEmailInvite Load (3.7ms)[0m  [1mSELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 25[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM `users` WHERE `users`.`id` = 25
+  [1m[36m (129.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 189ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 15:34:31 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mAdmin Load (8.4ms)[0m  SELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` LIMIT 10 OFFSET 0
+  [1m[36mFilmUser Load (1.8ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)[0m
+  Rendered admin/users/index.html.erb within layouts/admin/application (26.8ms)
+  Rendered layouts/admin/_navigation.html.erb (9.7ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 75.2ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:34:35 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (16.9ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:34:35 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (24.9ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=dFxD6YBmPsyxdF6EMzlMiAXJgrMpXK1ITXb6AqD735o.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUREQVhaMm56SFVBLUZxbFlEd1FXRzkzTC1rYmxiUkNPYXVmU0hqQ0RhTkNOd3MxQ0ZOd1dpVEdWSmoyUnRYUUM5Y1doUXR3VzlGNXYwQTZ2c2g2a09tT0dTYldVZDF6Y1FmNE9YTVoxdzBoc3Z6eFRkLUdYVl85WjlLcEJwdFkxVUVjVHNJbjl5U3FUTGpxYXQxQ0pFTVRzLXVtX2dkNDNTUVk5cEFPS1A2SHlGZFJCY0tObXgyMFZselJFNjEzd3hpZHZkWThLaUZyWklSSmZVa1Y5V1UiLCJpc3N1ZWRfYXQiOjEzNjI1ODQwNzksInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 15:34:39 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"dFxD6YBmPsyxdF6EMzlMiAXJgrMpXK1ITXb6AqD735o.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUREQVhaMm56SFVBLUZxbFlEd1FXRzkzTC1rYmxiUkNPYXVmU0hqQ0RhTkNOd3MxQ0ZOd1dpVEdWSmoyUnRYUUM5Y1doUXR3VzlGNXYwQTZ2c2g2a09tT0dTYldVZDF6Y1FmNE9YTVoxdzBoc3Z6eFRkLUdYVl85WjlLcEJwdFkxVUVjVHNJbjl5U3FUTGpxYXQxQ0pFTVRzLXVtX2dkNDNTUVk5cEFPS1A2SHlGZFJCY0tObXgyMFZselJFNjEzd3hpZHZkWThLaUZyWklSSmZVa1Y5V1UiLCJpc3N1ZWRfYXQiOjEzNjI1ODQwNzksInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (23.0ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 15:34:41', '2013-03-06 15:34:41', 'harris.christophe@gmail.com', '$2a$10$3mBezkmEx4xzfg6mWKNHPuYFcnJhLwaR3e0cG.8g/.pbtNaU5d6XK', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 15:34:41')[0m
+  [1m[35m (296.2ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.1ms)
+Completed 200 OK in 474ms (Views: 5.8ms | ActiveRecord: 320.9ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:34:41 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_signed_in_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 307ms (Views: 294.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:36:38 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (2.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 26 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 72.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:36:46 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (1.7ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.4ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 26)
+  Rendered admin/users/index.html.erb within layouts/admin/application (18.5ms)
+  Rendered layouts/admin/_navigation.html.erb (3.1ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 42.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:36:47 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (3.5ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (8.9ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (1.5ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 26)
+  Rendered admin/users/index.html.erb within layouts/admin/application (315.0ms)
+  Rendered layouts/admin/_navigation.html.erb (3.2ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 354ms (Views: 334.0ms | ActiveRecord: 14.2ms)
+
+
+Started DELETE "/admin/users/26" for 127.0.0.1 at Wed Mar 06 15:36:51 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"26"}
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (3.6ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 26 LIMIT 1
+  [1m[36mFilmUser Load (0.4ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (26)[0m
+  [1m[35m (6.0ms)[0m  BEGIN
+  [1m[36mFriendRelation Load (5.5ms)[0m  [1mSELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290[0m
+  [1m[35mEmailInvite Load (1.7ms)[0m  SELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 26
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `users` WHERE `users`.`id` = 26[0m
+  [1m[35m (144.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 188ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 15:36:51 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (2.1ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.2ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)
+  Rendered admin/users/index.html.erb within layouts/admin/application (19.9ms)
+  Rendered layouts/admin/_navigation.html.erb (4.0ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 335ms (Views: 59.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:36:56 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (14.8ms)
+  Rendered layouts/_fb_init.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 353ms (Views: 349.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:36:56 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 26 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (28.1ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:37:39 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (28.9ms)
+  Rendered layouts/_fb_init.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:38:20 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/sessions/new.html.erb within layouts/devise (37.0ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=X5lt6n-kfQm9blpwtHKD0giB8shXUwSELP0U6xWHzHo.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUI5bTN5UnBzdjl5NERTTk9rTjNmMDVlRWF5eHZmdkZjVkstTnl5QURXZHE3VFZyMUFMU2RkV21ULVBtbnVXSkc3akd3MHJfQUZ6cFNPY3VuVGdKVGdrV0F4Uk91TDBIX1lFZTVhUDJwcndQOE9FbUJza1AtN2ZBeEJjQ2NKNUZCaktZU3JLVHJtcGxqMEVVVXZwOTQtbkNoVm5xTDV0amphcHJUWUdzbTV5YW5CWDgxT0NTcDg0MGtwZGQ3WWZGbVNWRFUzNklzNXo2cFlCTkJRa3pVQjkiLCJpc3N1ZWRfYXQiOjEzNjI1ODQzMDQsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 15:38:24 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"X5lt6n-kfQm9blpwtHKD0giB8shXUwSELP0U6xWHzHo.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUI5bTN5UnBzdjl5NERTTk9rTjNmMDVlRWF5eHZmdkZjVkstTnl5QURXZHE3VFZyMUFMU2RkV21ULVBtbnVXSkc3akd3MHJfQUZ6cFNPY3VuVGdKVGdrV0F4Uk91TDBIX1lFZTVhUDJwcndQOE9FbUJza1AtN2ZBeEJjQ2NKNUZCaktZU3JLVHJtcGxqMEVVVXZwOTQtbkNoVm5xTDV0amphcHJUWUdzbTV5YW5CWDgxT0NTcDg0MGtwZGQ3WWZGbVNWRFUzNklzNXo2cFlCTkJRa3pVQjkiLCJpc3N1ZWRfYXQiOjEzNjI1ODQzMDQsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (16.4ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 15:38:25', '2013-03-06 15:38:25', 'harris.christophe@gmail.com', '$2a$10$Uh3A1JZCOpIHb4l/6wMOEec1D7T1c.gh7aYs5971eyqP5pBSaB70W', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 15:38:25')[0m
+  [1m[35m (240.4ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.1ms)
+Completed 200 OK in 395ms (Views: 20.1ms | ActiveRecord: 258.3ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:38:25 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (9.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 46.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:39:27 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (5.0ms)
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:40:35 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1[0m
+Redirected to http://localhost:3000/home/map
+Filter chain halted as :check_if_user_not_signed_in rendered or redirected
+Completed 302 Found in 368ms (ActiveRecord: 304.4ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:40:36 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_fb_init.html.erb (0.5ms)
+  Rendered layouts/_signed_in_header.html.erb (1.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 1355ms (Views: 1266.9ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:40:53 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.4ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 27)
+  Rendered admin/users/index.html.erb within layouts/admin/application (554.0ms)
+  Rendered layouts/admin/_navigation.html.erb (7.5ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 1025ms (Views: 948.5ms | ActiveRecord: 34.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:40:55 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (1.3ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (3.6ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 27)
+  Rendered admin/users/index.html.erb within layouts/admin/application (40.5ms)
+  Rendered layouts/admin/_navigation.html.erb (13.8ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 163ms (Views: 136.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 15:40:57 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.2ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 27)
+  Rendered admin/users/index.html.erb within layouts/admin/application (21.7ms)
+  Rendered layouts/admin/_navigation.html.erb (7.8ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 48.5ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/admin/users/27" for 127.0.0.1 at Wed Mar 06 15:41:02 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"27"}
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (8.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1
+  [1m[36mFilmUser Load (2.5ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (27)[0m
+  [1m[35m (1.6ms)[0m  BEGIN
+  [1m[36mFriendRelation Load (0.2ms)[0m  [1mSELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290[0m
+  [1m[35mEmailInvite Load (0.4ms)[0m  SELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 27
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `users` WHERE `users`.`id` = 27[0m
+  [1m[35m (215.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 349ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 15:41:02 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.2ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)
+  Rendered admin/users/index.html.erb within layouts/admin/application (28.0ms)
+  Rendered layouts/admin/_navigation.html.erb (4.8ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:41:06 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1[0m
+Completed 500 Internal Server Error in 27ms
+
+ActionView::MissingTemplate (Missing template layouts/devise with {:locale=>[:en], :handlers=>[:coffee, :erb, :builder], :formats=>[:html]}. Searched in:
+  * "/home/christophecompaq/Populisto/app/views"
+  * "/var/lib/gems/1.8/gems/devise-2.0.4/app/views"
+):
+  app/controllers/home_controller.rb:14:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:41:06 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template layouts/devise with {:locale=>[:en], :handlers=>[:coffee, :erb, :builder], :formats=>[:html]}. Searched in:
+  * "/home/christophecompaq/Populisto/app/views"
+  * "/var/lib/gems/1.8/gems/devise-2.0.4/app/views"
+):
+  app/controllers/home_controller.rb:14:in `index'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 15:41:50 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 27 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (221.7ms)
+  Rendered layouts/_fb_init.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 291ms (Views: 275.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=MSTLP2ZmuvRT_w6JIg2SBH-9b5lZrKfxGS_B0cfE-lU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUFtYWZFTWItOTVEQ2gwQVY5Z1BKSFJsSlk4SDRNLW11RVhOS1FmZ242eEVXM19ic05DWVF2bzFFUkxpeWJjQmlLRFo4dHpvSjBJMDI1d3JuZlVaZ0Ywalo2NWQyRnJCMmo0QWh6a1RTTXVtcF9YSzBNR2hCYzB0UDVjUC1OcDYyaVdjWERnc2dDUGR3dF96V3FmOVk0bkR2a0MtcmJYQmdxejZ4bXNRMUVFQkVUQnItYWNhaFN5emdNcXJTZlNOeUgzdEcteEVzVEpMXzlMTlEwa2kxTjUiLCJpc3N1ZWRfYXQiOjEzNjI1ODQ1MjIsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 15:42:02 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"MSTLP2ZmuvRT_w6JIg2SBH-9b5lZrKfxGS_B0cfE-lU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUFtYWZFTWItOTVEQ2gwQVY5Z1BKSFJsSlk4SDRNLW11RVhOS1FmZ242eEVXM19ic05DWVF2bzFFUkxpeWJjQmlLRFo4dHpvSjBJMDI1d3JuZlVaZ0Ywalo2NWQyRnJCMmo0QWh6a1RTTXVtcF9YSzBNR2hCYzB0UDVjUC1OcDYyaVdjWERnc2dDUGR3dF96V3FmOVk0bkR2a0MtcmJYQmdxejZ4bXNRMUVFQkVUQnItYWNhaFN5emdNcXJTZlNOeUgzdEcteEVzVEpMXzlMTlEwa2kxTjUiLCJpc3N1ZWRfYXQiOjEzNjI1ODQ1MjIsInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (65.0ms)[0m  INSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 15:42:04', '2013-03-06 15:42:04', 'harris.christophe@gmail.com', '$2a$10$v2BXr2Nx0tIqs/zWRiaY0.Ml6cbwI19YogFlV9P.1/nkpO4GGNFA6', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 15:42:04')
+  [1m[36m (194.9ms)[0m  [1mCOMMIT[0m
+  Rendered users/omniauth_callbacks/success.js.erb (0.5ms)
+Completed 200 OK in 457ms (Views: 45.9ms | ActiveRecord: 261.5ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 15:42:04 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:14:44 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 44.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:15:13 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (6.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_signed_in_header.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 68.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:16:18 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 54.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:19:16 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (5.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 306ms (Views: 297.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:19:42 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (3.1ms)
+ERROR: compiling _app_views_layouts_application_html_erb__1590793692_70319630180860 RAISED compile error
+/home/christophecompaq/Populisto/app/views/layouts/application.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+... 'layouts/header' current_user.registration_complete?);@outp...
+                              ^
+Function body:           def _app_views_layouts_application_html_erb__1590793692_70319630180860(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>');@output_buffer.append= ( t('application.title') );@output_buffer.safe_concat('</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');   if @include_goole_maps 
+@output_buffer.safe_concat('    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
+
+');   end 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    ');@output_buffer.append= ( stylesheet_link_tag 'ie', :media => 'all' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  ');@output_buffer.append= ( render :partial => 'layouts/fb_init' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="container">
+    ');@output_buffer.append= ( render :partial => 'layouts/header' current_user.registration_complete?);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( render :partial => 'layouts/messages' if user_signed_in? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <div class=\'page-content\'>
+        ');@output_buffer.append= ( content_for?(:body) ? yield(:body) : yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+
+  </div>
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/christophecompaq/Populisto/app/views/layouts/application.html.erb:33:in `compile'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/template.rb:233:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/template.rb:142:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/notifications.rb:125:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/template.rb:141:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:88:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/activerecord-3.2.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:167:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:458:in `_run__492314551__process_action__2009790889__callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `instrument'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/var/lib/gems/1.8/gems/activerecord-3.2.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:121:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:45:in `process'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal.rb:203:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_controller/metal.rb:246:in `action'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/var/lib/gems/1.8/gems/journey-1.0.3/lib/journey/router.rb:68:in `call'
+/var/lib/gems/1.8/gems/journey-1.0.3/lib/journey/router.rb:56:in `each'
+/var/lib/gems/1.8/gems/journey-1.0.3/lib/journey/router.rb:56:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:600:in `call'
+/var/lib/gems/1.8/gems/omniauth-1.1.0/lib/omniauth/strategy.rb:177:in `call!'
+/var/lib/gems/1.8/gems/omniauth-1.1.0/lib/omniauth/strategy.rb:157:in `call'
+/var/lib/gems/1.8/gems/omnicontacts-0.2.3/lib/omnicontacts/middleware/base_oauth.rb:41:in `call'
+/var/lib/gems/1.8/gems/omnicontacts-0.2.3/lib/omnicontacts/builder.rb:27:in `call'
+/var/lib/gems/1.8/gems/warden-1.1.1/lib/warden/manager.rb:35:in `call'
+/var/lib/gems/1.8/gems/warden-1.1.1/lib/warden/manager.rb:34:in `catch'
+/var/lib/gems/1.8/gems/warden-1.1.1/lib/warden/manager.rb:34:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.2.3/lib/active_record/query_cache.rb:64:in `call'
+/var/lib/gems/1.8/gems/activerecord-3.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `_run__1257339084__call__4__callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `send'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/rack/logger.rb:26:in `call_app'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/rack/logger.rb:16:in `call_without_quiet_assets'
+/var/lib/gems/1.8/gems/quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.8/gems/activesupport-3.2.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/static.rb:62:in `call'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/engine.rb:479:in `call'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/application.rb:220:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/handler/webrick.rb:13:in `run'
+/var/lib/gems/1.8/gems/rack-1.4.1/lib/rack/server.rb:265:in `start'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/commands/server.rb:70:in `start'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/commands.rb:55
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/commands.rb:50:in `tap'
+/var/lib/gems/1.8/gems/railties-3.2.3/lib/rails/commands.rb:50
+script/rails:6:in `require'
+script/rails:6
+Completed 500 Internal Server Error in 296ms
+
+ActionView::Template::Error (compile error
+/home/christophecompaq/Populisto/app/views/layouts/application.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+... 'layouts/header' current_user.registration_complete?);@outp...
+                              ^):
+    18: <body>
+    19:   <%= render :partial => 'layouts/fb_init' %>
+    20:   <div class="container">
+    21:     <%= render :partial => 'layouts/header' current_user.registration_complete?%>
+    22:     <%= render :partial => 'layouts/messages' if user_signed_in? %>
+    23:     <div class='page-content'>
+    24:         <%= content_for?(:body) ? yield(:body) : yield %>
+  app/views/layouts/application.html.erb:33:in `compile'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.6ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:20:06 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (11.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1
+  Rendered home/map.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 61.1ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 16:20:15 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (75.8ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (1.3ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 28)
+  Rendered admin/users/index.html.erb within layouts/admin/application (97.9ms)
+  Rendered layouts/admin/_navigation.html.erb (3.0ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 169ms (Views: 87.3ms | ActiveRecord: 77.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 06 16:20:16 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.6ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2, 28)
+  Rendered admin/users/index.html.erb within layouts/admin/application (41.5ms)
+  Rendered layouts/admin/_navigation.html.erb (3.4ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (2.4ms)
+Completed 200 OK in 205ms (Views: 189.7ms | ActiveRecord: 7.1ms)
+
+
+Started DELETE "/admin/users/28" for 127.0.0.1 at Wed Mar 06 16:20:33 +0000 2013
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cSM1PpNHhSuSkns6O0hUZKaECBQ+81CMwYzzKrkWLY4=", "id"=>"28"}
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1
+  [1m[36mFilmUser Load (0.4ms)[0m  [1mSELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (28)[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFriendRelation Load (0.2ms)[0m  [1mSELECT `friend_relations`.* FROM `friend_relations` WHERE `friend_relations`.`source_user_id` = 1074907290[0m
+  [1m[35mEmailInvite Load (0.4ms)[0m  SELECT `email_invites`.* FROM `email_invites` WHERE `email_invites`.`from_user_id` = 28
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `users` WHERE `users`.`id` = 28[0m
+  [1m[35m (145.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Wed Mar 06 16:20:33 +0000 2013
+Processing by Admin::UsersController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT `admins`.* FROM `admins` WHERE `admins`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  [1m[35mFilmUser Load (0.2ms)[0m  SELECT `films_users`.* FROM `films_users` WHERE `films_users`.`user_id` IN (2)
+  Rendered admin/users/index.html.erb within layouts/admin/application (15.3ms)
+  Rendered layouts/admin/_navigation.html.erb (3.1ms)
+  Rendered layouts/_breadcrumbs.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 58ms (Views: 50.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 16:20:37 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1[0m
+  Rendered users/sessions/new.html.erb within layouts/devise (32.3ms)
+  Rendered layouts/_fb_init.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 107ms (Views: 103.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 06 16:20:37 +0000 2013
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (3.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 28 LIMIT 1
+  Rendered users/sessions/new.html.erb within layouts/devise (25.2ms)
+  Rendered layouts/_fb_init.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/auth/facebook/callback?signed_request=I1AOJ_t3MkW7pS5aO0bEMQEpJV-QtQfR40XeNfuytXs.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUNqYnF1NHF3ZTdCamgzeWdSNDcxOFNTQV9LRHBqVUJmdjZ5cjIycWdRN1ZlYzRKT3VObWJfUl93WnpzQS1WQ0FqTFJiVWdGS1pyS2NhUkM2MTNlcTN2dVFIY3pxbElheW1hV1hIVGFnSjh4dXdqRWExQWd1U3VUcVVJaDVCYTRySDdocEFVcWZxQk1FYkQtajMxMjVOT2dPVU84RTg5SlhIak0yeWNkQTk3VnRERndUckQwWXpoOU9FNWpvYVBGdGFWWGNhV0p2M2pMdEh2bm9RRDVQa1UiLCJpc3N1ZWRfYXQiOjEzNjI1ODY4NDksInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0" for 127.0.0.1 at Wed Mar 06 16:20:49 +0000 2013
+Processing by Users::OmniauthCallbacksController#facebook as */*
+  Parameters: {"signed_request"=>"I1AOJ_t3MkW7pS5aO0bEMQEpJV-QtQfR40XeNfuytXs.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUNqYnF1NHF3ZTdCamgzeWdSNDcxOFNTQV9LRHBqVUJmdjZ5cjIycWdRN1ZlYzRKT3VObWJfUl93WnpzQS1WQ0FqTFJiVWdGS1pyS2NhUkM2MTNlcTN2dVFIY3pxbElheW1hV1hIVGFnSjh4dXdqRWExQWd1U3VUcVVJaDVCYTRySDdocEFVcWZxQk1FYkQtajMxMjVOT2dPVU84RTg5SlhIak0yeWNkQTk3VnRERndUckQwWXpoOU9FNWpvYVBGdGFWWGNhV0p2M2pMdEh2bm9RRDVQa1UiLCJpc3N1ZWRfYXQiOjEzNjI1ODY4NDksInVzZXJfaWQiOiIxMDc0OTA3MjkwIn0"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`external_user_id` = 1074907290 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'harris.christophe@gmail.com' LIMIT 1
+  [1m[36mSQL (47.0ms)[0m  [1mINSERT INTO `users` (`address`, `address_visible`, `city`, `confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `email`, `encrypted_password`, `external_user_id`, `first_name`, `invites_count`, `last_name`, `lat`, `lng`, `name`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `unconfirmed_email`, `updated_at`) VALUES (NULL, 0, NULL, NULL, NULL, '2013-03-06 16:20:50', '2013-03-06 16:20:51', 'harris.christophe@gmail.com', '$2a$10$ybSVg.vysbRk2s4WfnpLQ.QCueu0oNnRjGsBqtvFW19/QbMkZ7pUu', 1074907290, 'Christophe', 0, 'Harris', NULL, NULL, 'Christophe Harris', 'facebook', NULL, NULL, NULL, NULL, '2013-03-06 16:20:51')[0m
+  [1m[35m (265.3ms)[0m  COMMIT
+  Rendered users/omniauth_callbacks/success.js.erb (0.2ms)
+Completed 200 OK in 447ms (Views: 18.5ms | ActiveRecord: 313.7ms)
+
+
+Started GET "/home/map" for 127.0.0.1 at Wed Mar 06 16:20:51 +0000 2013
+Processing by HomeController#map as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 29 LIMIT 1[0m
+  Rendered home/map.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_fb_init.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 261ms (Views: 249.8ms | ActiveRecord: 1.7ms)
