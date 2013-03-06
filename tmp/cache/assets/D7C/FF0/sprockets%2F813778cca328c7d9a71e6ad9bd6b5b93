@@ -1,5 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"Â{"required_assets_digest"%4d90342674b0c56ddcca2757b23c31bc"
-class"BundledAsset"digest"%c56be6c3ce1cf9402fa999084a732430"lengthiÅ"content_type"application/javascript"_version"%9f3b95dd7ea3030dc35985c0a8020862"pathname"4$root/app/assets/javascripts/application.js.erb"source"Å/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"Â{"source"Å/*!
  * jQuery JavaScript Library v1.7.2
  * http://jquery.com/
  *
@@ -15390,4 +15389,5 @@ function showNewContent(container, content) {
 }
 ;
 "
-mtime"2013-02-25T00:35:11+00:00"logical_path"application.js:@created_atf1361841889.6963251 êó:@expires_in0
+class"BundledAsset"pathname"4$root/app/assets/javascripts/application.js.erb"digest"%c56be6c3ce1cf9402fa999084a732430"logical_path"application.js"_version"%9f3b95dd7ea3030dc35985c0a8020862"lengthiÅ"content_type"application/javascript"required_assets_digest"%4d90342674b0c56ddcca2757b23c31bc"
+mtime"2013-03-06T20:27:26+00:00:@created_atf1362601650.600539 o;:@expires_in0

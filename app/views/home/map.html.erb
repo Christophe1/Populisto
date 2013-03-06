@@ -32,20 +32,26 @@
 	</div>
 	
 	<br><br><br>
+
+  <%#= code below deals with the 'Yes' and 'No' links on the infoWindow.
+  They go to the aplication.js file %>
+
 	<div id="no_link">
  	<%= link_to I18n.t('map.no_link'), '#', :class => 'map-no-link' %>
-		<!--<a href="#">No</a>-->
 	</div>
 	
 	<div id="yes_link">
 		<%= link_to I18n.t('map.yes_link'), '#', :class => 'map-yes-link' %>
-		<!--<a href="#">Yes</a>-->
+
 	</div>
 
 </div>
 
 <script type="text/javascript">
   function initialize_google_maps() {
+
+
+
     var midOfIreland = new google.maps.LatLng(53.252069, -7.860718);
     var myOptions = {
       zoom: 7,
@@ -65,13 +71,15 @@
     
     var contentstring = $('#info_window').html();
     
- <%#   var myOptions = {content:'<div id="No_link"><a href=http://www.rosk.com>No</a></div><div id="Yes_link"><a href="#">Yes</a></div>,
+ <%#   var myOptions = {content:'<div id="No_link"><a href=http://www.rosk.com>No</a></div><div id="Yes_link"><a href="#">Yes</a></div>',
     alignBottom:true,
     closeBoxURL: ""  
     };%>
      
 var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
-  
+google.maps.event.addListener(infowindow, 'closeclick', function() {   
+  $(".map-no-link").trigger("click");
+});  
  
   
    var marker = new google.maps.Marker({
