@@ -9,29 +9,29 @@
   <div class="search-area">
 
     <div class='search-box'>
-      <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
+      <%#= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
 
-        <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen, 
+        <%#= f.input :search_ids, :collection => @data, :as => :grouped_chosen, 
                     :group_method => :last, :prompt => false,
                     :input_html => { :class => 'span5', :multiple => true }, 
                     :label => t('find_something.search_label'), 
                     :placeholder => t('find_something.search_placeholder') %>
 
-        <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button' %>
+        <%#= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button' %>
 
-      <% end %>
-    </div>
+      <%# end %>
+    </div> 
     <div class="clearfix"></div>
 
     <div id="map_canvas"></div>
 
     <div class="clearfix"></div>
 
-  </div>
+  </div> 
 
   <%= render 'reviews' if @reviews %>
 
-</div>
+ </div>
 
 <script type="text/javascript">
   var map;
@@ -39,7 +39,7 @@
 
   function initialize_google_maps() {
     var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
-    var zoom = <%= @kms_range %> > 10 ? 10 : 11;
+    var zoom = <%#= @kms_range %> > 10 ? 10 : 11;
     var myOptions = {
         zoom: zoom,
         center: currentlatlng,
@@ -57,7 +57,7 @@
         fillOpacity: 0,
         strokeWeight: 2,
         strokeOpacity: 0.7,
-        radius: <%= @kms_range %>*1000,
+        radius: <%#= @kms_range %>*1000,
     });
     circle.bindTo('center', marker, 'position');
 
@@ -79,11 +79,11 @@
   }
 
   function initialize_markers() {
-    <% (@reviews || []).each do |r| %>
-      <% next unless r.lat && r.lng %>
-      position = new google.maps.LatLng(<%= r.lat %>, <%= r.lng %>);
+    <%# (@reviews || []).each do |r| %>
+      <%# next unless r.lat && r.lng %>
+      position = new google.maps.LatLng(<%#= r.lat %>, <%#= r.lng %>);
       add_marker(position);
-    <% end %>
+    <%# end %>
   }
 
   $(function() {

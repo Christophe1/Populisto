@@ -1,6 +1,5 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"¼{"
-class"BundledAsset"required_assets_digest"%1caee60094baaf208d8c4d3528999cd9"content_type"text/css"lengthi¹º"
-mtime"2013-03-06T13:03:16+00:00"logical_path"application.css"_version"%9f3b95dd7ea3030dc35985c0a8020862"source"¹º/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"¼{"content_type"text/css"
+mtime"2013-03-11T20:50:49+00:00"pathname"6$root/app/assets/stylesheets/application.css.scss"logical_path"application.css"_version"%9f3b95dd7ea3030dc35985c0a8020862"source"¹º/*
 
 
 
@@ -25,7 +24,7 @@ mtime"2013-03-06T13:03:16+00:00"logical_path"application.css"_version"%9f3b9
 .header {
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 150px;
   top: 0;
   background-color: #ffffff;
   /* @include border-radius(0px 0px 7px 7px, 0px 0px 7px 7px); */
@@ -6678,4 +6677,5 @@ a.label:hover, a.badge:hover {
 .modal-body {
   height: 60%;
 }
-"digest"%7bfc99a20fcf3068a45cd75c794335bf"pathname"6$root/app/assets/stylesheets/application.css.scss:@created_atf1362575052.207253 C¢:@expires_in0
+"
+class"BundledAsset"required_assets_digest"%2e422d0e8ba54eb777ffd489de5d69db"digest"%1a6ae604bf9d507c534e50252974df38"lengthi¹º:@created_atf1363035054.7410581 m:@expires_in0

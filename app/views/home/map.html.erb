@@ -77,6 +77,7 @@
     };%>
      
 var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
+// for the 'x', to close the infoWindow, we give it the same behaviour as the 'No' link
 google.maps.event.addListener(infowindow, 'closeclick', function() {   
   $(".map-no-link").trigger("click");
 });  
