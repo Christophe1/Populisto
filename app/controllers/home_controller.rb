@@ -8,6 +8,8 @@ class HomeController < FrontEndController
 
   after_filter :update_distances_to_other_users, :only => :update_address
 
+  #before_filter :load_data_for_checkbox
+
 
 
   def index
