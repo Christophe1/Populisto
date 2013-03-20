@@ -20,10 +20,10 @@
 
   <% if current_user.registration_complete? %>
       <div class='second-line'>
-        <div class="invites-count">
+        <!-- <div class="invites-count"> -->
           <%#invite counter
           <%#= I18n.t('email_invites.invites_sent', :number => current_user.invites_count).html_safe %>
-        </div>
+        <!-- </div> -->
 
         <div class="user-panel">
           <%= fb_avatar(current_user)  %>
@@ -37,10 +37,6 @@
 
         <%= link_to I18n.t('layout.your_page_link'), user_path(current_user), :class => 'btn menu-item' %>
 
-      </div>
-
-
-  <% end %>
 
       <div class='search-box'>
       <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
@@ -55,44 +51,13 @@
 
       <% end %>
     </div>
+      </div>
 
-    <div class="clearfix"></div>
-  
-<%# if current_user.registration_complete? %>
-<!-- <div class='find-something'>
 
-  <div class="greetings"> -->
-    <%#= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
-    <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
-<!--   </div> -->
+  <% end %>
 
-<%# end %>
-  <!-- <div class="search-area"> -->
 
-<!--     <div class='search-box'>
-      <%#= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
 
-        <%#= f.input :search_ids, :collection => @data, :as => :grouped_chosen, 
-                    :group_method => :last, :prompt => false,
-                    :input_html => { :class => 'span5', :multiple => true }, 
-                    :label => t('find_something.search_label'), 
-                    :placeholder => t('find_something.search_placeholder') %>
-
-        <%#= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button' %>
-
-      <%# end %>
-      <%# end %>
-    </div> -->
-<!-- </div> -->
-<!--     <div class="clearfix"></div>
-
-    <div id="map_canvas"></div>
-
-    <div class="clearfix"></div>
-
-  </div> -->
-
-  <%#= render 'reviews' if @reviews %>
 </div>
 
 // <script type="text/javascript">

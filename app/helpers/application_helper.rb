@@ -182,4 +182,21 @@ module ApplicationHelper
     end
     avatars.join('').html_safe
   end
+
+  def users_followers
+    if current_user == @user
+      "<h3>People you're following</h3>"
+    else
+      "<h3>People #{your_page(@user).chomp("Page")} following</h3>"
+  end
+  end
+
+    def users_following
+    if current_user == @user
+      "<h3>Your followers</h3>"
+    else
+      "<h3>#{your_page(@user).chomp("Page")} followers</h3>"
+  end
+  end
+
 end

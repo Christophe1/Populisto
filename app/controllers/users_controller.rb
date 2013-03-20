@@ -12,9 +12,9 @@ class UsersController < FrontEndController
     @reviews = @user.reviews
   end
 
-    def index
-    @review = Review.new
-  end
+  #   def index
+  #   @review = Review.new
+  # end
 
   def address_toggle    
     @user.update_attributes(:address_visible => params[:value]) if @user == current_user

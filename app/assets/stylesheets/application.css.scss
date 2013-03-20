@@ -1,7 +1,8 @@
 /*
- *= require_self
+
  *= require chosen
  *= require _bootstrap
+ *= require_self
  *= require email_invitation
 */
 
@@ -101,10 +102,35 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
         text-decoration: underline;
       }
     }
+
+    .search-box {
+      margin-top: 15px;
+      .control-group.grouped_chosen {
+        float: left;
+        display: inline;
+        width: 540px;
+
+        .control-label {
+          display: block;
+          float: none;
+          width: auto;
+        }
+        #review_search_ids_chzn {
+          margin-left: -25px;
+        }
+      }
+      .search-button {
+        float: right;
+        margin-right: 48px;
+        margin-top: 28px;
+      }
+    }
+
     @include clearfix();
   }
 
   @include clearfix();
+
 }
 
 /* css details for the list on the login - sign up page */
@@ -258,7 +284,8 @@ font-weight: bold;
   border-style: solid;
 } */
 
-/* the maps page; user selects their location */
+/*---------------------------------START OF ADRESS SELECTION ON MAP CSS--------------------------*/
+
 
 body {
 
@@ -336,7 +363,7 @@ body {
 
 }
 
-
+/*---------------------------------END OF ADRESS SELECTION ON MAP CSS--------------------------*/
 
 
 .control-group.chosen {
@@ -378,22 +405,12 @@ body {
     }
   }
 
+
+
   .search-area {
     width: 640px;
     margin: 10px auto;
-    .search-box {
-      margin-top: 15px;
-      .control-group.chosen {
-        float: left;
-        display: inline;
-        width: 540px;
 
-      }
-      .search-button {
-        float: right;
-        margin-right: 48px;
-      }
-    }
   }
 
   .area {
@@ -795,9 +812,12 @@ color: blue;
         float: left;
         .avatar {
           float: left;
+          padding-right: 5px;
+          padding-top: 20px;
+          padding-left: 10px;
         }
         .user-name {
-          margin: 10px 0px 0px 5px;
+          margin: 25px 0px 0px 5px;
         }
       }
       .follow_form {
@@ -818,5 +838,6 @@ color: blue;
 .follow_form {
   .btn {
     width: 100px;
+    margin-bottom: 30px;
   }
 }

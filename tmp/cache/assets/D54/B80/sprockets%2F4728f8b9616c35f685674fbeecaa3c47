@@ -1,5 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"Éè{"content_type"application/javascript"dependency_paths[{"
-mtime"2013-01-22T18:03:43+00:00"digest"%59321673c56810e244d9e1831eda1d24"	path"2$root/app/assets/javascripts/chosen.jquery.js"source"Lç// Chosen, a Select Box Enhancer for jQuery and Protoype
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"Éè{"_version"%9f3b95dd7ea3030dc35985c0a8020862"required_paths["2$root/app/assets/javascripts/chosen.jquery.js"dependency_digest"%5f093323a6df0c58fed3605dab3b5e3e"lengthiLç"dependency_paths[{"	path"2$root/app/assets/javascripts/chosen.jquery.js"
+mtime"2013-03-13T20:52:54+00:00"digest"%59321673c56810e244d9e1831eda1d24"pathname"2$root/app/assets/javascripts/chosen.jquery.js"logical_path"chosen.jquery.js"
+class"ProcessedAsset"content_type"application/javascript"source"Lç// Chosen, a Select Box Enhancer for jQuery and Protoype
 // by Patrick Filler for Harvest, http://getharvest.com
 // 
 // Version 0.9.8
@@ -1004,5 +1005,4 @@ Copyright (c) 2011 by Harvest
 
 }).call(this);
 "
-mtime"2013-01-22T18:03:43+00:00"dependency_digest"%5f093323a6df0c58fed3605dab3b5e3e"
-class"ProcessedAsset"_version"%9f3b95dd7ea3030dc35985c0a8020862"required_paths["2$root/app/assets/javascripts/chosen.jquery.js"pathname"2$root/app/assets/javascripts/chosen.jquery.js"digest"%59321673c56810e244d9e1831eda1d24"lengthiLç"logical_path"chosen.jquery.js:@created_atf1361489967.1124589 2á:@expires_in0
+mtime"2013-03-13T20:52:54+00:00"digest"%59321673c56810e244d9e1831eda1d24:@created_atf1363207981.8201611 }Ö:@expires_in0

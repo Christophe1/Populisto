@@ -4,12 +4,15 @@
   </div>
   
   <div class="following_list">
-    <h4>Following</h4>
+
+    <%= users_followers.html_safe %>
+
     <%= render @following %>
   </div>
 
   <div class="followers_list" >
-    <h4>Followers</h4>
+    <%= users_following.html_safe %>
+
     <%= render @followers %>
   </div>
 

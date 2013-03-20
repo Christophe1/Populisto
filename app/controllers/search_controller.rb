@@ -1,3 +1,7 @@
+
+#maybe all of this file can be deleted, because I've copied the methods
+#into the users_controller.rb. Hopefully it's redundant now, because I want
+#it to be - search is to be done from the header.
 class SearchController < FrontEndController
 
   before_filter :with_google_maps_api
@@ -35,6 +39,9 @@ class SearchController < FrontEndController
     params[:review][:search_ids].reject!(&:blank?)
   end
 
+#I added the method below to the users_controller, 
+#updating for search box in the header,
+#so maybe it can be deleted
   def load_data_for_checkbox
     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }    
     users_in_my_area = User.within(default_range, :origin => current_user)
@@ -51,7 +58,9 @@ class SearchController < FrontEndController
              [I18n.t('search.group.following_in'), following],
              [I18n.t('search.group.other_people'), other]]
   end
-
+#I added the method below to the users_controller, 
+#updating for search box in the header,
+#so maybe it can be deleted
   def default_range
     20
   end

@@ -1,10 +1,19 @@
 <div class='find-something'>
 
   <div class="greetings">
-    <%= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
-    <%= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%#= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
+    <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
   </div>
-
+  <br>
+  <br>
+    <%= link_to ("Go here", "http://www.rosk.com/") %>
+    <%= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
 
   <div class="search-area">
 
@@ -39,7 +48,7 @@
 
   function initialize_google_maps() {
     var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
-    var zoom = <%#= @kms_range %> > 10 ? 10 : 11;
+    var zoom = <%= @kms_range %> > 10 ? 10 : 11;
     var myOptions = {
         zoom: zoom,
         center: currentlatlng,
@@ -57,7 +66,7 @@
         fillOpacity: 0,
         strokeWeight: 2,
         strokeOpacity: 0.7,
-        radius: <%#= @kms_range %>*1000,
+        radius: <%= @kms_range %>*1000,
     });
     circle.bindTo('center', marker, 'position');
 
@@ -79,11 +88,11 @@
   }
 
   function initialize_markers() {
-    <%# (@reviews || []).each do |r| %>
-      <%# next unless r.lat && r.lng %>
-      position = new google.maps.LatLng(<%#= r.lat %>, <%#= r.lng %>);
+    <% (@reviews || []).each do |r| %>
+      <% next unless r.lat && r.lng %>
+      position = new google.maps.LatLng(<%= r.lat %>, <%= r.lng %>);
       add_marker(position);
-    <%# end %>
+    <% end %>
   }
 
   $(function() {
