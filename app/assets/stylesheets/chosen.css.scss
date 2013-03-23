@@ -5,7 +5,7 @@
 @import "compass/css3";
 
 .chzn-container {
-  font-size: 13px;
+  font-size: 16px;
   position: relative;
   display: inline-block;
   zoom: 1;
@@ -179,6 +179,7 @@
 
     .default {
       color: #999;
+      width:580px !important;
     }
   }
 

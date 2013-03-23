@@ -32,7 +32,7 @@ en:
     time_ago: "%{time} ago"
     user_indicator: "Hello, %{user}."
     me: "Me"
-    your_page: "Your Page"
+    your_page: "Your Address Book"
     s_page: "'s Page"
     s_area_details: "'s area details: "
     location_hidden: "location is hidden"
@@ -107,7 +107,7 @@ en:
     new_title: "Tell us about a film you have seen in the past year:"
     edit_title: "Edit film details:"
     film_comments: "What do you think about it?"
-    genres_hint: "Start typing to get suggestions"
+    genres_hint: "What are you looking for? Search the address books of people in your area."
     first_film_success: "Thank you, %{user}. You can add more films if you wish. Or, see what films your friends watched."
     duplicate_success: "Film was added successfully."
     empty_text: "There is nothing on your Populisto! Page yet. Once you have found things or contacts of interest in your area, they will be stored here."
@@ -127,13 +127,13 @@ en:
     close_popup_text: 'Close'
     review_successfully_created: 'Review was successfully created'
     categories_selector_label: 'Categories'
-    categories_selector_placeholder: 'Start typing to get suggestions'
+    categories_selector_placeholder: 'What are you looking for? Search the address books of people in your area.'
   find_something:
     greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto.'
     change_range_20: 'Change to 10km?'
     change_range_10: 'Change to 20km?'
-    search_help: 'What are you looking for? Select from the list or start typing the name of someone to see their page.'
-    search_placeholder: 'Start typing to get suggestions.'
+    search_help: 'What are you looking for? Search the address books of people in your area.'
+    search_placeholder: 'What are you looking for? Search the address books of people in your area.'
     search_label: 'Category'
     button_text: 'Go'
     my_area_title: 'In Your Area:'

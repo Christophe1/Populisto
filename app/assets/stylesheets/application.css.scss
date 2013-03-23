@@ -1,7 +1,6 @@
 /*
-
- *= require chosen
  *= require _bootstrap
+ *= require chosen
  *= require_self
  *= require email_invitation
 */
@@ -117,6 +116,7 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
         }
         #review_search_ids_chzn {
           margin-left: -25px;
+          width: 580px !important;
         }
       }
       .search-button {
@@ -630,7 +630,7 @@ margin-top:80px;
   .user-info {
 
     .your_page_label {
-      font-size: 18px;
+      font-size: 26px;
     }
     .avatar {
       height: 120px;
