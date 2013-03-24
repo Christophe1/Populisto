@@ -116,7 +116,7 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
         }
         #review_search_ids_chzn {
           margin-left: -25px;
-          width: 580px !important;
+          width: 550px !important;
         }
       }
       .search-button {
@@ -134,10 +134,17 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
 }
 
 /* css details for the list on the login - sign up page */
+
+.populisto_logo2 {
+margin: 0 auto;
+width: 280px;
+position: relative;
+}
+
 .features {
   list-style:none;
   float: left;
-  margin: 6em 0 0 6em;
+  margin: 9em 0 0 18em;
   }
   .features li {
   margin: 8px 0 2em;
@@ -161,11 +168,11 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
 
   
   .iPad-promo {
-  width:520px;
+  width:380px;
   list-style:none;
   float:left;
   border: 1px solid #ebebeb;
-  margin: 330px 0 0 -260px;
+  margin: 330px 0 0 -350px;
   padding: 20px;
   }
   
@@ -184,8 +191,8 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
   } 
   
   .iPad-promo .img2 {
-  margin-left: 450px;
-  margin-top: -42px
+  margin-left: 340px;
+  margin-top: -60px
   } 
 
 
@@ -194,7 +201,7 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
 /*Facebook login, on the home page */
 
   .login-page {
-  margin: 30px 0px 0px 800px;
+  margin: 30px 0px 0px 650px;
   width: 400px;
 
 
@@ -301,7 +308,7 @@ body {
   .page-content {
     background-color: #ffffff;
     padding: 10px;
-    margin-top: 80px; 
+    margin-top: 30px; 
     /* @include border-radius(7px, 7px); */
   }
 
@@ -831,6 +838,7 @@ color: blue;
 
 .select-label {
   float: right;
+  padding-right: 50px;
   color: #A8A8A8;
   font-style: italic;
 }

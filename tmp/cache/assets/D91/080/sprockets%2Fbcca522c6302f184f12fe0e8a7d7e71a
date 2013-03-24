@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"§¾{"source"N½/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"j¿{"source"¾/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -5074,11 +5074,12 @@ a.label:hover, a.badge:hover {
   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   z-index: 1010;
+  width: 550px !important;
 }
 
 /* @end */
 /* @group Single Chosen */
-/* line 32, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 33, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-single {
   background-color: #ffffff;
   border: 1px solid #aaaaaa;
@@ -5109,11 +5110,11 @@ a.label:hover, a.badge:hover {
   color: #444444;
   text-decoration: none;
 }
-/* line 50, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 51, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-default {
   color: #999;
 }
-/* line 55, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 56, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-single span {
   margin-right: 26px;
   display: block;
@@ -5123,7 +5124,7 @@ a.label:hover, a.badge:hover {
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-/* line 65, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 66, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-single abbr {
   display: block;
   position: absolute;
@@ -5134,15 +5135,15 @@ a.label:hover, a.badge:hover {
   font-size: 1px;
   background: url(/assets/chosen-sprite.png) right top no-repeat;
 }
-/* line 74, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 75, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-single abbr:hover {
   background-position: right -11px;
 }
-/* line 80, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 81, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single.chzn-disabled abbr:hover {
   background-position: right top;
 }
-/* line 84, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 85, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-single div {
   position: absolute;
   right: 0;
@@ -5151,14 +5152,14 @@ a.label:hover, a.badge:hover {
   height: 100%;
   width: 18px;
 }
-/* line 92, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 93, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-single div b {
   background: url(/assets/chosen-sprite.png) no-repeat 0 0;
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 100, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 101, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-search {
   padding: 3px 4px;
   position: relative;
@@ -5166,7 +5167,7 @@ a.label:hover, a.badge:hover {
   white-space: nowrap;
   z-index: 1010;
 }
-/* line 107, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 108, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-search input {
   background: white url(/assets/chosen-sprite.png) no-repeat 100% -22px;
   background: url(/assets/chosen-sprite.png) no-repeat 100% -22px, -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
@@ -5182,7 +5183,7 @@ a.label:hover, a.badge:hover {
   font-family: sans-serif;
   font-size: 1em;
 }
-/* line 124, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 125, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single .chzn-drop {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -5193,14 +5194,14 @@ a.label:hover, a.badge:hover {
 }
 
 /* @end */
-/* line 136, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 137, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-single-nosearch input {
   position: absolute;
   left: -9000px;
 }
 
 /* @group Multi Chosen */
-/* line 143, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 144, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices {
   background-color: white;
   border: 1px solid #cccccc;
@@ -5217,18 +5218,18 @@ a.label:hover, a.badge:hover {
   height: 1%;
   position: relative;
 }
-/* line 155, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 156, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices li {
   float: left;
   list-style: none;
 }
-/* line 160, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 161, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-field {
   white-space: nowrap;
   margin: 0;
   padding: 0;
 }
-/* line 165, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 166, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-field input {
   color: #666;
   background: transparent !important;
@@ -5244,12 +5245,12 @@ a.label:hover, a.badge:hover {
   -o-box-shadow: none;
   box-shadow: none;
 }
-/* line 181, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 182, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-field .default {
   color: #999;
-  width: 580px !important;
+  width: 550px !important;
 }
-/* line 187, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 188, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-choice {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5276,11 +5277,11 @@ a.label:hover, a.badge:hover {
   position: relative;
   cursor: default;
 }
-/* line 214, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 215, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-choice-focus {
   background: #d4d4d4;
 }
-/* line 218, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 219, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-choice .search-choice-close {
   display: block;
   position: absolute;
@@ -5291,18 +5292,18 @@ a.label:hover, a.badge:hover {
   font-size: 1px;
   background: url(/assets/chosen-sprite.png) right top no-repeat;
 }
-/* line 228, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 229, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-choice .search-choice-close:hover {
   background-position: right -11px;
 }
-/* line 233, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 234, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-choice-focus .search-choice-close {
   background-position: right -11px;
 }
 
 /* @end */
 /* @group Results */
-/* line 242, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 243, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results {
   margin: 0 4px 4px 0;
   max-height: 240px;
@@ -5313,13 +5314,13 @@ a.label:hover, a.badge:hover {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 252, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 253, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-results {
   margin: -1px 0 0;
   padding: 0;
 }
 
-/* line 258, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 259, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results li {
   display: none;
   line-height: 15px;
@@ -5327,12 +5328,12 @@ a.label:hover, a.badge:hover {
   margin: 0;
   list-style: none;
 }
-/* line 266, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 267, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results .active-result {
   cursor: pointer;
   display: list-item;
 }
-/* line 271, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 272, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results .highlighted {
   background-color: #3875d7;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
@@ -5344,37 +5345,37 @@ a.label:hover, a.badge:hover {
   background-image: linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   color: #fff;
 }
-/* line 283, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 284, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results li em {
   background: #feffde;
   font-style: normal;
 }
-/* line 288, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 289, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results .highlighted em {
   background: transparent;
 }
-/* line 292, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 293, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results .no-results {
   background: #f4f4f4;
   display: list-item;
 }
-/* line 297, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 298, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results .group-result {
   cursor: default;
   color: #999;
   font-weight: bold;
 }
-/* line 303, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 304, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results .group-option {
   padding-left: 15px;
 }
 
-/* line 308, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 309, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .result-selected {
   display: none;
 }
 
-/* line 313, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 314, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results-scroll {
   background: white;
   margin: 0 4px;
@@ -5384,29 +5385,29 @@ a.label:hover, a.badge:hover {
   /* This should by dynamic with js */
   z-index: 1;
 }
-/* line 322, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 323, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results-scroll span {
   display: inline-block;
   height: 17px;
   text-indent: -5000px;
   width: 9px;
 }
-/* line 329, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 330, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results-scroll-down {
   bottom: 0;
 }
-/* line 331, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 332, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results-scroll-down span {
   background: url(/assets/chosen-sprite.png) no-repeat -4px -3px;
 }
-/* line 336, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 337, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container .chzn-results-scroll-up span {
   background: url(/assets/chosen-sprite.png) no-repeat -22px -3px;
 }
 
 /* @end */
 /* @group Active  */
-/* line 346, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 347, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-active .chzn-single {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -5414,7 +5415,7 @@ a.label:hover, a.badge:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border: 1px solid #5897fb;
 }
-/* line 354, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 355, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-active .chzn-single-with-drop {
   border: 1px solid #aaa;
   -webkit-box-shadow: 0 1px 0 #fff inset;
@@ -5436,16 +5437,16 @@ a.label:hover, a.badge:hover {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 375, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 376, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-active .chzn-single-with-drop div {
   background: transparent;
   border-left: none;
 }
-/* line 379, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 380, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-active .chzn-single-with-drop div b {
   background-position: -18px 1px;
 }
-/* line 385, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 386, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-active .chzn-choices {
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
@@ -5455,83 +5456,83 @@ a.label:hover, a.badge:hover {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 391, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 392, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-active .chzn-choices .search-field input {
   color: #111 !important;
 }
 
 /* @end */
 /* @group Disabled Support */
-/* line 401, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 402, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-disabled {
   cursor: default;
   opacity: 0.5 !important;
 }
-/* line 404, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 405, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-disabled .chzn-single, .chzn-disabled .chzn-choices .search-choice-close {
   cursor: default;
 }
 
 /* @group Right to Left */
-/* line 411, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 412, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl {
   text-align: right;
 }
-/* line 413, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 414, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-single {
   padding: 0 8px 0 0;
   overflow: visible;
 }
-/* line 416, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 417, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-single span {
   margin-left: 26px;
   margin-right: 0;
   direction: rtl;
 }
-/* line 422, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 423, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-single div {
   left: 3px;
   right: auto;
 }
-/* line 427, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 428, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-single abbr {
   left: 26px;
   right: auto;
 }
-/* line 434, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 435, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-choices .search-field input {
   direction: rtl;
 }
-/* line 438, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 439, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-choices li {
   float: right;
 }
-/* line 442, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 443, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-choices .search-choice {
   padding: 3px 5px 3px 19px;
   margin: 3px 5px 3px 0;
 }
-/* line 445, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 446, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-choices .search-choice .search-choice-close {
   left: 4px;
   right: auto;
   background-position: right top;
 }
-/* line 453, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 454, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl.chzn-container-single .chzn-results {
   margin: 0 0 4px 4px;
   padding: 0 4px 0 0;
 }
-/* line 458, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 459, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-results .group-option {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 463, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 464, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl.chzn-container-active div {
   border-right: none;
 }
-/* line 467, ../../app/assets/stylesheets/chosen.css.scss */
+/* line 468, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-rtl .chzn-search input {
   background: white url(/assets/chosen-sprite.png) no-repeat -38px -22px;
   background: url(/assets/chosen-sprite.png) no-repeat -38px -22px, -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
@@ -5668,7 +5669,7 @@ a.label:hover, a.badge:hover {
 /* line 118, ../../app/assets/stylesheets/application.css.scss */
 .header .second-line .search-box .control-group.grouped_chosen #review_search_ids_chzn {
   margin-left: -25px;
-  width: 580px !important;
+  width: 550px !important;
 }
 /* line 123, ../../app/assets/stylesheets/application.css.scss */
 .header .second-line .search-box .search-button {
@@ -5696,78 +5697,85 @@ a.label:hover, a.badge:hover {
 }
 
 /* css details for the list on the login - sign up page */
-/* line 138, ../../app/assets/stylesheets/application.css.scss */
+/* line 139, ../../app/assets/stylesheets/application.css.scss */
+.populisto_logo2 {
+  margin: 0 auto;
+  width: 280px;
+  position: relative;
+}
+
+/* line 145, ../../app/assets/stylesheets/application.css.scss */
 .features {
   list-style: none;
   float: left;
-  margin: 6em 0 0 6em;
+  margin: 9em 0 0 18em;
 }
 
-/* line 143, ../../app/assets/stylesheets/application.css.scss */
+/* line 150, ../../app/assets/stylesheets/application.css.scss */
 .features li {
   margin: 8px 0 2em;
 }
 
-/* line 146, ../../app/assets/stylesheets/application.css.scss */
+/* line 153, ../../app/assets/stylesheets/application.css.scss */
 .features img {
   float: left;
   margin: 0px;
 }
 
-/* line 150, ../../app/assets/stylesheets/application.css.scss */
+/* line 157, ../../app/assets/stylesheets/application.css.scss */
 .features p {
   margin: 0 0 0 68px;
 }
 
-/* line 153, ../../app/assets/stylesheets/application.css.scss */
+/* line 160, ../../app/assets/stylesheets/application.css.scss */
 .features .title {
   font-size: 16px;
   margin-bottom: .3em;
 }
 
-/* line 158, ../../app/assets/stylesheets/application.css.scss */
+/* line 165, ../../app/assets/stylesheets/application.css.scss */
 .features img2 {
   float: right;
   margin: 5px 0 0;
 }
 
-/* line 164, ../../app/assets/stylesheets/application.css.scss */
+/* line 171, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo {
-  width: 520px;
+  width: 380px;
   list-style: none;
   float: left;
   border: 1px solid #ebebeb;
-  margin: 330px 0 0 -260px;
+  margin: 330px 0 0 -350px;
   padding: 20px;
 }
 
-/* line 173, ../../app/assets/stylesheets/application.css.scss */
+/* line 180, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo img {
   float: left;
   margin-right: 18px;
 }
 
-/* line 178, ../../app/assets/stylesheets/application.css.scss */
+/* line 185, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo .title {
   font-size: 16px;
   margin-bottom: .2em;
 }
 
-/* line 183, ../../app/assets/stylesheets/application.css.scss */
+/* line 190, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo p {
   font-size: 1em;
 }
 
-/* line 187, ../../app/assets/stylesheets/application.css.scss */
+/* line 194, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo .img2 {
-  margin-left: 450px;
-  margin-top: -42px;
+  margin-left: 340px;
+  margin-top: -60px;
 }
 
 /*Facebook login, on the home page */
-/* line 197, ../../app/assets/stylesheets/application.css.scss */
+/* line 204, ../../app/assets/stylesheets/application.css.scss */
 .login-page {
-  margin: 30px 0px 0px 800px;
+  margin: 30px 0px 0px 650px;
   width: 400px;
   border: 1px solid #eee;
   -webkit-border-radius: 10px;
@@ -5776,24 +5784,24 @@ a.label:hover, a.badge:hover {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 202, ../../app/assets/stylesheets/application.css.scss */
+/* line 209, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section {
   text-align: center;
   position: relative;
   padding: 15px 15px 0;
 }
-/* line 206, ../../app/assets/stylesheets/application.css.scss */
+/* line 213, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section .fb-login {
   width: 315px;
   margin: 15px auto;
   display: block;
 }
-/* line 211, ../../app/assets/stylesheets/application.css.scss */
+/* line 218, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section .fb-notes {
   font-size: 12px;
   margin-bottom: 20px;
 }
-/* line 215, ../../app/assets/stylesheets/application.css.scss */
+/* line 222, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section .or-devider {
   position: absolute;
   bottom: -36px;
@@ -5810,41 +5818,41 @@ a.label:hover, a.badge:hover {
   font-size: 17px;
   line-height: 26px;
 }
-/* line 233, ../../app/assets/stylesheets/application.css.scss */
+/* line 240, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in {
   text-align: center;
 }
-/* line 236, ../../app/assets/stylesheets/application.css.scss */
+/* line 243, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in p {
   font-size: 20px;
 }
-/* line 240, ../../app/assets/stylesheets/application.css.scss */
+/* line 247, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in .create-account-note {
   color: red;
 }
-/* line 243, ../../app/assets/stylesheets/application.css.scss */
+/* line 250, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in .create-account-note a, .login-page .sign-in .create-account-note a:visited {
   color: red;
   text-decoration: underline;
 }
-/* line 249, ../../app/assets/stylesheets/application.css.scss */
+/* line 256, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in .not-on-facebook-note a {
   color: blue;
 }
 
 /*the yes and no links on the info box, on the google map page, straight after registration */
-/* line 262, ../../app/assets/stylesheets/application.css.scss */
+/* line 269, ../../app/assets/stylesheets/application.css.scss */
 #correct_area {
   font-weight: bold;
 }
 
-/* line 266, ../../app/assets/stylesheets/application.css.scss */
+/* line 273, ../../app/assets/stylesheets/application.css.scss */
 #no_link {
   float: left;
   font-weight: bold;
 }
 
-/* line 271, ../../app/assets/stylesheets/application.css.scss */
+/* line 278, ../../app/assets/stylesheets/application.css.scss */
 #yes_link {
   float: right;
   font-weight: bold;
@@ -5862,23 +5870,23 @@ a.label:hover, a.badge:hover {
   border-style: solid;
 } */
 /*---------------------------------START OF ADRESS SELECTION ON MAP CSS--------------------------*/
-/* line 291, ../../app/assets/stylesheets/application.css.scss */
+/* line 298, ../../app/assets/stylesheets/application.css.scss */
 body {
   background-color: #eee !important;
 }
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
+/* line 304, ../../app/assets/stylesheets/application.css.scss */
 body > .container {
   width: 100%;
   padding: 0px 0 50px 0;
 }
-/* line 302, ../../app/assets/stylesheets/application.css.scss */
+/* line 309, ../../app/assets/stylesheets/application.css.scss */
 body .page-content {
   background-color: #ffffff;
   padding: 10px;
-  margin-top: 80px;
+  margin-top: 30px;
   /* @include border-radius(7px, 7px); */
 }
-/* line 311, ../../app/assets/stylesheets/application.css.scss */
+/* line 318, ../../app/assets/stylesheets/application.css.scss */
 body .map-page {
   width: 800px;
   margin: 0 auto;
@@ -5890,7 +5898,7 @@ body .map-page {
      float: right;
    } */
 }
-/* line 317, ../../app/assets/stylesheets/application.css.scss */
+/* line 324, ../../app/assets/stylesheets/application.css.scss */
 body .map-page .greetings {
   width: 60%;
   margin: 10px auto 30px;
@@ -5900,7 +5908,7 @@ body .map-page .greetings {
   font-size: 20px;
   line-height: 26px;
 }
-/* line 327, ../../app/assets/stylesheets/application.css.scss */
+/* line 334, ../../app/assets/stylesheets/application.css.scss */
 body .map-page .address-area {
   margin: 10px auto;
   width: 97%;
@@ -5908,7 +5916,7 @@ body .map-page .address-area {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 334, ../../app/assets/stylesheets/application.css.scss */
+/* line 341, ../../app/assets/stylesheets/application.css.scss */
 body .map-page .address-area #address_autocomplete {
   width: 60%;
   height: 30px;
@@ -5917,7 +5925,7 @@ body .map-page .address-area #address_autocomplete {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 345, ../../app/assets/stylesheets/application.css.scss */
+/* line 352, ../../app/assets/stylesheets/application.css.scss */
 body .map-page #map_canvas {
   height: 400px;
   width: 600px;
@@ -5927,18 +5935,18 @@ body .map-page #map_canvas {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 353, ../../app/assets/stylesheets/application.css.scss */
+/* line 360, ../../app/assets/stylesheets/application.css.scss */
 body .map-page #map_canvas img {
   max-width: none;
 }
 
 /*---------------------------------END OF ADRESS SELECTION ON MAP CSS--------------------------*/
-/* line 371, ../../app/assets/stylesheets/application.css.scss */
+/* line 378, ../../app/assets/stylesheets/application.css.scss */
 .control-group.chosen .help-inline {
   margin-top: -20px;
 }
 
-/* line 378, ../../app/assets/stylesheets/application.css.scss */
+/* line 385, ../../app/assets/stylesheets/application.css.scss */
 .control-group.error .chzn-container input, .control-group.error .chzn-container input:focus {
   border: none;
   border-color: none;
@@ -5951,80 +5959,80 @@ body .map-page #map_canvas img {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 386, ../../app/assets/stylesheets/application.css.scss */
+/* line 393, ../../app/assets/stylesheets/application.css.scss */
 .control-group.error .chzn-container-multi .chzn-choices {
   color: #b94a48;
   border-color: #b94a48;
 }
 
-/* line 394, ../../app/assets/stylesheets/application.css.scss */
+/* line 401, ../../app/assets/stylesheets/application.css.scss */
 .find-something .greetings {
   width: 60%;
   margin: 5px auto;
   text-align: center;
 }
-/* line 400, ../../app/assets/stylesheets/application.css.scss */
+/* line 407, ../../app/assets/stylesheets/application.css.scss */
 .find-something #map_canvas {
   height: 380px;
   width: 470px;
   margin: 0 auto;
 }
-/* line 404, ../../app/assets/stylesheets/application.css.scss */
+/* line 411, ../../app/assets/stylesheets/application.css.scss */
 .find-something #map_canvas img {
   max-width: none;
 }
-/* line 411, ../../app/assets/stylesheets/application.css.scss */
+/* line 418, ../../app/assets/stylesheets/application.css.scss */
 .find-something .search-area {
   width: 640px;
   margin: 10px auto;
 }
-/* line 417, ../../app/assets/stylesheets/application.css.scss */
+/* line 424, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area {
   margin: 0 auto;
   width: 870px;
 }
-/* line 422, ../../app/assets/stylesheets/application.css.scss */
+/* line 429, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area h4 {
   margin: 10px 0 10px 10px;
 }
-/* line 426, ../../app/assets/stylesheets/application.css.scss */
+/* line 433, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review {
   background-color: #F5F5F5;
 }
-/* line 430, ../../app/assets/stylesheets/application.css.scss */
+/* line 437, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .left-part {
   width: 70px;
   float: left;
   padding: 10px;
 }
-/* line 436, ../../app/assets/stylesheets/application.css.scss */
+/* line 443, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .right-part {
   float: left;
   padding: 10px;
   width: 758px;
 }
-/* line 441, ../../app/assets/stylesheets/application.css.scss */
+/* line 448, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .right-part .review-text {
   padding: 10px 0;
 }
 
-/* line 454, ../../app/assets/stylesheets/application.css.scss */
+/* line 461, ../../app/assets/stylesheets/application.css.scss */
 .add-to-my-page {
   float: right;
   font-size: 10px;
 }
 
-/* line 459, ../../app/assets/stylesheets/application.css.scss */
+/* line 466, ../../app/assets/stylesheets/application.css.scss */
 .time-ago {
   font-size: 10px;
 }
 
-/* line 463, ../../app/assets/stylesheets/application.css.scss */
+/* line 470, ../../app/assets/stylesheets/application.css.scss */
 .grey {
   color: #777;
 }
 
-/* line 468, ../../app/assets/stylesheets/application.css.scss */
+/* line 475, ../../app/assets/stylesheets/application.css.scss */
 #my_films .actions {
   padding: 18px 0;
   margin-bottom: 18px;
@@ -6043,7 +6051,7 @@ body .map-page #map_canvas img {
 }
 
 /* for FireFox */
-/* line 480, ../../app/assets/stylesheets/application.css.scss */
+/* line 487, ../../app/assets/stylesheets/application.css.scss */
 input.btn::-moz-focus-inner,
 button.btn::-moz-focus-inner,
 a.btn::-moz-focus-inner {
@@ -6051,7 +6059,7 @@ a.btn::-moz-focus-inner {
 }
 
 /* for IE8 */
-/* line 487, ../../app/assets/stylesheets/application.css.scss */
+/* line 494, ../../app/assets/stylesheets/application.css.scss */
 input.btn:focus,
 button.btn:focus,
 a.btn:focus {
@@ -6059,7 +6067,7 @@ a.btn:focus {
 }
 
 /* IE */
-/* line 492, ../../app/assets/stylesheets/application.css.scss */
+/* line 499, ../../app/assets/stylesheets/application.css.scss */
 .legend {
   display: block;
   width: 100%;
@@ -6071,20 +6079,20 @@ a.btn:focus {
   border: 0;
   border-bottom: 1px solid #eee;
 }
-/* line 504, ../../app/assets/stylesheets/application.css.scss */
+/* line 511, ../../app/assets/stylesheets/application.css.scss */
 .legend small {
   font-size: 13.5px;
   color: #999999;
 }
 
-/* line 511, ../../app/assets/stylesheets/application.css.scss */
+/* line 518, ../../app/assets/stylesheets/application.css.scss */
 .legend + .control-group,
 .control-group.first {
   margin-top: 18px;
   -webkit-margin-top-collapse: separate;
 }
 
-/* line 516, ../../app/assets/stylesheets/application.css.scss */
+/* line 523, ../../app/assets/stylesheets/application.css.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -6099,14 +6107,14 @@ a.btn:focus {
 }
 
 /* Overlay */
-/* line 522, ../../app/assets/stylesheets/application.css.scss */
+/* line 529, ../../app/assets/stylesheets/application.css.scss */
 #simplemodal-overlay {
   background-color: #aaa;
   cursor: wait;
 }
 
 /* Container */
-/* line 527, ../../app/assets/stylesheets/application.css.scss */
+/* line 534, ../../app/assets/stylesheets/application.css.scss */
 #simplemodal-container {
   width: 550px;
   height: 350px;
@@ -6119,42 +6127,42 @@ a.btn:focus {
   border-radius: 12px;
 }
 
-/* line 537, ../../app/assets/stylesheets/application.css.scss */
+/* line 544, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-text {
   margin: 10px auto 30px;
   width: 500px;
 }
-/* line 541, ../../app/assets/stylesheets/application.css.scss */
+/* line 548, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form {
   width: 410px;
   margin: 0 auto;
 }
-/* line 548, ../../app/assets/stylesheets/application.css.scss */
+/* line 555, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs .control-group.chosen .help-inline {
   margin-top: 3px;
 }
-/* line 551, ../../app/assets/stylesheets/application.css.scss */
+/* line 558, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs input, #review-page .review-form .inputs textarea, #review-page .review-form .inputs select {
   width: 410px;
 }
-/* line 554, ../../app/assets/stylesheets/application.css.scss */
+/* line 561, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs textarea {
   height: 200px;
 }
-/* line 557, ../../app/assets/stylesheets/application.css.scss */
+/* line 564, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs .review-comments-example {
   margin-top: -10px;
   display: block;
   margin-bottom: 15px;
 }
-/* line 564, ../../app/assets/stylesheets/application.css.scss */
+/* line 571, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .actions {
   width: 100px;
   margin: 0 auto;
   text-align: center;
   *zoom: 1;
 }
-/* line 569, ../../app/assets/stylesheets/application.css.scss */
+/* line 576, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .actions input, #review-page .review-form .actions a {
   display: inline-block;
 }
@@ -6167,22 +6175,22 @@ a.btn:focus {
 #review-page .review-form .actions:after {
   clear: both;
 }
-/* line 574, ../../app/assets/stylesheets/application.css.scss */
+/* line 581, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form #review_name, #review-page .review-form #review_phone, #review-page .review-form #review_address, #review-page .review-form #review_comment {
   width: 400px;
 }
 
-/* line 581, ../../app/assets/stylesheets/application.css.scss */
+/* line 588, ../../app/assets/stylesheets/application.css.scss */
 .perfect-review-example {
   padding: 10px;
 }
 
-/* line 585, ../../app/assets/stylesheets/application.css.scss */
+/* line 592, ../../app/assets/stylesheets/application.css.scss */
 #start_text {
   float: left;
 }
 
-/* line 591, ../../app/assets/stylesheets/application.css.scss */
+/* line 598, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section {
   background-color: #DFDFDF;
   padding: 15px;
@@ -6193,85 +6201,85 @@ a.btn:focus {
   -o-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
 }
-/* line 595, ../../app/assets/stylesheets/application.css.scss */
+/* line 602, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .explanation {
   text-align: center;
   margin: 7px;
   font-size: 14px;
 }
-/* line 601, ../../app/assets/stylesheets/application.css.scss */
+/* line 608, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .inputs input.string, .sign-in-section .inputs input.password {
   width: 360px;
   height: 28px;
   font-size: 18pt;
   padding: 15px 5px 5px 5px;
 }
-/* line 608, ../../app/assets/stylesheets/application.css.scss */
+/* line 615, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .actions {
   margin-left: 30%;
   /*text-align: right;*/
 }
-/* line 613, ../../app/assets/stylesheets/application.css.scss */
+/* line 620, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links {
   color: #848484;
   text-align: center;
 }
-/* line 616, ../../app/assets/stylesheets/application.css.scss */
+/* line 623, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links a {
   color: #848484;
 }
-/* line 620, ../../app/assets/stylesheets/application.css.scss */
+/* line 627, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links.centralized {
   text-align: center;
 }
 
-/* line 629, ../../app/assets/stylesheets/application.css.scss */
+/* line 636, ../../app/assets/stylesheets/application.css.scss */
 .users-page {
   margin-top: 80px;
 }
-/* line 633, ../../app/assets/stylesheets/application.css.scss */
+/* line 640, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .your_page_label {
   font-size: 26px;
 }
-/* line 636, ../../app/assets/stylesheets/application.css.scss */
+/* line 643, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .avatar {
   height: 120px;
   margin: 0 10px 10px 0;
   float: left;
 }
-/* line 641, ../../app/assets/stylesheets/application.css.scss */
+/* line 648, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .stats {
   width: 850px;
   margin: 7px 0px;
 }
-/* line 646, ../../app/assets/stylesheets/application.css.scss */
+/* line 653, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location .location-label {
   margin-bottom: 0px;
 }
-/* line 649, ../../app/assets/stylesheets/application.css.scss */
+/* line 656, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location .address-visible-toggle {
   float: left;
   margin-right: 5px;
 }
-/* line 653, ../../app/assets/stylesheets/application.css.scss */
+/* line 660, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location #share_label, .users-page .user-info #your_location #keep_private_label {
   float: left;
   margin: 1px 25px 0px 0px;
 }
-/* line 657, ../../app/assets/stylesheets/application.css.scss */
+/* line 664, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location #your_location_message {
   color: green;
 }
-/* line 664, ../../app/assets/stylesheets/application.css.scss */
+/* line 671, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb {
   position: relative;
 }
-/* line 668, ../../app/assets/stylesheets/application.css.scss */
+/* line 675, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb:hover {
   border-color: #0099CC;
   opacity: 0.9;
 }
-/* line 671, ../../app/assets/stylesheets/application.css.scss */
+/* line 678, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb:hover .edit_review_link {
   position: absolute;
   display: block;
@@ -6279,126 +6287,126 @@ a.btn:focus {
   right: 5px;
   color: #0099CC;
 }
-/* line 679, ../../app/assets/stylesheets/application.css.scss */
+/* line 686, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .edit_review_link {
   display: none;
 }
-/* line 682, ../../app/assets/stylesheets/application.css.scss */
+/* line 689, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .posted_at {
   color: #888888;
   font-style: italic;
   margin: 5px 0px;
 }
-/* line 687, ../../app/assets/stylesheets/application.css.scss */
+/* line 694, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .category_name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 692, ../../app/assets/stylesheets/application.css.scss */
+/* line 699, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment {
   dislay: table-row;
 }
-/* line 694, ../../app/assets/stylesheets/application.css.scss */
+/* line 701, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment .more-info {
   display: table-cell;
   width: 70px;
 }
-/* line 698, ../../app/assets/stylesheets/application.css.scss */
+/* line 705, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment .comment-content {
   display: table-cell;
   white-space: pre-line;
 }
-/* line 707, ../../app/assets/stylesheets/application.css.scss */
+/* line 714, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form form {
   margin: 0;
 }
-/* line 710, ../../app/assets/stylesheets/application.css.scss */
+/* line 717, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs {
   display: table-row;
 }
-/* line 712, ../../app/assets/stylesheets/application.css.scss */
+/* line 719, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs #except_comment {
   display: table-cell;
   width: 40%;
 }
-/* line 716, ../../app/assets/stylesheets/application.css.scss */
+/* line 723, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs #comment {
   padding-left: 30px;
 }
-/* line 720, ../../app/assets/stylesheets/application.css.scss */
+/* line 727, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form #review_name, .users-page .edit_review_form #review_phone, .users-page .edit_review_form #review_address {
   width: 333px;
 }
-/* line 723, ../../app/assets/stylesheets/application.css.scss */
+/* line 730, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form select {
   width: 343px;
 }
-/* line 727, ../../app/assets/stylesheets/application.css.scss */
+/* line 734, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_review_info .edit-label {
   display: block;
 }
-/* line 731, ../../app/assets/stylesheets/application.css.scss */
+/* line 738, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form textarea {
   width: 100%;
   height: 195px;
 }
-/* line 735, ../../app/assets/stylesheets/application.css.scss */
+/* line 742, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .cancel-edit {
   position: absolute;
   top: 5px;
   right: 5px;
   color: #0099CC;
 }
-/* line 742, ../../app/assets/stylesheets/application.css.scss */
+/* line 749, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .control-group {
   display: inline;
 }
-/* line 744, ../../app/assets/stylesheets/application.css.scss */
+/* line 751, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .control-group .controls {
   display: inherit;
 }
-/* line 748, ../../app/assets/stylesheets/application.css.scss */
+/* line 755, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form span#address_validation {
   color: #B94A48;
 }
-/* line 752, ../../app/assets/stylesheets/application.css.scss */
+/* line 759, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group {
   margin-left: 25px;
 }
-/* line 754, ../../app/assets/stylesheets/application.css.scss */
+/* line 761, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .save_review {
   float: right;
   margin-left: inherit;
   margin-right: -10px;
 }
-/* line 759, ../../app/assets/stylesheets/application.css.scss */
+/* line 766, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .delete_review {
   float: right;
   margin-left: inherit;
 }
-/* line 763, ../../app/assets/stylesheets/application.css.scss */
+/* line 770, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .keep_private_label {
   float: right;
   margin: 5px 0px 0px 5px;
 }
-/* line 767, ../../app/assets/stylesheets/application.css.scss */
+/* line 774, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .keep_private_button {
   float: right;
   margin: 7px 0px 0px 25px;
 }
-/* line 771, ../../app/assets/stylesheets/application.css.scss */
+/* line 778, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .share_label {
   float: right;
   margin: 5px 0px 0px 5px;
 }
-/* line 775, ../../app/assets/stylesheets/application.css.scss */
+/* line 782, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .share_button {
   float: right;
   margin: 7px 0px 0px 25px;
 }
 
-/* line 786, ../../app/assets/stylesheets/application.css.scss */
+/* line 793, ../../app/assets/stylesheets/application.css.scss */
 #popup_close {
   position: absolute;
   color: #0099CC;
@@ -6407,7 +6415,7 @@ a.btn:focus {
   cursor: pointer;
 }
 
-/* line 794, ../../app/assets/stylesheets/application.css.scss */
+/* line 801, ../../app/assets/stylesheets/application.css.scss */
 #validation {
   display: none;
   position: absolute;
@@ -6416,47 +6424,48 @@ a.btn:focus {
   color: red;
 }
 
-/* line 802, ../../app/assets/stylesheets/application.css.scss */
+/* line 809, ../../app/assets/stylesheets/application.css.scss */
 .info-windows {
   color: blue;
 }
 
-/* line 807, ../../app/assets/stylesheets/application.css.scss */
+/* line 814, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list, .following-followers-popup .followers_list {
   width: 50%;
   float: left;
 }
-/* line 811, ../../app/assets/stylesheets/application.css.scss */
+/* line 818, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info, .following-followers-popup .followers_list .followed_user .info {
   width: 60%;
   float: left;
 }
-/* line 814, ../../app/assets/stylesheets/application.css.scss */
+/* line 821, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info .avatar, .following-followers-popup .followers_list .followed_user .info .avatar {
   float: left;
   padding-right: 5px;
   padding-top: 20px;
   padding-left: 10px;
 }
-/* line 820, ../../app/assets/stylesheets/application.css.scss */
+/* line 827, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info .user-name, .following-followers-popup .followers_list .followed_user .info .user-name {
   margin: 25px 0px 0px 5px;
 }
-/* line 824, ../../app/assets/stylesheets/application.css.scss */
+/* line 831, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .follow_form, .following-followers-popup .followers_list .followed_user .follow_form {
   position: relative;
   top: 11px;
   display: inline;
 }
 
-/* line 833, ../../app/assets/stylesheets/application.css.scss */
+/* line 840, ../../app/assets/stylesheets/application.css.scss */
 .select-label {
   float: right;
+  padding-right: 50px;
   color: #A8A8A8;
   font-style: italic;
 }
 
-/* line 840, ../../app/assets/stylesheets/application.css.scss */
+/* line 848, ../../app/assets/stylesheets/application.css.scss */
 .follow_form .btn {
   width: 100px;
   margin-bottom: 30px;
@@ -6694,6 +6703,6 @@ a.btn:focus {
 .modal-body {
   height: 60%;
 }
-"digest"%eb43455447c37a82f93a20f10c09c195"pathname"6$root/app/assets/stylesheets/application.css.scss"logical_path"application.css"
-class"BundledAsset"
-mtime"2013-03-23T01:41:36+00:00"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"required_assets_digest"%c0a7634301a84d26b17f3ea1f4cbf355"lengthiN½:@created_atf1364002904.6352849 ¨‚:@expires_in0
+"
+mtime"2013-03-24T22:49:55+00:00"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"lengthi¾"
+class"BundledAsset"required_assets_digest"%7a7dd230c10d8fe8c33677bd7d696736"digest"%ebb516d5f69484b92d3c09fee9a43208"logical_path"application.css"pathname"6$root/app/assets/stylesheets/application.css.scss:@created_atf1364165425.9609251 Ì:@expires_in0

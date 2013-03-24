@@ -68,13 +68,14 @@
 
    autocomplete = new google.maps.places.Autocomplete(input, options);
     autocomplete.bindTo('bounds', map);
+    $(autocomplete).trigger("click");
     
     var contentstring = $('#info_window').html();
     
- <%#   var myOptions = {content:'<div id="No_link"><a href=http://www.rosk.com>No</a></div><div id="Yes_link"><a href="#">Yes</a></div>',
-    alignBottom:true,
-    closeBoxURL: ""  
-    };%>
+ // <%#   var myOptions = {content:'<div id="No_link"><a href=http://www.rosk.com>No</a></div><div id="Yes_link"><a href="#">Yes</a></div>',
+ //    alignBottom:true,
+ //    closeBoxURL: ""  
+ //    };%>
      
 var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
 // for the 'x', to close the infoWindow, we give it the same behaviour as the 'No' link

@@ -20,6 +20,7 @@
     left: 0;
     @include box-shadow(0 4px 5px rgba(0, 0, 0, 0.15));
     z-index: 1010;
+    width:550px !important;
   }
 }
 
@@ -179,7 +180,7 @@
 
     .default {
       color: #999;
-      width:580px !important;
+      width:550px !important;
     }
   }
 

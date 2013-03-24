@@ -187,7 +187,7 @@ module ApplicationHelper
     if current_user == @user
       "<h3>People you're following</h3>"
     else
-      "<h3>People #{your_page(@user).chomp("Page")} following</h3>"
+      "<h3>People #{your_page(@user).chomp("Address Book")} following</h3>"
   end
   end
 
@@ -195,7 +195,7 @@ module ApplicationHelper
     if current_user == @user
       "<h3>Your followers</h3>"
     else
-      "<h3>#{your_page(@user).chomp("Page")} followers</h3>"
+      "<h3>#{your_page(@user).chomp("Address Book")} followers</h3>"
   end
   end
 

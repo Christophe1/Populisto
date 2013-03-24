@@ -33,7 +33,7 @@ en:
     user_indicator: "Hello, %{user}."
     me: "Me"
     your_page: "Your Address Book"
-    s_page: "'s Page"
+    s_page: "'s Address Book"
     s_area_details: "'s area details: "
     location_hidden: "location is hidden"
     select_all: "Select All"
