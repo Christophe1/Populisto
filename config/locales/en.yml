@@ -134,7 +134,7 @@ en:
     change_range_10: 'Change to 20km?'
     search_help: 'What are you looking for? Search the address books of people in your area.'
     search_placeholder: 'What are you looking for? Search the address books of people in your area.'
-    search_label: 'Category'
+    search_label: ''
     button_text: 'Go'
     my_area_title: 'In Your Area:'
     outside_area_title: 'Outside Your Area:'

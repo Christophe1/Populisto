@@ -32,17 +32,56 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
   z-index: 1;
 
 
-  .top-line {
-    height: 55px;
-    position: relative;
 
 
   .populisto_logo {
+    float: left;
     max-width: 50%;
     padding-top: 12px;
     padding-left: 12px;
    }
 
+   /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
+
+
+    .search-box {
+      margin-top: 15px;
+     .form-horizontal {
+
+     .controls {
+     margin-left: 50px;
+     margin-top: -10px;
+     }
+
+      .control-group.grouped_chosen {
+        float: left;
+        display: inline;
+        width: 540px;
+
+      .control-label {
+
+          float: none;
+          width: auto;
+        }
+
+        #review_search_ids_chzn {
+          margin-left: -25px;
+          width: 550px !important;
+        }
+      }
+      .search-button {
+        float: right;
+        margin-right: 340px;
+        margin-top: 18px;
+      }
+    }
+
+    @include clearfix();
+
+  
+    }
+
+/* not sure what .brand is used for. Maybe can be deleted? 
     .brand {
       float: left;
       display: block;
@@ -50,9 +89,9 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
       margin-top:10px;
       left: 5px;
       width: 250px;
-    }
+    }    */
 
-    .slogan {
+    .welcome {
       float: right;
       margin: 16px 5px 0 0;
       font-size: 14px;
@@ -63,11 +102,7 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
       }
     }
 
-  }
 
-  .second-line {
-
-    height: 55px;
 
     .menu-item {
       float: right;
@@ -81,9 +116,12 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
       margin-left: 12px;
     }
 
+  
+
     .user-panel {
       float: right;
-      margin-top: 7px;
+      margin-top: -54px;
+      margin-right: 20px;
       width: 100px;
 
       .fb-avatar {
@@ -102,36 +140,12 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
       }
     }
 
-    .search-box {
-      margin-top: 15px;
-      .control-group.grouped_chosen {
-        float: left;
-        display: inline;
-        width: 540px;
 
-        .control-label {
-          display: block;
-          float: none;
-          width: auto;
-        }
-        #review_search_ids_chzn {
-          margin-left: -25px;
-          width: 550px !important;
-        }
-      }
-      .search-button {
-        float: right;
-        margin-right: 48px;
-        margin-top: 28px;
-      }
+
     }
 
-    @include clearfix();
-  }
 
-  @include clearfix();
 
-}
 
 /* css details for the list on the login - sign up page */
 
