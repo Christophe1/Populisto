@@ -49,31 +49,41 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
      .form-horizontal {
 
      .controls {
-     margin-left: 50px;
-     margin-top: -10px;
-     }
+     width:50px;
+     margin-left: 390px;
+     margin-top: 18px;
+     
 
       .control-group.grouped_chosen {
         float: left;
         display: inline;
         width: 540px;
 
-      .control-label {
 
+
+        #review_search_ids_chzn {
+          margin-left: -25px;
+         /* width: 550px !important; */
+        }
+
+}
+
+      
+      }
+                    .search-button {
+        float: right;
+        margin-right: 473px;
+        margin-top: -62px;
+      }
+
+      .control-label {
+          display: none;
           float: none;
           width: auto;
         }
 
-        #review_search_ids_chzn {
-          margin-left: -25px;
-          width: 550px !important;
-        }
-      }
-      .search-button {
-        float: right;
-        margin-right: 340px;
-        margin-top: 18px;
-      }
+
+
     }
 
     @include clearfix();
@@ -305,12 +315,12 @@ font-weight: bold;
   border-style: solid;
 } */
 
-/*---------------------------------START OF ADRESS SELECTION ON MAP CSS--------------------------*/
+/*---------------------------------START OF ADDRESS SELECTION ON MAP CSS--------------------------*/
 
 
 body {
 
-  background-color: #eee !important;
+  background-color: #fff !important;
   
 
 
@@ -321,9 +331,9 @@ body {
 
   .page-content {
     background-color: #ffffff;
-    padding: 10px;
-    margin-top: 30px; 
-    /* @include border-radius(7px, 7px); */
+    padding: 100px;
+    /* margin-top: 30px; 
+     @include border-radius(7px, 7px); */
   }
 
 
@@ -415,6 +425,8 @@ body {
     width: 60%;
     margin: 5px auto;
     text-align: center;
+    font-size: 16px;
+    padding-top: 20px;
   }
 
   #map_canvas {
@@ -657,14 +669,21 @@ margin-top:80px;
       height: 120px;
       margin: 0 10px 10px 0;
       float: left;
+      padding-left:240px;
     }
     .stats {
       width: 850px;
       margin: 7px 0px;
+      font-size: 16px;
+      padding: 15px;
+
+
     }
     #your_location {
       .location-label {
         margin-bottom: 0px;
+        font-size: 16px;
+        padding-bottom: 6px;
       }
       .address-visible-toggle {
         float: left;
@@ -673,6 +692,8 @@ margin-top:80px;
       #share_label, #keep_private_label {
         float: left;
         margin: 1px 25px 0px 0px;
+        font-size: 16px;
+        padding-bottom: 6px;
       }
       #your_location_message{
         color: green;
@@ -852,7 +873,7 @@ color: blue;
 
 .select-label {
   float: right;
-  padding-right: 50px;
+  padding-right: 10px;
   color: #A8A8A8;
   font-style: italic;
 }

@@ -4,6 +4,8 @@
 @import "bootstrap/mixins";
 @import "compass/css3";
 
+
+
 .chzn-container {
   font-size: 16px;
   position: relative;
@@ -20,7 +22,7 @@
     left: 0;
     @include box-shadow(0 4px 5px rgba(0, 0, 0, 0.15));
     z-index: 1010;
-    width:550px !important;
+    /* width:550px !important; */
   }
 }
 
@@ -181,7 +183,7 @@
     .default {
       font-family:Arial,Helvetica,sans-serif;
       color: #999;
-      width:550px !important;
+      /* width:550px !important; */
     }
   }
 

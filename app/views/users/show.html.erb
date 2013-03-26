@@ -55,11 +55,15 @@
  </div>
 
 
-  <div class="reviews" >
-      <% @reviews.each do |review| %>
+ <div class="reviews" >
+  <% if @reviews.any? %>
+    <% @reviews.each do |review| %>
       <%= review_block review %>
-      <% end %>
-  </div>
+    <% end %>
+  <% else %>
+    <%= render :partial => 'layouts/no_reviews' %>
+  <% end %>
+</div>
 
 </div>
 
@@ -69,7 +73,7 @@
 
   function initialize_google_maps() {
     var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
-    var zoom = <%= @kms_range %> > 10 ? 10 : 11;
+    var zoom = <%= @kms_range %> > 9 ? 9 : 10;
     var myOptions = {
         zoom: zoom,
         center: currentlatlng,
@@ -78,7 +82,7 @@
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-    var marker = new google.maps.Marker({map: map, position: currentlatlng});
+    var marker = new google.maps.Marker({map: map, position: currentlatlng, icon:{oppacity:0}});
     map.setCenter(currentlatlng);
     map.setZoom(zoom);
 
@@ -106,6 +110,7 @@
       map: map
     });
     markers.push(marker);
+    markers.setVisible(false);
   }
 
   function initialize_markers() {

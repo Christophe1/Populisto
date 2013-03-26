@@ -1,5 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"Â{"_version"%9f3b95dd7ea3030dc35985c0a8020862"lengthiÅ"pathname"4$root/app/assets/javascripts/application.js.erb"logical_path"application.js"
-class"BundledAsset"content_type"application/javascript"source"Å/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"{ {"source"/*!
  * jQuery JavaScript Library v1.7.2
  * http://jquery.com/
  *
@@ -15144,6 +15143,11 @@ if ( $.uiBackCompat !== false ) {
 
 
 
+$('select').chosen();
+$('.chzn-single').css('width','2900px');
+$('.chzn-drop').css('width','2980px');
+$('.chzn-search input').css('width','2630px');
+
 $(function() {
     $.extend($.blockUI.defaults.css, {
         backgroundColor: 'transparent',
@@ -15390,4 +15394,5 @@ function showNewContent(container, content) {
 }
 ;
 "
-mtime"2013-03-13T20:52:54+00:00"required_assets_digest"%4d90342674b0c56ddcca2757b23c31bc"digest"%c56be6c3ce1cf9402fa999084a732430:@created_atf1363207982.1221321 —:@expires_in0
+class"BundledAsset"pathname"4$root/app/assets/javascripts/application.js.erb"_version"%9f3b95dd7ea3030dc35985c0a8020862"logical_path"application.js"lengthi"required_assets_digest"%735dbd29ab1d30b1281042707a058fa6"
+mtime"2013-03-25T22:12:27+00:00"content_type"application/javascript"digest"%00f6b43b262bb6a77b62c930fc3c53d1:@created_atf1364249550.162673 i<:@expires_in0
