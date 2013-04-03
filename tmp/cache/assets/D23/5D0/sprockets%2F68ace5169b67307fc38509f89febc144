@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"ìI{"source".H/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"ùI{"lengthi8H"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"source"8H/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -5074,7 +5074,7 @@ a.label:hover, a.badge:hover {
   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   z-index: 1010;
-  width: 550px !important;
+  /* width:550px !important; */
 }
 
 /* @end */
@@ -5249,7 +5249,7 @@ a.label:hover, a.badge:hover {
 .chzn-container-multi .chzn-choices .search-field .default {
   font-family: Arial,Helvetica,sans-serif;
   color: #999;
-  width: 550px !important;
+  /* width:550px !important; */
 }
 /* line 191, ../../app/assets/stylesheets/chosen.css.scss */
 .chzn-container-multi .chzn-choices .search-choice {
@@ -5632,6 +5632,6 @@ footer .brand {
   -moz-box-shadow: #cccccc 0 0 25px;
   box-shadow: #cccccc 0 0 25px;
 }
-"
-class"BundledAsset"pathname"<$root/app/assets/stylesheets/admin/application.css.scss"_version"%9f3b95dd7ea3030dc35985c0a8020862"logical_path"admin/application.css"lengthi.H"required_assets_digest"%ce7d915bcd4c17c96a662497552e13f8"
-mtime"2013-03-25T22:09:44+00:00"content_type"text/css"digest"%e3f6cb22b81b7a20a2092f073ccd24de:@created_atf1364249635.9368019 Ùê:@expires_in0
+"logical_path"admin/application.css"digest"%5dd3a2148522d43565c50aee43b4f7e3"
+mtime"2013-03-26T09:16:31+00:00"
+class"BundledAsset"required_assets_digest"%9a1bbc89dae46afa72bce82c9342ac4d"pathname"<$root/app/assets/stylesheets/admin/application.css.scss:@created_atf1364298670.155937 ˙ﬂ:@expires_in0

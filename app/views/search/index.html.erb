@@ -48,7 +48,7 @@
 
   function initialize_google_maps() {
     var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
-    var zoom = <%= @kms_range %> > 10 ? 10 : 11;
+    var zoom = <%= @kms_range %> > 9 ? 9 : 10;
     var myOptions = {
         zoom: zoom,
         center: currentlatlng,

@@ -2,7 +2,7 @@
  *= require _bootstrap
  *= require chosen
  *= require_self
- *= require email_invitation
+
 */
 
 @import "bootstrap/variables";
@@ -442,7 +442,9 @@ body {
 
   .search-area {
     width: 640px;
-    margin: 10px auto;
+    margin-top: -2em;
+    margin-left: 18em;
+    margin-bottom: 2em;
 
   }
 
@@ -684,6 +686,7 @@ margin-top:80px;
         margin-bottom: 0px;
         font-size: 16px;
         padding-bottom: 6px;
+        padding-left: 300px;
       }
       .address-visible-toggle {
         float: left;
@@ -881,6 +884,12 @@ color: blue;
 .follow_form {
   .btn {
     width: 100px;
+    margin-top:15px;
     margin-bottom: 30px;
   }
+}
+
+.centre_text {
+  margin-left: 340px;
+  margin-top: 70px;
 }

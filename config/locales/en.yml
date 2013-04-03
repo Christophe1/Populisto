@@ -34,7 +34,7 @@ en:
     me: "Me"
     your_page: "Your Address Book"
     s_page: "'s Address Book"
-    s_area_details: "'s area details: "
+    s_area: "'s area: "
     location_hidden: "location is hidden"
     select_all: "Select All"
     links:
@@ -129,10 +129,10 @@ en:
     categories_selector_label: 'Categories'
     categories_selector_placeholder: 'Search the address books of people in your area.'
   find_something:
-    greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto.'
+    greetings: 'your area is set to %{km}km around the location you gave when registering with Populisto.'
     change_range_20: 'Change to 10km?'
     change_range_10: 'Change to 20km?'
-    search_help: 'What are you looking for? Search the address books of people in your area.'
+    search_help: 'Search the address books of people in your area.'
     search_placeholder: 'Search the address books of people in your area.'
     search_label: ''
     button_text: 'Go'
@@ -142,6 +142,8 @@ en:
     followers_reviews_title: 'Address book entries by those following you'
     following_reviews_title: 'Address book entries by those you’re following'
     others_reviews_title: 'Other address book entries'
+    empty_user_owner: "You don't have anything in your address book."
+    empty_user_other: " is empty."
     review:
       name: 'Name: '
       phone: 'Phone: '

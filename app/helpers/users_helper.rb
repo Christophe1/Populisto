@@ -9,9 +9,9 @@ module UsersHelper
   
   def your_location(user)
     if user == current_user
-      "Your area details: #{user.address}"
-    elsif user.address_visible
-      "#{user.first_name.capitalize}" + I18n.t('helpers.s_area_details') + "#{user.address}"
+      "Your area: #{user.address}"
+    else
+      ""
     end
   end
 end

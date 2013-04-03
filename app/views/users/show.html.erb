@@ -20,7 +20,17 @@
 <div class='find-something'>
 
   <div class="greetings">
-    <%= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
+    <% if @user == current_user %>
+    <%= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
+    <% elsif @user.address_visible %>
+    <%="#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') + " #{@user.address}" %>
+    <% else %>
+    <%= "#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') %>
+    <% end %>
+
+
+
+
     <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
   </div>
   <br>
@@ -56,6 +66,8 @@
 
 
  <div class="reviews" >
+  <!-- if a person does a search, show the results of other peoples'  -->
+  <!-- address books. If there are no results, go to 'layouts/no_reviews' -->
   <% if @reviews.any? %>
     <% @reviews.each do |review| %>
       <%= review_block review %>
