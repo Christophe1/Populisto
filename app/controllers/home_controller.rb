@@ -12,6 +12,7 @@ class HomeController < FrontEndController
 
 
 
+
   def index
     render 'users/sessions/new', :layout => 'devise'
   end

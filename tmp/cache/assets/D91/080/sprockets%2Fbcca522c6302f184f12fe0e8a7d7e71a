@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"Á{"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"lengthi¼¿"logical_path"application.css"source"¼¿/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"ŠÂ{"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"source"1Á/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -6495,6 +6495,21 @@ a.btn:focus {
   margin-left: 340px;
   margin-top: 70px;
 }
+
+/* static pages */
+/* line 914, ../../app/assets/stylesheets/application.css.scss */
+.static_pages_header {
+  font-size: 26px;
+  margin-left: 200px;
+  margin-top: 130px;
+}
+/* line 919, ../../app/assets/stylesheets/application.css.scss */
+.static_pages_header .static_pages_body {
+  font-size: 16px;
+  /* margin-left: 200px; */
+  margin-top: 20px;
+  margin-right: 200px;
+}
 /* line 23, ../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
   *zoom: 1;
@@ -6728,6 +6743,6 @@ a.btn:focus {
 .modal-body {
   height: 60%;
 }
-"pathname"6$root/app/assets/stylesheets/application.css.scss"digest"%9606b8cb64cef7959b73389ecd695e58"
-class"BundledAsset"
-mtime"2013-04-10T11:41:18+01:00"required_assets_digest"%d98de4f765a06ab0e55ec37989b2daf8:@created_atf1365590574.0518041 PÂ:@expires_in0
+"required_assets_digest"%66a09fe06a991d497885e92d57c09f54"logical_path"application.css"digest"%d8dc09557a1fdc7688e707224b0d6de6"lengthi1Á"
+mtime"2013-04-10T21:52:50+01:00"pathname"6$root/app/assets/stylesheets/application.css.scss"
+class"BundledAsset:@created_atf1365627176.326736 é>:@expires_in0

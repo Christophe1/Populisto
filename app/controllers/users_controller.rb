@@ -1,10 +1,10 @@
 class UsersController < FrontEndController
 
-  before_filter :authenticate_user!, :with_google_maps_api
-  before_filter :default_miles_range
+  # before_filter :authenticate_user!, :with_google_maps_api
+  # before_filter :default_miles_range
   before_filter :find_user
-  before_filter :load_data_for_checkbox
-  before_filter :fix_params, :only => :create
+  # before_filter :load_data_for_checkbox
+  # before_filter :fix_params, :only => :create
 
 
   # def show    
@@ -26,17 +26,17 @@ class UsersController < FrontEndController
     render :layout => false
   end
   
-  #protected
-#     def find_user
-#       @user = User.find(params[:id])
-#     end
+  # protected
+  #   def find_user
+  #     @user = User.find(params[:id])
+  #   end
 
 
-#   def create
-#     @review = Review.new params[:review]
-#     @reviews = Review.scoped_by_search_params(params, current_user)
-#     render :action => :index
-#   end
+  # def create
+  #   @review = Review.new params[:review]
+  #   @reviews = Review.scoped_by_search_params(params, current_user)
+  #   render :action => :index
+  # end
 
 #   def change_range
 #     current_range = (params[:current_range] || default_range).to_i
@@ -50,13 +50,13 @@ class UsersController < FrontEndController
 #     @kms_range = (cookies[:kms_range] || default_range).to_i
 #   end
 
-  private
+#   private
 
-  # def fix_params
-  #   params[:review] ||= {}
-  #   params[:review][:search_ids] ||= []
-  #   params[:review][:search_ids].reject!(&:blank?)
-  # end
+#   def fix_params
+#     params[:review] ||= {}
+#     params[:review][:search_ids] ||= []
+#     params[:review][:search_ids].reject!(&:blank?)
+#   end
 
 
 # def load_data_for_checkbox
@@ -76,12 +76,12 @@ class UsersController < FrontEndController
 #              [I18n.t('search.group.other_people'), other]]
 #   end
 
-    def default_range
-    20
-  end
+#     def default_range
+#     20
+#   end
 
-    def new_range(old_range)
-    {20 => 10, 10 => 20}[old_range]
-  end
+#     def new_range(old_range)
+#     {20 => 10, 10 => 20}[old_range]
+#   end
 
 end

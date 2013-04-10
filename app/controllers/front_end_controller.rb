@@ -6,6 +6,8 @@ class FrontEndController < ApplicationController
 
   before_filter :check_friendship_token
 
+
+
   protected
 
   # Redirects user to Map page if address is not filled
