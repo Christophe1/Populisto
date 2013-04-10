@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  p { margin: 20px 0 0 }
+  b { color: blue; }
+</style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+
+
+
+ 
+<input id="check1" type="checkbox" checked="checked">
+<label for="check1">Check me</label>
+<p></p>
+
+<div id = "new_image">
+  <img src = "rails.png">
+</div>
+
+
+ <img id ="rotate_images" src="img1_on.png"/>
+
+<script>
+$('#new_image').on({
+    'click': function () {
+        var origsrc = $(rotate_images).attr('src');
+        var src = '';
+        if (origsrc == 'img1_on.png') src = 'img2_on.png';
+        if (origsrc == 'img2_on.png') src = 'img3_on.png';
+        if (origsrc == 'img3_on.png') src = 'img1_on.png';
+        $(rotate_images).attr('src', src);
+    }
+});
+</script>
+
+
+ 
+</body>
+</html>

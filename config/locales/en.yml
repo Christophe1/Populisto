@@ -26,7 +26,7 @@ en:
       update:
         notice: "%{resource_name} was updated successfully."
   helpers:
-    enter_a_location: "Enter a location"
+    enter_a_location: "Enter address, town or village where you live."
     cant_be_blank: "can't be blank"
     actions: "Actions"
     time_ago: "%{time} ago"
@@ -116,7 +116,8 @@ en:
     review_title: "%{user} about %{genres}"
     empty_search_results: "No results have appeared for that search. Be a populisto and enter one yourself!"
   map_page:
-    greetings: "Hi %{user_name}. <p><p> First, thanks for signing up! Next, please tell us where you live. We won't display this to anyone unless you want us to - if you don't want to give us your exact address details that's ok, but the more accurate you are, the more effective your results will be when searching for that buthcer, baker or candlestick maker!"
+    greetings_1: "Hi %{user_name}. Please tell us where you live. We won't display this to anyone unless you want us to..."
+    greetings_2: "If you don't want to give us your exact address details that's ok, but the more accurate you are, the more effective your results will be when doing searches."
   write_review:
     text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>A Plumber? A Doctor? A restaurant? Share it with friends to help them find something. Or store it personally for your own information'
     submit_button: 'Post to Your Page'

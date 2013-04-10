@@ -84,7 +84,7 @@
   var markers = [];
 
   function initialize_google_maps() {
-    var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
+    var currentlatlng = new google.maps.LatLng(<%= @user.lat %>, <%= @user.lng %>);
     var zoom = <%= @kms_range %> > 9 ? 9 : 10;
     var myOptions = {
         zoom: zoom,
@@ -122,7 +122,7 @@
       map: map
     });
     markers.push(marker);
-    markers.setVisible(false);
+    // markers.setVisible(false);
   }
 
   function initialize_markers() {

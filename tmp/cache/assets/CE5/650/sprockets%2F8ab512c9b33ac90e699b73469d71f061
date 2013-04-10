@@ -1,6 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"Ü¥{"
-mtime"2013-04-03T10:14:23+01:00"
-class"BundledAsset"lengthiƒ¤"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"required_assets_digest"%63bb02a5266a924b7544a6af3f13890c"pathname"6$root/app/assets/stylesheets/application.css.scss"source"ƒ¤/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"Á{"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862"lengthi¼¿"logical_path"application.css"source"¼¿/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -5600,35 +5598,35 @@ a.label:hover, a.badge:hover {
   padding-top: 12px;
   padding-left: 12px;
 }
-/* line 48, ../../app/assets/stylesheets/application.css.scss */
+/* line 49, ../../app/assets/stylesheets/application.css.scss */
 .header .search-box {
   margin-top: 15px;
   *zoom: 1;
 }
-/* line 52, ../../app/assets/stylesheets/application.css.scss */
+/* line 53, ../../app/assets/stylesheets/application.css.scss */
 .header .search-box .form-horizontal .controls {
   width: 50px;
   margin-left: 390px;
   margin-top: 18px;
 }
-/* line 58, ../../app/assets/stylesheets/application.css.scss */
+/* line 59, ../../app/assets/stylesheets/application.css.scss */
 .header .search-box .form-horizontal .controls .control-group.grouped_chosen {
   float: left;
   display: inline;
   width: 540px;
 }
-/* line 65, ../../app/assets/stylesheets/application.css.scss */
+/* line 66, ../../app/assets/stylesheets/application.css.scss */
 .header .search-box .form-horizontal .controls .control-group.grouped_chosen #review_search_ids_chzn {
   margin-left: -25px;
   /* width: 550px !important; */
 }
-/* line 74, ../../app/assets/stylesheets/application.css.scss */
+/* line 75, ../../app/assets/stylesheets/application.css.scss */
 .header .search-box .form-horizontal .search-button {
   float: right;
   margin-right: 473px;
   margin-top: -62px;
 }
-/* line 80, ../../app/assets/stylesheets/application.css.scss */
+/* line 81, ../../app/assets/stylesheets/application.css.scss */
 .header .search-box .form-horizontal .control-label {
   display: none;
   float: none;
@@ -5643,133 +5641,149 @@ a.label:hover, a.badge:hover {
 .header .search-box:after {
   clear: both;
 }
-/* line 105, ../../app/assets/stylesheets/application.css.scss */
+/* line 106, ../../app/assets/stylesheets/application.css.scss */
 .header .welcome {
   float: right;
   margin: 16px 5px 0 0;
   font-size: 14px;
 }
-/* line 110, ../../app/assets/stylesheets/application.css.scss */
+/* line 111, ../../app/assets/stylesheets/application.css.scss */
 .header .welcome .fb-avatar {
   width: 16px;
   margin-right: 2px;
 }
-/* line 118, ../../app/assets/stylesheets/application.css.scss */
+/* line 119, ../../app/assets/stylesheets/application.css.scss */
 .header .menu-item {
   float: right;
   margin-top: 10px;
   margin-right: 10px;
 }
-/* line 124, ../../app/assets/stylesheets/application.css.scss */
+/* line 125, ../../app/assets/stylesheets/application.css.scss */
 .header .invites-count {
   float: left;
   margin-top: 20px;
   margin-left: 12px;
 }
-/* line 132, ../../app/assets/stylesheets/application.css.scss */
+/* line 133, ../../app/assets/stylesheets/application.css.scss */
 .header .user-panel {
   float: right;
   margin-top: -54px;
   margin-right: 20px;
   width: 100px;
 }
-/* line 138, ../../app/assets/stylesheets/application.css.scss */
+/* line 139, ../../app/assets/stylesheets/application.css.scss */
 .header .user-panel .fb-avatar {
   width: 30px;
 }
-/* line 142, ../../app/assets/stylesheets/application.css.scss */
+/* line 143, ../../app/assets/stylesheets/application.css.scss */
 .header .user-panel .fb-logout {
   background: none;
   border: none;
   outline: none;
   color: #08C;
 }
-/* line 149, ../../app/assets/stylesheets/application.css.scss */
+/* line 150, ../../app/assets/stylesheets/application.css.scss */
 .header .user-panel .fb-logout:hover {
   text-decoration: underline;
 }
+/* line 156, ../../app/assets/stylesheets/application.css.scss */
+.header #static_pages {
+  float: left;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-left: 30px;
+}
 
 /* css details for the list on the login - sign up page */
-/* line 163, ../../app/assets/stylesheets/application.css.scss */
+/* line 170, ../../app/assets/stylesheets/application.css.scss */
 .populisto_logo2 {
   margin: 0 auto;
   width: 280px;
   position: relative;
 }
 
-/* line 169, ../../app/assets/stylesheets/application.css.scss */
+/* line 176, ../../app/assets/stylesheets/application.css.scss */
+.changing_images {
+  float: left;
+  padding-top: 30px;
+  padding-left: 90px;
+  width: 550px;
+  height: 350px;
+}
+
+/* line 184, ../../app/assets/stylesheets/application.css.scss */
 .features {
   list-style: none;
   float: left;
   margin: 9em 0 0 18em;
 }
 
-/* line 174, ../../app/assets/stylesheets/application.css.scss */
+/* line 189, ../../app/assets/stylesheets/application.css.scss */
 .features li {
   margin: 8px 0 2em;
 }
 
-/* line 177, ../../app/assets/stylesheets/application.css.scss */
+/* line 192, ../../app/assets/stylesheets/application.css.scss */
 .features img {
   float: left;
   margin: 0px;
 }
 
-/* line 181, ../../app/assets/stylesheets/application.css.scss */
+/* line 196, ../../app/assets/stylesheets/application.css.scss */
 .features p {
   margin: 0 0 0 68px;
 }
 
-/* line 184, ../../app/assets/stylesheets/application.css.scss */
+/* line 199, ../../app/assets/stylesheets/application.css.scss */
 .features .title {
   font-size: 16px;
   margin-bottom: .3em;
 }
 
-/* line 189, ../../app/assets/stylesheets/application.css.scss */
+/* line 204, ../../app/assets/stylesheets/application.css.scss */
 .features img2 {
   float: right;
   margin: 5px 0 0;
 }
 
-/* line 195, ../../app/assets/stylesheets/application.css.scss */
+/* line 210, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo {
   width: 380px;
   list-style: none;
   float: left;
   border: 1px solid #ebebeb;
-  margin: 330px 0 0 -350px;
+  margin: 380px 0 0 -500px;
   padding: 20px;
 }
 
-/* line 204, ../../app/assets/stylesheets/application.css.scss */
+/* line 219, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo img {
   float: left;
   margin-right: 18px;
 }
 
-/* line 209, ../../app/assets/stylesheets/application.css.scss */
+/* line 224, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo .title {
   font-size: 16px;
   margin-bottom: .2em;
 }
 
-/* line 214, ../../app/assets/stylesheets/application.css.scss */
+/* line 229, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo p {
   font-size: 1em;
 }
 
-/* line 218, ../../app/assets/stylesheets/application.css.scss */
+/* line 233, ../../app/assets/stylesheets/application.css.scss */
 .iPad-promo .img2 {
   margin-left: 340px;
   margin-top: -60px;
 }
 
 /*Facebook login, on the home page */
-/* line 228, ../../app/assets/stylesheets/application.css.scss */
+/* line 243, ../../app/assets/stylesheets/application.css.scss */
 .login-page {
-  margin: 30px 0px 0px 650px;
-  width: 400px;
+  margin: 30px 0px 0px 710px;
+  width: 360px;
   border: 1px solid #eee;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -5777,24 +5791,24 @@ a.label:hover, a.badge:hover {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 233, ../../app/assets/stylesheets/application.css.scss */
+/* line 248, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section {
   text-align: center;
   position: relative;
   padding: 15px 15px 0;
 }
-/* line 237, ../../app/assets/stylesheets/application.css.scss */
+/* line 252, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section .fb-login {
   width: 315px;
   margin: 15px auto;
   display: block;
 }
-/* line 242, ../../app/assets/stylesheets/application.css.scss */
+/* line 257, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section .fb-notes {
   font-size: 12px;
   margin-bottom: 20px;
 }
-/* line 246, ../../app/assets/stylesheets/application.css.scss */
+/* line 261, ../../app/assets/stylesheets/application.css.scss */
 .login-page .facebook-section .or-devider {
   position: absolute;
   bottom: -36px;
@@ -5811,41 +5825,41 @@ a.label:hover, a.badge:hover {
   font-size: 17px;
   line-height: 26px;
 }
-/* line 264, ../../app/assets/stylesheets/application.css.scss */
+/* line 279, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in {
   text-align: center;
 }
-/* line 267, ../../app/assets/stylesheets/application.css.scss */
+/* line 282, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in p {
   font-size: 20px;
 }
-/* line 271, ../../app/assets/stylesheets/application.css.scss */
+/* line 286, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in .create-account-note {
   color: red;
 }
-/* line 274, ../../app/assets/stylesheets/application.css.scss */
+/* line 289, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in .create-account-note a, .login-page .sign-in .create-account-note a:visited {
   color: red;
   text-decoration: underline;
 }
-/* line 280, ../../app/assets/stylesheets/application.css.scss */
+/* line 295, ../../app/assets/stylesheets/application.css.scss */
 .login-page .sign-in .not-on-facebook-note a {
   color: blue;
 }
 
 /*the yes and no links on the info box, on the google map page, straight after registration */
-/* line 293, ../../app/assets/stylesheets/application.css.scss */
+/* line 308, ../../app/assets/stylesheets/application.css.scss */
 #correct_area {
   font-weight: bold;
 }
 
-/* line 297, ../../app/assets/stylesheets/application.css.scss */
+/* line 312, ../../app/assets/stylesheets/application.css.scss */
 #no_link {
   float: left;
   font-weight: bold;
 }
 
-/* line 302, ../../app/assets/stylesheets/application.css.scss */
+/* line 317, ../../app/assets/stylesheets/application.css.scss */
 #yes_link {
   float: right;
   font-weight: bold;
@@ -5863,23 +5877,23 @@ a.label:hover, a.badge:hover {
   border-style: solid;
 } */
 /*---------------------------------START OF ADDRESS SELECTION ON MAP CSS--------------------------*/
-/* line 322, ../../app/assets/stylesheets/application.css.scss */
+/* line 337, ../../app/assets/stylesheets/application.css.scss */
 body {
   background-color: #fff !important;
 }
-/* line 328, ../../app/assets/stylesheets/application.css.scss */
+/* line 343, ../../app/assets/stylesheets/application.css.scss */
 body > .container {
   width: 100%;
   padding: 0px 0 50px 0;
 }
-/* line 333, ../../app/assets/stylesheets/application.css.scss */
+/* line 348, ../../app/assets/stylesheets/application.css.scss */
 body .page-content {
   background-color: #ffffff;
-  padding: 100px;
+  padding: 60px;
   /* margin-top: 30px; 
    @include border-radius(7px, 7px); */
 }
-/* line 342, ../../app/assets/stylesheets/application.css.scss */
+/* line 357, ../../app/assets/stylesheets/application.css.scss */
 body .map-page {
   width: 800px;
   margin: 0 auto;
@@ -5891,9 +5905,9 @@ body .map-page {
      float: right;
    } */
 }
-/* line 348, ../../app/assets/stylesheets/application.css.scss */
+/* line 363, ../../app/assets/stylesheets/application.css.scss */
 body .map-page .greetings {
-  width: 60%;
+  width: 80%;
   margin: 10px auto 30px;
   display: block;
   margin-left: auto;
@@ -5901,7 +5915,7 @@ body .map-page .greetings {
   font-size: 20px;
   line-height: 26px;
 }
-/* line 358, ../../app/assets/stylesheets/application.css.scss */
+/* line 373, ../../app/assets/stylesheets/application.css.scss */
 body .map-page .address-area {
   margin: 10px auto;
   width: 97%;
@@ -5909,7 +5923,7 @@ body .map-page .address-area {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 365, ../../app/assets/stylesheets/application.css.scss */
+/* line 380, ../../app/assets/stylesheets/application.css.scss */
 body .map-page .address-area #address_autocomplete {
   width: 60%;
   height: 30px;
@@ -5918,7 +5932,7 @@ body .map-page .address-area #address_autocomplete {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 376, ../../app/assets/stylesheets/application.css.scss */
+/* line 392, ../../app/assets/stylesheets/application.css.scss */
 body .map-page #map_canvas {
   height: 400px;
   width: 600px;
@@ -5928,18 +5942,18 @@ body .map-page #map_canvas {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 384, ../../app/assets/stylesheets/application.css.scss */
+/* line 400, ../../app/assets/stylesheets/application.css.scss */
 body .map-page #map_canvas img {
   max-width: none;
 }
 
 /*---------------------------------END OF ADRESS SELECTION ON MAP CSS--------------------------*/
-/* line 402, ../../app/assets/stylesheets/application.css.scss */
+/* line 418, ../../app/assets/stylesheets/application.css.scss */
 .control-group.chosen .help-inline {
   margin-top: -20px;
 }
 
-/* line 409, ../../app/assets/stylesheets/application.css.scss */
+/* line 425, ../../app/assets/stylesheets/application.css.scss */
 .control-group.error .chzn-container input, .control-group.error .chzn-container input:focus {
   border: none;
   border-color: none;
@@ -5952,84 +5966,83 @@ body .map-page #map_canvas img {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 417, ../../app/assets/stylesheets/application.css.scss */
+/* line 433, ../../app/assets/stylesheets/application.css.scss */
 .control-group.error .chzn-container-multi .chzn-choices {
   color: #b94a48;
   border-color: #b94a48;
 }
 
-/* line 425, ../../app/assets/stylesheets/application.css.scss */
+/* line 441, ../../app/assets/stylesheets/application.css.scss */
 .find-something .greetings {
-  width: 60%;
   margin: 5px auto;
-  text-align: center;
   font-size: 16px;
+  padding-left: 300px;
   padding-top: 20px;
 }
-/* line 433, ../../app/assets/stylesheets/application.css.scss */
+/* line 448, ../../app/assets/stylesheets/application.css.scss */
 .find-something #map_canvas {
   height: 380px;
   width: 470px;
   margin: 0 auto;
 }
-/* line 437, ../../app/assets/stylesheets/application.css.scss */
+/* line 452, ../../app/assets/stylesheets/application.css.scss */
 .find-something #map_canvas img {
   max-width: none;
 }
-/* line 444, ../../app/assets/stylesheets/application.css.scss */
+/* line 459, ../../app/assets/stylesheets/application.css.scss */
 .find-something .search-area {
   width: 640px;
   margin-top: -2em;
   margin-left: 18em;
   margin-bottom: 2em;
 }
-/* line 452, ../../app/assets/stylesheets/application.css.scss */
+/* line 467, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area {
   margin: 0 auto;
   width: 870px;
 }
-/* line 457, ../../app/assets/stylesheets/application.css.scss */
+/* line 472, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area h4 {
   margin: 10px 0 10px 10px;
 }
-/* line 461, ../../app/assets/stylesheets/application.css.scss */
+/* line 476, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review {
   background-color: #F5F5F5;
 }
-/* line 465, ../../app/assets/stylesheets/application.css.scss */
+/* line 480, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .left-part {
   width: 70px;
   float: left;
   padding: 10px;
 }
-/* line 471, ../../app/assets/stylesheets/application.css.scss */
+/* line 486, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .right-part {
   float: left;
   padding: 10px;
   width: 758px;
 }
-/* line 476, ../../app/assets/stylesheets/application.css.scss */
+/* line 491, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .right-part .review-text {
   padding: 10px 0;
 }
 
-/* line 489, ../../app/assets/stylesheets/application.css.scss */
+/* line 504, ../../app/assets/stylesheets/application.css.scss */
 .add-to-my-page {
   float: right;
   font-size: 10px;
 }
 
-/* line 494, ../../app/assets/stylesheets/application.css.scss */
+/* line 509, ../../app/assets/stylesheets/application.css.scss */
 .time-ago {
   font-size: 10px;
 }
 
-/* line 498, ../../app/assets/stylesheets/application.css.scss */
+/* line 513, ../../app/assets/stylesheets/application.css.scss */
 .grey {
   color: #777;
 }
 
-/* line 503, ../../app/assets/stylesheets/application.css.scss */
+/* line 518, ../../app/assets/stylesheets/application.css.scss */
 #my_films .actions {
   padding: 18px 0;
   margin-bottom: 18px;
@@ -6048,7 +6061,7 @@ body .map-page #map_canvas img {
 }
 
 /* for FireFox */
-/* line 515, ../../app/assets/stylesheets/application.css.scss */
+/* line 530, ../../app/assets/stylesheets/application.css.scss */
 input.btn::-moz-focus-inner,
 button.btn::-moz-focus-inner,
 a.btn::-moz-focus-inner {
@@ -6056,7 +6069,7 @@ a.btn::-moz-focus-inner {
 }
 
 /* for IE8 */
-/* line 522, ../../app/assets/stylesheets/application.css.scss */
+/* line 537, ../../app/assets/stylesheets/application.css.scss */
 input.btn:focus,
 button.btn:focus,
 a.btn:focus {
@@ -6064,7 +6077,7 @@ a.btn:focus {
 }
 
 /* IE */
-/* line 527, ../../app/assets/stylesheets/application.css.scss */
+/* line 542, ../../app/assets/stylesheets/application.css.scss */
 .legend {
   display: block;
   width: 100%;
@@ -6076,20 +6089,20 @@ a.btn:focus {
   border: 0;
   border-bottom: 1px solid #eee;
 }
-/* line 539, ../../app/assets/stylesheets/application.css.scss */
+/* line 554, ../../app/assets/stylesheets/application.css.scss */
 .legend small {
   font-size: 13.5px;
   color: #999999;
 }
 
-/* line 546, ../../app/assets/stylesheets/application.css.scss */
+/* line 561, ../../app/assets/stylesheets/application.css.scss */
 .legend + .control-group,
 .control-group.first {
   margin-top: 18px;
   -webkit-margin-top-collapse: separate;
 }
 
-/* line 551, ../../app/assets/stylesheets/application.css.scss */
+/* line 566, ../../app/assets/stylesheets/application.css.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -6104,14 +6117,14 @@ a.btn:focus {
 }
 
 /* Overlay */
-/* line 557, ../../app/assets/stylesheets/application.css.scss */
+/* line 572, ../../app/assets/stylesheets/application.css.scss */
 #simplemodal-overlay {
   background-color: #aaa;
   cursor: wait;
 }
 
 /* Container */
-/* line 562, ../../app/assets/stylesheets/application.css.scss */
+/* line 577, ../../app/assets/stylesheets/application.css.scss */
 #simplemodal-container {
   width: 550px;
   height: 350px;
@@ -6124,42 +6137,42 @@ a.btn:focus {
   border-radius: 12px;
 }
 
-/* line 572, ../../app/assets/stylesheets/application.css.scss */
+/* line 587, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-text {
   margin: 10px auto 30px;
   width: 500px;
 }
-/* line 576, ../../app/assets/stylesheets/application.css.scss */
+/* line 591, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form {
   width: 410px;
   margin: 0 auto;
 }
-/* line 583, ../../app/assets/stylesheets/application.css.scss */
+/* line 598, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs .control-group.chosen .help-inline {
   margin-top: 3px;
 }
-/* line 586, ../../app/assets/stylesheets/application.css.scss */
+/* line 601, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs input, #review-page .review-form .inputs textarea, #review-page .review-form .inputs select {
   width: 410px;
 }
-/* line 589, ../../app/assets/stylesheets/application.css.scss */
+/* line 604, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs textarea {
   height: 200px;
 }
-/* line 592, ../../app/assets/stylesheets/application.css.scss */
+/* line 607, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs .review-comments-example {
   margin-top: -10px;
   display: block;
   margin-bottom: 15px;
 }
-/* line 599, ../../app/assets/stylesheets/application.css.scss */
+/* line 614, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .actions {
   width: 100px;
   margin: 0 auto;
   text-align: center;
   *zoom: 1;
 }
-/* line 604, ../../app/assets/stylesheets/application.css.scss */
+/* line 619, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .actions input, #review-page .review-form .actions a {
   display: inline-block;
 }
@@ -6172,25 +6185,25 @@ a.btn:focus {
 #review-page .review-form .actions:after {
   clear: both;
 }
-/* line 609, ../../app/assets/stylesheets/application.css.scss */
+/* line 624, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form #review_name, #review-page .review-form #review_phone, #review-page .review-form #review_address, #review-page .review-form #review_comment {
   width: 400px;
 }
 
-/* line 616, ../../app/assets/stylesheets/application.css.scss */
+/* line 631, ../../app/assets/stylesheets/application.css.scss */
 .perfect-review-example {
   padding: 10px;
 }
 
-/* line 620, ../../app/assets/stylesheets/application.css.scss */
+/* line 635, ../../app/assets/stylesheets/application.css.scss */
 #start_text {
   float: left;
 }
 
-/* line 626, ../../app/assets/stylesheets/application.css.scss */
+/* line 641, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section {
   background-color: #DFDFDF;
-  padding: 15px;
+  padding: 25px;
   padding-top: 22px;
   -webkit-border-radius: 0 0 8px 8px;
   -moz-border-radius: 0 0 8px 8px;
@@ -6198,93 +6211,93 @@ a.btn:focus {
   -o-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
 }
-/* line 630, ../../app/assets/stylesheets/application.css.scss */
+/* line 645, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .explanation {
   text-align: center;
   margin: 7px;
   font-size: 14px;
 }
-/* line 636, ../../app/assets/stylesheets/application.css.scss */
+/* line 651, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .inputs input.string, .sign-in-section .inputs input.password {
-  width: 360px;
-  height: 28px;
-  font-size: 18pt;
-  padding: 15px 5px 5px 5px;
+  width: 300px;
+  height: 12px;
+  font-size: 14pt;
+  padding: 10px 5px 10px 5px;
 }
-/* line 643, ../../app/assets/stylesheets/application.css.scss */
+/* line 658, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .actions {
-  margin-left: 30%;
+  margin-left: 25%;
   /*text-align: right;*/
 }
-/* line 648, ../../app/assets/stylesheets/application.css.scss */
+/* line 663, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links {
   color: #848484;
   text-align: center;
 }
-/* line 651, ../../app/assets/stylesheets/application.css.scss */
+/* line 666, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links a {
   color: #848484;
 }
-/* line 655, ../../app/assets/stylesheets/application.css.scss */
+/* line 670, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links.centralized {
   text-align: center;
 }
 
-/* line 664, ../../app/assets/stylesheets/application.css.scss */
+/* line 679, ../../app/assets/stylesheets/application.css.scss */
 .users-page {
-  margin-top: 80px;
+  margin-top: 90px;
 }
-/* line 668, ../../app/assets/stylesheets/application.css.scss */
+/* line 683, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .your_page_label {
   font-size: 26px;
 }
-/* line 671, ../../app/assets/stylesheets/application.css.scss */
+/* line 686, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .avatar {
   height: 120px;
   margin: 0 10px 10px 0;
   float: left;
   padding-left: 240px;
 }
-/* line 677, ../../app/assets/stylesheets/application.css.scss */
+/* line 692, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .stats {
   width: 850px;
   margin: 7px 0px;
   font-size: 16px;
   padding: 15px;
 }
-/* line 686, ../../app/assets/stylesheets/application.css.scss */
+/* line 701, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location .location-label {
   margin-bottom: 0px;
   font-size: 16px;
   padding-bottom: 6px;
   padding-left: 300px;
 }
-/* line 692, ../../app/assets/stylesheets/application.css.scss */
+/* line 707, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location .address-visible-toggle {
   float: left;
   margin-right: 5px;
 }
-/* line 696, ../../app/assets/stylesheets/application.css.scss */
+/* line 711, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location #share_label, .users-page .user-info #your_location #keep_private_label {
   float: left;
   margin: 1px 25px 0px 0px;
   font-size: 16px;
   padding-bottom: 6px;
 }
-/* line 702, ../../app/assets/stylesheets/application.css.scss */
+/* line 717, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location #your_location_message {
   color: green;
 }
-/* line 709, ../../app/assets/stylesheets/application.css.scss */
+/* line 724, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb {
   position: relative;
 }
-/* line 713, ../../app/assets/stylesheets/application.css.scss */
+/* line 728, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb:hover {
   border-color: #0099CC;
   opacity: 0.9;
 }
-/* line 716, ../../app/assets/stylesheets/application.css.scss */
+/* line 731, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb:hover .edit_review_link {
   position: absolute;
   display: block;
@@ -6292,126 +6305,126 @@ a.btn:focus {
   right: 5px;
   color: #0099CC;
 }
-/* line 724, ../../app/assets/stylesheets/application.css.scss */
+/* line 739, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .edit_review_link {
   display: none;
 }
-/* line 727, ../../app/assets/stylesheets/application.css.scss */
+/* line 742, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .posted_at {
   color: #888888;
   font-style: italic;
   margin: 5px 0px;
 }
-/* line 732, ../../app/assets/stylesheets/application.css.scss */
+/* line 747, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .category_name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 737, ../../app/assets/stylesheets/application.css.scss */
+/* line 752, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment {
   dislay: table-row;
 }
-/* line 739, ../../app/assets/stylesheets/application.css.scss */
+/* line 754, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment .more-info {
   display: table-cell;
   width: 70px;
 }
-/* line 743, ../../app/assets/stylesheets/application.css.scss */
+/* line 758, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment .comment-content {
   display: table-cell;
   white-space: pre-line;
 }
-/* line 752, ../../app/assets/stylesheets/application.css.scss */
+/* line 767, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form form {
   margin: 0;
 }
-/* line 755, ../../app/assets/stylesheets/application.css.scss */
+/* line 770, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs {
   display: table-row;
 }
-/* line 757, ../../app/assets/stylesheets/application.css.scss */
+/* line 772, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs #except_comment {
   display: table-cell;
   width: 40%;
 }
-/* line 761, ../../app/assets/stylesheets/application.css.scss */
+/* line 776, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs #comment {
   padding-left: 30px;
 }
-/* line 765, ../../app/assets/stylesheets/application.css.scss */
+/* line 780, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form #review_name, .users-page .edit_review_form #review_phone, .users-page .edit_review_form #review_address {
   width: 333px;
 }
-/* line 768, ../../app/assets/stylesheets/application.css.scss */
+/* line 783, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form select {
   width: 343px;
 }
-/* line 772, ../../app/assets/stylesheets/application.css.scss */
+/* line 787, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_review_info .edit-label {
   display: block;
 }
-/* line 776, ../../app/assets/stylesheets/application.css.scss */
+/* line 791, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form textarea {
   width: 100%;
   height: 195px;
 }
-/* line 780, ../../app/assets/stylesheets/application.css.scss */
+/* line 795, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .cancel-edit {
   position: absolute;
   top: 5px;
   right: 5px;
   color: #0099CC;
 }
-/* line 787, ../../app/assets/stylesheets/application.css.scss */
+/* line 802, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .control-group {
   display: inline;
 }
-/* line 789, ../../app/assets/stylesheets/application.css.scss */
+/* line 804, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .control-group .controls {
   display: inherit;
 }
-/* line 793, ../../app/assets/stylesheets/application.css.scss */
+/* line 808, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form span#address_validation {
   color: #B94A48;
 }
-/* line 797, ../../app/assets/stylesheets/application.css.scss */
+/* line 812, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group {
   margin-left: 25px;
 }
-/* line 799, ../../app/assets/stylesheets/application.css.scss */
+/* line 814, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .save_review {
   float: right;
   margin-left: inherit;
   margin-right: -10px;
 }
-/* line 804, ../../app/assets/stylesheets/application.css.scss */
+/* line 819, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .delete_review {
   float: right;
   margin-left: inherit;
 }
-/* line 808, ../../app/assets/stylesheets/application.css.scss */
+/* line 823, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .keep_private_label {
   float: right;
   margin: 5px 0px 0px 5px;
 }
-/* line 812, ../../app/assets/stylesheets/application.css.scss */
+/* line 827, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .keep_private_button {
   float: right;
   margin: 7px 0px 0px 25px;
 }
-/* line 816, ../../app/assets/stylesheets/application.css.scss */
+/* line 831, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .share_label {
   float: right;
   margin: 5px 0px 0px 5px;
 }
-/* line 820, ../../app/assets/stylesheets/application.css.scss */
+/* line 835, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .share_button {
   float: right;
   margin: 7px 0px 0px 25px;
 }
 
-/* line 831, ../../app/assets/stylesheets/application.css.scss */
+/* line 846, ../../app/assets/stylesheets/application.css.scss */
 #popup_close {
   position: absolute;
   color: #0099CC;
@@ -6420,7 +6433,7 @@ a.btn:focus {
   cursor: pointer;
 }
 
-/* line 839, ../../app/assets/stylesheets/application.css.scss */
+/* line 854, ../../app/assets/stylesheets/application.css.scss */
 #validation {
   display: none;
   position: absolute;
@@ -6429,40 +6442,40 @@ a.btn:focus {
   color: red;
 }
 
-/* line 847, ../../app/assets/stylesheets/application.css.scss */
+/* line 862, ../../app/assets/stylesheets/application.css.scss */
 .info-windows {
   color: blue;
 }
 
-/* line 852, ../../app/assets/stylesheets/application.css.scss */
+/* line 867, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list, .following-followers-popup .followers_list {
   width: 50%;
   float: left;
 }
-/* line 856, ../../app/assets/stylesheets/application.css.scss */
+/* line 871, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info, .following-followers-popup .followers_list .followed_user .info {
   width: 60%;
   float: left;
 }
-/* line 859, ../../app/assets/stylesheets/application.css.scss */
+/* line 874, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info .avatar, .following-followers-popup .followers_list .followed_user .info .avatar {
   float: left;
   padding-right: 5px;
   padding-top: 20px;
   padding-left: 10px;
 }
-/* line 865, ../../app/assets/stylesheets/application.css.scss */
+/* line 880, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info .user-name, .following-followers-popup .followers_list .followed_user .info .user-name {
   margin: 25px 0px 0px 5px;
 }
-/* line 869, ../../app/assets/stylesheets/application.css.scss */
+/* line 884, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .follow_form, .following-followers-popup .followers_list .followed_user .follow_form {
   position: relative;
   top: 11px;
   display: inline;
 }
 
-/* line 878, ../../app/assets/stylesheets/application.css.scss */
+/* line 893, ../../app/assets/stylesheets/application.css.scss */
 .select-label {
   float: right;
   padding-right: 10px;
@@ -6470,16 +6483,251 @@ a.btn:focus {
   font-style: italic;
 }
 
-/* line 886, ../../app/assets/stylesheets/application.css.scss */
+/* line 901, ../../app/assets/stylesheets/application.css.scss */
 .follow_form .btn {
   width: 100px;
   margin-top: 15px;
   margin-bottom: 30px;
 }
 
-/* line 893, ../../app/assets/stylesheets/application.css.scss */
+/* line 908, ../../app/assets/stylesheets/application.css.scss */
 .centre_text {
   margin-left: 340px;
   margin-top: 70px;
 }
-"digest"%379a5262ccb3879715b67855e33212d8"logical_path"application.css:@created_atf1364980470.16787 ¾b:@expires_in0
+/* line 23, ../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 15, ../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+/* line 19, ../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 6, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .color-red {
+  color: red;
+}
+/* line 9, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #choosed span {
+  padding: 0 5px;
+}
+/* line 10, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #choosed i {
+  position: relative;
+  top: 1px;
+}
+/* line 16, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #no-contacts {
+  padding: 10px 0;
+}
+/* line 18, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #no-contacts .buttons {
+  margin-top: 10px;
+}
+/* line 21, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup h2 {
+  border-bottom: 1px solid #ccc;
+  font-weight: normal;
+}
+/* line 26, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .information-text {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+/* line 31, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .information-text img {
+  display: block;
+  margin-left: -8px;
+  padding-bottom: 15px;
+  zoom: 0.7;
+}
+/* line 37, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .information-text.other-email {
+  border-top: 1px solid #ccc;
+  margin-top: -2px;
+  overflow: hidden;
+}
+/* line 41, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .information-text.other-email img {
+  margin-top: -10px;
+}
+/* line 47, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .control-group {
+  max-height: 270px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 52, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .control-group .email {
+  padding: 2px 5px;
+}
+/* line 55, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .control-group .email:hover {
+  background: #eee;
+}
+/* line 60, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .control-group .invited-email {
+  padding: 2px 5px;
+  color: #999;
+  cursor: default;
+}
+/* line 67, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .step {
+  padding: 5px 0;
+}
+/* line 70, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .step .number {
+  font-weight: bold;
+}
+/* line 77, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .email-invitation-form input, .invite-popup .email-invitation-form textarea {
+  width: 515px;
+}
+/* line 81, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .email-invitation-form input.other-email {
+  margin-top: 7px;
+}
+/* line 83, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .email-invitation-form textarea {
+  height: 250px;
+}
+/* line 87, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .email-invitation-form textarea.other-email {
+  height: 210px;
+}
+/* line 91, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .buttons {
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+}
+/* line 95, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .buttons .back-link {
+  font-size: 14px;
+  padding-top: 6px;
+}
+/* line 100, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .buttons input, .invite-popup .buttons a {
+  float: right;
+  margin-left: 10px;
+}
+/* line 105, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .buttons #select-all {
+  float: left;
+  margin: 3px 5px;
+}
+/* line 111, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup input[type=checkbox] {
+  width: auto;
+}
+/* line 115, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup label {
+  cursor: pointer;
+  display: inline-block;
+}
+/* line 120, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #social {
+  text-align: center;
+}
+/* line 122, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #social-icons .additional-text {
+  padding: 10px 10px 20px 10px;
+}
+/* line 124, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup #social-icons .additional-text h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-bottom: 15px;
+}
+/* line 131, ../../app/assets/stylesheets/email_invitation.css.scss */
+.invite-popup .link-wrapper {
+  display: inline-block;
+  margin: 10px 3px;
+  text-align: center;
+  width: 65px;
+}
+
+/* line 140, ../../app/assets/stylesheets/email_invitation.css.scss */
+.sn-icon {
+  background: url(sn-sprite.jpg) no-repeat 0 0;
+  display: block;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 60px;
+}
+/* line 148, ../../app/assets/stylesheets/email_invitation.css.scss */
+.sn-icon:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+
+/* line 151, ../../app/assets/stylesheets/email_invitation.css.scss */
+.sn-text {
+  color: #484848;
+  font-size: 11px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+/* line 158, ../../app/assets/stylesheets/email_invitation.css.scss */
+.gmail {
+  background-position: -60px 0;
+}
+
+/* line 159, ../../app/assets/stylesheets/email_invitation.css.scss */
+.yahoo {
+  background-position: -120px 0;
+}
+
+/* line 160, ../../app/assets/stylesheets/email_invitation.css.scss */
+.hotmail {
+  background-position: -180px 0;
+}
+
+/* line 161, ../../app/assets/stylesheets/email_invitation.css.scss */
+.outlook {
+  background-position: -240px 0;
+}
+
+/* line 162, ../../app/assets/stylesheets/email_invitation.css.scss */
+.other_email {
+  background-position: -300px 0;
+}
+
+/* line 163, ../../app/assets/stylesheets/email_invitation.css.scss */
+.linkedin {
+  background-position: -360px -60px;
+}
+
+/* line 165, ../../app/assets/stylesheets/email_invitation.css.scss */
+.modal-body {
+  max-height: 350px;
+  padding: 15px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 172, ../../app/assets/stylesheets/email_invitation.css.scss */
+.modal {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  left: 3%;
+  width: auto;
+  margin: 0;
+}
+
+/* line 180, ../../app/assets/stylesheets/email_invitation.css.scss */
+.modal-body {
+  height: 60%;
+}
+"pathname"6$root/app/assets/stylesheets/application.css.scss"digest"%9606b8cb64cef7959b73389ecd695e58"
+class"BundledAsset"
+mtime"2013-04-10T11:41:18+01:00"required_assets_digest"%d98de4f765a06ab0e55ec37989b2daf8:@created_atf1365590574.0569689 ¥a:@expires_in0

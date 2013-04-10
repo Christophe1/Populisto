@@ -1,4 +1,17 @@
 QuestionnaireSite::Application.routes.draw do
+
+  get "about_us", :to => "static_pages#about_us"
+  get "contact_us", :to => "static_pages#contact_us"
+  get "faq", :to => "static_pages#faq"
+  
+  #get "static_pages/about_us"
+  #get "about_us", :to => "static_pages#about_us"
+   #get "about_us" => 'static_pages#about_us', :as => :about_us
+
+  #get "static_pages/contact_us"
+
+  #get "static_pages/faq"
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   devise_scope :user do
