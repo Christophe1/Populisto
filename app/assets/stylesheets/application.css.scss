@@ -152,11 +152,21 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
     }
 
 
-      #static_pages{
-      float: left;
-      font-size: 16px;
+      #static_pages {
       margin-top: 25px;
-      margin-left: 30px;
+
+      li{
+      display: inline;
+      /* list-style-type: none; */
+      padding-right: 35px;
+      font-size: 16px
+
+      }
+
+      #address_book {
+      font-size: 26px
+      }
+
       }
 
     }
