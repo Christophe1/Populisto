@@ -3,6 +3,8 @@ QuestionnaireSite::Application.routes.draw do
   get "about_us", :to => "static_pages#about_us"
   get "contact_us", :to => "static_pages#contact_us"
   get "faq", :to => "static_pages#faq"
+  get "competition_terms", :to => "static_pages#competition_terms"
+
   
   #get "static_pages/about_us"
   #get "about_us", :to => "static_pages#about_us"

@@ -57,7 +57,7 @@
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-    var marker = new google.maps.Marker({map: map, position: currentlatlng});
+    var marker = new google.maps.Marker({map: map, position: currentlatlng, icon:{oppacity:0}});
     map.setCenter(currentlatlng);
     map.setZoom(zoom);
 

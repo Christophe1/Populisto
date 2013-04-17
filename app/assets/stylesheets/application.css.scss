@@ -132,7 +132,7 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
     .user-panel {
       float: right;
       margin-top: -54px;
-      margin-right: 20px;
+      margin-right: -440px;
       width: 100px;
 
       .fb-avatar {
@@ -451,6 +451,7 @@ body {
 margin: 5px auto;
 font-size: 16px;
 padding-left: 300px;
+padding-right: 350px;
 padding-top: 20px;
   }
 
@@ -484,7 +485,7 @@ padding-top: 20px;
 
     .review {
 
-      background-color: #F5F5F5;
+      background-color: #ffffff;
 
       .left-part {
         width: 70px;
@@ -730,6 +731,8 @@ margin-top:90px;
   }
 
   .reviews {
+  width: 800px;
+  margin-left: 200px;
     .breadcrumb {
       position: relative;
     }
@@ -743,6 +746,7 @@ margin-top:90px;
         top: 5px;
         right: 5px;
         color: #0099CC;
+
       }
     }  
     .edit_review_link {
@@ -761,12 +765,14 @@ margin-top:90px;
     .comment {
       dislay: table-row;
       .more-info {
-        display: table-cell;
+        /* display: table-cell; */
         width: 70px;
+        padding-left: 200px;
       }
       .comment-content {
         display: table-cell;
         white-space: pre-line;
+        padding-left: 200px;
       }
     }
     
@@ -915,7 +921,7 @@ color: blue;
 }
 
 .centre_text {
-  margin-left: 340px;
+  margin-left: 240px;
   margin-top: 70px;
 }
 
@@ -926,11 +932,38 @@ color: blue;
   margin-top: 130px;
 
 .static_pages_body{
-  font-size: 16px;
   /* margin-left: 200px; */
-   margin-top: 20px;
-  margin-right: 200px;
+  font-size: 16px;
+margin-top: 20px;
+margin-right: 300px;
+text-align: justify
 }
 
 }
 
+.breadcrumb {
+background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99);
+}
+
+.info {
+  float:left;
+}
+
+
+#competition_text{
+
+font-size: 16px;
+margin-top: 150px;
+float:right;
+
+#competition_ipad {
+  padding-left:10px;
+  padding-left: 70px;
+}
+
+#competition_terms{
+font-size: 13px;
+padding-left: 15px;
+
+}
+}

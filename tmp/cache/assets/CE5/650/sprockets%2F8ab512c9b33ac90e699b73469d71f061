@@ -1,5 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"▀ц{"_version"%9f3b95dd7ea3030dc35985c0a8020862"
-class"BundledAsset"required_assets_digest"%638b3df18022b2225177810f71a4cfff"digest"%d051f8076d3d7231838db12aaa0db684"lengthi2б"source"2б/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"г{"lengthiфе"
+mtime"2013-04-17T15:32:22+01:00"digest"%2146f1dac621ec815bc21ef81f708591"pathname"6$root/app/assets/stylesheets/application.css.scss"
+class"BundledAsset"logical_path"application.css"required_assets_digest"%a83997d007dc94a00e19a62df13705a6"source"фе/* line 23, ../../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -5669,7 +5670,7 @@ a.label:hover, a.badge:hover {
 .header .user-panel {
   float: right;
   margin-top: -54px;
-  margin-right: 20px;
+  margin-right: -440px;
   width: 100px;
 }
 /* line 139, ../../app/assets/stylesheets/application.css.scss */
@@ -5986,72 +5987,73 @@ body .map-page #map_canvas img {
   margin: 5px auto;
   font-size: 16px;
   padding-left: 300px;
+  padding-right: 350px;
   padding-top: 20px;
 }
-/* line 458, ../../app/assets/stylesheets/application.css.scss */
+/* line 459, ../../app/assets/stylesheets/application.css.scss */
 .find-something #map_canvas {
   height: 380px;
   width: 470px;
   margin: 0 auto;
 }
-/* line 462, ../../app/assets/stylesheets/application.css.scss */
+/* line 463, ../../app/assets/stylesheets/application.css.scss */
 .find-something #map_canvas img {
   max-width: none;
 }
-/* line 469, ../../app/assets/stylesheets/application.css.scss */
+/* line 470, ../../app/assets/stylesheets/application.css.scss */
 .find-something .search-area {
   width: 640px;
   margin-top: -2em;
   margin-left: 18em;
   margin-bottom: 2em;
 }
-/* line 477, ../../app/assets/stylesheets/application.css.scss */
+/* line 478, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area {
   margin: 0 auto;
   width: 870px;
 }
-/* line 482, ../../app/assets/stylesheets/application.css.scss */
+/* line 483, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area h4 {
   margin: 10px 0 10px 10px;
 }
-/* line 486, ../../app/assets/stylesheets/application.css.scss */
+/* line 487, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
 }
-/* line 490, ../../app/assets/stylesheets/application.css.scss */
+/* line 491, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .left-part {
   width: 70px;
   float: left;
   padding: 10px;
 }
-/* line 496, ../../app/assets/stylesheets/application.css.scss */
+/* line 497, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .right-part {
   float: left;
   padding: 10px;
   width: 758px;
 }
-/* line 501, ../../app/assets/stylesheets/application.css.scss */
+/* line 502, ../../app/assets/stylesheets/application.css.scss */
 .find-something .area .review .right-part .review-text {
   padding: 10px 0;
 }
 
-/* line 514, ../../app/assets/stylesheets/application.css.scss */
+/* line 515, ../../app/assets/stylesheets/application.css.scss */
 .add-to-my-page {
   float: right;
   font-size: 10px;
 }
 
-/* line 519, ../../app/assets/stylesheets/application.css.scss */
+/* line 520, ../../app/assets/stylesheets/application.css.scss */
 .time-ago {
   font-size: 10px;
 }
 
-/* line 523, ../../app/assets/stylesheets/application.css.scss */
+/* line 524, ../../app/assets/stylesheets/application.css.scss */
 .grey {
   color: #777;
 }
 
-/* line 528, ../../app/assets/stylesheets/application.css.scss */
+/* line 529, ../../app/assets/stylesheets/application.css.scss */
 #my_films .actions {
   padding: 18px 0;
   margin-bottom: 18px;
@@ -6070,7 +6072,7 @@ body .map-page #map_canvas img {
 }
 
 /* for FireFox */
-/* line 540, ../../app/assets/stylesheets/application.css.scss */
+/* line 541, ../../app/assets/stylesheets/application.css.scss */
 input.btn::-moz-focus-inner,
 button.btn::-moz-focus-inner,
 a.btn::-moz-focus-inner {
@@ -6078,7 +6080,7 @@ a.btn::-moz-focus-inner {
 }
 
 /* for IE8 */
-/* line 547, ../../app/assets/stylesheets/application.css.scss */
+/* line 548, ../../app/assets/stylesheets/application.css.scss */
 input.btn:focus,
 button.btn:focus,
 a.btn:focus {
@@ -6086,7 +6088,7 @@ a.btn:focus {
 }
 
 /* IE */
-/* line 552, ../../app/assets/stylesheets/application.css.scss */
+/* line 553, ../../app/assets/stylesheets/application.css.scss */
 .legend {
   display: block;
   width: 100%;
@@ -6098,20 +6100,20 @@ a.btn:focus {
   border: 0;
   border-bottom: 1px solid #eee;
 }
-/* line 564, ../../app/assets/stylesheets/application.css.scss */
+/* line 565, ../../app/assets/stylesheets/application.css.scss */
 .legend small {
   font-size: 13.5px;
   color: #999999;
 }
 
-/* line 571, ../../app/assets/stylesheets/application.css.scss */
+/* line 572, ../../app/assets/stylesheets/application.css.scss */
 .legend + .control-group,
 .control-group.first {
   margin-top: 18px;
   -webkit-margin-top-collapse: separate;
 }
 
-/* line 576, ../../app/assets/stylesheets/application.css.scss */
+/* line 577, ../../app/assets/stylesheets/application.css.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -6126,14 +6128,14 @@ a.btn:focus {
 }
 
 /* Overlay */
-/* line 582, ../../app/assets/stylesheets/application.css.scss */
+/* line 583, ../../app/assets/stylesheets/application.css.scss */
 #simplemodal-overlay {
   background-color: #aaa;
   cursor: wait;
 }
 
 /* Container */
-/* line 587, ../../app/assets/stylesheets/application.css.scss */
+/* line 588, ../../app/assets/stylesheets/application.css.scss */
 #simplemodal-container {
   width: 550px;
   height: 350px;
@@ -6146,42 +6148,42 @@ a.btn:focus {
   border-radius: 12px;
 }
 
-/* line 597, ../../app/assets/stylesheets/application.css.scss */
+/* line 598, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-text {
   margin: 10px auto 30px;
   width: 500px;
 }
-/* line 601, ../../app/assets/stylesheets/application.css.scss */
+/* line 602, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form {
   width: 410px;
   margin: 0 auto;
 }
-/* line 608, ../../app/assets/stylesheets/application.css.scss */
+/* line 609, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs .control-group.chosen .help-inline {
   margin-top: 3px;
 }
-/* line 611, ../../app/assets/stylesheets/application.css.scss */
+/* line 612, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs input, #review-page .review-form .inputs textarea, #review-page .review-form .inputs select {
   width: 410px;
 }
-/* line 614, ../../app/assets/stylesheets/application.css.scss */
+/* line 615, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs textarea {
   height: 200px;
 }
-/* line 617, ../../app/assets/stylesheets/application.css.scss */
+/* line 618, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .inputs .review-comments-example {
   margin-top: -10px;
   display: block;
   margin-bottom: 15px;
 }
-/* line 624, ../../app/assets/stylesheets/application.css.scss */
+/* line 625, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .actions {
   width: 100px;
   margin: 0 auto;
   text-align: center;
   *zoom: 1;
 }
-/* line 629, ../../app/assets/stylesheets/application.css.scss */
+/* line 630, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form .actions input, #review-page .review-form .actions a {
   display: inline-block;
 }
@@ -6194,22 +6196,22 @@ a.btn:focus {
 #review-page .review-form .actions:after {
   clear: both;
 }
-/* line 634, ../../app/assets/stylesheets/application.css.scss */
+/* line 635, ../../app/assets/stylesheets/application.css.scss */
 #review-page .review-form #review_name, #review-page .review-form #review_phone, #review-page .review-form #review_address, #review-page .review-form #review_comment {
   width: 400px;
 }
 
-/* line 641, ../../app/assets/stylesheets/application.css.scss */
+/* line 642, ../../app/assets/stylesheets/application.css.scss */
 .perfect-review-example {
   padding: 10px;
 }
 
-/* line 645, ../../app/assets/stylesheets/application.css.scss */
+/* line 646, ../../app/assets/stylesheets/application.css.scss */
 #start_text {
   float: left;
 }
 
-/* line 651, ../../app/assets/stylesheets/application.css.scss */
+/* line 652, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section {
   background-color: #DFDFDF;
   padding: 25px;
@@ -6220,93 +6222,98 @@ a.btn:focus {
   -o-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
 }
-/* line 655, ../../app/assets/stylesheets/application.css.scss */
+/* line 656, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .explanation {
   text-align: center;
   margin: 7px;
   font-size: 14px;
 }
-/* line 661, ../../app/assets/stylesheets/application.css.scss */
+/* line 662, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .inputs input.string, .sign-in-section .inputs input.password {
   width: 300px;
   height: 12px;
   font-size: 14pt;
   padding: 10px 5px 10px 5px;
 }
-/* line 668, ../../app/assets/stylesheets/application.css.scss */
+/* line 669, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .actions {
   margin-left: 25%;
   /*text-align: right;*/
 }
-/* line 673, ../../app/assets/stylesheets/application.css.scss */
+/* line 674, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links {
   color: #848484;
   text-align: center;
 }
-/* line 676, ../../app/assets/stylesheets/application.css.scss */
+/* line 677, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links a {
   color: #848484;
 }
-/* line 680, ../../app/assets/stylesheets/application.css.scss */
+/* line 681, ../../app/assets/stylesheets/application.css.scss */
 .sign-in-section .links.centralized {
   text-align: center;
 }
 
-/* line 689, ../../app/assets/stylesheets/application.css.scss */
+/* line 690, ../../app/assets/stylesheets/application.css.scss */
 .users-page {
   margin-top: 90px;
 }
-/* line 693, ../../app/assets/stylesheets/application.css.scss */
+/* line 694, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .your_page_label {
   font-size: 26px;
 }
-/* line 696, ../../app/assets/stylesheets/application.css.scss */
+/* line 697, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .avatar {
   height: 120px;
   margin: 0 10px 10px 0;
   float: left;
   padding-left: 240px;
 }
-/* line 702, ../../app/assets/stylesheets/application.css.scss */
+/* line 703, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info .stats {
   width: 850px;
   margin: 7px 0px;
   font-size: 16px;
   padding: 15px;
 }
-/* line 711, ../../app/assets/stylesheets/application.css.scss */
+/* line 712, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location .location-label {
   margin-bottom: 0px;
   font-size: 16px;
   padding-bottom: 6px;
   padding-left: 300px;
 }
-/* line 717, ../../app/assets/stylesheets/application.css.scss */
+/* line 718, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location .address-visible-toggle {
   float: left;
   margin-right: 5px;
 }
-/* line 721, ../../app/assets/stylesheets/application.css.scss */
+/* line 722, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location #share_label, .users-page .user-info #your_location #keep_private_label {
   float: left;
   margin: 1px 25px 0px 0px;
   font-size: 16px;
   padding-bottom: 6px;
 }
-/* line 727, ../../app/assets/stylesheets/application.css.scss */
+/* line 728, ../../app/assets/stylesheets/application.css.scss */
 .users-page .user-info #your_location #your_location_message {
   color: green;
 }
 /* line 734, ../../app/assets/stylesheets/application.css.scss */
+.users-page .reviews {
+  width: 800px;
+  margin-left: 200px;
+}
+/* line 737, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb {
   position: relative;
 }
-/* line 738, ../../app/assets/stylesheets/application.css.scss */
+/* line 741, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb:hover {
   border-color: #0099CC;
   opacity: 0.9;
 }
-/* line 741, ../../app/assets/stylesheets/application.css.scss */
+/* line 744, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .breadcrumb:hover .edit_review_link {
   position: absolute;
   display: block;
@@ -6314,126 +6321,128 @@ a.btn:focus {
   right: 5px;
   color: #0099CC;
 }
-/* line 749, ../../app/assets/stylesheets/application.css.scss */
+/* line 753, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .edit_review_link {
   display: none;
 }
-/* line 752, ../../app/assets/stylesheets/application.css.scss */
+/* line 756, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .posted_at {
   color: #888888;
   font-style: italic;
   margin: 5px 0px;
 }
-/* line 757, ../../app/assets/stylesheets/application.css.scss */
+/* line 761, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .category_name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 762, ../../app/assets/stylesheets/application.css.scss */
+/* line 766, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment {
   dislay: table-row;
 }
-/* line 764, ../../app/assets/stylesheets/application.css.scss */
-.users-page .reviews .comment .more-info {
-  display: table-cell;
-  width: 70px;
-}
 /* line 768, ../../app/assets/stylesheets/application.css.scss */
+.users-page .reviews .comment .more-info {
+  /* display: table-cell; */
+  width: 70px;
+  padding-left: 200px;
+}
+/* line 773, ../../app/assets/stylesheets/application.css.scss */
 .users-page .reviews .comment .comment-content {
   display: table-cell;
   white-space: pre-line;
+  padding-left: 200px;
 }
-/* line 777, ../../app/assets/stylesheets/application.css.scss */
+/* line 783, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form form {
   margin: 0;
 }
-/* line 780, ../../app/assets/stylesheets/application.css.scss */
+/* line 786, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs {
   display: table-row;
 }
-/* line 782, ../../app/assets/stylesheets/application.css.scss */
+/* line 788, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs #except_comment {
   display: table-cell;
   width: 40%;
 }
-/* line 786, ../../app/assets/stylesheets/application.css.scss */
+/* line 792, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .inputs #comment {
   padding-left: 30px;
 }
-/* line 790, ../../app/assets/stylesheets/application.css.scss */
+/* line 796, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form #review_name, .users-page .edit_review_form #review_phone, .users-page .edit_review_form #review_address {
   width: 333px;
 }
-/* line 793, ../../app/assets/stylesheets/application.css.scss */
+/* line 799, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form select {
   width: 343px;
 }
-/* line 797, ../../app/assets/stylesheets/application.css.scss */
+/* line 803, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_review_info .edit-label {
   display: block;
 }
-/* line 801, ../../app/assets/stylesheets/application.css.scss */
+/* line 807, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form textarea {
   width: 100%;
   height: 195px;
 }
-/* line 805, ../../app/assets/stylesheets/application.css.scss */
+/* line 811, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .cancel-edit {
   position: absolute;
   top: 5px;
   right: 5px;
   color: #0099CC;
 }
-/* line 812, ../../app/assets/stylesheets/application.css.scss */
+/* line 818, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .control-group {
   display: inline;
 }
-/* line 814, ../../app/assets/stylesheets/application.css.scss */
+/* line 820, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .control-group .controls {
   display: inherit;
 }
-/* line 818, ../../app/assets/stylesheets/application.css.scss */
+/* line 824, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form span#address_validation {
   color: #B94A48;
 }
-/* line 822, ../../app/assets/stylesheets/application.css.scss */
+/* line 828, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group {
   margin-left: 25px;
 }
-/* line 824, ../../app/assets/stylesheets/application.css.scss */
+/* line 830, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .save_review {
   float: right;
   margin-left: inherit;
   margin-right: -10px;
 }
-/* line 829, ../../app/assets/stylesheets/application.css.scss */
+/* line 835, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .delete_review {
   float: right;
   margin-left: inherit;
 }
-/* line 833, ../../app/assets/stylesheets/application.css.scss */
+/* line 839, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .keep_private_label {
   float: right;
   margin: 5px 0px 0px 5px;
 }
-/* line 837, ../../app/assets/stylesheets/application.css.scss */
+/* line 843, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .keep_private_button {
   float: right;
   margin: 7px 0px 0px 25px;
 }
-/* line 841, ../../app/assets/stylesheets/application.css.scss */
+/* line 847, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .share_label {
   float: right;
   margin: 5px 0px 0px 5px;
 }
-/* line 845, ../../app/assets/stylesheets/application.css.scss */
+/* line 851, ../../app/assets/stylesheets/application.css.scss */
 .users-page .edit_review_form .edit_button_group .share_button {
   float: right;
   margin: 7px 0px 0px 25px;
 }
 
-/* line 856, ../../app/assets/stylesheets/application.css.scss */
+/* line 862, ../../app/assets/stylesheets/application.css.scss */
 #popup_close {
   position: absolute;
   color: #0099CC;
@@ -6442,7 +6451,7 @@ a.btn:focus {
   cursor: pointer;
 }
 
-/* line 864, ../../app/assets/stylesheets/application.css.scss */
+/* line 870, ../../app/assets/stylesheets/application.css.scss */
 #validation {
   display: none;
   position: absolute;
@@ -6451,40 +6460,40 @@ a.btn:focus {
   color: red;
 }
 
-/* line 872, ../../app/assets/stylesheets/application.css.scss */
+/* line 878, ../../app/assets/stylesheets/application.css.scss */
 .info-windows {
   color: blue;
 }
 
-/* line 877, ../../app/assets/stylesheets/application.css.scss */
+/* line 883, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list, .following-followers-popup .followers_list {
   width: 50%;
   float: left;
 }
-/* line 881, ../../app/assets/stylesheets/application.css.scss */
+/* line 887, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info, .following-followers-popup .followers_list .followed_user .info {
   width: 60%;
   float: left;
 }
-/* line 884, ../../app/assets/stylesheets/application.css.scss */
+/* line 890, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info .avatar, .following-followers-popup .followers_list .followed_user .info .avatar {
   float: left;
   padding-right: 5px;
   padding-top: 20px;
   padding-left: 10px;
 }
-/* line 890, ../../app/assets/stylesheets/application.css.scss */
+/* line 896, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .info .user-name, .following-followers-popup .followers_list .followed_user .info .user-name {
   margin: 25px 0px 0px 5px;
 }
-/* line 894, ../../app/assets/stylesheets/application.css.scss */
+/* line 900, ../../app/assets/stylesheets/application.css.scss */
 .following-followers-popup .following_list .followed_user .follow_form, .following-followers-popup .followers_list .followed_user .follow_form {
   position: relative;
   top: 11px;
   display: inline;
 }
 
-/* line 903, ../../app/assets/stylesheets/application.css.scss */
+/* line 909, ../../app/assets/stylesheets/application.css.scss */
 .select-label {
   float: right;
   padding-right: 10px;
@@ -6492,32 +6501,60 @@ a.btn:focus {
   font-style: italic;
 }
 
-/* line 911, ../../app/assets/stylesheets/application.css.scss */
+/* line 917, ../../app/assets/stylesheets/application.css.scss */
 .follow_form .btn {
   width: 100px;
   margin-top: 15px;
   margin-bottom: 30px;
 }
 
-/* line 918, ../../app/assets/stylesheets/application.css.scss */
+/* line 924, ../../app/assets/stylesheets/application.css.scss */
 .centre_text {
-  margin-left: 340px;
+  margin-left: 240px;
   margin-top: 70px;
 }
 
 /* static pages */
-/* line 924, ../../app/assets/stylesheets/application.css.scss */
+/* line 930, ../../app/assets/stylesheets/application.css.scss */
 .static_pages_header {
   font-size: 26px;
   margin-left: 200px;
   margin-top: 130px;
 }
-/* line 929, ../../app/assets/stylesheets/application.css.scss */
+/* line 935, ../../app/assets/stylesheets/application.css.scss */
 .static_pages_header .static_pages_body {
-  font-size: 16px;
   /* margin-left: 200px; */
+  font-size: 16px;
   margin-top: 20px;
-  margin-right: 200px;
+  margin-right: 300px;
+  text-align: justify;
+}
+
+/* line 945, ../../app/assets/stylesheets/application.css.scss */
+.breadcrumb {
+  background-image: -webkit-linear-gradient(top, #ffff99, #ffff99);
+}
+
+/* line 949, ../../app/assets/stylesheets/application.css.scss */
+.info {
+  float: left;
+}
+
+/* line 954, ../../app/assets/stylesheets/application.css.scss */
+#competition_text {
+  font-size: 16px;
+  margin-top: 150px;
+  float: right;
+}
+/* line 960, ../../app/assets/stylesheets/application.css.scss */
+#competition_text #competition_ipad {
+  padding-left: 10px;
+  padding-left: 70px;
+}
+/* line 965, ../../app/assets/stylesheets/application.css.scss */
+#competition_text #competition_terms {
+  font-size: 13px;
+  padding-left: 15px;
 }
 /* line 23, ../../../../../var/lib/gems/1.8/gems/bootstrap-sass-2.0.3/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .clearfix {
@@ -6752,5 +6789,4 @@ a.btn:focus {
 .modal-body {
   height: 60%;
 }
-"
-mtime"2013-04-13T01:28:08+01:00"content_type"text/css"logical_path"application.css"pathname"6$root/app/assets/stylesheets/application.css.scss:@created_atf1365812965.176403 J0:@expires_in0
+"content_type"text/css"_version"%9f3b95dd7ea3030dc35985c0a8020862:@created_atf1366209332.7244401 ]::@expires_in0

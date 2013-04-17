@@ -19,8 +19,13 @@
   <%= render :partial => 'layouts/fb_init' %>
   <div class="container">
     <%= render :partial => 'layouts/header' if user_signed_in? && current_user.registration_complete?%>
-    <%= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>
+    <%#= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>
     <div class='page-content'>
+      <div id = "competition_text"><a href="#" class="email-invite-link">Invite Others</a>
+                and win an iPad!<br>
+                <div id = "competition_ipad"><%= image_tag ("ipad.png") %></div>
+                <div id = "competition_terms"><%= link_to "Terms and Conditions apply",competition_terms_path %></div>
+                </div>
         <%= content_for?(:body) ? yield(:body) : yield %>
     </div>
 
