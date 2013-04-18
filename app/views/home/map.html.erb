@@ -52,10 +52,41 @@
 </div>
 
 <script type="text/javascript">
+  var pac_input = document.getElementById('address_autocomplete');
+
+  (function pacSelectFirst(input){
+    // store the original event binding function
+    var _addEventListener = (input.addEventListener) ? input.addEventListener : input.attachEvent;
+
+    function addEventListenerWrapper(type, listener) {
+      // Simulate a 'down arrow' keypress on hitting 'return' when no pac suggestion is selected,
+      // and then trigger the original listener.
+      if (type == "keydown") {
+        var orig_listener = listener;
+        listener = function (event) {
+          var suggestion_selected = $(".pac-item.pac-selected").length > 0;
+          if (event.which == 13 && !suggestion_selected) {
+            event.preventDefault();
+            var simulated_downarrow = $.Event("keydown", {keyCode:40, which:40})
+            orig_listener.apply(input, [simulated_downarrow]);
+          }
+
+          orig_listener.apply(input, [event]);
+        };
+      }
+
+      // add the modified listener
+      _addEventListener.apply(input, [type, listener]);
+    }
+
+    if (input.addEventListener)
+      input.addEventListener = addEventListenerWrapper;
+    else if (input.attachEvent)
+      input.attachEvent = addEventListenerWrapper;
+
+  })(pac_input);
+
   function initialize_google_maps() {
-
-
-
     var midOfIreland = new google.maps.LatLng(53.252069, -7.860718);
     var myOptions = {
       zoom: 7,
@@ -65,46 +96,41 @@
     };
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-    var input = document.getElementById('address_autocomplete');
     var options = {
       types: ['geocode']
     };
 
-   autocomplete = new google.maps.places.Autocomplete(input, options);
+    autocomplete = new google.maps.places.Autocomplete(pac_input, options);
     autocomplete.bindTo('bounds', map);
     // $(autocomplete).trigger("click");
     
     var contentstring = $('#info_window').html();
     
-     
-var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
-// for the 'x', to close the infoWindow, we give it the same behaviour as the 'No' link, in the infoWindow
-google.maps.event.addListener(infowindow, 'closeclick', function() {   
-  $(".map-no-link").trigger("click");
-});  
+    var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
+    // for the 'x', to close the infoWindow, we give it the same behaviour as the 'No' link, in the infoWindow
+    google.maps.event.addListener(infowindow, 'closeclick', function() {   
+      $(".map-no-link").trigger("click");
+    });  
  
-  
-   var marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
       map: map
     });
-    
-    
 
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
       var place = autocomplete.getPlace();
       if (place.geometry.viewport) {
           map.fitBounds(place.geometry.viewport);
-      } else 
-      {
+      } else {
           map.setCenter(place.geometry.location);
           map.setZoom(11);
       }
+
       marker.setPosition(place.geometry.location);
       $('#user_lat').val(place.geometry.location.lat());
       $('#user_lng').val(place.geometry.location.lng());
       $('#changed').val('1');
 
-   //   infowindow.setContent(place.name);
+      //infowindow.setContent(place.name);
       infowindow.open(map, marker);
     });
 
@@ -117,14 +143,7 @@ google.maps.event.addListener(infowindow, 'closeclick', function() {
 
   }
 
-
   $(function() {
       initialize_google_maps();
   });
-
-
-
 </script>
-
-
- 
