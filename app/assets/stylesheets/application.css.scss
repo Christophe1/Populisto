@@ -254,6 +254,20 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
     }
   }
 
+  .sign-in-section {
+    .simple_form#new_user {
+      .error-explanation {
+        margin: 5px 0px 5px 0px;
+        background: #f2dede;
+        padding: 15px;
+        .error-message {
+          display: block;
+          color: #b94a48;
+        }
+      }
+    }
+  }
+
   .sign-in {
     text-align: center;
 
