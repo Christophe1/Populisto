@@ -33,242 +33,213 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
   border-style: solid;
   z-index: 1;
 
-
-
-
   .populisto_logo {
     float: left;
     max-width: 50%;
     padding-top: 12px;
     padding-left: 12px;
-   }
+  }
 
+  /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
 
-   /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
+  .search-box {
+    margin-top: 15px;
 
+    .form-horizontal {
 
-    .search-box {
-      margin-top: 15px;
-     .form-horizontal {
+      .controls {
+        width:50px;
+        margin-left: 390px;
+        margin-top: 18px;
 
-     .controls {
-     width:50px;
-     margin-left: 390px;
-     margin-top: 18px;
-     
+        .control-group.grouped_chosen {
+          float: left;
+          display: inline;
+          width: 540px;
 
-      .control-group.grouped_chosen {
-        float: left;
-        display: inline;
-        width: 540px;
-
-
-
-        #review_search_ids_chzn {
-          margin-left: -25px;
-         /* width: 550px !important; */
+          #review_search_ids_chzn {
+            margin-left: -25px;
+          }
         }
-
-}
-
-      
       }
-                    .search-button {
+
+      .search-button {
         float: right;
         margin-right: 473px;
         margin-top: -62px;
       }
 
       .control-label {
-          display: none;
-          float: none;
-          width: auto;
-        }
-
-
-
+        display: none;
+        float: none;
+        width: auto;
+      }
     }
-
     @include clearfix();
+  }
 
-  
+  .welcome {
+    float: right;
+    margin: 16px 5px 0 0;
+    font-size: 14px;
+
+    .fb-avatar {
+      width: 16px;
+      margin-right: 2px;
+    }
+  }
+
+  .menu-item {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .invites-count {
+    float: left;
+    margin-top: 20px;
+    margin-left: 12px;
+  }
+
+  .user-panel {
+    float: right;
+    margin-top: -54px;
+    margin-right: -440px;
+    width: 100px;
+
+    .fb-avatar {
+      width: 30px;
     }
 
-/* not sure what .brand is used for. Maybe can be deleted? 
-    .brand {
-      float: left;
-      display: block;
-      position: absolute;
-      margin-top:10px;
-      left: 5px;
-      width: 250px;
-    }    */
-
-    .welcome {
-      float: right;
-      margin: 16px 5px 0 0;
-      font-size: 14px;
-
-      .fb-avatar {
-        width: 16px;
-        margin-right: 2px;
-      }
+    .fb-logout {
+      background: none;
+      border: none;
+      outline: none;
+      color: #08C;
     }
 
-
-
-    .menu-item {
-      float: right;
-      margin-top: 10px;
-      margin-right: 10px;
+    .fb-logout:hover {
+      text-decoration: underline;
     }
-
-    .invites-count {
-      float: left;
-      margin-top: 20px;
-      margin-left: 12px;
-    }
-
-  
-
-    .user-panel {
-      float: right;
-      margin-top: -54px;
-      margin-right: -440px;
-      width: 100px;
-
-      .fb-avatar {
-        width: 30px;
-      }
-
-      .fb-logout {
-        background: none;
-        border: none;
-        outline: none;
-        color: #08C;
-      }
-
-      .fb-logout:hover {
-        text-decoration: underline;
-      }
-    }
+  }
 
 
-      #static_pages {
-      margin-top: 25px;
+  #static_pages {
+    margin-top: 25px;
 
-      li{
+    li {
       display: inline;
       /* list-style-type: none; */
       padding-right: 35px;
       font-size: 16px
-
-      }
-
-      #address_book {
-      font-size: 26px
-      }
-
-      }
-
     }
 
+    #address_book {
+      font-size: 26px
+    }
+  }
 
-
+}
 
 /* css details for the list on the login - sign up page */
 
 .populisto_logo2 {
-margin: 0 auto;
-width: 280px;
-position: relative;
+  margin: 0 auto;
+  width: 280px;
+  position: relative;
 }
 
-   .changing_images {
-float: left;
-padding-top: 30px;
-padding-left: 90px;
-width: 550px;
-height: 350px;
-   }
+.changing_images {
+  float: left;
+  padding-top: 30px;
+  padding-left: 90px;
+  width: 550px;
+  height: 350px;
+}
 
 .features {
   list-style:none;
   float: left;
   margin: 9em 0 0 18em;
-  }
-  .features li {
+}
+
+.features li {
   margin: 8px 0 2em;
-  }
- .features img {
+}
+
+.features img {
   float: left;
   margin: 0px;
-  } 
-  .features p {
+} 
+
+.features p {
   margin: 0 0 0 68px;
-  }
-  .features .title {
+}
+
+.features .title {
   font-size: 16px;
   margin-bottom: .3em;
-  }
-  
-  .features img2 {
+}
+
+.features img2 {
   float: right;
   margin: 5px 0 0;
-  } 
+} 
 
-  
-  .iPad-promo {
+
+.iPad-promo {
   width:380px;
   list-style:none;
   float:left;
   border: 1px solid #ebebeb;
   margin: 380px 0 0 -500px;
   padding: 20px;
-  }
-  
-  .iPad-promo img {
-    float: left;
+}
+
+.iPad-promo img {
+  float: left;
   margin-right: 18px 
-  } 
-  
-  .iPad-promo .title {
+} 
+
+.iPad-promo .title {
   font-size: 16px;
   margin-bottom: .2em;
-  } 
-  
-  .iPad-promo p {
+} 
+
+.iPad-promo p {
   font-size: 1em;
-  } 
-  
-  .iPad-promo .img2 {
+} 
+
+.iPad-promo .img2 {
   margin-left: 340px;
   margin-top: -60px
-  } 
+} 
 
 
 
 
 /*Facebook login, on the home page */
 
-  .login-page {
+.login-page {
   margin: 30px 0px 0px 710px;
   width: 360px;
-
 
   .facebook-section {
     text-align: center;
     position: relative;
     padding: 15px 15px 0;
+
     .fb-login {
       width: 315px;
       margin: 15px auto;
       display: block;
     }
+
     .fb-notes {
       font-size: 12px;
       margin-bottom: 20px;
     }
+
     .or-devider {
       position: absolute;
       bottom: -36px;
@@ -283,51 +254,45 @@ height: 350px;
     }
   }
 
+  .sign-in {
+    text-align: center;
 
+    p {
+      font-size: 20px;
+    }
 
-
-.sign-in
-{
-  text-align: center;
-
-  p {
-    font-size: 20px;
-  }
-
-  .create-account-note {
-    color: red;
-
-    a, a:visited {
+    .create-account-note {
       color: red;
-      text-decoration: underline;
+
+      a, a:visited {
+        color: red;
+        text-decoration: underline;
+      }
+    }
+
+    .not-on-facebook-note a {
+      color: blue;
     }
   }
 
-  .not-on-facebook-note a {
-    color: blue;
-  }
-}
-
-
-border: 
-  1px solid #eee;
+  border: 1px solid #eee;
   @include border-radius(10px);
-
 }
 
 /*the yes and no links on the info box, on the google map page, straight after registration */
+
 #correct_area {
-font-weight: bold;
+  font-weight: bold;
 }
 
 #no_link {
-float: left;
-font-weight: bold;
+  float: left;
+  font-weight: bold;
 }
 
 #yes_link {
-float: right;
-font-weight: bold;
+  float: right;
+  font-weight: bold;
 }
 
   /* #header-wrap {
@@ -346,10 +311,7 @@ font-weight: bold;
 
 
 body {
-
   background-color: #fff !important;
-  
-
 
   > .container {
     width: 100%;
@@ -360,66 +322,56 @@ body {
     background-color: #ffffff;
     padding: 60px;
     /* margin-top: 30px; 
-     @include border-radius(7px, 7px); */
+    @include border-radius(7px, 7px); */
   }
 
+  .map-page {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-
-.map-page {
-  width: 800px;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  .greetings {
-    width: 80%;
-    margin: 10px auto 30px;
-     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  .address-area {
-    margin: 10px auto;
-    width: 97%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    #address_autocomplete {
-      
-      width: 60%;
-      height: 30px;
-      font-size: 20px;
+    .greetings {
+      width: 80%;
+      margin: 10px auto 30px;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      font-size: 20px;
+      line-height: 26px;
     }
 
-  }
+    .address-area {
+      margin: 10px auto;
+      width: 97%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
 
-  #map_canvas {
-  height: 400px;
-  width: 600px;
-  margin-top: 0.6em;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-    img {
+      #address_autocomplete {
+        width: 60%;
+        height: 30px;
+        font-size: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    #map_canvas {
+      height: 400px;
+      width: 600px;
+      margin-top: 0.6em;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
         max-width: none;
+      }
     }
   }
-
- /* the 'Next button', on the select
- destination page. No longer needed. 
- #map-next-link {
-    float: right;
-  } */
-}
-
 }
 
 /*---------------------------------END OF ADRESS SELECTION ON MAP CSS--------------------------*/
@@ -450,11 +402,11 @@ body {
 
 .find-something {
   .greetings {
-margin: 5px auto;
-font-size: 16px;
-padding-left: 300px;
-padding-right: 350px;
-padding-top: 20px;
+    margin: 5px auto;
+    font-size: 16px;
+    padding-left: 300px;
+    padding-right: 350px;
+    padding-top: 20px;
   }
 
   #map_canvas {
@@ -462,22 +414,18 @@ padding-top: 20px;
     width: 470px;
     margin: 0 auto;
     img {
-        max-width: none;
+      max-width: none;
     }
   }
-
-
 
   .search-area {
     width: 640px;
     margin-top: -2em;
     margin-left: 18em;
     margin-bottom: 2em;
-
   }
 
   .area {
-
     margin: 0 auto;
     width: 870px;
 
@@ -486,7 +434,6 @@ padding-top: 20px;
     }
 
     .review {
-
       background-color: #ffffff;
 
       .left-part {
@@ -503,7 +450,6 @@ padding-top: 20px;
         .review-text {
           padding: 10px 0;
         }
-
 
       }
 
@@ -540,14 +486,14 @@ padding-top: 20px;
 input.btn::-moz-focus-inner,
 button.btn::-moz-focus-inner,
 a.btn::-moz-focus-inner {
-    border : 0px;
+  border : 0px;
 }
 
 /* for IE8 */
 input.btn:focus,
 button.btn:focus,
 a.btn:focus {
-    outline : none;
+  outline : none;
 }
 
 /* IE */
@@ -650,25 +596,25 @@ a.btn:focus {
 
 
 
-  .sign-in-section {
-    background-color: #DFDFDF;
-    padding: 25px;
-    padding-top: 22px;
-    .explanation {
-      text-align: center;
-      margin: 7px;
-      font-size: 14px;
+.sign-in-section {
+  background-color: #DFDFDF;
+  padding: 25px;
+  padding-top: 22px;
+  .explanation {
+    text-align: center;
+    margin: 7px;
+    font-size: 14px;
+  }
+  .inputs {
+    input.string, input.password {
+      width: 300px;
+      height: 12px;
+      font-size: 14pt;
+      padding: 10px 5px 10px 5px;
     }
-    .inputs {
-      input.string, input.password {
-        width: 300px;
-        height: 12px;
-        font-size: 14pt;
-        padding: 10px 5px 10px 5px;
-      }
-    }
-    .actions {
-      margin-left: 25%;
+  }
+  .actions {
+    margin-left: 25%;
       /*text-align: right;*/
     }
 
@@ -686,87 +632,85 @@ a.btn:focus {
 
   }
 
- 
-
-.users-page {
-margin-top:90px;
-  .user-info {
-
-    .your_page_label {
-      font-size: 26px;
-    }
-    .avatar {
-      height: 120px;
-      margin: 0 10px 10px 0;
-      float: left;
-      padding-left:240px;
-    }
-    .stats {
-      width: 850px;
-      margin: 7px 0px;
-      font-size: 16px;
-      padding: 15px;
 
 
-    }
-    #your_location {
-      .location-label {
-        margin-bottom: 0px;
-        font-size: 16px;
-        padding-bottom: 6px;
-        padding-left: 300px;
+  .users-page {
+    margin-top:90px;
+    .user-info {
+
+      .your_page_label {
+        font-size: 26px;
       }
-      .address-visible-toggle {
+      .avatar {
+        height: 120px;
+        margin: 0 10px 10px 0;
         float: left;
-        margin-right: 5px;
+        padding-left:240px;
       }
-      #share_label, #keep_private_label {
-        float: left;
-        margin: 1px 25px 0px 0px;
+      .stats {
+        width: 850px;
+        margin: 7px 0px;
         font-size: 16px;
-        padding-bottom: 6px;
+        padding: 15px;
       }
-      #your_location_message{
-        color: green;
+      #your_location {
+        .location-label {
+          margin-bottom: 0px;
+          font-size: 16px;
+          padding-bottom: 6px;
+          padding-left: 300px;
+        }
+        .address-visible-toggle {
+          float: left;
+          margin-right: 5px;
+        }
+        #share_label, #keep_private_label {
+          float: left;
+          margin: 1px 25px 0px 0px;
+          font-size: 16px;
+          padding-bottom: 6px;
+        }
+        #your_location_message{
+          color: green;
+        }
       }
     }
-  }
 
-  .reviews {
-  width: 800px;
-  margin-left: 200px;
-    .breadcrumb {
-      position: relative;
-    }
+    .reviews {
+      width: 800px;
+      margin-left: 200px;
+      .breadcrumb {
+        position: relative;
+      }
 
-    .breadcrumb:hover {
-      border-color:  #0099CC;  
-      opacity: 0.9;
+      .breadcrumb:hover {
+        border-color:  #0099CC;  
+        opacity: 0.9;
+        .edit_review_link {
+          position: absolute;
+          display: block;
+          top: 5px;
+          right: 5px;
+          color: #0099CC;
+
+        }
+      }  
       .edit_review_link {
-        position: absolute;
-        display: block;
-        top: 5px;
-        right: 5px;
-        color: #0099CC;
-
+        display: none;
       }
-    }  
-    .edit_review_link {
-      display: none;
-    }
-    .posted_at {
-      color: #888888;
-      font-style: italic;
-      margin: 5px 0px;
-    }    
-    .category_name{
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .comment {
-      dislay: table-row;
-      .more-info {
+      .posted_at {
+        color: #888888;
+        font-style: italic;
+        margin: 5px 0px;
+      }    
+      .category_name{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .comment {
+        display: table-row;
+        .more-info {
         /* display: table-cell; */
         width: 70px;
         padding-left: 200px;
@@ -786,13 +730,13 @@ margin-top:90px;
     }
     .inputs{
       display: table-row;
-    #except_comment {
-      display: table-cell;
-      width:40%;
-    }
-    #comment{
-      padding-left: 30px;
-    }
+      #except_comment {
+        display: table-cell;
+        width:40%;
+      }
+      #comment{
+        padding-left: 30px;
+      }
     }
     #review_name, #review_phone, #review_address {
       width: 333px;
@@ -877,7 +821,7 @@ margin-top:90px;
 }
 
 .info-windows{
-color: blue;
+  color: blue;
 }
 
 .following-followers-popup {
@@ -933,18 +877,18 @@ color: blue;
   margin-left: 200px;
   margin-top: 130px;
 
-.static_pages_body{
+  .static_pages_body{
   /* margin-left: 200px; */
   font-size: 16px;
-margin-top: 20px;
-margin-right: 300px;
-text-align: justify
+  margin-top: 20px;
+  margin-right: 300px;
+  text-align: justify
 }
 
 }
 
 .breadcrumb {
-background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99);
+  background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99);
 }
 
 .info {
@@ -954,18 +898,18 @@ background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99);
 
 #competition_text{
 
-font-size: 16px;
-margin-top: 150px;
-float:right;
+  font-size: 16px;
+  margin-top: 150px;
+  float:right;
 
-#competition_ipad {
-  padding-left:10px;
-  padding-left: 70px;
-}
+  #competition_ipad {
+    padding-left:10px;
+    padding-left: 70px;
+  }
 
-#competition_terms{
-font-size: 13px;
-padding-left: 15px;
+  #competition_terms{
+    font-size: 13px;
+    padding-left: 15px;
 
-}
+  }
 }
