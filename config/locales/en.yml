@@ -122,7 +122,7 @@ en:
     text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>A Plumber? A Doctor? A restaurant? Share it with friends to help them find something. Or store it personally for your own information'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
-    comment_label: 'Comments - personal experience, value for money...'
+    comment_label: 'Some Comments:'
     comment_popup_link_text: 'See samples of stuff written up just perfectly'
     perfect_example: 'Add example to translations file - en.yml'
     close_popup_text: 'Close'

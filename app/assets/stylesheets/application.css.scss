@@ -5,6 +5,7 @@
  *= require search
  *= require static_pages
  *= require_self
+ *= require form
 */
 
 @import "bootstrap/variables";
@@ -584,7 +585,7 @@ a.btn:focus {
     }
 
     .actions {
-      width: 100px;
+      width: 300px;
       margin: 0 auto;
       text-align: center;
 

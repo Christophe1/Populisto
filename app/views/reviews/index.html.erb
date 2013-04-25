@@ -8,20 +8,23 @@
 
   <div class='review-form'>
       <%= simple_form_for(@review) do |f| %>
-          <div class="inputs">
-            <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
-                             :input_html => {  :multiple => true },
-                             :label => I18n.t('write_review.categories_selector_label') , :placeholder => I18n.t('write_review.categories_selector_placeholder') %>
-            <%= f.input :name, :required => true %>
-            <%= f.input :phone  %>
+          <div class="inputs clearfix">
+            <div class="leftGroups">
+              <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
+                               :input_html => {  :multiple => true },
+                               :label => I18n.t('write_review.categories_selector_label') , :placeholder => I18n.t('write_review.categories_selector_placeholder') %>
+              <%= f.input :name, :required => true %>
+              <%= f.input :phone  %>
 
-            <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => '' %>
+              <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => '' %>
 
-            <%= f.hidden_field :lat  %>
-            <%= f.hidden_field :lng  %>
-
-            <%= f.input :comment, :label => I18n.t('write_review.comment_label') %>
-            <a class="review-comments-example" href='#'><%= I18n.t('write_review.comment_popup_link_text') %></a>
+              <%= f.hidden_field :lat  %>
+              <%= f.hidden_field :lng  %>
+            </div>
+            <div class="rightGroups">
+              <%= f.input :comment, :label => I18n.t('write_review.comment_label') %>
+              <a class="review-comments-example" href='#'><%= I18n.t('write_review.comment_popup_link_text') %></a>
+            </div>
           </div>
 
           <div class="actions">
