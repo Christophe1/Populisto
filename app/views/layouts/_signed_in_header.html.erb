@@ -3,7 +3,7 @@
   <!-- <div class='top-line'> -->
 
  <div class="populisto_logo">
-    <%= link_to(image_tag('logo.png', :alt => t('application.title')), root_path) %>
+    <%= link_to(image_tag('logo.jpg', :alt => t('application.title')), root_path) %>
   </div>
 
 <%#user is only signed in fully when they fully register - INCLUDING ADDRESS %>
@@ -44,19 +44,24 @@
           <%= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
         </div>
 
+        <div id = "menu">
         <ul id = "static_pages">
+
           <li><%= link_to "About Us",about_us_path %></li>
           <li><%= link_to "FAQ", faq_path %></li>
           <li><a href="#" class="email-invite-link">Invite Others</a></li>
           <li><%= link_to "Contact Us", contact_us_path %></li>
           <li id="address_book"><%= link_to "Your Address Book", user_path(current_user) %></li>
+          <li><%= link_to "Pop something in", reviews_path  %>
         </ul>
-
+        <%#= link_to I18n.t('layout.write_smth'), reviews_path, :class => 'btn menu-item'  %>
+          </div>
+          </div>
 
         <%#= fb_login_button(image_tag("fblogin.png"), :class => 'menu-item fb-login') unless current_user.added_fb_account? %>
 
         
-        <%#= link_to I18n.t('layout.write_smth'), reviews_path, :class => 'btn menu-item'  %>
+        
         <%#= link_to I18n.t('layout.find_something_link'), find_path, :class => 'btn menu-item'  %>
 
         <%#= link_to I18n.t('layout.your_page_link'), user_path(current_user), :class => 'btn menu-item' %>

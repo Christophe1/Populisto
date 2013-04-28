@@ -5,7 +5,7 @@ en:
   activerecord:
     errors:
       messages:
-        confirmation: "The Confirm Password value does not match the Password. Please enter matching values."
+        confirmation: "Your password doesn't match. Please try again."
   application:
     title: "Populisto!"
     admin_area: "Admin Area"
