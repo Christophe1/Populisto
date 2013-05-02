@@ -14,4 +14,20 @@ module UsersHelper
       ""
     end
   end
+
+  def pop_something(user)
+    if user == current_user
+      I18n.t('helpers.pop_something_in')
+    else
+      ""
+    end
+  end
+
+  def pop_something2(user)
+    if user == current_user
+      I18n.t('helpers.pop_something_in2')
+    else
+      ""
+    end
+  end
 end

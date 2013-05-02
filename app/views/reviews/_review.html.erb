@@ -1,6 +1,7 @@
 <div class="breadcrumb" id="review_<%= review.id %>">
   <div class="content">
   <% if edit_enabled %>
+
     <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
   <% end %>
 

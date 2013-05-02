@@ -72,7 +72,9 @@ module ApplicationHelper
   # @return [String] html markup.
   #
   def fb_avatar(user, options = {})
-    link_to(image_tag("http://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options)), "http://www.facebook.com/profile.php?id=#{user.external_user_id}", { :target => '_blank' })
+    image_tag("http://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options))
+    # the code below turns the facebook avatar into a link, which we don't want.
+    # link_to(image_tag("http://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options)), "http://www.facebook.com/profile.php?id=#{user.external_user_id}", { :target => '_blank' })
   end
 
   # Generates profile link tag.

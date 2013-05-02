@@ -38,23 +38,9 @@
 
 <script type="text/javascript">
 
-    function initialize_google_maps() {
-      var input = document.getElementById('review_address');
-      var options = { types: ['geocode'] };
 
-      autocomplete = new google.maps.places.Autocomplete(input, options);
-
-      google.maps.event.addListener(autocomplete, 'place_changed', function() {
-        var place = autocomplete.getPlace();
-        $('#review_lat').val(place.geometry.location.lat());
-        $('#review_lng').val(place.geometry.location.lng());
-      });
-
-    }
-
-    $(function() {
-        initialize_google_maps();
-    });
+// I took out the initialize_google_maps function here,
+// because it was clashing with the one in scripts.js
 
     $("#review_<%= @review.id %> select").each(function () {
         $(this).attr('data-placeholder', $(this).attr('placeholder'));

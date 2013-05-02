@@ -19,6 +19,12 @@ $wizardTabsBorder:      $wizardTabsBorderWidth solid $wizardTabsBorderColor;
 $wizardTabWidth:        ceil(($gridRowWidth - 2 * $wizardTabsBorderWidth) / 2);
 $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidth);
 
+
+html {
+     overflow: -moz-scrollbars-vertical;
+     overflow: scroll;
+}
+
 /* the header, with logo, avatar, log out et al, which is on most pages. */
 
 
@@ -656,6 +662,17 @@ a.btn:focus {
       .your_page_label {
         font-size: 26px;
       }
+
+      .pop_something_in {
+        font-size: 26px;
+        line-height: 26px;
+      }
+
+      .pop_something_in2 {
+        font-size: 26px;
+        line-height: 26px;
+      }
+
       .avatar {
         height: 120px;
         margin: 0 10px 10px 0;
@@ -668,6 +685,7 @@ a.btn:focus {
         font-size: 16px;
         padding: 15px;
       }
+      
       #your_location {
         .location-label {
           margin-bottom: 0px;

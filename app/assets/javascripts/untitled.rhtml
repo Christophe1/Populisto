@@ -1,0 +1,179 @@
+
+
+var map_latitude = '<%= at_user.lat %>';
+var map_longitude = '<%= at_user.lng %>';
+  var map;
+  var markers = [];
+
+  function initialize_google_maps() {
+    var currentlatlng = new google.maps.LatLng(48.8, 2.12);
+    var zoom = 9;
+    var myOptions = {
+        zoom: zoom,
+        center: currentlatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP, // ROADMAP, SATELLITE, HYBRID
+        streetViewControl: false
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+    var marker = new google.maps.Marker({map: map, position: currentlatlng, icon:{oppacity:0}});
+    map.setCenter(currentlatlng);
+    map.setZoom(zoom);
+
+    var circle = new google.maps.Circle({
+        map: map,
+        fillOpacity: 0,
+        strokeWeight: 2,
+        strokeOpacity: 0.7,
+        radius: 9000,
+    });
+    circle.bindTo('center', marker, 'position');
+
+  }
+
+  function show_markers() {
+    if (markers)
+      for(i in markers) {
+        markers[i].setMap(map);
+      }
+  }
+
+  function add_marker(location) {
+    marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+    markers.push(marker);
+    // markers.setVisible(false);
+  }
+
+<!--   function initialize_markers() {
+    <%# (@reviews || []).each do |r| %>
+      <%# next unless r.lat && r.lng %>
+      position = new google.maps.LatLng(<%= r.lat %>, <%= r.lng %>);
+      add_marker(position);
+    <%# end %>
+  } -->
+
+  $(function() {
+    initialize_google_maps();
+    initialize_markers();
+    show_markers();
+  });
+
+//   google.maps.event.trigger(map, 'resize');
+// });
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+
+
+
+
+<script type="text/javascript">
+
+// $(document).ready(function(){
+
+//$(document).on("redraw_map", function(){
+
+  var map;
+  var markers = [];
+
+  function initialize_google_maps() {
+    var currentlatlng = new google.maps.LatLng(<%= @user.lat %>, <%= @user.lng %>);
+    var zoom = <%= @kms_range %> > 9 ? 9 : 10;
+    var myOptions = {
+        zoom: zoom,
+        center: currentlatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP, // ROADMAP, SATELLITE, HYBRID
+        streetViewControl: false
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+    var marker = new google.maps.Marker({map: map, position: currentlatlng, icon:{oppacity:0}});
+    map.setCenter(currentlatlng);
+    map.setZoom(zoom);
+
+    var circle = new google.maps.Circle({
+        map: map,
+        fillOpacity: 0,
+        strokeWeight: 2,
+        strokeOpacity: 0.7,
+        radius: <%= @kms_range %>*1000,
+    });
+    circle.bindTo('center', marker, 'position');
+
+  }
+
+  function show_markers() {
+    if (markers)
+      for(i in markers) {
+        markers[i].setMap(map);
+      }
+  }
+
+  function add_marker(location) {
+    marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+    markers.push(marker);
+    // markers.setVisible(false);
+  }
+
+  function initialize_markers() {
+    <% (@reviews || []).each do |r| %>
+      <% next unless r.lat && r.lng %>
+      position = new google.maps.LatLng(<%= r.lat %>, <%= r.lng %>);
+      add_marker(position);
+    <% end %>
+  }
+
+  $(function() {
+    initialize_google_maps();
+    initialize_markers();
+    show_markers();
+  });
+
+//   google.maps.event.trigger(map, 'resize');
+// });
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    // $('.review-comments-example').live('click', function(e) {
+    //     $.modal('<div class="perfect-review-example"><%= I18n.t('write_review.perfect_example') %></div>', {closeHTML : '<a id="popup_close" href="#"><%= I18n.t('write_review.close_popup_text') %></a>', overlayClose : true})
+    // });
+
+    function initialize_google_maps() {
+      var input = document.getElementById('review_address');
+      var options = { types: ['geocode'] };
+
+      autocomplete = new google.maps.places.Autocomplete(input, options);
+
+      google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        var place = autocomplete.getPlace();
+        $('#review_lat').val(place.geometry.location.lat());
+        $('#review_lng').val(place.geometry.location.lng());
+      });
+
+    }
+
+    $(function() {
+        initialize_google_maps();
+    });
+
+</script>

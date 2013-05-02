@@ -33,6 +33,9 @@ en:
     user_indicator: "Hello, %{user}."
     me: "Me"
     your_page: "Your Address Book"
+    pop_something_in: 'A butcher, a baker, a candlestick maker?'
+    pop_something_in2: 'Pop something in to your Address Book!'
+    pop_something_in3: "Store it for your own information, or to help others."
     s_page: "'s Address Book"
     s_area: "'s area: "
     location_hidden: "location is hidden"
