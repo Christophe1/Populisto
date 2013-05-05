@@ -392,6 +392,7 @@ body {
         max-width: none;
       }
     }
+
   }
 }
 
@@ -431,6 +432,15 @@ body {
   }
 
   #map_canvas {
+    height: 380px;
+    width: 470px;
+    margin: 0 auto;
+    img {
+      max-width: none;
+    }
+  }
+
+    #map_canvas2 {
     height: 380px;
     width: 470px;
     margin: 0 auto;
