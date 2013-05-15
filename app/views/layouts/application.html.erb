@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= t('application.title') %></title>
+  <%= include_gon(:watch => true) %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   
   <% if @include_goole_maps %>
@@ -19,14 +20,15 @@
 <body>
   <%= render :partial => 'layouts/fb_init' %>
   <!-- <div class="container">  -->
-    <%= render :partial => 'layouts/header' if user_signed_in? && current_user.registration_complete?%>
-    <%#= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>
-      <div id = "competition_text"><a href="#" class="email-invite-link">Invite Others</a>
-                and win an iPad!<br>
 
-                <div id = "competition_ipad"><%= image_tag ("ipad.png") %></div>
-                <div id = "competition_terms"><%= link_to "Terms and Conditions apply",competition_terms_path, :class => 'ajax' %></div> 
-                </div>
+    <!-- If user is signed in and registered, show the header - Your Address Book, Search box etc... 
+        we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
+    <%= render :partial => 'layouts/header' if user_signed_in? && current_user.registration_complete? %>
+
+    <!-- If user is signed in and registered, show the 'Win an iPad! partial' -->
+    <%= render :partial => 'layouts/competition' if user_signed_in? && current_user.registration_complete? %>
+    <%#= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>
+
 
                 <!-- <div id = "user-map-page"> -->
       <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>

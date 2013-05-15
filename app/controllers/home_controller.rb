@@ -15,6 +15,9 @@ class HomeController < FrontEndController
 
   def index
     render 'users/sessions/new', :layout => 'devise'
+
+      @users_count = User.count
+  gon.watch.users_count = @users_counts
   end
 
   def map
@@ -46,5 +49,6 @@ class HomeController < FrontEndController
   def update_distances_to_other_users
     FriendRelation.update_distances(current_user)
   end
+
 
 end

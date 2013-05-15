@@ -55,8 +55,8 @@
      end
 
      @data = [[I18n.t('search.group.category'), categories], 
-              [I18n.t('search.group.followers_in'), followers],
               [I18n.t('search.group.following_in'), following],
+              [I18n.t('search.group.followers_in'), followers],
               [I18n.t('search.group.other_people'), other]]
    end
  #I added the method below to the users_controller, 

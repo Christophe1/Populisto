@@ -1,5 +1,3 @@
-
-
 <div id='review-page'>
 
   <div class='review-text'>
@@ -25,12 +23,12 @@
             </div>
             <div class="rightGroups">
               <%= f.input :comment, :label => I18n.t('write_review.comment_label') %>
-              <!-- <a class="review-comments-example" href='#'><%#= I18n.t('write_review.comment_popup_link_text') %></a> -->
+              <a class="review-comments-example" href='#'><%= I18n.t('write_review.comment_popup_link_text') %></a>
             </div>
           </div>
 
           <div class="actions">
-            <div class='share-private'>
+            <div class="share-private">
               <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
               <%= f.radio_button :visible, "true" , :class => "share_button" %>
               
@@ -43,8 +41,31 @@
           </div>
       <% end %>
   </div>
-  <div>
-      <%= @user_latitude  %>
-    <%= @user_longitude %>
+
 </div>
-</div>
+
+<script type="text/javascript">
+
+    $('.review-comments-example').live('click', function(e) {
+        $.modal('<div class="perfect-review-example"><%= I18n.t('write_review.perfect_example') %></div>', {closeHTML : '<a id="popup_close" href="#"><%= I18n.t('write_review.close_popup_text') %></a>', overlayClose : true})
+    });
+
+    function initialize_google_maps() {
+      var input = document.getElementById('review_address');
+      var options = { types: ['geocode'] };
+
+      autocomplete = new google.maps.places.Autocomplete(input, options);
+
+      google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        var place = autocomplete.getPlace();
+        $('#review_lat').val(place.geometry.location.lat());
+        $('#review_lng').val(place.geometry.location.lng());
+      });
+
+    }
+
+    $(function() {
+        initialize_google_maps();
+    });
+
+</script>

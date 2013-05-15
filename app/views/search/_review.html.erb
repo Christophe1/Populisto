@@ -6,7 +6,7 @@
 
   <div class="right-part">
     <p>
-      <%= link_to review.user.front_name, user_path(review.user) %> / <%= review.categories_list %>
+      <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> / <%= review.categories_list %>
     </p>
     <p>
       <%= t('find_something.review.name') %><%= review.name %>

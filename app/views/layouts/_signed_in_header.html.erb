@@ -42,6 +42,7 @@
         <div class="user-panel">
           <%= fb_avatar(current_user)  %>
           <%= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
+          <%#= link_to "Pop something in", reviews_path  %>
         </div>
 
         <div id = "menu">
@@ -53,7 +54,7 @@
           <li><%= link_to "Contact Us", contact_us_path %></li>
           <li><%= link_to "Your Address Book", user_path(current_user) %></li>
           <!-- <li id="address_book"><%= link_to "Your Address Book", user_path(current_user) %></li> -->
-          <li><%#= link_to "Pop something in", reviews_path  %>
+          <li><%= link_to "Pop something in", reviews_path  %>
         </ul>
         <%#= link_to I18n.t('layout.write_smth'), reviews_path, :class => 'btn menu-item'  %>
           </div>

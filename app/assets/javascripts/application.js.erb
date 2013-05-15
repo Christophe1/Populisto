@@ -240,6 +240,15 @@ $(function() {
 
 });
 
+
+     $('.leftGroups').on('keydown', '#review_address', function(e) {   
+         element = e.target    
+         if (e.keyCode == 13) {    
+            $(element).blur();    
+            return false;   
+         }   
+     });
+
 function showNewContent(container, content) {
     var toShow = $('.invite-popup-body ' + container);
     var step = 1;

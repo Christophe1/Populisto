@@ -1,10 +1,8 @@
-
-
 <div id='review-page'>
 
   <div class='review-text'>
 
-    <%= raw I18n.t('write_review.text') %>
+    <%#= raw I18n.t('write_review.text') %>
 
   </div>
 
@@ -14,37 +12,33 @@
             <div class="leftGroups">
               <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
                                :input_html => {  :multiple => true },
-                               :label => I18n.t('write_review.categories_selector_label') , :placeholder => ' ' %>
+                               :label => I18n.t('write_review.categories_selector_label') , :placeholder => I18n.t('write_review.categories_selector_placeholder') %>
+
+
+
+                               
               <%= f.input :name, :required => true %>
               <%= f.input :phone  %>
 
-              <%= f.input :address, :placeholder => '' %>
+<div id = "leftGroups-google-map">
+              <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => '' %>
+            </div>
 
               <%= f.hidden_field :lat  %>
               <%= f.hidden_field :lng  %>
             </div>
             <div class="rightGroups">
               <%= f.input :comment, :label => I18n.t('write_review.comment_label') %>
-              <!-- <a class="review-comments-example" href='#'><%#= I18n.t('write_review.comment_popup_link_text') %></a> -->
+              <!-- <a class="review-comments-example" href='#'><%= I18n.t('write_review.comment_popup_link_text') %></a> -->
             </div>
           </div>
 
           <div class="actions">
-            <div class='share-private'>
-              <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-              <%= f.radio_button :visible, "true" , :class => "share_button" %>
-              
-              <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-              <%= f.radio_button :visible, "false", :class => "keep_private_button" %>
-            </div>
-            
             <%= link_to I18n.t('write_review.cancel_button'), landing_page, :class => 'btn' %>
             <%= f.button :submit, I18n.t('write_review.submit_button'), :class => 'btn btn-primary' %>
           </div>
       <% end %>
   </div>
-  <div>
-      <%= @user_latitude  %>
-    <%= @user_longitude %>
-</div>
+
+
 </div>

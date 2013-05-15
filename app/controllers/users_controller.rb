@@ -16,8 +16,9 @@ class UsersController < FrontEndController
   #   @review = Review.new
   # end
 
-  def address_toggle    
+  def address_toggle  
     @user.update_attributes(:address_visible => params[:value]) if @user == current_user
+    a=@user.name
   end
 
   def following_followers
@@ -25,6 +26,7 @@ class UsersController < FrontEndController
     @followers = User.followers_for @user
     render :layout => false
   end
+
   
   # protected
   #   def find_user

@@ -38,7 +38,7 @@ html {
   border-color: #eeeeee;
   border-width: 0 0 1px 0;
   border-style: solid;
-  z-index: 1;
+  z-index: 1000;
 
   .populisto_logo {
     float: left;
@@ -572,50 +572,6 @@ a.btn:focus {
   
 }
 
-#review-page {
-  .review-text {
-    margin: 10px auto 30px;
-    width: 500px;
-  }
-  .review-form {
-
-    width: 410px;
-    margin: 0 auto;
-
-
-    .inputs {
-      .control-group.chosen .help-inline {
-        margin-top: 3px;
-      }
-      input, textarea, select {
-        width: 410px;
-      }
-      textarea {
-        height: 200px;
-      }
-      .review-comments-example {
-        margin-top: -10px;
-        display: block;
-        margin-bottom: 15px;
-      }
-    }
-
-    .actions {
-      width: 300px;
-      margin: 0 auto;
-      text-align: center;
-
-      input, a {
-        display: inline-block;
-      }
-      @include clearfix();
-    }
-    #review_name, #review_phone, #review_address, #review_comment{
-      width: 400px;
-    }
-
-  }
-}
 
 .perfect-review-example {
   padding: 10px;
@@ -659,8 +615,10 @@ a.btn:focus {
     .links.centralized {
       text-align: center;
     }
-    @include border-radius(0 0 8px 8px);
 
+
+
+    @include border-radius(0 0 8px 8px);
   }
 
 
@@ -712,7 +670,7 @@ a.btn:focus {
           margin: 1px 25px 0px 0px;
           font-size: 16px;
           padding-bottom: 6px;
-        }
+        } 
         #your_location_message{
           color: green;
         }
@@ -915,7 +873,8 @@ a.btn:focus {
 }
 
 /* static pages */
-.static_pages_header{
+
+.static_pages_header, {
   font-size: 26px;
   margin-left: 200px;
   margin-top: 130px;
@@ -926,6 +885,13 @@ a.btn:focus {
   margin-top: 20px;
   margin-right: 300px;
   text-align: justify
+}
+
+.sign_up {
+  float: right;
+margin-top: 40px;
+margin-right: 300px;
+margin-bottom: 200px;
 }
 
 }
@@ -956,3 +922,4 @@ a.btn:focus {
 
   }
 }
+

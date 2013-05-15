@@ -5,6 +5,10 @@ class ReviewsController < FrontEndController
 
   def index
     @review = Review.new
+    # user_latitude = @user.lat
+    # user_longitude = @user.lng
+    @user_latitude = current_user.lat
+    @user_longitude = current_user.lng
   end
 
   def create

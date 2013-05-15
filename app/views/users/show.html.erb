@@ -1,4 +1,8 @@
+
 <div class="users-page">
+
+
+
   <div class="user-info">
 
     <div class = "avatar">
@@ -6,7 +10,7 @@
     </div>
     <%#= label_tag I18n.t('helpers.your_page'), your_page(@user), :class => 'your_page_label' %>
     <%#= label_tag I18n.t('helpers.pop_something_in'), pop_something(@user), :class => 'pop_something_in' %>
-    <%= link_to "Poppp",render_index_review_path %>
+    <%= link_to "Pop something in",reviews_path, :class => "ajax" %>
 
     <%= render 'follow_form', :user => @user %>
     <%= render 'stats', :user => @user, :stats_user_id => @user.id %>
@@ -23,6 +27,7 @@
   <div class="greetings">
     <% if @user == current_user %>
     <%= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
+    <%=  %>
     <% elsif @user.address_visible %>
     <%="#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') + " #{@user.address}" %>
     <% else %>
@@ -55,10 +60,30 @@
       <%# end %>
     </div> 
     <!-- <div class="clearfix"></div> -->
+<!--     <div id="latitude" data-lat="<%# @user.lat %>">jjjjj</div>
+    <div id="longitude" data-lng="<%# @user.lng %>">kkkkk</div> -->
 
     <div id="map_canvas"></div>
 
+    <div id='users-counter'>
+  <%= @user_latitude %>
+  <%#= @user_longitude %>
+</div>
+...
+<a href='#' id='stop-renewing'>
+  Stop renewing
+</a>
+
     <!-- <div class="clearfix"></div> -->
+
+<!-- <div id="javascript_tags with lat and lang">
+  <%#= javascript_tag do %>
+user_latitude = "<%#=raw @user.lat %>";
+user_longitude = "<%#=raw @user.lng %>";
+
+   <%# end %>
+ </div> -->
+
 
   </div> 
 
@@ -81,4 +106,3 @@
 </div>
 
 </div>
-

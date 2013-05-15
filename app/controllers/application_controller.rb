@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-
+  # before_filter :authenticate_user!
   before_filter :with_google_maps_api
   before_filter :default_miles_range
   before_filter :load_data_for_checkbox
@@ -19,6 +19,13 @@ class ApplicationController < ActionController::Base
     def show    
     @review = Review.new
     @reviews = @user.reviews
+    @user_latitude = @user.lat
+    gon.watch.user_lat = @user_latitude
+
+    # @user_longitude = @user.lng
+    # gon.watch.user_long = @user_longitude 
+  
+  
   end
 
       def index
@@ -79,8 +86,8 @@ protected
         users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end
 
-      @data.append([I18n.t('search.group.followers_in'), followers])
       @data.append([I18n.t('search.group.following_in'), following])
+      @data.append([I18n.t('search.group.followers_in'), followers])
       @data.append([I18n.t('search.group.other_people'), other])
     end
   end
