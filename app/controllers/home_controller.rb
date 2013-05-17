@@ -16,8 +16,8 @@ class HomeController < FrontEndController
   def index
     render 'users/sessions/new', :layout => 'devise'
 
-      @users_count = User.count
-  gon.watch.users_count = @users_counts
+  #     @users_count = User.count
+  # gon.watch.users_count = @users_counts
   end
 
   def map

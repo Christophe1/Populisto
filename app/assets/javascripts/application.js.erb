@@ -241,7 +241,8 @@ $(function() {
 });
 
 
-     $('.leftGroups').on('keydown', '#review_address', function(e) {   
+     // $('.leftGroups').on('keydown', '#review_address', function(e) {   
+        $('.review-form form').on('keydown', 'input', function(e) {
          element = e.target    
          if (e.keyCode == 13) {    
             $(element).blur();    

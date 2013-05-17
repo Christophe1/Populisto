@@ -27,7 +27,7 @@ var ajax_loaded = (function(response) {
 
 
 
-//on the 'Your Address Book page', call the function to show the map
+// on the 'Your Address Book page', call the function to show the map
 if ($("#map_canvas").length > 0)
 {
   console.log('ajax 2 - map_canvas is detected'); 
@@ -161,9 +161,9 @@ $(".search-box form").on("submit", form_submit);
 
 
 $(function() {
-    //this needs to be here because when user first enters Populisto!
-    //no links have been clicked, ajax isn't triggered, so we get a blank
-    //map page. 
+    // this needs to be here because when user first enters Populisto!
+    // no links have been clicked, ajax isn't triggered, so we get a blank
+    // map page. 
 
     if ($("#map_canvas").length > 0)
     {
@@ -187,7 +187,9 @@ function initialize_google_maps() {
   console.log('initialized google maps'); 
     // console.log("#lat2"); 
     // console.log(lng2); 
-    var currentlatlng = new google.maps.LatLng(48, -6.16);
+    var currentlatlng = new google.maps.LatLng(user_latitude, user_longitude);
+    // var currentlatlng = new google.maps.LatLng(<%#=raw @user.lat %>, <%#=raw @user.lat %>);
+    // var currentlatlng = new google.maps.LatLng(53.404, -6.136);
     var zoom = 10;
     var myOptions = {
       zoom: zoom,
@@ -215,7 +217,7 @@ function initialize_google_maps() {
     function initialize_google_maps2() {
 
      console.log('google maps 2 initialized'); 
-     var currentlatlng = new google.maps.LatLng(53, -6.18);
+     var currentlatlng = new google.maps.LatLng(53.404, -6.136);
      var zoom = 10;
      var myOptions = {
       zoom: zoom,

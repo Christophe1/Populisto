@@ -19,8 +19,8 @@ class ApplicationController < ActionController::Base
     def show    
     @review = Review.new
     @reviews = @user.reviews
-    @user_latitude = @user.lat
-    gon.watch.user_lat = @user_latitude
+    # @user_latitude = @user.lat
+    # gon.watch.user_lat = @user_latitude
 
     # @user_longitude = @user.lng
     # gon.watch.user_long = @user_longitude 

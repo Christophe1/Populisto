@@ -109,13 +109,13 @@ html {
   }
 
   .user-panel {
-    float: right;
-    margin-top: -54px;
-    margin-right: -440px;
-    width: 100px;
+  float: right;
+  margin-top: -65px;
+  margin-right: 25px;
+  width: 100px;
 
     .fb-avatar {
-      width: 30px;
+      width: 40px;
     }
 
     .fb-logout {
@@ -145,6 +145,12 @@ html {
       font-size: 26px
     }
   }
+
+ .fb-like {
+  float:right;
+ }
+
+
 
 }
 
@@ -228,7 +234,7 @@ html {
 /*Facebook login, on the home page */
 
 .login-page {
-  margin: 30px 0px 0px 710px;
+  margin: 30px 0px 0px 650px;
   width: 360px;
 
   .facebook-section {
@@ -908,7 +914,8 @@ margin-bottom: 200px;
 #competition_text{
 
   font-size: 16px;
-  margin-top: 150px;
+  margin-top: 180px;
+  margin-right: 30px;
   float:right;
 
   #competition_ipad {
@@ -922,4 +929,6 @@ margin-bottom: 200px;
 
   }
 }
+
+
 

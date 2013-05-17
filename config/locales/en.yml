@@ -122,10 +122,10 @@ en:
     greetings_1: "Hi %{user_name}. Please tell us where you live. We won't display this to anyone unless you want us to..."
     greetings_2: "If you don't want to give us your exact address details that's ok, but the more accurate you are, the more effective your results will be when doing searches."
   write_review:
-    text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>A Plumber? A Doctor? A restaurant? Share it with friends to help them find something. Or store it personally for your own information'
+    text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>Share something with friends to help them find something. Or store it personally for your own information'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
-    comment_label: 'Some Comments:'
+    comment_label: 'Comments - price, quality etc..'
     comment_popup_link_text: 'See samples of stuff written up just perfectly'
     perfect_example: 'Add example to translations file - en.yml'
     close_popup_text: 'Close'
@@ -199,7 +199,7 @@ en:
     callback_close_link: "Close this window"
     icons_extra_text: "You’ll have full control over who you want to contact!"
     icons_additional_text: "Each invite you send gains you a ticket for the raffle, to win an iPad. The more you send, the greater chance you have of winning.<br /><br />You can see the number of invites you've sent on the left of the screen. Winner will be announced in early June."
-    invites_sent: "You have sent <b>%{number}</b> invites"
+    invites_sent: "Invites sent: <b>%{number}</b>"
     outlook:
       step1: "Please provide a .csv file with contacts. You will be able to choose the ones you want to import on the next page"
       step1_link: "Directions to export your contacts to .csv from Outlook."
@@ -256,6 +256,6 @@ en:
   search:
     group:
       category: "Category"
-      followers_in: "Followers in your area"
       following_in: "People you follow"
+      followers_in: "People following you"
       other_people: "Other people in your area"

@@ -63,26 +63,32 @@
 <!--     <div id="latitude" data-lat="<%# @user.lat %>">jjjjj</div>
     <div id="longitude" data-lng="<%# @user.lng %>">kkkkk</div> -->
 
-    <div id="map_canvas"></div>
+    <div id="map_canvas">
+
+    </div>
+
 
     <div id='users-counter'>
-  <%= @user_latitude %>
+        <%= @user.lat %>
+        <%= @user.lng %>
+   <!-- are these below from the controller? -->
+  <%#= @user_latitude %>
   <%#= @user_longitude %>
 </div>
 ...
-<a href='#' id='stop-renewing'>
+<!-- <a href='#' id='stop-renewing'>
   Stop renewing
-</a>
+</a> -->
 
     <!-- <div class="clearfix"></div> -->
 
-<!-- <div id="javascript_tags with lat and lang">
-  <%#= javascript_tag do %>
-user_latitude = "<%#=raw @user.lat %>";
-user_longitude = "<%#=raw @user.lng %>";
+<div id="javascript_tags with lat and lang">
+  <%= javascript_tag do %>
+user_latitude = "<%=raw @user.lat %>";
+user_longitude = "<%=raw @user.lng %>";
 
-   <%# end %>
- </div> -->
+   <% end %>
+ </div>
 
 
   </div> 
@@ -104,5 +110,7 @@ user_longitude = "<%#=raw @user.lng %>";
     <%= render :partial => 'layouts/no_reviews' %>
   <% end %>
 </div>
+
+
 
 </div>
