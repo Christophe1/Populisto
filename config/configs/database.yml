@@ -30,11 +30,11 @@ staging:
 production:
   adapter: mysql2
   encoding: utf8
-  reconnect: false
-  database: populisto
+  reconnect: true
+  database: populisto_production
   pool: 5
-  username: questionnaire
-  password: questionnaire
+  username: populisto
+  password: qpm93uw
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
