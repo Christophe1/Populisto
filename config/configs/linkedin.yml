@@ -10,5 +10,5 @@ test:
   <<: *staging
 
 production:
-  app_id: ""
-  app_secret: ""
+  app_id: "kc16np03s2a2"
+  app_secret: "SfkcE7JJbtlnMVI0"
