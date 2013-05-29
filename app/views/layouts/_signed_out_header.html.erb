@@ -1,10 +1,26 @@
-<div class="header">
+  <!-- header, for the login and signup pages -->
+  <div id="home_page_header">
 
-  <!-- <div class='top-line'> -->
+  <div class = "populisto_logo2">
 
-    <div class="populisto_logo">
-    <%= link_to(image_tag('logo.jpg', :alt => t('application.title')), root_path) %>
+  <%= image_tag 'logo.jpg' %>
   </div>
-  <!-- </div> -->
 
-</div>
+  	    <div id = "menu">
+          <ul id = "home_page_links">
+            <li><%= link_to "Home",about_us_path %></li>
+            <li><%= link_to "About Us",about_us_path %></li>
+            <li><%= link_to "FAQ", faq_path %></li>
+            <!-- <li><a href="#" class="email-invite-link">Invite Others</a></li> -->
+            <li><%= link_to "Contact Us", contact_us_path %></li>
+            <li><%#= link_to "Your Address Book", user_path(current_user) %></li>
+
+  <!-- FaceBook Like Button -->
+  <!-- <li><div class="fb-like" data-href="http://populisto.demohoster.com/" data-send="false" data-width="300" data-show-faces="false" data-layout="button_count"></div></li> -->
+
+          </ul>
+
+            </div>
+
+
+  </div> 

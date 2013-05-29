@@ -1,5 +1,9 @@
+<!-- where is @breadcrumbs defined? Can't find it in my project.
+Maybe it is something inherited, from the @breadcrumbs gem?  -->
 <% if @breadcrumbs %>
+<!-- show the breadcrumb class - that is, the formBackground.png -->
   <ul class="breadcrumb">
+
     <% @breadcrumbs.each_with_index do |crumb, index| %>
       <% if crumb[:url] and index < @breadcrumbs.length - 1 %>
         <li>

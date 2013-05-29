@@ -2,7 +2,6 @@
 <html>
 <head>
   <title><%= t('application.title') %></title>
-  <%#= include_gon(:watch => true) %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   
   <% if @include_goole_maps %>
@@ -21,9 +20,9 @@
   <%= render :partial => 'layouts/fb_init' %>
   <!-- <div class="container">  -->
 
-    <!-- If user is signed in and registered, show the header - Your Address Book, Search box etc... 
+    <!-- If user is signed in and registered, show the signed_in_header - Your Address Book, Search box etc... 
         we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
-    <%= render :partial => 'layouts/header' if user_signed_in? && current_user.registration_complete? %>
+    <%= render :partial => 'layouts/signed_in_header' if user_signed_in? && current_user.registration_complete? %>
     <!-- If user is signed in and registered, show the 'Win an iPad! partial' -->
     <%= render :partial => 'layouts/competition' if user_signed_in? && current_user.registration_complete? %>
     <%#= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>

@@ -42,8 +42,14 @@ $(function() {
     $("select.chosen").each(function () {
         $(this).attr('data-placeholder', $(this).attr('placeholder'));
     }).chosen().change(function (event, object) {
+        console.log("event");
         if (object.selected && object.selected.match("^user_")) {
-            window.location.href = object.selected.replace('user_', '/users/');
+            //$(".search-choice").remove(); 
+            //below is the code for selecting a 'user' from the Chosen
+            //list. The ajax function, in scripts.js, is then loaded
+            var url = object.selected.replace('user_', '/users/');
+            $.get(url, ajax_loaded); 
+            
         }
     });
 
@@ -83,6 +89,7 @@ $(function() {
         href: function(element) {
             return element.attr('href') || element.data('url');
         }
+
     });
 
     $(document).delegate(rails.buttonClickSelector, 'click.rails', function(e) {

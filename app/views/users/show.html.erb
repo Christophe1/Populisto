@@ -66,30 +66,27 @@
     <div id="map_canvas">
 
     </div>
+    <!-- This is here, to generate the user's latitude and longitude dynamically -->
+    <!-- The data-lat and lng attributes are used in 'initialise_google_maps' function, in scripts.js' -->
+    <div id="user-position" class="hidden" data-lat="<%= @user.lat %>" data-lng="<%= @user.lng %>"></div>
+
+<!-- 
+    <button id="show_the_number">show</button>
+    <input type="text" id="text1"> -->
 
 
-    <div id='users-counter'>
-        <%= @user.lat %>
-        <%= @user.lng %>
+    <!-- <div id='users-counter'> -->
+        <%#= @user.lat %>
+        <%#= @user.lng %>
    <!-- are these below from the controller? -->
   <%#= @user_latitude %>
   <%#= @user_longitude %>
-</div>
-...
+<!-- </div> -->
 <!-- <a href='#' id='stop-renewing'>
   Stop renewing
 </a> -->
 
     <!-- <div class="clearfix"></div> -->
-
-<div id="javascript_tags with lat and lang">
-  <%= javascript_tag do %>
-user_latitude = "<%=raw @user.lat %>";
-user_longitude = "<%=raw @user.lng %>";
-
-   <% end %>
- </div>
-
 
   </div> 
 
@@ -114,3 +111,4 @@ user_longitude = "<%=raw @user.lng %>";
 
 
 </div>
+

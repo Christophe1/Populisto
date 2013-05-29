@@ -1,0 +1,176 @@
+  .reviews {
+  /* background: #fbf6b2 url(formBg.png) 0 0 repeat-y; */
+  width: 850px;
+  margin-left: 120px;
+
+  .breadcrumb {
+  background: #fbf6b2 url(formBg.png) 0 0 repeat-y;
+  height: 240px;
+  /* background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99); */
+  }  
+
+  .breadcrumb {
+  position: relative;
+  }  
+
+  .breadcrumb:hover {
+  border-color:  #0099CC;  
+  /*   opacity: 1.2; */
+
+
+  } 
+
+
+  .left_window {
+  width:360px;
+  float: left;
+
+  .category_name{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  }
+
+
+
+
+  .edit_review_link {
+  display: none;
+  }
+
+  .info {
+  float:left;
+  }
+
+  .posted_at {
+  color: #888888;
+  font-style: italic;
+  margin: 5px 0px;
+  }    
+
+
+  }
+
+  .right_window {
+  width:360px;
+  float: right;
+
+  .edit_review_link {
+  float: right;
+  display: block;
+  top: 5px;
+  right: 5px;
+  color: #0099CC;
+  }
+
+  .comment {
+  /* display: table-row; */
+  float:left;
+
+  .more-info {
+  /* display: table-cell; 
+  width: 70px;
+  padding-left: 200px; */
+  }
+  .comment-content {
+  display: table-cell;
+  white-space: pre-line;
+  /* padding-left: 200px; */
+  }
+  }
+
+  }
+
+
+
+  /*   ////////////////   The edit form, below  ///////////////////////  */
+
+  .edit_review_form {
+
+
+  form {
+   margin: 0;
+
+  }
+  .inputs{
+  display: table-row;
+  #except_comment {
+  display: table-cell;
+  width:40%;
+  }
+  #comment{
+  padding-left: 30px;
+  }
+  }
+  #review_name, #review_phone, #review_address {
+  width: 333px;
+  }
+  select {
+  width: 343px;
+  }
+  .edit_review_info{
+  .edit-label{
+  display: block;
+  }
+  }
+  textarea {
+width: 80%;
+height: 105px;
+resize: none;
+margin-left: 80px;
+  }
+  .cancel-edit{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #0099CC;
+  }
+
+  .control-group {
+  display:inline;
+  .controls {
+  display: inherit;
+  }
+  }
+  span#address_validation {
+  color: #B94A48;
+  }
+
+  .edit_button_group{
+
+  /* put the save, delete buttons and radio buttons at the bottom of the Address book entry */
+
+position: absolute;
+bottom: 10px;
+margin-left: 145px;
+
+  .save_review{
+  float: right;
+
+  }
+  .delete_review {
+float: right;
+margin-right: 10px;
+  }
+  .keep_private_label{
+float: right;
+margin: 5px 25px 0px 5px;
+  }
+  .keep_private_button{
+  float: right;
+  margin: 7px 0px 0px 20px;
+  }
+  .share_label{        
+  float: right;        
+  margin: 5px 0px 0px 5px;
+  }
+  .share_button{
+  float: right;
+  margin: 7px 0px 0px 25px;
+  }
+  }
+
+  }
+
+  }
+

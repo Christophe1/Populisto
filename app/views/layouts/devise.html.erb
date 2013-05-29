@@ -14,8 +14,9 @@
 
   <body style="background-color: #ffffff !important;">
     <%= render :partial => 'layouts/fb_init' %>
-    <div class="container">
-      <%= render :partial => 'layouts/header' if user_signed_in? && current_user.registration_complete? %>
+    <!-- <div class="container"> -->
+    <!-- show the signed_out_header, on the home page -->
+      <%= render :partial => 'layouts/signed_out_header' %>
       <%= render :partial => 'layouts/messages' %>
       <%#= render 'layouts/fb_like_button' %>
       <div class='page-content'>

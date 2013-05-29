@@ -19,10 +19,11 @@ class ApplicationController < ActionController::Base
     def show    
     @review = Review.new
     @reviews = @user.reviews
-    # @user_latitude = @user.lat
+
+    # user_latitude = @user.lat
     # gon.watch.user_lat = @user_latitude
 
-    # @user_longitude = @user.lng
+    # @user.lng = user_longitude
     # gon.watch.user_long = @user_longitude 
   
   
@@ -83,7 +84,9 @@ protected
       other = users_in_my_area - followers - following - [current_user]
 
       [followers, following, other].each do |users|
-        users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
+        users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.id}"] }
+        # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
+        # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end
 
       @data.append([I18n.t('search.group.following_in'), following])

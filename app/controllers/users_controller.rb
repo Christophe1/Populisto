@@ -18,7 +18,6 @@ class UsersController < FrontEndController
 
   def address_toggle  
     @user.update_attributes(:address_visible => params[:value]) if @user == current_user
-    a=@user.name
   end
 
   def following_followers

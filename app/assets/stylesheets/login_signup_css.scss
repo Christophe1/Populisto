@@ -1,0 +1,163 @@
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "compass/css3";
+@import "compass/css3/border-radius";
+
+$wizardTabsBorderWidth: 5px;
+$wizardTabsBorderColor: #B7CBE9;
+$wizardTabsBorder:      $wizardTabsBorderWidth solid $wizardTabsBorderColor;
+$wizardTabWidth:        ceil(($gridRowWidth - 2 * $wizardTabsBorderWidth) / 2);
+$wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidth);
+
+/* css details for the list on the login - sign up page */
+
+.populisto_logo2 {
+  margin: 0 auto;
+  width: 280px;
+  position: relative;
+}
+
+.changing_images {
+  float: left;
+  padding-top: 30px;
+  padding-left: 90px;
+  width: 550px;
+  height: 350px;
+}
+
+.features {
+  list-style:none;
+  float: left;
+  margin: 9em 0 0 18em;
+}
+
+.features li {
+  margin: 8px 0 2em;
+}
+
+.features img {
+  float: left;
+  margin: 0px;
+} 
+
+.features p {
+  margin: 0 0 0 68px;
+}
+
+.features .title {
+  font-size: 16px;
+  margin-bottom: .3em;
+}
+
+.features img2 {
+  float: right;
+  margin: 5px 0 0;
+} 
+
+
+.iPad-promo {
+  width:380px;
+  list-style:none;
+  float:left;
+  border: 1px solid #ebebeb;
+  margin: 380px 0 0 -500px;
+  padding: 20px;
+}
+
+.iPad-promo img {
+  float: left;
+  margin-right: 18px 
+} 
+
+.iPad-promo .title {
+  font-size: 16px;
+  margin-bottom: .2em;
+} 
+
+.iPad-promo p {
+  font-size: 1em;
+} 
+
+.iPad-promo .img2 {
+  margin-left: 340px;
+  margin-top: -60px
+} 
+
+
+
+
+/*Facebook login, on the home page */
+
+.login-page {
+  margin: 30px 0px 0px 650px;
+  width: 360px;
+
+  .facebook-section {
+    text-align: center;
+    position: relative;
+    padding: 15px 15px 0;
+
+    .fb-login {
+      width: 315px;
+      margin: 15px auto;
+      display: block;
+    }
+
+    .fb-notes {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .or-devider {
+      position: absolute;
+      bottom: -36px;
+      left: 180px;
+      background-color: white;
+      width: 40px;
+      height: 30px;
+      text-align: center;
+      @include border-radius(15px);
+      font-size: 17px;
+      line-height: 26px;
+    }
+  }
+
+  .sign-in-section {
+    .simple_form#new_user {
+      .error-explanation {
+        margin: 5px 0px 5px 0px;
+        background: #f2dede;
+        padding: 15px;
+        .error-message {
+          display: block;
+          color: #b94a48;
+        }
+      }
+    }
+  }
+
+  .sign-in {
+    text-align: center;
+
+    p {
+      font-size: 20px;
+    }
+
+    .create-account-note {
+      color: red;
+
+      a, a:visited {
+        color: red;
+        text-decoration: underline;
+      }
+    }
+
+    .not-on-facebook-note a {
+      color: blue;
+    }
+  }
+
+  border: 1px solid #eee;
+  @include border-radius(10px);
+}

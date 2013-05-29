@@ -688,7 +688,10 @@ Copyright (c) 2011 by Harvest
     Chosen.prototype.choice_destroy_link_click = function(evt) {
       evt.preventDefault();
       if (!this.is_disabled) {
-        this.pending_destroy_click = true;
+        //Editing out this code below sorts out the bug where,
+        //when you delete an item from the search box, you have to click 
+        //twice on the search box, to be able to enter something. source:https://github.com/flockonus/chosen....
+        //this.pending_destroy_click = true;
         return this.choice_destroy($(evt.target));
       } else {
         return evt.stopPropagation;

@@ -5,7 +5,13 @@
 
 <!-- This is the unordered list for the login-sign up page -->
 <ul class="features">
-
+  <li>
+  <img class><%= image_tag("freeeee.png") %></img>
+  <p class="title">Free</p>
+  <p>
+  100% free on-line address book...with a twist.
+  </p>
+  </li>
   <li>
   <img class><%= image_tag("correct.png") %></img>
   <p class="title">Reliable</p>

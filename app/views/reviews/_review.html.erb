@@ -1,9 +1,8 @@
-<div class="breadcrumb" id="review_<%= review.id %>">
-  <div class="content">
-  <% if edit_enabled %>
 
-    <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
-  <% end %>
+
+<div class="breadcrumb" id="review_<%= review.id %>">
+  <!-- <div class="content"> -->
+<div class="left_window">
 
   <div class="category_name">
     <%= review.categories_list %>
@@ -11,11 +10,23 @@
 
   <div class="info">
     <strong><%= I18n.t('user.review.name') %></strong> <%= review.name %><br>
+  </br>
     <strong><%= I18n.t('user.review.address') %></strong> <%= review.address %><br>
+  </br>
     <strong><%= I18n.t('user.review.phone') %></strong> <%= review.phone %><br>
+  </br>
     <div class = "posted_at">Posted <%= time_ago_in_words(review.created_at) %> ago.</div>
   </div>
+<!-- </div> -->
+</div>
 
+
+
+<div class="right_window">
+    <% if edit_enabled %>
+
+    <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
+  <% end %>
   <div class="comment">
     <strong class="more-info"><%= I18n.t('user.review.more_info') %></strong> 
     <div class="comment-content"><%= review.comment %></div>
@@ -27,4 +38,5 @@
   
   </div>
 </div>
+
 

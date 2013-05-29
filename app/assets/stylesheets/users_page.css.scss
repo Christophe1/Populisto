@@ -1,0 +1,58 @@
+.users-page {
+    margin-top:90px;
+    .user-info {
+
+      .your_page_label {
+        font-size: 26px;
+      }
+
+      .pop_something_in {
+        font-size: 26px;
+        line-height: 26px;
+      }
+
+      .pop_something_in2 {
+        font-size: 26px;
+        line-height: 26px;
+      }
+
+      .avatar {
+        height: 120px;
+        margin: 0 10px 10px 0;
+        float: left;
+        padding-left:240px;
+      }
+      .stats {
+        width: 850px;
+        margin: 7px 0px;
+        font-size: 16px;
+        padding: 15px;
+      }
+      
+      #your_location {
+        .location-label {
+          margin-bottom: 0px;
+          font-size: 16px;
+          padding-bottom: 6px;
+          padding-left: 300px;
+        }
+        .address-visible-toggle {
+          float: left;
+          margin-right: 5px;
+        }
+        #share_label, #keep_private_label {
+          float: left;
+          margin: 1px 25px 0px 0px;
+          font-size: 16px;
+          padding-bottom: 6px;
+        } 
+        #your_location_message{
+          color: green;
+        }
+      }
+    }
+
+}
+
+
+
