@@ -74,6 +74,7 @@ group :development do
   gem 'email_spec'
   gem 'capistrano', '~> 2.12.0'
   gem 'capistrano-ext', '~> 1.2.1'
+  gem 'rvm-capistrano', '~> 1.2.1'
   gem 'ruby-debug-base', '=0.10.4'
   gem 'ruby-debug', '=0.10.4'
   gem 'annotate'

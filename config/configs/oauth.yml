@@ -19,5 +19,8 @@ test:
 
 production:
   facebook:
-    app_id: ""
-    app_secret: ""
+    app_id: "378201315578308"
+    app_secret: "4dabe290bd8ad7f815c54ad708141057"
+    options:
+      scope: "email"
+      display: "page"

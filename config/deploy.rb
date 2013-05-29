@@ -1,16 +1,16 @@
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 
-set :stages, %w(staging)
+set :stages, %w(staging production)
 set :default_stage, "staging"
 
 set :application, "Questionnaire Site"
 
 set :scm, :git
-set :repository,  "git@git.itransition.corp:questionnaire-site/questionnaire-site.git"
+set :repository,  "git@github.com:Christophe1/Populisto.git"
 set :deploy_via, :remote_cache
 
-set :bundle_without, [:development]
+set :bundle_without, [:development, :test]
 
 default_run_options[:pty] = true
 
@@ -28,18 +28,18 @@ namespace :deploy do
 end
 
 namespace :workers do
-  desc "Restart daemon workers"
+  desc "Restart workers"
   task "restart", :roles => :bg do
     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake workers:stop"
     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake workers:start"
   end
 
-  desc "Start daemon workers"
+  desc "Start workers"
   task "start", :roles => :bg do
     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake workers:start"
   end
 
-  desc "Stop daemon workers"
+  desc "Stop workers"
   task "stop", :roles => :bg do
     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake workers:stop"
   end
