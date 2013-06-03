@@ -114,9 +114,9 @@ var ajax_load = (function(e) {
 //why the trigger?
 
 $(document).on("ready", function(){
-$("#menu2 a").on("click",ajax_load);
+$("#menu a").on("click",ajax_load);
 $(".ajax").on("click",ajax_load);
-$("#menu2 a.main").trigger("click");
+$("#menu a.main").trigger("click");
 $(".search-box form").on("submit", form_submit);
 
 
