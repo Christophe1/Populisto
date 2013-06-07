@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-  p { margin: 20px 0 0 }
-  b { color: blue; }
-</style>
+
+  <link rel="stylesheet" type="text/css" href="carousel.css">
+
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
 </head>
 <body>
 
 
 
  
-<input id="check1" type="checkbox" checked="checked">
+<!-- <input id="check1" type="checkbox" checked="checked">
 <label for="check1">Check me</label>
-<p></p>
+<p></p> -->
 
-<div id = "new_image">
+
+
+
+
+<div id = "carousel">
+  <div id = "new_image">
   <img src = "rails.png">
 </div>
-
-
  <img id ="rotate_images" src="img1_on.png"/>
+</div>
 
 <script>
 $('#new_image').on({

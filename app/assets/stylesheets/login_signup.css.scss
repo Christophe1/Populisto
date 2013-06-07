@@ -41,7 +41,7 @@
   float: left;
   padding-top: 30px;
   padding-left: 90px;
-  width: 550px;
+  width: 650px;
   height: 350px;
 }
 
@@ -109,8 +109,10 @@
 /*Facebook login, on the home page */
 
 .login-page {
-  margin: 30px 0px 0px 650px;
-  width: 360px;
+float:right;
+margin-right:250px;
+  /* margin: 0px 0px 0px 830px;
+  width: 360px; */
 
   .facebook-section {
     text-align: center;

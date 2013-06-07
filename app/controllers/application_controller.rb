@@ -84,7 +84,7 @@ protected
       other = users_in_my_area - followers - following - [current_user]
 
       [followers, following, other].each do |users|
-        users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.id}"] }
+         users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.id}"] }
         # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
         # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end

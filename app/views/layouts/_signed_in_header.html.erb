@@ -15,7 +15,8 @@
     <% if current_user.registration_complete? %>
 
           <div class='search-box'>
-      <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
+
+      <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {} do |f| %>
 
         <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen, 
                     :group_method => :last, :prompt => false,

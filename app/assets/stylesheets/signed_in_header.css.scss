@@ -1,0 +1,136 @@
+/* the header, with logo, avatar, log out et al, which is on most pages. */
+
+@import "bootstrap/mixins";
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  top: 0;
+  background-color: #ffffff;
+  /* @include border-radius(0px 0px 7px 7px, 0px 0px 7px 7px); */
+  border-color: #eeeeee;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  z-index: 1000;
+
+  .populisto_logo {
+    float: left;
+    max-width: 50%;
+   /* padding-top: 12px; */
+    padding-left: 12px;
+  }
+
+  /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
+
+  .search-box {
+   /* margin-top: 15px; */
+
+
+      .controls {
+        width:50px;
+        margin-left: 390px;
+        margin-top: 18px;
+
+        .control-group.grouped_chosen {
+          float: left;
+          display: inline;
+          width: 540px;
+
+          #review_search_ids_chzn {
+            margin-left: -25px;
+          }
+        }
+      }
+
+      .search-button {
+        float: right;
+        margin-right: 473px;
+        margin-top: -43px;
+      }
+
+      .control-label {
+        display: none;
+        float: none;
+        width: auto;
+      }
+
+
+
+
+
+  /*  @include clearfix(); */
+
+    }
+
+  
+
+  .welcome {
+    float: right;
+    margin: 16px 5px 0 0;
+    font-size: 14px;
+
+    .fb-avatar {
+      width: 16px;
+      margin-right: 2px;
+    }
+  }
+
+  .menu-item {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .invites-count {
+    float: left;
+    margin-top: 20px;
+    margin-left: 12px;
+  }
+
+  .user-panel {
+  float: right;
+  margin-top: -65px;
+  margin-right: 25px;
+  width: 100px;
+
+    .fb-avatar {
+      width: 40px;
+    }
+
+    .fb-logout {
+      background: none;
+      border: none;
+      outline: none;
+      color: #08C;
+    }
+
+    .fb-logout:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  #static_pages {
+    margin-left: 320px;
+
+    li {
+      display: inline;
+      /* list-style-type: none; */
+      padding-right: 35px;
+      font-size: 16px
+    }
+
+    #address_book {
+      font-size: 26px
+    }
+  }
+
+ .fb-like {
+  float:right;
+  padding-right: 45px;
+ }
+
+
+
+}
