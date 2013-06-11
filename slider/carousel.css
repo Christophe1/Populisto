@@ -1,8 +1,18 @@
 #carousel{
-width:300px;
+position:relative;
+height:350px;
+width:550px;
 
 }
 
-#carousel #new_image{
-float:right;
+#back{
+position: absolute;
+left:0;
+top:175px;
+}
+
+#forward{
+position: absolute;
+right:0;
+top:175px;
 }

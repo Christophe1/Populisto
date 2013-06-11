@@ -19,22 +19,45 @@
 
 
 
-
+<!-- the container div, which holds the back and forward arrows on each side, and the 
+changing images, in the middle -->
 <div id = "carousel">
-  <div id = "new_image">
-  <img src = "rails.png">
+  <img id ="rotate_images" src="1.png"/>
+  <!-- back arrow -->
+  <div id = "back">
+  <img src = "arrow_back.png">
+</div>  
+<!-- forward arrow -->
+  <div id = "forward">
+  <img src = "arrow_forward.png">
 </div>
- <img id ="rotate_images" src="img1_on.png"/>
+ 
 </div>
 
 <script>
-$('#new_image').on({
+
+$('#back').on({
     'click': function () {
         var origsrc = $(rotate_images).attr('src');
         var src = '';
-        if (origsrc == 'img1_on.png') src = 'img2_on.png';
-        if (origsrc == 'img2_on.png') src = 'img3_on.png';
-        if (origsrc == 'img3_on.png') src = 'img1_on.png';
+        if (origsrc == '5.png') src = '4.png';
+        if (origsrc == '4.png') src = '3.png';
+        if (origsrc == '3.png') src = '2.png';
+        if (origsrc == '2.png') src = '1.png';
+        if (origsrc == '1.png') src = '1.png';
+        $(rotate_images).attr('src', src);
+    }
+});
+
+$('#forward').on({
+    'click': function () {
+        var origsrc = $(rotate_images).attr('src');
+        var src = '';
+        if (origsrc == '1.png') src = '2.png';
+        if (origsrc == '2.png') src = '3.png';
+        if (origsrc == '3.png') src = '4.png';
+        if (origsrc == '4.png') src = '5.png';
+        if (origsrc == '5.png') src = '5.png';
         $(rotate_images).attr('src', src);
     }
 });

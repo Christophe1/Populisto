@@ -5,6 +5,7 @@ QuestionnaireSite::Application.routes.draw do
   get "faq", :to => "static_pages#faq"
   get "competition_terms", :to => "static_pages#competition_terms"
   get "t_and_c", :to => "static_pages#terms_and_conditions"
+  # get "log_in", :to => "users/sessions#new"
   # get "user", :to => @user(current_user)
   get "render_index_review", :to => "reviews#render_index"
 

@@ -234,3 +234,30 @@ function initialize_chosen() {
     return false;
   });
 }
+
+
+$('#back').on({
+    'click': function () {
+        var origsrc = $(rotate_images).attr('src');
+        var src = '';
+        if (origsrc == '5.png') src = '4.png';
+        if (origsrc == '4.png') src = '3.png';
+        if (origsrc == '3.png') src = '2.png';
+        if (origsrc == '2.png') src = '1.png';
+        if (origsrc == '1.png') src = '1.png';
+        $(rotate_images).attr('src', src);
+    }
+});
+
+$('#forward').on({
+    'click': function () {
+        var origsrc = $(rotate_images).attr('src');
+        var src = '';
+        if (origsrc == '1.png') src = '2.png';
+        if (origsrc == '2.png') src = '3.png';
+        if (origsrc == '3.png') src = '4.png';
+        if (origsrc == '4.png') src = '5.png';
+        if (origsrc == '5.png') src = '5.png';
+        $(rotate_images).attr('src', src);
+    }
+});
