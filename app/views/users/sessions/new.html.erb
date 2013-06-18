@@ -12,17 +12,20 @@
   <!-- the container div, which holds the back and forward arrows on each side, and the 
   changing images, in the middle -->
   <div id = "carousel">
-    <img id ="rotate_images" src="assets/1.1.png"/>
+    <%= image_tag "1.1.png", :id => "rotate_images" %>
+    <!-- <img id ="rotate_images" src="assets/1.1.png"/> -->
     <!-- back arrow -->
     <div id = "back">
-      <%#= image_tag "arrow_back.png" %>
-    <img src = "assets/arrow_back.png">
+      <%= image_tag "arrow_back.png" %> 
+    <!-- <img src = "assets/arrow_back.png"> -->
   </div>  
   <!-- forward arrow -->
     <div id = "forward">
-    <img src = "assets/arrow_forward.png"></div>
+      <%= image_tag "arrow_forward.png" %>
+    <!-- <img src = "assets/arrow_forward.png"></div> -->
    
   </div>
+</div>
 
   <div class="login-page">
 
@@ -82,9 +85,9 @@
       'click': function () {
           var origsrc = $(rotate_images).attr('src');
           var src = '';
-          if (origsrc == 'assets/3.1.png') src = 'assets/2.1.png';
-          if (origsrc == 'assets/2.1.png') src = 'assets/1.1.png';
-          if (origsrc == 'assets/1.1.png') src = 'assets/1.1.png';
+          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('2.1.png') %>';
+          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('1.1.png') %>';
+          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('1.1.png') %>';
           $(rotate_images).attr('src', src);
       }
   });
@@ -93,35 +96,14 @@
       'click': function () {
           var origsrc = $(rotate_images).attr('src');
           var src = '';
-          if (origsrc == 'assets/1.1.png') src = 'assets/2.1.png';
-          if (origsrc == 'assets/2.1.png') src = 'assets/3.1.png';
-          if (origsrc == 'assets/3.1.png') src = 'assets/3.1.png';
+          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('2.1.png') %>';
+          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('3.1.png') %>';
+          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('3.1.png') %>';
           $(rotate_images).attr('src', src);
       }
   });
   </script>
-  <!-- This is the unordered list for the login-sign up page -->
-  <!-- <ul class="features">
-    <li>
-    <img class><%#= image_tag("free.png") %></img>
-    <p class="title">Free</p>
-    <p>
-    100% free on-line address book...but better.
-    </p>
-    </li>
-    <li>
-    <img class><%#= image_tag("correct.png") %></img>
-    <p class="title">Reliable</p>
-    <p>Find trusted sources from people you know.</p>
-    </li>
-    <li>
-    <img class><%#= image_tag("share.gif") %></img>
-    <p class="title">Share</p>
-    <p>Pop that electrician or dress maker into your <br>
-    list so others can employ them.</p>
-    </li>
-  </ul>
-   -->
+
   <div id="iPad-promo">
     <!-- <li id="win_ipad"> -->
     <div id="smiley">

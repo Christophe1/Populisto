@@ -1,13 +1,24 @@
-<div class="review breadcrumb" id="review_<%=review.id%>">
+<div class="reviews" >
 
-  <div class="left-part">
+<div class="breadcrumb" id="review_<%=review.id%>">
+
+<div class="left_window">
+  <!-- <div class="left-part"> -->
     <%= fb_avatar(review.user) %>
-  </div>
 
-  <div class="right-part">
-    <p>
+
+<div class="category_name">
+
+    <!-- <p> -->
+      <% if current_user.name == review.user.front_name %>
+      <%= link_to "You", user_path(review.user) %> / <%= review.categories_list %>
+      <% else %>
       <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> / <%= review.categories_list %>
-    </p>
+      <% end %>
+    <!-- </p> -->
+    </div>
+
+<div class="info">
     <p>
       <%= t('find_something.review.name') %><%= review.name %>
     </p>
@@ -17,17 +28,24 @@
     <p>
       <%= t('find_something.review.phone') %><%= review.phone %>
     </p>
+  </div>
+</div>
     
+<div class="right_window">
+
     <div class="review-text">
       <%= review.comment %>
     </div>
     <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
 <div class = "binder">
-<%= image_tag "free.png" %>
   </div>
 
   <div class="clearfix"></div>
 
-  <hr style="margin: 0 30px;"/>
+</div>
+
+  <!-- <hr style="margin: 0 30px;"/> -->
+
+</div>
 
 </div>

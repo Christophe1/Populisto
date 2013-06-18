@@ -22,7 +22,12 @@
 
     <!-- If user is signed in and registered, show the signed_in_header - Your Address Book, Search box etc... 
         we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
-    <%= render :partial => 'layouts/signed_in_header' if user_signed_in? && current_user.registration_complete? %>
+    <% if user_signed_in? && current_user.registration_complete? %>
+    <%= render :partial => 'layouts/signed_in_header' %>
+    <% else %>
+    <!-- If not signed in, then show the signed_out_header -->
+    <%= render :partial => 'layouts/signed_out_header' %>
+    <% end %>
     <!-- If user is signed in and registered, show the 'Win an iPad! partial' -->
     <%= render :partial => 'layouts/competition' if user_signed_in? && current_user.registration_complete? %>
     <%#= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>

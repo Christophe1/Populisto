@@ -1,6 +1,6 @@
 <div class='find-something'>
 
-  <div class="greetings">
+  <!-- <div class="greetings"> -->
     <br>
     <br>
     <br>
@@ -9,45 +9,35 @@
     <br>
     <%#= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
     <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
-  </div>
+<!--   </div>
   <br>
-  <br>
+  <br> -->
     <%#= link_to ("Go here", "http://www.rosk.com/") %>
     <%#= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
 
-  <div class="search-area">
+<!--   <div class="search-area">
 
     <div class='search-box'>
-      <%#= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
 
-        <%#= f.input :search_ids, :collection => @data, :as => :grouped_chosen, 
-                    :group_method => :last, :prompt => false,
-                    :input_html => { :class => 'span5', :multiple => true }, 
-                    :label => t('find_something.search_label'), 
-                    :placeholder => t('find_something.search_placeholder') %>
-
-        <%#= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button' %>
-
-      <%# end %>
     </div> 
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
 
 <div id="map_canvas">
+  <!-- generated map goes in here -->
 </div>
+<!-- the code below is required for giving the map coordinates, above -->
 <div id="user-position" class="hidden" data-lat="<%= current_user.lat %>" data-lng="<%= current_user.lng %>"></div>
 
     <div class="clearfix"></div>
 
   </div> 
 
-<%= render 'reviews' if @reviews %>
+
+  <% if @reviews.any? %>
+<%= render 'reviews' %>
+  <% else %>
+  <%= render :partial => 'layouts/no_reviews_in_your_area' %>
+    <%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
+    <% end %>
 
 
- </div>
-
-<script type="text/javascript">
-
-   // The initialize_google_map function was here
-   // but I took it out. It didn't seem to be doing anything
-     
-// </script>

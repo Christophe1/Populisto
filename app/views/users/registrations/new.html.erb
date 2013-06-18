@@ -1,33 +1,31 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
 
-<div class = "populisto_logo2">
-<%= image_tag 'logo.png' %>
+    <!-- <link rel="stylesheet" type="text/css" href="carousel.css"> -->
+
+   <!-- // <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+
+  </head>
+  <body>
+
+  <!-- the container div, which holds the back and forward arrows on each side, and the 
+  changing images, in the middle -->
+  <div id = "carousel">
+    <%= image_tag "1.1.png", :id => "rotate_images" %>
+    <!-- <img id ="rotate_images" src="assets/1.1.png"/> -->
+    <!-- back arrow -->
+    <div id = "back">
+      <%= image_tag "arrow_back.png" %> 
+    <!-- <img src = "assets/arrow_back.png"> -->
+  </div>  
+  <!-- forward arrow -->
+    <div id = "forward">
+      <%= image_tag "arrow_forward.png" %>
+    <!-- <img src = "assets/arrow_forward.png"></div> -->
+   
+  </div>
 </div>
-
-<!-- This is the unordered list for the login-sign up page -->
-<ul class="features">
-
-  <li>
-  <img class><%= image_tag("correct.png") %></img>
-  <p class="title">Reliable</p>
-  <p>Find trustedss sources from people you know.</p>
-  </li>
-  <li>
-  <img class><%= image_tag("share.gif") %></img>
-  <p class="title">Share</p>
-  <p>Pop that electrician or dress maker into your <br>
-  list so others can employ them.</p>
-  </li>
-</ul>
-
-<ul class="iPad-promo">
-  <li>
-  <img class><%= image_tag("smiley.png") %></img>
-  <p class="title">And...</p>
-  <p>Be in with the chance to win an iPad! 
-    <%= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"http://www.rosk.com\",'Terms and Conditions', 'width=300, height=600');" %>
-  <%= image_tag "ipad.png", :class => "img2" %>
-  </li>
-</ul>
 
 
 
@@ -69,17 +67,21 @@
 
           <div class="inputs">
             <%= f.input_field :first_name, :required => true, :autofocus => true, :placeholder => I18n.t('create_account.first_name') %>
+          </br>
             <%= f.input_field :last_name, :required => true, :placeholder => I18n.t('create_account.second_name') %>
+          </br>
             <%= f.input_field :email, :required => true, :placeholder => I18n.t('create_account.email_address') %>
+          </br>
             <%= f.input_field :password, :required => true, :placeholder => I18n.t('create_account.password') %>
+          </br>
             <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
           </div>
-
+</br>
           <div class="actions">
             <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
           </div>
         <% end %>
-
+</br>
         <div class='links centralized'>
           
           <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
@@ -91,3 +93,43 @@ By clicking "Create Account" you confirm that you accept the <%= link_to "Terms 
     </div>
 
 </div>
+
+  <div id="iPad-promo">
+    <!-- <li id="win_ipad"> -->
+    <div id="smiley">
+    <%= image_tag("smiley.png") %>
+  </div>
+    <!-- <p class="title">And...290513</p> -->
+    <div id = "win_ipad_text">
+    Be in with the chance to win an iPad! 
+    </div>
+      <%#= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"terms.html.erb\",'Terms and Conditions', 'width=300, height=600');" %>
+   <div id = "ipad_image">
+    <%#= image_tag "ipad.png" %>
+   </div>
+ </div>
+
+   <script>
+
+  $('#back').on({
+      'click': function () {
+          var origsrc = $(rotate_images).attr('src');
+          var src = '';
+          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('2.1.png') %>';
+          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('1.1.png') %>';
+          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('1.1.png') %>';
+          $(rotate_images).attr('src', src);
+      }
+  });
+
+  $('#forward').on({
+      'click': function () {
+          var origsrc = $(rotate_images).attr('src');
+          var src = '';
+          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('2.1.png') %>';
+          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('3.1.png') %>';
+          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('3.1.png') %>';
+          $(rotate_images).attr('src', src);
+      }
+  });
+  </script>

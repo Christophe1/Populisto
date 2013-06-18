@@ -1,0 +1,16 @@
+
+<div class ="centre_text">
+
+<% if @user == current_user %>
+<h3>
+<%=  I18n.t 'find_something.empty_user_owner' %>
+<% else %>
+<h3>
+  <%= @user.first_name.capitalize %>
+  <%= I18n.t 'helpers.s_page' %>
+  <%= I18n.t 'find_something.empty_user_other' %>
+</h3>
+
+    <% end %>
+
+</div>
