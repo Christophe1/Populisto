@@ -7,32 +7,34 @@
     <%= fb_avatar(review.user) %>
 
 
-<div class="category_name">
 
-    <!-- <p> -->
+<!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry -->
+<div class = "address_entry_user_name">    
       <% if current_user.name == review.user.front_name %>
-      <%= link_to "You", user_path(review.user) %> / <%= review.categories_list %>
+      <%= link_to "You", user_path(review.user) %> 
       <% else %>
-      <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> / <%= review.categories_list %>
+      <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> 
       <% end %>
-    <!-- </p> -->
+</div>
+
+    <div class="category_name">
+    <%= review.categories_list %>
     </div>
 
 <div class="info">
-    <p>
-      <%= t('find_something.review.name') %><%= review.name %>
-    </p>
-    <p>
-      <%= t('find_something.review.address') %><%= review.address %>
-    </p>
-    <p>
-      <%= t('find_something.review.phone') %><%= review.phone %>
-    </p>
+      <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
+      </br>
+      <strong><%= I18n.t('user.review.address') %></strong><%= review.address %><br>
+      </br>
+      <strong><%= I18n.t('user.review.phone') %></strong><%= review.phone %><br>
+      </br>
+    <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
   </div>
 </div>
     
 <div class="right_window">
 
+<div class="comments"><%= I18n.t('user.review.comments') %></div> 
     <div class="review-text">
       <%= review.comment %>
     </div>

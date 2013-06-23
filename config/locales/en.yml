@@ -27,7 +27,7 @@ en:
         notice: "%{resource_name} was updated successfully."
   helpers:
     enter_a_location: "Enter address, town or village where you live."
-    cant_be_blank: "can't be blank"
+    cant_be_blank: " - can't be blank"
     actions: "Actions"
     time_ago: "%{time} ago"
     user_indicator: "Hello, %{user}."
@@ -126,7 +126,7 @@ en:
     text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>Share something with friends to help them find something. Or store it personally for your own information'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
-    comment_label: 'Comments - price, quality etc..'
+    comment_label: 'Comments'
     comment_popup_link_text: 'See samples of stuff written up just perfectly'
     perfect_example: 'Add example to translations file - en.yml'
     close_popup_text: 'Close'
@@ -240,15 +240,14 @@ en:
       name: "Name: "
       address: "Address: "
       phone: "Phone: "
-      comment: "Comment: "
-      more_info: "More info: "
+      comments: "Comments: "
       delete: "Delete"
       edit:
         category: "Category"
         name: "Name *"
         address: "Address"
         phone: "Phone"
-        comment: "Comment"
+        comments: "Comments"
         more_info: "More info"
         cancel: "Cancel"
         edit: "Edit"
@@ -259,4 +258,4 @@ en:
       category: "Category"
       following_in: "People you follow"
       followers_in: "People following you"
-      other_people: "Other people in your area"
+      other_people: "Others in your area"

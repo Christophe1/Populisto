@@ -8,16 +8,15 @@
     <%= review.categories_list %>
   </div>
 
-  <div class="info">
-    <strong><%= I18n.t('user.review.name') %></strong> <%= review.name %><br>
-  </br>
-    <strong><%= I18n.t('user.review.address') %></strong> <%= review.address %><br>
-  </br>
-    <strong><%= I18n.t('user.review.phone') %></strong> <%= review.phone %><br>
-  </br>
-    <div class = "posted_at">Posted <%= time_ago_in_words(review.created_at) %> ago.</div>
+<div class="info">
+      <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
+      </br>
+      <strong><%= I18n.t('user.review.address') %></strong><%= review.address %><br>
+      </br>
+      <strong><%= I18n.t('user.review.phone') %></strong><%= review.phone %><br>
+      </br>
+    <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
   </div>
-<!-- </div> -->
 </div>
 
 
@@ -27,10 +26,10 @@
 
     <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
   <% end %>
-  <div class="comment">
-    <strong class="more-info"><%= I18n.t('user.review.more_info') %></strong> 
+  <!-- <div class="comment"> -->
+    <div class="comments"><%= I18n.t('user.review.comments') %></div> 
     <div class="comment-content"><%= review.comment %></div>
-  </div>
+  <!-- </div> -->
   
   <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
   

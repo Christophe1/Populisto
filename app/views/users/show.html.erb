@@ -10,7 +10,7 @@
     </div>
     <%#= label_tag I18n.t('helpers.your_page'), your_page(@user), :class => 'your_page_label' %>
     <%#= label_tag I18n.t('helpers.pop_something_in'), pop_something(@user), :class => 'pop_something_in' %>
-    <%= link_to "Pop something in",reviews_path, :class => "ajax" %>
+    <%= link_to "Pop something in",reviews_path %>
 
     <%= render 'follow_form', :user => @user %>
     <%= render 'stats', :user => @user, :stats_user_id => @user.id %>

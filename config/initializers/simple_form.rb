@@ -47,16 +47,37 @@ SimpleForm.setup do |config|
     b.use :error, :wrap_with => { :tag => :span, :class => :error }
   end
 
+  # config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+  #   b.use :html5
+  #   b.use :placeholder
+  #   b.use :label
+  #   b.wrapper :tag => 'div', :class => 'controls' do |input|
+  #     input.use :input
+  #     input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+  #     input.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+  #   end
+  # end
+
+
+
   config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |input|
-      input.use :input
-      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
-      input.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    b.wrapper :tag => 'div', :class => 'label-error' do |input|
+      b.use :label
+      b.use :error, :wrap_with => { :tag => 'span', :class => 'help-block' }
+    end
+    b.wrapper :tag => 'div', :class => 'controls' do |ba|
+      ba.use :input
+      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
   end
+
+
+
+
+
+
 
   config.wrappers :prepend, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
     b.use :html5

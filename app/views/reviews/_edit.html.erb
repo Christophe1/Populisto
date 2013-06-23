@@ -2,25 +2,36 @@
   <div class="cancel-edit" id="<%= @review.id %>">
     <%= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
   </div>
+
   <%= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
       <div id="except_comment">
       <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
             :input_html => { :multiple => true, :id => "#{@review.id}" },
-            :label => I18n.t('write_review.categories_selector_label') , :placeholder => I18n.t('write_review.categories_selector_placeholder') %>
-      <%= f.input :name, :required => true %>
-      <%= f.input :phone  %>
+            :label => I18n.t('write_review.categories_selector_label'), 
+            :label_html => { :class => 'edit_form_titles' },
+            :error_html => { :class => 'cant_be_blank'}
+            %>
 
-      <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location') %>
+      <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+      
+      <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
       <span id="address_validation"></span>
+
+      <%= f.input :phone  %>
 
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
       </div>
-      <div id="comment">
-      <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 12}, :label => I18n.t('write_review.comment_label') %>
-      </div>
 
+      <!-- <div class="right"> -->
+      <!-- <div class="comments"><%#= I18n.t('user.review.comments') %></div>  -->
+
+      <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
+
+
+
+        <!-- buttons: save, delete, share, keep private -->
       <div class="edit_button_group">
       <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
       <%= render 'delete', :review => @review %>
@@ -32,6 +43,7 @@
       <%= f.radio_button :visible, "true" , :class => "share_button" %>
           
       </div>
+    <!-- </div> -->
     </div>
   <% end %>
 </div>
@@ -46,12 +58,12 @@
         $(this).attr('data-placeholder', $(this).attr('placeholder'));
     }).chosen();
 
-    $('.edit_review_form form').submit(function() {
-      if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
-        $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
-        return false;
-      }      
-    });
+    // $('.edit_review_form form').submit(function() {
+    //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
+    //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
+    //     return false;
+    //   }      
+    // });
 
 </script>
 <div class="clearfix"></div>
