@@ -10,6 +10,16 @@
     </div>
     <%#= label_tag I18n.t('helpers.your_page'), your_page(@user), :class => 'your_page_label' %>
     <%#= label_tag I18n.t('helpers.pop_something_in'), pop_something(@user), :class => 'pop_something_in' %>
+
+
+         <!-- If the user has nothing in their address book,
+         or if a person whose page is being viewed has nothing in it,
+         render the page below. Basically, it says, 'This address book is empty' -->
+        <% if @reviews.any? == false %>
+    <%= render :partial => 'layouts/empty_user_address_book' %>
+  <% end %>
+
+
     <%= link_to "Pop something in",reviews_path %>
 
     <%= render 'follow_form', :user => @user %>
@@ -97,14 +107,12 @@
  <div class="reviews" >
   <!-- show the current user's reviews or-->
   <!-- if current user goes to another person's page, show the results on that person's page -->
-  <!-- . If there are no results, go to 'layouts/no_reviews' -->
-  <!-- basically, say, 'That address book is empty' -->
   <% if @reviews.any? %>
     <% @reviews.each do |review| %>
       <%= review_block review %>
     <% end %>
-  <% else %>
-    <%= render :partial => 'layouts/empty_user_address_book' %>
+  <%# else %>
+    <%#= render :partial => 'layouts/empty_user_address_book' %>
   <% end %>
 </div>
 

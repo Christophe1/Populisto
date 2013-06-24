@@ -8,10 +8,12 @@
 
 
 
-<!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry -->
+<!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry. -->
 <div class = "address_entry_user_name">    
-      <% if current_user.name == review.user.front_name %>
-      <%= link_to "You", user_path(review.user) %> 
+  <!-- not sure why, but need to use review.user.name and front_name to distinguish
+  between regular and Facebook log in people. -->
+      <% if current_user.name == review.user.name || review.user.front_name %>
+      <%= link_to "You", user_path(review.user), :class => "ajax" %> 
       <% else %>
       <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> 
       <% end %>
