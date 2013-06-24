@@ -12,11 +12,11 @@
 <div class = "address_entry_user_name">    
   <!-- not sure why, but need to use review.user.name and front_name to distinguish
   between regular and Facebook log in people. -->
-      <% if current_user.name == review.user.name || review.user.front_name %>
-      <%= link_to "You", user_path(review.user), :class => "ajax" %> 
-      <% else %>
+      <%# if current_user.name == review.user.name || review.user.front_name %>
+      <%#= link_to "You", user_path(review.user), :class => "ajax" %> 
+      <%# else %>
       <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> 
-      <% end %>
+      <%# end %>
 </div>
 
     <div class="category_name">
