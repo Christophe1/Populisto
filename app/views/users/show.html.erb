@@ -107,13 +107,13 @@
  <div class="reviews" >
   <!-- show the current user's reviews or-->
   <!-- if current user goes to another person's page, show the results on that person's page -->
-  <% if @reviews.any? %>
+  <%# if @reviews.any? %>
     <% @reviews.each do |review| %>
       <%= review_block review %>
     <% end %>
   <%# else %>
     <%#= render :partial => 'layouts/empty_user_address_book' %>
-  <% end %>
+  <%# end %>
 </div>
 
 

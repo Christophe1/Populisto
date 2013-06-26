@@ -22,10 +22,22 @@
 
 
 <div class="right_window">
-    <% if edit_enabled %>
+  current user = <%= current_user %>
+  <br/>
+  review user = <%= review.user.first_name %>
+  review_<%= review.id %>
+  <%= review.visible? %>
+
+
+
+    <% if review.user == current_user %>
+    <!-- this was another way of doing the above, but I prefer the above. 
+    edit_enabled is defined in reviews_helper, commented out -->
+    <%# if edit_enabled %>
 
     <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
   <% end %>
+
   <!-- <div class="comment"> -->
     <div class="comments"><%= I18n.t('user.review.comments') %></div> 
     <div class="comment-content"><%= review.comment %></div>
