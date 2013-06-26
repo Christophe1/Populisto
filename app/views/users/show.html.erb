@@ -20,12 +20,13 @@
   <% end %>
 
 
-    <%= link_to "Pop something in",reviews_path %>
+    <%#= link_to "Pop something in",reviews_path %>
 
     <%= render 'follow_form', :user => @user %>
     <%= render 'stats', :user => @user, :stats_user_id => @user.id %>
 
-    <%= render 'your_location' %>
+    <!-- this shows the user's address, with the option to toggle public or private -->
+    <%#= render 'your_location' %>
 
 
     <div class="clearfix"></div>
@@ -35,14 +36,16 @@
 <div class='find-something'>
 
   <div class="greetings">
-    <% if @user == current_user %>
-    <%= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
-    <%=  %>
-    <% elsif @user.address_visible %>
-    <%="#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') + " #{@user.address}" %>
-    <% else %>
-    <%= "#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') %>
-    <% end %>
+    <%# if @user == current_user %>
+    <p><%= "just here for testing:" + current_user.first_name %></p>
+    <%= I18n.t('find_something.greetings', :km => @kms_range) %>
+    <%#= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
+    <%#=  %>
+    <%# elsif @user.address_visible %>
+    <%#="#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') + " #{@user.address}" %>
+    <%# else %>
+    <%#= "#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') %>
+    <%# end %>
 
 
 
@@ -107,10 +110,17 @@
  <div class="reviews" >
   <!-- show the current user's reviews or-->
   <!-- if current user goes to another person's page, show the results on that person's page -->
+  <!-- this is separate to doing a search -->
+  <!-- go through all the user's reviews, make sure they match up with the visible_to?
+  method - not showing another user's private users - and then display the block -->
   <%# if @reviews.any? %>
-    <% @reviews.each do |review| %>
-      <%= review_block review %>
-    <% end %>
+
+  <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
+    <%= render 'reviews/review', :review => review %>
+   <% end %>
+    <%# @reviews.each do |review| %>
+      <%#= review_block review %>
+    <%# end %>
   <%# else %>
     <%#= render :partial => 'layouts/empty_user_address_book' %>
   <%# end %>

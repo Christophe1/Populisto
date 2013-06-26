@@ -22,13 +22,16 @@
 
 
 <div class="right_window">
-  current user = <%= current_user %>
+  current user = <%= current_user.first_name %>
   <br/>
   review user = <%= review.user.first_name %>
   review_<%= review.id %>
   <%= review.visible? %>
 
 
+<!--  the 'edit' link for a review is only available to current_user when he is looking at his page in
+  its entirety. If he does a search for 'plumber', and his entry comes up, he can't edit it
+ from there. He has to go into his page.-->
 
     <% if review.user == current_user %>
     <!-- this was another way of doing the above, but I prefer the above. 

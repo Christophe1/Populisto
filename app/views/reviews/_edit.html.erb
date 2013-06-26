@@ -1,6 +1,8 @@
 <div class="edit_review_form">
   <div class="cancel-edit" id="<%= @review.id %>">
+
     <%= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
+
   </div>
 
   <%= simple_form_for(@review, :remote => true) do |f| %>

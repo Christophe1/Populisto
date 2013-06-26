@@ -2,10 +2,13 @@
 <div class ="centre_text">
 
 <% if @user == current_user %>
-<h3>
-<%=  I18n.t 'find_something.empty_user_owner' %>
+
+<%= "You don't have anything in your address book. Would you like to " %>
+<%= link_to "pop something in?", reviews_path %>
+<%= "A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about them!" %>
+<%#=  I18n.t 'find_something.empty_user_owner' %>
 <% else %>
-<h3>
+
   <%= @user.first_name.capitalize %>
   <%= I18n.t 'helpers.s_page' %>
   <%= I18n.t 'find_something.empty_user_other' %>

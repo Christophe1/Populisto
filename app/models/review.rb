@@ -60,6 +60,21 @@ class Review < ActiveRecord::Base
     name
   end
 
+# if current_user id is the same as the person who
+# who made the review
+# and the review is set to 'public'
+# only then can every user see the review
+# otherwise, if it is private, only current_user can see it.
+
+#check out a cleaner way of doing this in stackoverflow, my question, 
+#'need assistance with some ruby array code, please'
+
+def visible_to?(user)
+  self.user.id == user.id || # assuming they have an ID 
+  visible == true
+end
+
+
   # Gets genres list.
   #
   def categories_list
@@ -110,6 +125,8 @@ class Review < ActiveRecord::Base
       self.author_id = self.user_id
     end
   end
+
+
 
 end
 
