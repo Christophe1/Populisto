@@ -59,7 +59,7 @@ en:
       add_to_my_page: "Add to My Page"
       email: "Email"
       facebook: "Facebook"
-      follow: "Follow"
+      follow: "Follow?"
       following: "Following"
       unfollow: "Unfollow"
       share: "Public"
@@ -134,7 +134,7 @@ en:
     categories_selector_label: 'Categories'
     categories_selector_placeholder: 'Search the address books of people in your area.'
   find_something:
-    greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto.'
+    greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto. When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map.'
     change_range_20: 'Change to 10km?'
     change_range_10: 'Change to 20km?'
     search_help: 'Search the address books of people in your area.'
