@@ -21,7 +21,21 @@
     <%#= image_tag("logo.jpg") %>
   </div> -->
 
+
+<!-- draw the map, on the right of the screen -->
     <div id="map_canvas">
+
+      <script>
+
+      $(function() {
+
+// this function can be found in draw_map.js
+      initialize_google_maps();
+
+
+  });
+
+</script>
 
     </div>
     
@@ -58,6 +72,9 @@
     <% end %>
 
   </div>
+<!-- Use the @user.lat and lng attributes to draw the map in the
+map_canvas div, above -->
+      <div id="user-position" class="hidden" data-lat="<%= @user.lat %>" data-lng="<%= @user.lng %>"></div>
 
     <!-- <div class="clear-both"></div> -->
 
@@ -143,7 +160,7 @@
     </div>
     <!-- This is here, to generate the user's latitude and longitude dynamically -->
     <!-- The data-lat and lng attributes are used in 'initialise_google_maps' function, in scripts.js' -->
-    <div id="user-position" class="hidden" data-lat="<%= @user.lat %>" data-lng="<%= @user.lng %>"></div>
+
 
 <!-- 
     <button id="show_the_number">show</button>

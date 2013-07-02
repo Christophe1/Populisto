@@ -17,7 +17,10 @@
 //= require jquery.simplemodal.1.4.2.min
 //= require jquery.placeholder.min
 //= require jquery-fileupload/basic
-//= require scripts
+//= require draw_map.js
+
+// I took out the ajax functions, which are in scripts.js, because back and forward buttons are not working.
+
 
 
 $('select').chosen();
@@ -44,11 +47,14 @@ $(function() {
     }).chosen().change(function (event, object) {
         console.log("event");
         if (object.selected && object.selected.match("^user_")) {
+            // comment out the line below, to get the ajax working
+            // and uncomment the last 3 lines of this routine.
+            window.location.href = object.selected.replace('user_', '/users/');
             //$(".search-choice").remove(); 
             //below is the code for selecting a 'user' from the Chosen
             //list. The ajax function, in scripts.js, is then loaded
-            var url = object.selected.replace('user_', '/users/');
-            $.get(url, ajax_loaded); 
+            // var url = object.selected.replace('user_', '/users/');
+            // $.get(url, ajax_loaded); 
             
         }
     });

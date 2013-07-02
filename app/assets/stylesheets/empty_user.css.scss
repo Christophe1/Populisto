@@ -2,7 +2,7 @@
 
   #map_canvas {
     height: 380px;
-    width: 40%;
+    width: 45%;
    /* width: 470px; */
     float:right;
     margin-top:80px;
@@ -42,12 +42,12 @@ margin-top:115px;
     bottom: -25px;
     content: '';
     position: absolute;
-    right: 475px;
+    right: 85.5%;
 }
 #top_bubble:before {
     border-right: 25px solid hsla(0,0%,0%,.1);
     bottom: -28px;
-    right: 472px;
+    right: 85%;
 }
 }
 
