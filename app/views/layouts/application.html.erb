@@ -28,7 +28,7 @@
     <%= render :partial => 'layouts/signed_out_header' %>
     <% end %>
     <!-- If user is signed in and registered, show the 'Win an iPad! partial' -->
-    <%= render :partial => 'layouts/competition' if user_signed_in? && current_user.registration_complete? %>
+    <%#= render :partial => 'layouts/competition' if user_signed_in? && current_user.registration_complete? %>
     <%#= render :partial => 'layouts/messages' if user_signed_in? && current_user.registration_complete?%>
 
 

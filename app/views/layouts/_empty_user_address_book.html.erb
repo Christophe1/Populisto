@@ -1,24 +1,25 @@
 
-<!-- <div class ="empty_user_text_pos"> -->
 
-
-<div class="chat-bubble">
 <% if @user == current_user %>
 
-<%= "You don't have anything in your address book. Would you like to " %>
-<%= link_to "pop something in?", reviews_path %>
-<%= "A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about them!" %>
-
-<div class="chat-bubble-arrow-border"></div>
-<div class="chat-bubble-arrow"></div>
+<div id = "top_bubble_div">
+<div id="top_bubble">
+<%= "Would you like to " %>
+<%= link_to "pop something in", reviews_path %>
+<%= "to your Address Book? A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about us!" %>
+</div>
 </div>
 
+<div id = "p_mechanic">
+	<%= image_tag("p_mechanic.png") %>
+</div>
 
-<span class="bubble">
-<%= "You don't have anything in your address book. Would you like to " %>
-<%= link_to "pop something in?", reviews_path %>
-<%= "A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about them!" %>
+<div id = "right_bubble_div">
+<span id="right_bubble">
+<%= "When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map -  20km around the address you gave when registering with Populisto."
+ %>
 </span>
+</div>
 
 <%#=  I18n.t 'find_something.empty_user_owner' %>
 <% else %>

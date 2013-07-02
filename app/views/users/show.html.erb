@@ -1,13 +1,13 @@
 
-<div class="users-page">
+<!-- <div class="users-page"> -->
 
 
 
-  <div class="user-info">
+  <!-- <div class="user-info"> -->
 
-    <div class = "avatar">
-      <%= fb_avatar(@user) %>
-    </div>
+<!--     <div class = "avatar">
+      <%#= fb_avatar(@user) %>
+    </div> -->
     <%#= label_tag I18n.t('helpers.your_page'), your_page(@user), :class => 'your_page_label' %>
     <%#= label_tag I18n.t('helpers.pop_something_in'), pop_something(@user), :class => 'pop_something_in' %>
 
@@ -15,30 +15,92 @@
          <!-- If the user has nothing in their address book,
          or if a person whose page is being viewed has nothing in it,
          render the page below. Basically, it says, 'This address book is empty' -->
-        <% if @reviews.any? == false %>
-    <%= render :partial => 'layouts/empty_user_address_book' %>
-  <% end %>
+        <!-- <div id ="contains"> -->
+
+             <!--    <div id="testy">
+    <%#= image_tag("logo.jpg") %>
+  </div> -->
+
+    <div id="map_canvas">
+
+    </div>
+    
+  <div id = "character_and_bubbles">
+<% if @user == current_user %>
+
+<div id = "top_bubble_div">
+<div id="top_bubble">
+<%= "Would you like to " %>
+<%= link_to "pop something in", reviews_path %>
+<%= "to your Address Book? A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about us!" %>
+</div>
+</div>
+
+<div id = "p_mechanic">
+  <%= image_tag("p_mechanic.png") %>
+</div>
+
+<div id = "right_bubble_div">
+<span id="right_bubble">
+<%= "When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map -  20km around the address you gave when registering with Populisto."
+ %>
+</span>
+</div>
+
+<%#=  I18n.t 'find_something.empty_user_owner' %>
+<%# else %>
+
+  <%#= @user.first_name.capitalize %>
+  <%#= I18n.t 'helpers.s_page' %>
+  <%#= I18n.t 'find_something.empty_user_other' %>
+<!-- </h3> -->
+
+    <% end %>
+
+  </div>
+
+    <!-- <div class="clear-both"></div> -->
+
+
+
+<!-- </div> -->
+
+
+
+
+
+
+    <%#= render :partial => 'layouts/empty_user_address_book' %>
+    <%# if @reviews.any? == false %>
+    <%# end %>
+
+
+
+
+  
+
+
 
 
     <%#= link_to "Pop something in",reviews_path %>
 
-    <%= render 'follow_form', :user => @user %>
-    <%= render 'stats', :user => @user, :stats_user_id => @user.id %>
+    <%#= render 'follow_form', :user => @user %>
+    <%#= render 'stats', :user => @user, :stats_user_id => @user.id %>
 
     <!-- this shows the user's address, with the option to toggle public or private -->
     <%#= render 'your_location' %>
 
 
-    <div class="clearfix"></div>
+    <!-- <div class="clearfix"></div> -->
 
-  </div>
+  <!-- </div> -->
 
 <div class='find-something'>
 
-  <div class="greetings">
+  <!-- <div class="greetings"> -->
     <%# if @user == current_user %>
-    <p><%= "just here for testing:" + current_user.first_name %></p>
-    <%= I18n.t('find_something.greetings', :km => @kms_range) %>
+    <p><%#= "just here for testing:" + current_user.first_name %></p>
+    <%#= I18n.t('find_something.greetings', :km => @kms_range) %>
     <%#= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
     <%#=  %>
     <%# elsif @user.address_visible %>
@@ -128,5 +190,5 @@
 
 
 
-</div>
+<!-- </div> -->
 

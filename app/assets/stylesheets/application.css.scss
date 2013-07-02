@@ -122,6 +122,15 @@ body {
 /*---------------------------------END OF ADRESS SELECTION ON MAP CSS--------------------------*/
 
 
+  #map_canvas {
+    height: 380px;
+    width: 470px;
+    float:right;
+    margin-top:80px;
+    
+    /* margin: 0 auto; */
+    }
+
 .control-group.chosen {
   .help-inline {
     margin-top: -20px;
