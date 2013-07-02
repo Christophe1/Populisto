@@ -2,7 +2,7 @@
 
   #map_canvas {
     height: 380px;
-    width: 50%;
+    width: 40%;
    /* width: 470px; */
     float:right;
     margin-top:80px;
@@ -13,7 +13,7 @@
 
 #character_and_bubbles {
 margin-top:115px;
- width: 50%;
+ width: 60%;
 
 #top_bubble_div {
 #top_bubble {
@@ -29,7 +29,7 @@ margin-top:115px;
     color: #333;
     display: inline-block;
     font: 16px/25px sans-serif;
-    width: 85%;
+    width: 71%;
     /* width: 500px; */
     padding: 15px 25px;
     position: relative;
@@ -74,7 +74,7 @@ padding:20px;
     color: #333;
     display: inline-block;
     font: 16px/25px sans-serif;
-    width: 52%;
+    max-width: 42%;
     /* width: 282px; */
     padding: 15px 25px;
     position: relative;
@@ -87,13 +87,13 @@ padding:20px;
     bottom: 68px;
     content: '';
     position: absolute;
-    right: 332px;
+    right: 100%;
 }
 /*
 #right_bubble:before {
     border-right: 25px solid hsla(0,0%,0%,.1);
     bottom: 72px;
-    right: 332px; 
+    right: 100%; 
 } */
 }
 

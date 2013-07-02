@@ -173,7 +173,7 @@ function initialize_google_maps() {
       center: currentlatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP, // ROADMAP, SATELLITE, HYBRID
         streetViewControl: false,
-        minZoom: 0, 
+        minZoom: 1, 
         // don't want people to be able to hone in on others' addresses too specifically.
         maxZoom: 13
       };
