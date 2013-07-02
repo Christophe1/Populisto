@@ -2,7 +2,8 @@
 
   #map_canvas {
     height: 380px;
-    width: 470px;
+    width: 50%;
+   /* width: 470px; */
     float:right;
     margin-top:80px;
         img {
@@ -12,6 +13,7 @@
 
 #character_and_bubbles {
 margin-top:115px;
+ width: 50%;
 
 #top_bubble_div {
 #top_bubble {
