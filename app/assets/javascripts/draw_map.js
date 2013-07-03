@@ -4,7 +4,6 @@ var markers = [];
 
 function initialize_google_maps() {
 
-  console.log('initialized google maps'); 
     var user_longitude = $("#user-position").attr("data-lng");
     var user_latitude = $("#user-position").attr("data-lat");
 

@@ -38,28 +38,54 @@
 </script>
 
     </div>
-    
-  <div id = "character_and_bubbles">
-<% if @user == current_user %>
 
-<div id = "top_bubble_div">
-<div id="top_bubble">
-<%= "Would you like to " %>
-<%= link_to "pop something in", reviews_path %>
-<%= "to your Address Book? A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about us!" %>
-</div>
-</div>
+      <!-- Use the @user.lat and lng attributes to draw the map in the
+      map_canvas div, above -->
+      <div id="user-position" class="hidden" data-lat="<%= @user.lat %>" data-lng="<%= @user.lng %>"></div>
+      
+      <div id = "character_and_bubbles">
 
-<div id = "p_mechanic">
-  <%= image_tag("p_mechanic.png") %>
-</div>
 
-<div id = "right_bubble_div">
-<span id="right_bubble">
-<%= "When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map -  20km around the address you gave when registering with Populisto."
- %>
-</span>
-</div>
+        <div id = "top_bubble_div">
+          <div id="top_bubble">
+            <!-- if the user is looking at their own Address Book, show this... -->
+            <% if @user == current_user %>
+            <%= "Would you like to " %>
+            <%= link_to "pop something in", reviews_path %>
+            <%= "to your Address Book? A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about us!" %>
+
+            <!-- if the user is looking at someone else's Address Book, show this... -->
+            <% elsif @user != current_user %>
+            <%= "This is the Address Book of " %>
+            <%= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
+            <%= ". Do you want to " %>
+            <%= link_to "pop something in", reviews_path %>
+            <%= "to your own Address Book?" %>
+            <% end %>
+
+          </div>
+        </div>
+
+        <div id = "p_mechanic">
+          <%= image_tag("p_mechanic.png") %>
+        </div>
+
+        <div id = "right_bubble_div">
+          <span id="right_bubble">
+            <!-- if the user is looking at their own Address Book, show this... -->
+            <% if @user == current_user %>
+            <%= "When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map -  20km around the address you gave when registering with Populisto."
+            %>
+
+            <!-- if the user is looking at someone else's Address Book, show this... -->
+            <% elsif @user != current_user %>
+            <%= "When " %>
+            <%= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
+            <%= "does a search, peoples’ address books within the circle on the map will be displayed."
+            %>
+            <% end %>
+          </span>
+        </div>
 
 <%#=  I18n.t 'find_something.empty_user_owner' %>
 <%# else %>
@@ -69,12 +95,10 @@
   <%#= I18n.t 'find_something.empty_user_other' %>
 <!-- </h3> -->
 
-    <% end %>
+    
 
   </div>
-<!-- Use the @user.lat and lng attributes to draw the map in the
-map_canvas div, above -->
-      <div id="user-position" class="hidden" data-lat="<%= @user.lat %>" data-lng="<%= @user.lng %>"></div>
+
 
     <!-- <div class="clear-both"></div> -->
 
@@ -155,9 +179,9 @@ map_canvas div, above -->
 <!--     <div id="latitude" data-lat="<%# @user.lat %>">jjjjj</div>
     <div id="longitude" data-lng="<%# @user.lng %>">kkkkk</div> -->
 
-    <div id="map_canvas">
+<!--     <div id="map_canvas">
 
-    </div>
+    </div> -->
     <!-- This is here, to generate the user's latitude and longitude dynamically -->
     <!-- The data-lat and lng attributes are used in 'initialise_google_maps' function, in scripts.js' -->
 
@@ -187,11 +211,12 @@ map_canvas div, above -->
 
 
  <div class="reviews" >
-  <!-- show the current user's reviews or-->
-  <!-- if current user goes to another person's page, show the results on that person's page -->
+  <!-- show the current user's Address Book entries or-->
+  <!-- if current user goes to another person's Address Book , show the results on that person's Address Book  -->
   <!-- this is separate to doing a search -->
-  <!-- go through all the user's reviews, make sure they match up with the visible_to?
-  method - not showing another user's private users - and then display the block -->
+  <!-- go through all the user's entries, make sure they match up with the visible_to?
+  method in the reviews model- not showing another user's private users - and then display those results -->
+  
   <%# if @reviews.any? %>
 
   <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
