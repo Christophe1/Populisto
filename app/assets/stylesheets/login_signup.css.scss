@@ -32,13 +32,17 @@ top:175px;
   top: 0;
 
   .populisto_logo2 {
-  margin-left: 480px;
+  width: 400px;
+margin-left: auto;
+margin-right: auto;
 }
 
 
   #home_page_links {
 padding-top: 20px;
-padding-left: 410px;
+width: 600px;
+margin-left: auto;
+margin-right: auto;
 
 
     li {
@@ -124,7 +128,7 @@ float: left;
 .login-page {
 width:370px;
 float: right;
-margin-right: 100px;
+margin-right: 40px;
 margin-top: 20px;
 border: 1px solid #eee;
 
