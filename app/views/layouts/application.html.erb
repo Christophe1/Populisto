@@ -25,9 +25,9 @@
         we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
     <% if user_signed_in? && current_user.registration_complete? %>
     <%= render :partial => 'layouts/signed_in_header' %>
-    <% else %>
+    <%# else %>
     <!-- If not signed in, then show the signed_out_header -->
-    <%= render :partial => 'layouts/signed_out_header' %>
+    <%#= render :partial => 'layouts/signed_out_header' %>
     <% end %>
 
 
