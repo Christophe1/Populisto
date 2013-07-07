@@ -25,7 +25,8 @@ QuestionnaireSite::Application.configure do
       :address              => 'smtp.gmail.com',
       :port                 => 587,
       # :domain               => 'gmail.com',
-      :user_name            => 'harris.christophe@gmail.com',
+      :user_name            => 'admin@populisto.ie',
+      # :user_name            => 'harris.christophe@gmail.com',
       :password             => 'hilaire2',
       :authentication       => 'plain',
       :enable_starttls_auto => true

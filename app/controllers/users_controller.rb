@@ -26,6 +26,7 @@ class UsersController < FrontEndController
     render :layout => false
   end
 
+
   
   # protected
   #   def find_user

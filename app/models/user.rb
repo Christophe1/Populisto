@@ -61,6 +61,8 @@ class User < ActiveRecord::Base
 
   self.per_page = 10
 
+
+
   class << self
     # Finds user by facebook token or creates a new one.
     #

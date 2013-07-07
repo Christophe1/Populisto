@@ -1,5 +1,3 @@
-
-
 <div class='map-page'>
 
   <div class="greetings">
@@ -31,23 +29,25 @@
 
   <div class="clearfix"></div>
 
-	<div id = "correct_area">
-	Is this the correct area?
-	</div>
-	
-	<br><br><br>
+  <div id = "correct_area">
+  Is this the correct area?
+  </div>
+
+  <br><br><br>
 
   <%#= code below deals with the 'Yes' and 'No' links on the infoWindow.
   They go to the aplication.js file %>
 
-	<div id="no_link">
- 	<%= link_to I18n.t('map.no_link'), '#', :class => 'map-no-link' %>
-	</div>
-	
-	<div id="yes_link">
-		<%= link_to I18n.t('map.yes_link'), '#', :class => 'map-yes-link' %>
+  <div id="no_link">
+  <%= link_to I18n.t('map.no_link'), '#', :class => 'map-no-link' %>
+  </div>
 
-	</div>
+  <div id="yes_link">
+    <%= link_to I18n.t('map.yes_link'), '#', :class => 'map-yes-link' %>
+
+  </div>
+
+</div>
 
 </div>
 

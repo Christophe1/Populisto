@@ -26,7 +26,6 @@
     <div id="map_canvas">
 
       <script>
-
       $(function() {
 
 // this function can be found in draw_map.js
@@ -36,6 +35,7 @@
   });
 
 </script>
+
 
     </div>
 
@@ -79,13 +79,14 @@
 
             <!-- if the user is looking at someone else's Address Book, show this... -->
             <% elsif @user != current_user %>
-            <%= "When " %>
             <%= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
-            <%= "does a search, peoples’ address books within the circle on the map will be displayed."
+            <%= "can see the address books of people within the circle, on the map."
             %>
             <% end %>
           </span>
         </div>
+
+
 
 <%#=  I18n.t 'find_something.empty_user_owner' %>
 <%# else %>
@@ -99,6 +100,25 @@
 
   </div>
 
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+
+<div id = "following_and_ipad">
+  <!-- show the followers/following link -->
+  <div id="following">
+
+<%= render 'stats', :user => @user, :stats_user_id => @user.id %>
+</div>
+
+<div id="comp">
+<!-- show the 'invite others and win an iPad' -->
+<%= render :partial => 'layouts/competition' %>
+</div>
+</div>
 
     <!-- <div class="clear-both"></div> -->
 
@@ -126,7 +146,7 @@
     <%#= link_to "Pop something in",reviews_path %>
 
     <%#= render 'follow_form', :user => @user %>
-    <%#= render 'stats', :user => @user, :stats_user_id => @user.id %>
+    
 
     <!-- this shows the user's address, with the option to toggle public or private -->
     <%#= render 'your_location' %>
@@ -136,11 +156,11 @@
 
   <!-- </div> -->
 
-<div class='find-something'>
+<!-- <div class='find-something'> -->
 
   <!-- <div class="greetings"> -->
     <%# if @user == current_user %>
-    <p><%#= "just here for testing:" + current_user.first_name %></p>
+    <!-- <p><%#= "just here for testing:" + current_user.first_name %></p> -->
     <%#= I18n.t('find_something.greetings', :km => @kms_range) %>
     <%#= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
     <%#=  %>
@@ -154,15 +174,15 @@
 
 
     <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
-  </div>
+  <!-- </div> -->
   <br>
   <br>
     <%#= link_to ("Go here", "http://www.rosk.com/") %>
     <%#= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
 
-  <div class="search-area">
+  <!-- <div class="search-area"> -->
 
-    <div class='search-box'>
+    <!-- <div class='search-box'> -->
       <%#= simple_form_for @review, :url => search_index_path, :method => :post, :html => { :class => 'form-horizontal'} do |f| %>
 
         <%#= f.input :search_ids, :collection => @data, :as => :grouped_chosen, 
@@ -174,7 +194,7 @@
         <%#= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button' %>
 
       <%# end %>
-    </div> 
+    <!-- </div>  -->
     <!-- <div class="clearfix"></div> -->
 <!--     <div id="latitude" data-lat="<%# @user.lat %>">jjjjj</div>
     <div id="longitude" data-lng="<%# @user.lng %>">kkkkk</div> -->
@@ -204,10 +224,15 @@
 
     <!-- <div class="clearfix"></div> -->
 
-  </div> 
+  <!-- </div>  -->
 
-
+<!-- this closing div seems to have no opening match, yet when I take it out, the reviews isn't
+formatted correctly -->
  </div>
+
+ <div id = "followers_following">
+ <%= render 'follow_form', :user => @user %>
+</div>
 
 
  <div class="reviews" >
