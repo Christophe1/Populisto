@@ -19,5 +19,5 @@ test:
 
 production:
   facebook:
-    app_id: ""
-    app_secret: ""
+    app_id: "402538736431796"
+    app_secret: "c93fc06ddb346e14479b0bf587b4a75c"
