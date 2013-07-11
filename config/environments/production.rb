@@ -22,7 +22,7 @@ QuestionnaireSite::Application.configure do
 
 
   # Need this here for mailing purposes
-  config.action_mailer.default_url_options = { :host => 'www.populisto.com' }
+  config.action_mailer.default_url_options = { :host => 'populisto.com' }
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
