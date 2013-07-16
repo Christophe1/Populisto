@@ -69,15 +69,5 @@
     //   }      
     // });
 
-// on ENTER, go to the next TAB
-$('input').on('keydown',function(e){
-    var keyCode = e.keyCode || e.which;
-     if(e.keyCode === 13) {
-      e.preventDefault();
-      $('input')[$('input').index(this)+1].focus();
-      }
-});
-
-
 </script>
 <div class="clearfix"></div>
