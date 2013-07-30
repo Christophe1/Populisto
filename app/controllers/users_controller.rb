@@ -29,6 +29,10 @@ class UsersController < FrontEndController
   def coming
 
   end
+
+
+
+  
   
   # protected
   #   def find_user

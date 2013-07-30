@@ -234,7 +234,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.5)
+    rake (10.0.4)
     rbx-require-relative (0.0.9)
     rdoc (3.12)
       json (~> 1.4)
@@ -361,7 +361,7 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rails (= 3.2.3)
-  rake (~> 0.9.5)
+  rake (~> 10.0.4)
   resque (~> 1.20.0)
   resque-scheduler
   rest-client (~> 1.6.7)

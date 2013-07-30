@@ -1,8 +1,11 @@
 <% if reviews.present? %>
     <div class='area'>
       <h4><%= title %></h4>
-      <% reviews.each do |review| %>
+      <!-- In search results, display all address book entries that are public -->
+      <%# reviews.each do |review| %>
+      <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
         <%= render 'review', :review => review %>
       <% end %>
     </div>
 <% end %>
+
