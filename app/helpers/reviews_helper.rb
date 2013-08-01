@@ -4,6 +4,8 @@ module ReviewsHelper
 	#although I think it is causing trouble with the 'edit' link, 
 	#when creating a review, so I'm just leaving it in. Mysterious!
 
+	#Update: I think it's actually important for some of the js.erb files.
+
   def review_block(review, options = {})
     options = {:review => review, :add_to_my_list => false}.merge(options)
     #  show the 'edit' link, if the current_user is looking at his own page
@@ -12,9 +14,4 @@ module ReviewsHelper
   end
 
 end
-
-
-
-
-
 

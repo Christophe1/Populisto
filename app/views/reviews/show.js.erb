@@ -1,1 +1,6 @@
-$('#review_<%=@review.id%>').replaceWith("<%= escape_javascript( review_block @review ) %>")
+$('#review_<%=@review.id%>').html("<%= escape_javascript( review_block @review ) %>")
+$('#review_<%=@review.id %>').animate({height:'185px'}, 350);
+
+
+
+

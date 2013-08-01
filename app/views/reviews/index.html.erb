@@ -1,3 +1,5 @@
+
+
   <div class='review-text'>
 
     <%= raw I18n.t('write_review.text') %>
@@ -8,11 +10,13 @@
 
 <div class="edit_review_form">
 <div class="breadcrumb">
-  <div class="cancel-edit" id="<%= @review.id %>">
+
+  <!-- <div class="cancel-edit" id="<%= @review.id %>"> -->
 
     <%#= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
 
-  </div>
+  <!-- </div> -->
+
   <%= simple_form_for(@review) do |f| %>
   <%#= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
@@ -39,7 +43,10 @@
       <!-- <div class="comments"><%#= I18n.t('user.review.comments') %></div>  -->
 
       <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
-      <label id ="char_count_label"></label>
+
+              <div id = "char_count_label">
+      </div>
+
 
 
 
@@ -68,7 +75,7 @@
 
 <script type="text/javascript">
 
-// this function is for the character count. There's 3 functions in this
+// There's 3 functions in this
 // script section: character count, the choosen drop down and ENTER should act like TAB
 
 $(document).ready(function()  {

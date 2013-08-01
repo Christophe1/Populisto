@@ -63,7 +63,7 @@ en:
       following: "Following"
       unfollow: "Unfollow"
       share: "Public"
-      keep_private: "Private"
+      keep_private: "Personal"
       add_to_your_page: "Add to your Address Book"
       add_to_your_page_confirmation: "You're about to add these details to your Address Book.\n\nThe comments part won't be added. It's up to you to give your own comments.\n\nPlease do add them when you're ready, as it gives a more constructive experience to others, if you make it public."
       remove_from_your_page: "Remove from your Address Book"
@@ -123,7 +123,7 @@ en:
     greetings_1: "Hi %{user_name}. Please tell us your address details."
     greetings_2: "If you don't want to give your exact details that's ok, but the more accurate you are, the more effective your results will be when doing searches."
   write_review:
-    text: 'Add something to Your Page. Think of Your Page as your personal address book.<br/><br/>Share something with friends to help them find something. Or store it personally for your own information'
+    text: 'Add something to your Address Book.<br/><br/>Share something with friends to help them find something, or store it personally for yourself.'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
     comment_label: 'Comments'

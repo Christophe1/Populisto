@@ -1,4 +1,6 @@
+
 <div class="edit_review_form">
+<div class = "breadcrumb2">
   <div class="cancel-edit" id="<%= @review.id %>">
 
     <%= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
@@ -50,6 +52,7 @@
     <!-- </div> -->
     </div>
   <% end %>
+</div>
 </div>
 
 <script type="text/javascript">

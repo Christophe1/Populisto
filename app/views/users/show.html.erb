@@ -28,7 +28,7 @@
       <script>
       $(function() {
 
-// this functionn can be found in draw_map.js
+// this function can be found in draw_map.js
       initialize_google_maps();
 
 
@@ -244,9 +244,12 @@ formatted correctly -->
   
   <%# if @reviews.any? %>
 
-  <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
+    <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
     <%= render 'reviews/review', :review => review %>
    <% end %>
+
+<%#= render 'reviews/review_container' %>
+
     <%# @reviews.each do |review| %>
       <%#= review_block review %>
     <%# end %>
