@@ -7,8 +7,8 @@ class UsersController < FrontEndController
   # before_filter :fix_params, :only => :create
 
 
-  # def show    
-  #   @review = Review.new
+  #def show    
+  #review = @review.id
   #   @reviews = @user.reviews
   # end
 

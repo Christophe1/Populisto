@@ -123,7 +123,7 @@ en:
     greetings_1: "Hi %{user_name}. Please tell us your address details."
     greetings_2: "If you don't want to give your exact details that's ok, but the more accurate you are, the more effective your results will be when doing searches."
   write_review:
-    text: 'Add something to your Address Book.<br/><br/>Share something with friends to help them find something, or store it personally for yourself.'
+    text: 'Add something to Populisto!, the only Address Book you will ever need.<br></br>Share something with friends to help them find something, or store it personally for yourself.'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
     comment_label: 'Comments'
@@ -132,13 +132,13 @@ en:
     close_popup_text: 'Close'
     review_successfully_created: 'Review was successfully created'
     categories_selector_label: 'Categories'
-    categories_selector_placeholder: 'Search the address books of people in your area.'
+    categories_selector_placeholder: 'Search Address Books of people in your area.'
   find_something:
     greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto. When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map.'
     change_range_20: 'Change to 10km?'
     change_range_10: 'Change to 20km?'
     search_help: 'Search the address books of people in your area.'
-    search_placeholder: 'Search the address books of people in your area.'
+    search_placeholder: 'Search Address Books'
     search_label: ''
     button_text: 'Go'
     my_area_title: 'In Your Area:'
@@ -255,7 +255,8 @@ en:
     validation: "I'm sorry, but this user is not living within your 20km area."
   search:
     group:
-      category: "Category"
+      category: "Useful things"
       following_in: "People you follow"
       followers_in: "People following you"
-      other_people: "Others in your area"
+      other_people: "Address Books in your area"
+      all_people: "Address Books outside your area"

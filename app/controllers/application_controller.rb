@@ -19,14 +19,6 @@ class ApplicationController < ActionController::Base
     def show    
     @review = Review.new
     @reviews = @user.reviews
-
-    # user_latitude = @user.lat
-    # gon.watch.user_lat = @user_latitude
-
-    # @user.lng = user_longitude
-    # gon.watch.user_long = @user_longitude 
-  
-  
   end
 
       def index
@@ -73,27 +65,62 @@ protected
   end
 
 
+#  divide the categories into 'Useful things' and 'Address Books in your area'
   def load_data_for_checkbox
     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }    
     @data = [[I18n.t('search.group.category'), categories]]
 
     if current_user then
       users_in_my_area = User.within(default_range, :origin => current_user)
-      followers = users_in_my_area.followers_for(current_user)
-      following = users_in_my_area.following_by(current_user)
-      other = users_in_my_area - followers - following - [current_user]
+      users_outside_my_area = User.outside(default_range, :origin => current_user)
+      # followers = users_in_my_area.followers_for(current_user)
+      # following = users_in_my_area.following_by(current_user)
+      other = users_in_my_area - [current_user]
 
-      [followers, following, other].each do |users|
+      [other, users_outside_my_area].each do |users|
          users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.id}"] }
         # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
         # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end
 
-      @data.append([I18n.t('search.group.following_in'), following])
-      @data.append([I18n.t('search.group.followers_in'), followers])
+      # @data.append([I18n.t('search.group.following_in'), following])
+      # @data.append([I18n.t('search.group.followers_in'), followers])
       @data.append([I18n.t('search.group.other_people'), other])
+      @data.append([I18n.t('search.group.all_people'),users_outside_my_area])
     end
   end
+
+  # ******************************************************************************************************
+
+  # the code below divides the 'Chosen' box into the categories:
+  # Useful things, Followers, Following and Users in your area
+
+  # def load_data_for_checkbox
+  #   # get all the categories
+  #  categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] } 
+  #  # make @data be all the categories, or 'useful things', with the heading 'useful things'
+  #   @data = [[I18n.t('search.group.category'), categories]]
+
+  #   if current_user then
+  #     # all users within current user's area
+  #     users_in_my_area = User.within(default_range, :origin => current_user)
+  #     followers = users_in_my_area.followers_for(current_user)
+  #     following = users_in_my_area.following_by(current_user)
+  #     other = users_in_my_area - followers - following - [current_user]
+
+  #     [followers, following, other].each do |users|
+  #        users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.id}"] }
+  #       # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
+  #       # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
+  #     end
+
+  #     @data.append([I18n.t('search.group.following_in'), following])
+  #     @data.append([I18n.t('search.group.followers_in'), followers])
+  #     @data.append([I18n.t('search.group.other_people'), other])
+  #   end
+  # end
+
+  # *******************************************************************************************************
 
     def default_range
     20

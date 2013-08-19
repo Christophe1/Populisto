@@ -3,8 +3,29 @@
 <div class="breadcrumb" id="review_<%=review.id%>">
 
 <div class="left_window">
+
+<!-- can be public or for your eyes only, change the colour accordingly -->
+<div id="privacy_<%= review.id %>">
+  <% if review.visible == true %>
+
+  <script>
+  $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
+  </script>
+
+  <%= "Public" %>
+  <% else %>
+
+    <script>
+  $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
+  </script>
+
+            <%= "Your eyes only" %>
+            <% end %>
+</div>
   <!-- <div class="left-part"> -->
+  <div id = "fb_avatar">
     <%= fb_avatar(review.user) %>
+    </div>
 
 
 
@@ -15,13 +36,14 @@
       <%# if current_user.name == review.user.name || review.user.front_name %>
       <%#= link_to "You", user_path(review.user), :class => "ajax" %> 
       <%# else %>
-      <%= link_to review.user.front_name, user_path(review.user), :class => "ajax" %> 
+      <%= (link_to review.user.front_name, user_path(review.user), :class => "ajax") + "/" + review.categories_list %> 
       <%# end %>
 </div>
 
-    <div class="category_name">
-    <%= review.categories_list %>
-    </div>
+<!--     <div class="category_name">
+    <%#= "/" + review.categories_list %>
+    </div> -->
+</br>
 
 <div class="info">
       <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
@@ -37,9 +59,9 @@
 <div class="right_window">
 
 <div class="comments"><%= I18n.t('user.review.comments') %></div> 
-    <div class="review-text">
-      <%= review.comment %>
-    </div>
+
+    <div class="comment-content"><%= review.comment %></div>
+    
     <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
 <div class = "binder">
   </div>

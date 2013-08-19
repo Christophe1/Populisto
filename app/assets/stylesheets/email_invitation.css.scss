@@ -50,10 +50,15 @@
     overflow-x: hidden;
 
     .email {
-      padding: 2px 5px;
+      /* padding: 2px 5px; */
 
       &:hover {
         background: #eee;
+      }
+      .already_user{
+      float:right;
+      padding-right: 10px;
+      font-style: italic;
       }
     }
 

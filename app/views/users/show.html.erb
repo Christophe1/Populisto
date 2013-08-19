@@ -25,10 +25,12 @@
 <!-- draw the map, on the right of the screen -->
     <div id="map_canvas">
 
+
       <script>
+
       $(function() {
 
-// this function can be found in draw_map.js
+// this function can be found in draw_map.js.erb
       initialize_google_maps();
 
 
@@ -240,15 +242,30 @@ formatted correctly -->
   <!-- if current user goes to another person's Address Book , show the results on that person's Address Book  -->
   <!-- this is separate to doing a search -->
   <!-- go through all the user's entries, make sure they match up with the visible_to?
-  method in the reviews model- not showing another user's private users - and then display those results -->
-  
-  <%# if @reviews.any? %>
+  method in the reviews model- not showing another user's private reviews - and then display those results -->
 
+  <% if @reviews.any? %>
+  
     <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
+
+    <div class="breadcrumb" id="review_<%= review.id %>">
     <%= render 'reviews/review', :review => review %>
    <% end %>
+   </div>
+
+     <% else %>
+    <%= render :partial => 'layouts/empty_user_address_book' %>
+  <%end %>
+
+  <%# if @reviews.any? %>
+
+    <%# @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
+    <%#= render 'reviews/review' %>
+   <%# end %>
+
 
 <%#= render 'reviews/review_container' %>
+<%#= review.id %>
 
     <%# @reviews.each do |review| %>
       <%#= review_block review %>

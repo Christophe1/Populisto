@@ -1,7 +1,33 @@
 
-<div class="breadcrumb" id="review_<%= review.id %>">
-  <!-- <div class="content"> -->
+ 
 <div class="left_window">
+
+<!-- can be public or for your eyes only, change the colour accordingly -->
+<div id="privacy_<%= review.id %>">
+  <% if review.visible == true %>
+
+  <script>
+  $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
+  </script>
+
+  <%= "Public" %>
+  <% else %>
+
+    <script>
+  $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
+  </script>
+
+            <%= "Your eyes only" %>
+            <% end %>
+
+              <!-- if the user is looking at someone else's Address Book, show this... -->
+            <%# elsif @user != current_user %>
+            <%#= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
+            <%#= "can see the address books of people within the circle, on the map."
+            %>
+            <%# end %>
+
+</div>
 
   <div class="category_name">
     <%= review.categories_list %>
@@ -33,6 +59,7 @@
     <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
   <% end %>
 
+ 
 
 
     <div class="comments"><%= I18n.t('user.review.comments') %></div> 
@@ -45,6 +72,3 @@
   
   </div>
 </div>
-
-
-

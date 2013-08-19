@@ -38,7 +38,7 @@ QuestionnaireSite::Application.routes.draw do
 
   resources :reviews do
     member do
-      get :repost, :reject
+      get :repost, :reject, :edit
     end
   end
   resources :users do

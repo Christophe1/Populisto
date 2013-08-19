@@ -5,11 +5,19 @@
   </div>
   <div class='email-invitation-form'>
     <div class="control-group">
+        <div class="email">
       <% @contacts.each do |name, value| %>
         <div class="email">
           <%= check_box_tag "contacts[]", value, false, :id => value %>
           <label for="<%= value %>"><%= name %></label>
+          <!-- if the contact in the user's address book is already a member of Populisto!
+          then say 'Already on Populisto!' -->
+          <% if !User.find_by_email(name).nil? %>
+          <div class ="already_user">
+          <%= "Already on Populisto!" %>
+          </div>
         </div>
+      <% end %>
       <% end %>
       <% if @invited.present? %>
         <h4><%= I18n.t('email_invites.already_invated') %></h4>

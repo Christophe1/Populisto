@@ -1,6 +1,5 @@
   .reviews {
   width: 850px;
-  height: 300px;
   margin-left: auto;
   margin-right: auto;
 
@@ -10,7 +9,7 @@
 
   .breadcrumb {
   background: #fbf6b2 url(formBg.png) 0 0 repeat-y;
-  height: 185px;
+  height: 190px;
   /* height: 250px; */
   /* background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99); */
   position: relative;
@@ -28,14 +27,24 @@
   width:360px;
   float: left;
 
+
+  #fb_avatar{
+  float: left;
+  padding-right: 10px;
+  }
+
+  #privacy {
+  float:right;
+  }
+
+/* this div is only visible in reviews from 'Search' */
   .address_entry_user_name{
-font-size: 24px;
-display: inline;
-padding-left: 10px;
+  font-size: 18px;
+  padding-top: 20px;
   }
 
   .category_name{
-font-size: 24px;
+font-size: 18px;
 margin-top: 15px;
 margin-bottom: 20px;
   }
@@ -47,6 +56,7 @@ margin-bottom: 20px;
   }
 
   .info {
+padding-top: 5px;
 font-size: 14px;
 line-height: 20px;
   }
@@ -86,7 +96,7 @@ line-height: 20px;
     .comments {
 font-size: 20px;
 margin-top: 15px;
-margin-bottom: 25px;
+margin-bottom: 15px;
 }
 
 
@@ -98,8 +108,10 @@ margin-bottom: 25px;
   } */
 
   .comment-content {
-  display: table-cell;
-  white-space: pre-line;
+  /* display: table-cell;
+  white-space: pre-line; */
+  font-size: 14px;
+  overflow: hidden;
   }
 
 
@@ -201,7 +213,7 @@ margin-left: 115px;
 margin-top: 20px;
   }
 
-  #char_count_label {
+  .char_count_label {
 margin-left: 430px;
 color: #808080;
 }

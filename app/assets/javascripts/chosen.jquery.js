@@ -131,6 +131,7 @@ Copyright (c) 2011 by Harvest
       this.disable_search_threshold = this.options.disable_search_threshold || 0;
       this.search_contains = this.options.search_contains || false;
       this.choices = 0;
+      // the line below, 135, enables the 'max selected options'
       return this.max_selected_options = this.options.max_selected_options || Infinity;
     };
 

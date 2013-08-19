@@ -1,6 +1,7 @@
 
+<!-- Edit mode. Show this form, when user clicks the 'Edit' link> -->
+
 <div class="edit_review_form">
-<div class = "breadcrumb2">
   <div class="cancel-edit" id="<%= @review.id %>">
 
     <%= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
@@ -33,7 +34,7 @@
 
       <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
 
-
+<div class = "char_count_label"></div>
 
         <!-- buttons: save, delete, share, keep private -->
       <div class="edit_button_group">
@@ -53,14 +54,29 @@
     </div>
   <% end %>
 </div>
-</div>
 
 <script type="text/javascript">
+
+// There's 3 functions in this  
+// script section: character count, the choosen drop down and 'ENTER should act like TAB'
+
+
+$(document).ready(function()  {
+    var characters = 200 -  $('textarea').val().length;
+    $(this).closest('.control-group').next(".char_count_label").append(characters);
+    $('textarea').keyup(function(){
+        if($(this).val().length > 200){
+            $(this).val($(this).val().substr(0, 200));
+        }
+        var remaining = 200 -  $(this).val().length;
+        $(this).closest('.control-group').next(".char_count_label").html(remaining);
+    });
+});
 
 
 // I took out the initialize_google_maps function here,
 // because it was clashing with the one in scripts.js
-
+// this is for the 'Chosen' drop down plug in.
     $("#review_<%= @review.id %> select").each(function () {
         $(this).attr('data-placeholder', $(this).attr('placeholder'));
     }).chosen();

@@ -19,14 +19,22 @@
 //= require jquery-fileupload/basic
 //= require draw_map.js
 
-// I took out the ajax functions, which are in scripts.js, because back and forward buttons are not working.
+// I took out scripts.js, which contains the ajax functions, because back and forward buttons are not working.
 
+// 25 - 27, max options that can be put in chosen search box is 2
+$(document).ready(function() {
+    $("select.chosen").chosen({ max_selected_options: 2 })
+    // if the user tries to put in more than 2, show then this message:
+    $("select.chosen").bind("liszt:maxselected", function () { alert("Enter up to 2 things. For example, 'plasterer' and 'paver', for someone who might do both."); });
+});
 
-
+// 18-8-13 - commented out the code below, 29-32...I don't think it actually DOES anything?
 $('select').chosen();
-$('.chzn-single').css('width','2900px');
-$('.chzn-drop').css('width','2980px');
-$('.chzn-search input').css('width','2630px');
+$('.chzn-single').css('width','290px');
+$('.chzn-drop').css('width','298px');
+$('.chzn-search input').css('width','263px');
+
+
 
 $(function() {
     $.extend($.blockUI.defaults.css, {
@@ -45,7 +53,7 @@ $(function() {
     $("select.chosen").each(function () {
         $(this).attr('data-placeholder', $(this).attr('placeholder'));
     }).chosen().change(function (event, object) {
-        console.log("event");
+        // console.log("event");
         if (object.selected && object.selected.match("^user_")) {
             // comment out the line below, to get the ajax working
             // and uncomment the last 3 lines of this routine.
