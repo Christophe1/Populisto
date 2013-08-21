@@ -214,7 +214,7 @@ Devise.setup do |config|
   # OAUTH_CONFIG_PATH = Rails.root.join("config", "oauth.yml")
   # if File.exists?(OAUTH_CONFIG_PATH)
   #   OAUTH_CONFIG = YAML.load_file(OAUTH_CONFIG_PATH)[Rails.env]
-  config.omniauth :facebook, ENV["FACEBOOK_ID"], ENV["FACEBOOK_SECRET"], options: {scope: ENV["FB_OPTS_SCOPE"], display: ENV["FB_OPTS_DISPLAY"]}
+  config.omniauth :facebook, ENV["FACEBOOK_ID"], ENV["FACEBOOK_SECRET"], :scope => 'email', :display => 'page'
   # else
   #   Rails.logger.warn("Could not find oauth.yml in config directory.")
   # end
