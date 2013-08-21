@@ -2,7 +2,7 @@
 
   <p><%= t('home.welcome') %></p>
 
-  <% if OAUTH_CONFIG['facebook'] %>
+  <% if ENV["FACEBOOK_ID"] %>
     <p><%= fb_login_button(image_tag("fblogin.png")) %></p>
   <% end %>
 

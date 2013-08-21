@@ -1,7 +1,5 @@
 development:
   facebook:
-    app_id: "303232736429925"
-    app_secret: "ebe99065439676ed8f75059927dae8ac"
     options:
       scope: "email"
       display: "page"
@@ -19,6 +17,6 @@ test:
 
 production:
   facebook:
-    app_id: "144574445744603"
-    app_secret: "501bf4e3202cd8578e32232a4a3c2d59"
-
+    options:
+      scope: "email"
+      display: "page"
