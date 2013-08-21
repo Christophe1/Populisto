@@ -213,12 +213,12 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   # OAUTH_CONFIG_PATH = Rails.root.join("config", "oauth.yml")
   # if File.exists?(OAUTH_CONFIG_PATH)
-    # OAUTH_CONFIG = YAML.load_file(OAUTH_CONFIG_PATH)[Rails.env]
-  config.omniauth :facebook, "303232736429925", "ebe99065439676ed8f75059927dae8ac"
+  #   OAUTH_CONFIG = YAML.load_file(OAUTH_CONFIG_PATH)[Rails.env]
+  config.omniauth :facebook, ENV["FACEBOOK_ID"], ENV["FACEBOOK_SECRET"], options: {scope: ENV["FB_OPTS_SCOPE"], display: ENV["FB_OPTS_DISPLAY"]}
   # else
-    # Rails.logger.warn("Could not find oauth.yml in config directory.")
+  #   Rails.logger.warn("Could not find oauth.yml in config directory.")
   # end
-#
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
