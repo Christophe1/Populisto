@@ -31,6 +31,9 @@ class User < ActiveRecord::Base
   OMNI_AUTH_PROVIDERS = [SocialNetwork::FACEBOOK]
   FAR_AWAY = 100_000
 
+  extend FriendlyId
+  friendly_id :slug_name, :use => :slugged
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :omniauthable, :validatable, :confirmable
@@ -61,7 +64,9 @@ class User < ActiveRecord::Base
 
   self.per_page = 10
 
-
+  def slug_name
+    self.first_name + " " + self.last_name
+  end
 
   class << self
     # Finds user by facebook token or creates a new one.

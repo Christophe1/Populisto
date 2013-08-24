@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   # end
 
     def find_user
-      @user = User.find(params[:id])
+      @user = User.find_by_slug(params[:id])
     end
 
 
@@ -78,7 +78,7 @@ protected
       other = users_in_my_area - [current_user]
 
       [other, users_outside_my_area].each do |users|
-         users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.id}"] }
+         users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.slug}"] }
         # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
         # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end

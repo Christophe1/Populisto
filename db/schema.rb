@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130128132357) do
+ActiveRecord::Schema.define(:version => 20130823222204) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",               :default => "", :null => false
@@ -91,12 +91,12 @@ ActiveRecord::Schema.define(:version => 20130128132357) do
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
     t.integer  "author_id"
-    t.string   "name",                                                          :null => false
+    t.string   "name",                                                         :null => false
     t.string   "phone"
     t.text     "comment"
-    t.datetime "created_at",                                                    :null => false
-    t.datetime "updated_at",                                                    :null => false
-    t.boolean  "visible",                                    :default => false
+    t.datetime "created_at",                                                   :null => false
+    t.datetime "updated_at",                                                   :null => false
+    t.boolean  "visible",                                    :default => true
     t.string   "address"
     t.decimal  "lat",         :precision => 12, :scale => 9
     t.decimal  "lng",         :precision => 12, :scale => 9
@@ -129,11 +129,13 @@ ActiveRecord::Schema.define(:version => 20130128132357) do
     t.boolean  "address_visible",                                                     :default => false, :null => false
     t.string   "city"
     t.integer  "invites_count",                                                       :default => 0
+    t.string   "slug"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["provider", "external_user_id"], :name => "idx_on_provider_and_external_user_id", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["slug"], :name => "index_users_on_slug"
 
 end
