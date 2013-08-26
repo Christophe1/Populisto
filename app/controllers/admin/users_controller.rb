@@ -7,7 +7,7 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     password_presence
-    @user = User.find(params[:id])
+    @user = User.find(params[:slug])
     if @user.update_attributes(params[:user])
       flash[:notice] = I18n.t('admin.profile.edit.success')
       redirect_to admin_user_path @user
