@@ -63,7 +63,7 @@ QuestionnaireSite::Application.routes.draw do
     resources :users
     resources :categories
     resources :reviews
-    
+
 
     root :to => "users#index"
   end
