@@ -5,6 +5,10 @@ class Admin::UsersController < Admin::BaseController
 
   before_filter :with_google_maps_api, :only => [:edit, :new]
 
+  def show
+    @user = User.find(params[:slug])
+  end
+
   def update
     password_presence
     @user = User.find(params[:slug])
