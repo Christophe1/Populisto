@@ -3,7 +3,7 @@
   window.fbAsyncInit = function() {
     // console.log("fbinit file");
     FB.init({
-      appId      : '<%= OAUTH_CONFIG['facebook']['app_id'] %>',
+      appId      : <%= ENV["FACEBOOK_ID"] %>,
       status     : true,
       cookie     : true,
       xfbml      : true,
