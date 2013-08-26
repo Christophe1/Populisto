@@ -4,14 +4,11 @@ class Admin::UsersController < Admin::BaseController
   paginated
 
   before_filter :with_google_maps_api, :only => [:edit, :new]
-
-  def show
-    @user = User.find(params[:slug])
-  end
+  before_filter :find_user, :only => [:show]
 
   def update
     password_presence
-    @user = User.find(params[:slug])
+    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = I18n.t('admin.profile.edit.success')
       redirect_to admin_user_path @user
