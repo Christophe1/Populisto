@@ -1,5 +1,5 @@
 # MySQL.  Versions 4.1 and 5.0 are recommended.
-# 
+#
 # Install the MYSQL driver
 #   gem install mysql2
 #
@@ -8,24 +8,24 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: questionnaire_development
-  pool: 5
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: questionnaire_development
+#   pool: 5
+#   username: root
+#   password:
+#   socket: /var/run/mysqld/mysqld.sock
 
-staging:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: populisto_staging
-  pool: 5
-  username: questionnaire
-  password: questionnaire
+# staging:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: populisto_staging
+#   pool: 5
+#   username: questionnaire
+#   password: questionnaire
 
 production:
   adapter: mysql2
@@ -34,7 +34,7 @@ production:
   database: populisto_production
   pool: 5
   username: populisto
-  password: qpm93uw
+  password: goodadmin1122
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
