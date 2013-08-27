@@ -16,7 +16,7 @@ default_run_options[:pty] = true
 
 desc "Symlink configs."
 task :link_configs do
-  %w(database oauth resque omnicontacts linkedin resque_schedule).each do |config_name|
+  %w(database oauth resque omnicontacts linkedin resque_schedule application).each do |config_name|
     run "ln -nfs #{release_path}/config/configs/#{config_name}.yml #{release_path}/config/#{config_name}.yml"
   end
 end
