@@ -30,7 +30,7 @@ production:
     app_secret: "PAqi6DrjchOKPnsnFpY5dIm_"
   yahoo:
     app_id: "dj0yJmk9a0hGVlpJVXJycjBwJmQ9WVdrOVpUTXdkR294TjJjbWNH$"
-    app_secret: "04e4a2da9f55b2db384d5cb3139792be74f87273"
+    app_secret: "2753625b6a462544f07b4c039fa8473c41d3b179"
   hotmail:
     app_id: "000000004C0DFEB4"
     app_secret: "IxzMRI4aUUdDAc4SPBYRtbNuZUkzoypp"
