@@ -15,15 +15,21 @@ class ApplicationController < ActionController::Base
 
   def redirect_if_dot_ie
     if request.host == 'populisto.ie'
-      redirect_to "http://populisto.com"
+      if request.path == "/login"
+        redirect = "/login"
+      else
+        redirect = request.path
+      end
+      redirect_to "http://populisto.com#{redirect}"
     end
   end
+
 
   def init_review
     @review = Review.new
   end
 
-  def show    
+  def show
     @review = Review.new
     @reviews = @user.reviews
   end
@@ -32,7 +38,7 @@ class ApplicationController < ActionController::Base
     @review = Review.new
   end
 
-  # def address_toggle    
+  # def address_toggle
   #   @user.update_attributes(:address_visible => params[:value]) if @user == current_user
   # end
 
@@ -74,7 +80,7 @@ protected
 
 #  divide the categories into 'Useful things' and 'Address Books in your area'
   def load_data_for_checkbox
-    categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }    
+    categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
     @data = [[I18n.t('search.group.category'), categories]]
 
     if current_user then
@@ -104,7 +110,7 @@ protected
 
   # def load_data_for_checkbox
   #   # get all the categories
-  #  categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] } 
+  #  categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
   #  # make @data be all the categories, or 'useful things', with the heading 'useful things'
   #   @data = [[I18n.t('search.group.category'), categories]]
 
