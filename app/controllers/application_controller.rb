@@ -12,11 +12,17 @@ class ApplicationController < ActionController::Base
 
   layout :layout_by_resource
 
-    def init_review
+  def redirect_if_dot_ie
+    if request.host == 'populisto.ie'
+      redirect_to "http://populisto.com"
+    end
+  end
+
+  def init_review
     @review = Review.new
   end
 
-    def show    
+  def show    
     @review = Review.new
     @reviews = @user.reviews
   end
