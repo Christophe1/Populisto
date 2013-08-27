@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   # before_filter :authenticate_user!
+  before_filter :redirect_if_dot_ie
   before_filter :with_google_maps_api
   before_filter :default_miles_range
   before_filter :load_data_for_checkbox
