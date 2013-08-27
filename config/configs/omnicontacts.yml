@@ -26,11 +26,11 @@ test:
 
 production:
   gmail:
-    app_id: <%= ENV["GOOGLE_APP_ID"] %>
-    app_secret: <%= ENV["GOOGLE_APP_SECRET"] %>
+    app_id: "734326590985.apps.googleusercontent.com"
+    app_secret: "PAqi6DrjchOKPnsnFpY5dIm_"
   yahoo:
-    app_id: <%= ENV["YAHOO_APP_CONSUME"] %>
-    app_secret: <%= ENV["YAHOO_APP_SECRET"] %>
+    app_id: "dj0yJmk9a0hGVlpJVXJycjBwJmQ9WVdrOVpUTXdkR294TjJjbWNH$"
+    app_secret: "04e4a2da9f55b2db384d5cb3139792be74f87273"
   hotmail:
     app_id: "000000004C0DFEB4"
     app_secret: "IxzMRI4aUUdDAc4SPBYRtbNuZUkzoypp"
