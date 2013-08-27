@@ -4,6 +4,7 @@ class Admin::UsersController < Admin::BaseController
   paginated
 
   before_filter :with_google_maps_api, :only => [:edit, :new]
+  before_filter :find_user, :only => [:show]
 
   def update
     password_presence
