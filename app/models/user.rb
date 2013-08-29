@@ -289,7 +289,7 @@ class User < ActiveRecord::Base
   def feed
     Review.from_users_followed_by(self)
   end
-  
+
   def reposted_ids
     reviews.pluck(:repost_from).compact
   end
@@ -302,5 +302,9 @@ class User < ActiveRecord::Base
     update_attributes(:invites_count => invites_count + contacts_count)
   end
 
-
+  def personal_reviews_contacts
+    arr = []
+    cat = Category.find_by_name("Personal Contact")
+    cat.reviews.where(:user_id => self.id)
+  end
 end

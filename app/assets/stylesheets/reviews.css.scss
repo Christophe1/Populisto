@@ -1,110 +1,110 @@
   .reviews {
-  width: 850px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 
-  .review_container {
-  margin-bottom:30px;
-  }
+    .review_container {
+      margin-bottom:30px;
+    }
 
-  .breadcrumb {
-  background: #fbf6b2 url(formBg.png) 0 0 repeat-y;
-  height: 190px;
+    .breadcrumb {
+      background: #fbf6b2 url(formBg.png) 0 0 repeat-y;
+      height: 190px;
   /* height: 250px; */
   /* background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99); */
   position: relative;
   margin-bottom: 30px;
-  }  
-  
+}
 
-  .breadcrumb:hover {
-  border-color:  #0099CC;  
+
+.breadcrumb:hover {
+  border-color:  #0099CC;
   /*   opacity: 1.2; */
-  } 
+}
 
 
-  .left_window {
+.left_window {
   width:360px;
   float: left;
 
 
   #fb_avatar{
-  float: left;
-  padding-right: 10px;
+    float: left;
+    padding-right: 10px;
   }
 
   #privacy {
-  float:right;
+    float:right;
   }
 
 /* this div is only visible in reviews from 'Search' */
-  .address_entry_user_name{
+.address_entry_user_name{
   font-size: 18px;
   padding-top: 20px;
-  }
+}
 
-  .category_name{
-font-size: 18px;
-margin-top: 15px;
-margin-bottom: 20px;
-  }
+.category_name{
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
 
 
 
-  .edit_review_link {
+.edit_review_link {
   display: none;
-  }
+}
 
-  .info {
-padding-top: 5px;
-font-size: 14px;
-line-height: 20px;
-  }
+.info {
+  padding-top: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
 
 
 
-  .posted_at {
+.posted_at {
   color: #888888;
   font-style: italic;
   left: 15px;
   bottom: 5px;
   font-size: 12px;
   position: absolute;
-  }    
+}
 
 
-  }
+}
 
-  .right_window {
+.right_window {
   width:360px;
   float: right;
 
   .edit_review_link {
-  float: right;
-  display: block;
-  top: 5px;
-  right: 5px;
-  color: #0099CC;
+    float: right;
+    display: block;
+    top: 5px;
+    right: 5px;
+    color: #0099CC;
   }
 
   /* .comment {
-   display: table-row; 
+   display: table-row;
   float:left;
   } */
 
 
-    .comments {
-font-size: 20px;
-margin-top: 15px;
-margin-bottom: 15px;
-}
+  .comments {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 
 
 
   /* .more-info {
- display: table-cell; 
+ display: table-cell;
   width: 70px;
-  padding-left: 200px; 
+  padding-left: 200px;
   } */
 
   .comment-content {
@@ -112,22 +112,22 @@ margin-bottom: 15px;
   white-space: pre-line; */
   font-size: 14px;
   overflow: hidden;
-  }
+}
 
 
-  .add_page_button_pos {
+.add_page_button_pos {
   right: 15px;
   bottom: 15px;
   position: absolute;
-  }
+}
 
-  .remove_page_button_pos {
+.remove_page_button_pos {
   right: 15px;
   bottom: 15px;
   position: absolute;
-  }
+}
 
-  }
+}
 
 
 
@@ -138,23 +138,23 @@ margin-bottom: 15px;
 
 
 
-margin-top: -10px;
+    margin-top: -10px;
 
-  form {
-   margin: 0;
+    form {
+     margin: 0;
 
-  }
-  .inputs{
-  display: table-row;
+   }
+   .inputs{
+    display: table-row;
 
-  #except_comment {
-  display: table-cell;
-  width:40%;
-  }
+    #except_comment {
+      display: table-cell;
+      width:40%;
+    }
 
-  #comment{
-  padding-left: 30px;
-  }
+    #comment{
+      padding-left: 30px;
+    }
 
   }
 
@@ -162,111 +162,110 @@ margin-top: -10px;
   /* in edit mode, these are the things on the left - down to 'edit-label' */
 
   .edit_form_titles{
-  display: block;
-  margin-bottom: 0px;
-  color: #333333;
+    display: block;
+    margin-bottom: 0px;
+    color: #333333;
   }
 
   .cant_be_blank{
-font-size: 12px;
-margin-top: -18px;
-margin-left: 90px;
+    font-size: 12px;
+    margin-top: -18px;
+    margin-left: 90px;
   }
 
   #review_name, #review_phone, #review_address {
-  width: 333px;
+    width: 333px;
   }
   select {
-  width: 343px;
+    width: 343px;
   }
   .edit_review_info{
 
-  .edit-label{
-  display: block;
-  }
+    .edit-label{
+      display: block;
+    }
 
   }
 
   /* in edit mode, these are the things on the right - down to 'share_button' */
 
-    .cancel-edit{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #0099CC;
+  .cancel-edit{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #0099CC;
   }
 
   /* .right{
   margin-left:80px; */
 
-    .comments {
-font-size: 20px;
-margin-left: 117px;
-margin-top: 25px;
-}
+  .comments {
+    font-size: 20px;
+    margin-left: 117px;
+    margin-top: 25px;
+  }
 
   textarea {
-width: 70%;
-height: 105px;
-resize: none;
-margin-left: 115px;
-margin-top: 20px;
+    width: 70%;
+    height: 105px;
+    resize: none;
+    margin-left: 115px;
+    margin-top: 20px;
   }
 
   .char_count_label {
-margin-left: 430px;
-color: #808080;
-}
+    margin-left: 430px;
+    color: #808080;
+  }
 
 
   .control-group {
-  display:inline;
-  .controls {
-  display: inherit;
-  }
+    display:inline;
+    .controls {
+      display: inherit;
+    }
   }
   span#address_validation {
-  color: #B94A48;
+    color: #B94A48;
   }
 
   .edit_button_group{
 
   /* put the save, delete buttons and radio buttons at the bottom of the Address book entry */
 
-position: absolute;
-bottom: 10px;
-margin-left: 80px;
+  bottom: 10px;
+  margin: 30px 0 0 80px;
 
   .save_review{
-  float: right;
+    float: right;
 
   }
   .delete_review {
-float: right;
-margin-right: 20px;
-margin-top: 5px
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px
   }
 
   .keep_private_label{
-float: right;
-margin: 5px 35px 0px 5px;
+    float: right;
+    margin: 5px 35px 0px 5px;
   }
   .keep_private_button{
-  float: right;
-  margin: 7px 0px 0px 20px;
+    float: right;
+    margin: 7px 0px 0px 20px;
   }
-  .share_label{        
-  float: right;        
-  margin: 5px 0px 0px 5px;
+  .share_label{
+    float: right;
+    margin: 5px 0px 0px 5px;
   }
   .share_button{
-  float: right;
-  margin: 7px 0px 0px 55px;
+    float: right;
+    margin: 7px 0px 0px 55px;
   }
-  }
+}
   /* } */
 
-  }
+}
 
-  }
+}
 

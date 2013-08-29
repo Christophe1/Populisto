@@ -21,15 +21,15 @@
   <%#= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
       <div id="except_comment">
-      <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
+      <%= f.input :category_ids, :collection => sorted_categories, :as => :chosen, :prompt => false,
             :input_html => { :multiple => true, :id => "#{@review.id}" },
-            :label => I18n.t('write_review.categories_selector_label'), 
+            :label => I18n.t('write_review.categories_selector_label'),
             :label_html => { :class => 'edit_form_titles' },
             :error_html => { :class => 'cant_be_blank'}
             %>
 
       <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
-      
+
       <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
       <span id="address_validation"></span>
 
@@ -56,14 +56,14 @@
       <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
       <%= link_to I18n.t('write_review.cancel_button'), landing_page, :class => "cancel_review" %>
       <%#= render 'delete', :review => @review %>
-      
+
       <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-      <%= f.radio_button :visible, "false", :class => "keep_private_button" %>
-      
+      <%= f.radio_button :visible, "false", :class => "keep_private_button", :checked => false %>
+
       <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-      <%= f.radio_button :visible, "true" , :class => "share_button" %>
-      
-      
+      <%= f.radio_button :visible, "true" , :class => "share_button", :checked => true %>
+
+
       </div>
     <!-- </div> -->
     </div>
@@ -110,7 +110,7 @@ $(document).ready(function()  {
     //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
     //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
     //     return false;
-    //   }      
+    //   }
     // });
 
 // on ENTER, go to the next TAB

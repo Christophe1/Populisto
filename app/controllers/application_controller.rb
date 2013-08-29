@@ -86,6 +86,7 @@ protected
     if current_user then
       users_in_my_area = User.within(default_range, :origin => current_user)
       users_outside_my_area = User.outside(default_range, :origin => current_user)
+      personal_contacts = current_user.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
       # followers = users_in_my_area.followers_for(current_user)
       # following = users_in_my_area.following_by(current_user)
       other = users_in_my_area - [current_user]
@@ -100,6 +101,7 @@ protected
       # @data.append([I18n.t('search.group.followers_in'), followers])
       @data.append([I18n.t('search.group.other_people'), other])
       @data.append([I18n.t('search.group.all_people'),users_outside_my_area])
+      @data.append([I18n.t('search.group.personal_contacts'),personal_contacts])
     end
   end
 
