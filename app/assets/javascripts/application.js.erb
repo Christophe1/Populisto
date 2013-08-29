@@ -58,12 +58,12 @@ $(function() {
             // comment out the line below, to get the ajax working
             // and uncomment the last 3 lines of this routine.
             window.location.href = object.selected.replace('user_', '/users/');
-            //$(".search-choice").remove(); 
+            //$(".search-choice").remove();
             //below is the code for selecting a 'user' from the Chosen
             //list. The ajax function, in scripts.js, is then loaded
             // var url = object.selected.replace('user_', '/users/');
-            // $.get(url, ajax_loaded); 
-            
+            // $.get(url, ajax_loaded);
+
         }
     });
 
@@ -128,7 +128,7 @@ $(function() {
         e.preventDefault();
         $('#address_form').submit();
     });
-    
+
     $('.map-no-link').live('click', function(e) {
         e.preventDefault();
 
@@ -138,7 +138,7 @@ $(function() {
             $('#user_city').val('');
             $('#changed').val('0');
             initialize_google_maps();
-    
+
     });
 
     $('.email-invite-link').click(function(e) {
@@ -259,16 +259,17 @@ $(function() {
         return Math.max.apply( Math, array );
     };
 
+    personal_contact();
 });
 
 
-     // $('.leftGroups').on('keydown', '#review_address', function(e) {   
+     // $('.leftGroups').on('keydown', '#review_address', function(e) {
         $('.review-form form').on('keydown', 'input', function(e) {
-         element = e.target    
-         if (e.keyCode == 13) {    
-            $(element).blur();    
-            return false;   
-         }   
+         element = e.target
+         if (e.keyCode == 13) {
+            $(element).blur();
+            return false;
+         }
      });
 
 function showNewContent(container, content) {
@@ -286,5 +287,28 @@ function showNewContent(container, content) {
             toShow.data('step', lastStep + 1);
             toShow.html(content).show();
         }
+    });
+}
+
+function personal_contact() {
+    $("ul.chzn-choices").bind("DOMSubtreeModified", function() {
+       radios = $(".new_review").find('input:radio');
+       radio_1 = $(".share_button");
+       radio_2 = $(".keep_private_button");
+       el = $.find('span:contains("Personal Contact")');
+       radio_1.prop("checked", true);
+
+       if(el.length != 0) {
+         // alert("found");
+         radios.attr("disabled", true);
+         radio_1.prop('checked',false);
+         radio_2.prop('checked',true);
+       }
+       else{
+         // alert("not found");
+         radios.attr("disabled", false);
+         radio_1.prop('checked',true);
+         radio_2.prop('checked',false);
+       }
     });
 }

@@ -34,12 +34,12 @@ class Review < ActiveRecord::Base
   validates :comment, :length => { :maximum => 1000 }
   validates_presence_of :category_ids
 
-  attr_accessible :comment, :name, :phone, 
-                  :user_id, :category_ids, 
-                  :address, :lng, :lat, 
+  attr_accessible :comment, :name, :phone,
+                  :user_id, :category_ids,
+                  :address, :lng, :lat,
                   :visible, :repost_from,
                   :search_ids
-                  
+
   attr_accessor :distance, :search_ids
 
   default_scope :order => 'reviews.created_at DESC'
@@ -66,11 +66,11 @@ class Review < ActiveRecord::Base
 # only then can every user see the review
 # otherwise, if it is private, only current_user can see it.
 
-#check out a cleaner way of doing this in stackoverflow, my question, 
+#check out a cleaner way of doing this in stackoverflow, my question,
 #'need assistance with some ruby array code, please'
 
 def visible_to?(user)
-  self.user.id == user.id || # assuming they have an ID 
+  self.user.id == user.id || # assuming they have an ID
   visible == true
 end
 
@@ -88,6 +88,10 @@ end
     review.save
   end
 
+  def is_personal_contact?
+    self.categories.find_by_name("Personal Contact").present?
+  end
+
   class << self
 
     #  Prepares scope from search params.
@@ -95,22 +99,25 @@ end
     #
     def scoped_by_search_params(params, current_user)
       if params[:review][:search_ids].present?
-        scope = Review.with_user.with_categories
-        filters = params[:review][:search_ids].select{ |f| f.present? }
-        categories = filters.select{|f| f.starts_with?('category_') }.map{|f| f.gsub('category_','').to_i }
-        users = filters.select{|f| f.starts_with?('user_') }.map{|f| f.gsub('user_','').to_i }
-        scope = scope.where(:categories => {:id => categories}) unless categories.blank?
-        scope = scope.where(:user_id => users) unless users.blank?
-        reviews = scope.all
-        # Stupid solution to reload all categories:
-        reviews = Review.with_user.with_categories.where(:id => reviews.map(&:id)).all.select{|r| r.user.present? }
+        params = params[:review][:search_ids]
+
+        categories_ids = params.map{|id| id.delete('category_').to_i}
+        categories_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+
+        users_ids = params.map{|id| id.delete('user_').to_i}
+        user_reviews = Review.where(:user_id => users_ids)
+
+        reviews_ids = params.map{|id| id.delete('review_').to_i}
+        personal_reviews = Review.where(:id => reviews_ids)
+
+        return reviews = (personal_reviews + categories_reviews + user_reviews).uniq
       end
     end
-    
+
     def from_users_followed_by(user)
       followed_user_ids = "SELECT target_user_id FROM friend_relations
                            WHERE source_user_id = :user_id"
-      where("user_id IN (#{followed_user_ids}) OR user_id = :user_id", 
+      where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
             :user_id => user.id)
     end
 

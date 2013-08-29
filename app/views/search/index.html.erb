@@ -19,7 +19,7 @@
 
     <div class='search-box'>
 
-    </div> 
+    </div>
     <div class="clearfix"></div> -->
 
 <div id="map_canvas">
@@ -30,15 +30,15 @@
 
     <div class="clearfix"></div>
 
-  </div> 
+  </div>
 
 
 
-<% if @reviews.any? %>
-<%= render 'reviews' %>
-  <% else %>
+<% if @reviews.present? %>
+  <%= render 'reviews' %>
+<% else %>
   <%= render :partial => 'layouts/no_reviews_in_your_area' %>
-    <%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
-    <% end %>
+  <%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
+<% end %>
 
 
