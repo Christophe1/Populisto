@@ -19,6 +19,9 @@ class Category < ActiveRecord::Base
 
   after_save :clear_cache
 
+  has_many :category_reviews
+  has_many :reviews, :through => :category_reviews
+
   # Overrides genre string representation.
   #
   def to_s
