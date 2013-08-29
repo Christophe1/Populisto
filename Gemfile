@@ -34,6 +34,7 @@ gem 'has_scope', '~> 0.5.1'
 gem "best_in_place", "~> 1.1.2"
 gem "friendly_id", "~> 4.0.9"
 gem "figaro"
+gem 'gmaps4rails'
 
 gem 'devise', '~> 2.0.6'
 gem 'omniauth'

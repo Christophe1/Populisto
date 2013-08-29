@@ -5,6 +5,11 @@ class Admin::UsersController < Admin::BaseController
 
   before_filter :with_google_maps_api, :only => [:edit, :new]
 
+  def index
+    @users = User.paginate(:page => params[:page], :per_page => 30)
+    @json = User.all.to_gmaps4rails
+  end
+
   def update
     password_presence
     @user = User.find(params[:id])
@@ -19,6 +24,11 @@ class Admin::UsersController < Admin::BaseController
   def destroy
     destroy! { collection_url(:page => params[:page]) }
   end
+
+  def map_view
+    @json = User.all.to_gmaps4rails
+  end
+
 
   protected
 

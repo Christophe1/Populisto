@@ -7,7 +7,7 @@ class UsersController < FrontEndController
   # before_filter :fix_params, :only => :create
 
 
-  #def show    
+  #def show
   #review = @review.id
   #   @reviews = @user.reviews
   # end
@@ -16,7 +16,7 @@ class UsersController < FrontEndController
   #   @review = Review.new
   # end
 
-  def address_toggle  
+  def address_toggle
     @user.update_attributes(:address_visible => params[:value]) if @user == current_user
   end
 
@@ -30,10 +30,6 @@ class UsersController < FrontEndController
 
   end
 
-
-
-  
-  
   # protected
   #   def find_user
   #     @user = User.find(params[:id])
@@ -68,7 +64,7 @@ class UsersController < FrontEndController
 
 
 # def load_data_for_checkbox
-#     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }    
+#     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
 #     users_in_my_area = User.within(default_range, :origin => current_user)
 #     followers = users_in_my_area.followers_for(current_user)
 #     following = users_in_my_area.following_by(current_user)
@@ -78,7 +74,7 @@ class UsersController < FrontEndController
 #       users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
 #     end
 
-#     @data = [[I18n.t('search.group.category'), categories], 
+#     @data = [[I18n.t('search.group.category'), categories],
 #              [I18n.t('search.group.followers_in'), followers],
 #              [I18n.t('search.group.following_in'), following],
 #              [I18n.t('search.group.other_people'), other]]

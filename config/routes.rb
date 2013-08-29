@@ -60,7 +60,11 @@ QuestionnaireSite::Application.routes.draw do
   namespace :admin do
     resource :profile, :only => [:edit, :update]
 
-    resources :users
+    resources :users do
+      collection do
+        get "map_view"
+      end
+    end
     resources :categories
     resources :reviews
 
