@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :slug_name, :use => :slugged
-  acts_as_gmappable :lat => 'lat', :lng => 'lng'
+  acts_as_gmappable :process_geocoding => false, :lat => 'lat', :lng => 'lng'
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
