@@ -1,4 +1,4 @@
-<%= simple_form_for [:admin, resource], :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for [:admin, @review], :html => { :class => 'form-horizontal' } do |f| %>
 
   <%= f.input :category_ids, :collection => @categories, :as => :chosen, :prompt => :false, :input_html => { :multiple => true }, :placeholder => 'Categories' %>
   <%= f.input :name %>

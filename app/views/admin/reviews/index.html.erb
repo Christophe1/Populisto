@@ -1,4 +1,4 @@
-<% if collection.present? %>
+<% if @reviews.present? %>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -11,9 +11,9 @@
       </tr>
     </thead>
     <tbody>
-      <% collection.each do |item| %>
+      <% @reviews.each do |item| %>
         <tr>
-          <td><%= link_to item.id, resource_path(item) %></td>
+          <td><%= link_to item.id, admin_review_path(item) %></td>
           <td><%= item.name %></td>
           <td><%= item.categories_list %></td>
           <td><%= item.comment %></td>

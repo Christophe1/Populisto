@@ -68,8 +68,7 @@ QuestionnaireSite::Application.routes.draw do
     resources :categories
     resources :reviews
 
-
-    root :to => "users#show"
+    root :to => "users#index"
   end
 
   # The priority is based upon order of creation:
