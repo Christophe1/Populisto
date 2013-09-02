@@ -1,3 +1,0 @@
-$('#review_<%=@review.id%>').html("<%= escape_javascript(render 'edit') %>")
-
-
