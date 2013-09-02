@@ -91,12 +91,12 @@ ActiveRecord::Schema.define(:version => 20130823222204) do
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
     t.integer  "author_id"
-    t.string   "name",                                                         :null => false
+    t.string   "name",                                                          :null => false
     t.string   "phone"
     t.text     "comment"
-    t.datetime "created_at",                                                   :null => false
-    t.datetime "updated_at",                                                   :null => false
-    t.boolean  "visible",                                    :default => true
+    t.datetime "created_at",                                                    :null => false
+    t.datetime "updated_at",                                                    :null => false
+    t.boolean  "visible",                                    :default => false
     t.string   "address"
     t.decimal  "lat",         :precision => 12, :scale => 9
     t.decimal  "lng",         :precision => 12, :scale => 9

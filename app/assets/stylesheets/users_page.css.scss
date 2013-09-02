@@ -1,17 +1,25 @@
 
 
 
+#Address_book_heading {
 
-  #map_canvas {
-    height: 380px;
-    width: 45%;
-   /* width: 470px; */
-    float:right;
-    margin-top:80px;
-        img {
-      max-width: none;
-    }
-    }
+margin-top: 80px;
+margin-left: 320px;
+
+#Address_book_owner {
+font-size: 28px;
+}
+
+}
+
+
+
+#map_canvas {
+height: 380px;
+width: 45%;
+margin-left: auto;
+margin-right: auto;
+}
 
 #character_and_bubbles {
 margin-top:115px;

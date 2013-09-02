@@ -17,7 +17,7 @@
 //= require jquery.simplemodal.1.4.2.min
 //= require jquery.placeholder.min
 //= require jquery-fileupload/basic
-//= require draw_map.js
+//= require draw_map.js.erb
 
 // I took out scripts.js, which contains the ajax functions, because back and forward buttons are not working.
 
@@ -304,7 +304,7 @@ function personal_contact() {
          radios.attr("disabled", true);
          radio_1.prop('checked',false);
          radio_2.prop('checked',true);
-         labels.css('color', '#D1CFD0')
+         labels.css('color', '#ADAAAB')
        }
        else{
          // alert("not found");
