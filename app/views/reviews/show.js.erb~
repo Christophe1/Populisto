@@ -1,6 +1,0 @@
-$('#review_<%=@review.id%>').html("<%= escape_javascript(render 'review') %>")
-$('#review_<%=@review.id %>').animate({height:'185px'}, 350);
-
-
-
-
