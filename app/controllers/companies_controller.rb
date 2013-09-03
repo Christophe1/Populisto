@@ -1,5 +1,5 @@
 class CompaniesController < FrontEndController
-  before_filter :authenticate_company!
+  before_filter :check_resource!
 
   def show
     @company = Company.find_by_slug(params[:id])

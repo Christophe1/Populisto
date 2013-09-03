@@ -28,6 +28,7 @@ class Review < ActiveRecord::Base
   #has_many :users, :through => :film_users
 
   belongs_to :user
+  belongs_to :company, :foreign_key => :user_id
 
   validates :name, :presence => true, :length => { :maximum => 255 }
   validates :phone, :length => { :maximum => 30 }
@@ -69,11 +70,14 @@ class Review < ActiveRecord::Base
 #check out a cleaner way of doing this in stackoverflow, my question,
 #'need assistance with some ruby array code, please'
 
-def visible_to?(user)
-  self.user.id == user.id || # assuming they have an ID
+def visible_to?(resource)
+  if resource.class.name == "User"
+  self.user == resource #|| assuming they have an ID
+  elsif resource.class.name == "Company"
+  self.company == resource #|| assuming they have an ID
+  end
   visible == true
 end
-
 
   # Gets genres list.
   #
