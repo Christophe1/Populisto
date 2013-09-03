@@ -39,4 +39,8 @@ class Company < ActiveRecord::Base
   def front_name
     name
   end
+
+  def invited_emails
+    email_invites.pluck(:email).compact.map { |email| [email, email] }
+  end
 end

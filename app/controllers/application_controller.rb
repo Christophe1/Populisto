@@ -13,6 +13,15 @@ class ApplicationController < ActionController::Base
 
   layout :layout_by_resource
 
+  # alias_method :devise_current_user, :current_user
+  def current_resource
+    if current_user
+      current_user
+    elsif current_company
+      current_company
+    end
+  end
+
   def redirect_if_dot_ie
     if request.host == 'populisto.ie'
       if request.path == "/login"
@@ -24,6 +33,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_resource!
+    current_user.present? || current_company.present? || redirect_to(root_path)
+  end
 
   def init_review
     @review = Review.new

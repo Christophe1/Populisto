@@ -74,11 +74,4 @@ class HomeController < FrontEndController
       FriendRelation.update_distances(current_company)
     end
   end
-
-  protected
-
-  def check_resource!
-    current_user.present? || current_company.present? || redirect_to(root_path)
-  end
-
 end
