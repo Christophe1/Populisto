@@ -1,13 +1,4 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
 
-    <!-- <link rel="stylesheet" type="text/css" href="carousel.css"> -->
-
-   <!-- // <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
-
-  </head>
-  <body>
 
   <!-- the container div, which holds the back and forward arrows on each side, and the
   changing images, in the middle -->
@@ -30,23 +21,8 @@
 
 
 <div class="login-page">
-
-    <p>Do you represent a <b>Company</b> ?<br>
-      Click <%= link_to "here", new_company_registration_path %> to create a Company accout.</p>
-    <div class='facebook-section'>
-      <!--<h2><%= I18n.t('sign_in.login_text') %></h2>-->
-
-      <%= fb_login_button(image_tag("Facebook-orig.png")) %>
-
-      <div class='fb-notes'>
-        <%= raw I18n.t('sign_in.login_notes') %>
-      </div>
-
-      <div class="or-devider">
-        <%= I18n.t('sign_in.or') %>
-      </div>
-
-    </div>
+      <p>Are you <b>on your own</b> ?<br>
+      Click <%= link_to "here", new_user_registration_path %> to create a user accout.</p>
 
     <div class='sign-in-section'>
 
@@ -68,9 +44,7 @@
           <% end %>
 
           <div class="inputs">
-            <%= f.input_field :first_name, :required => true, :autofocus => true, :placeholder => I18n.t('create_account.first_name') %>
-          </br>
-            <%= f.input_field :last_name, :required => true, :placeholder => I18n.t('create_account.second_name') %>
+            <%= f.input_field :name, :required => true, :autofocus => true, :placeholder => I18n.t('create_account.company_name') %>
           </br>
             <%= f.input_field :email, :required => true, :placeholder => I18n.t('create_account.email_address') %>
           </br>
@@ -86,7 +60,7 @@
 </br>
         <div class='links centralized'>
 
-          <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
+          <%= link_to I18n.t('sign_in.sign_in'), new_company_session_path %>
           <br><br>
 By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
         </div>

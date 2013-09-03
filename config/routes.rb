@@ -10,6 +10,7 @@ QuestionnaireSite::Application.routes.draw do
   get "render_index_review", :to => "reviews#render_index"
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :companies
 
   devise_scope :user do
     delete "sign_out", :to => "devise/sessions#destroy"
@@ -41,6 +42,9 @@ QuestionnaireSite::Application.routes.draw do
       get :repost, :reject, :edit
     end
   end
+
+  resources :companies
+
   resources :users do
     member do
       get :following_followers, :address_toggle

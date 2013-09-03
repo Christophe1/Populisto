@@ -6,10 +6,10 @@
   <!-- <div class="user-info"> -->
 
 <!--     <div class = "avatar">
-      <%#= fb_avatar(@user) %>
+      <%#= fb_avatar(@company) %>
     </div> -->
-    <%#= label_tag I18n.t('helpers.your_page'), your_page(@user), :class => 'your_page_label' %>
-    <%#= label_tag I18n.t('helpers.pop_something_in'), pop_something(@user), :class => 'pop_something_in' %>
+    <%#= label_tag I18n.t('helpers.your_page'), your_page(@company), :class => 'your_page_label' %>
+    <%#= label_tag I18n.t('helpers.pop_something_in'), pop_something(@company), :class => 'pop_something_in' %>
 
 
          <!-- If the user has nothing in their address book,
@@ -26,17 +26,17 @@
 
 <div id = "Address_book_heading">
   <div id = "Address_book_owner">
-    <% if current_user %>
+    <% if current_company %>
     <%= "Your Address Book" %>
     <% else %>
-    <%= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" + "'s Address Book" %>
+    <%= "#{@company.first_name.capitalize} " + "#{@company.last_name.capitalize}" + "'s Address Book" %>
     <% end %>
   </div>
   <div id = "Address_book_area">
-    <% if current_user %>
+    <% if @company == current_company %>
     <%= "Your area:" %>
     <% else %>
-    <%= "#{@user.first_name.capitalize} " + "'s area:" %>
+    <%= "#{@company.first_name.capitalize} " + "'s area:" %>
     <% end %>
   </div>
 </div>
@@ -59,9 +59,9 @@
 
     </div>
 
-      <!-- Use the @user.lat and lng attributes to draw the map in the
+      <!-- Use the @company.lat and lng attributes to draw the map in the
       map_canvas div, above -->
-      <div id="user-position" class="hidden" data-lat="<%= @user.lat %>" data-lng="<%= @user.lng %>"></div>
+      <div id="user-position" class="hidden" data-lat="<%= @company.lat %>" data-lng="<%= @company.lng %>"></div>
 
       <!-- <div id = "character_and_bubbles"> -->
 
@@ -69,15 +69,15 @@
 <!--         <div id = "top_bubble_div">
           <div id="top_bubble"> -->
             <!-- if the user is looking at their own Address Book, show this... -->
-            <%# if @user == current_user %>
+            <%# if @company == current_company %>
             <%#= "Would you like to " %>
             <%#= link_to "pop something in", reviews_path %>
             <%#= "to your Address Book? A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about us!" %>
 
             <!-- if the user is looking at someone else's Address Book, show this... -->
-            <%# elsif @user != current_user %>
+            <%# elsif @company != current_company %>
             <%#= "This is the Address Book of " %>
-            <%#= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
+            <%#= "#{@company.first_name.capitalize} " + "#{@company.last_name.capitalize}" %>
             <%#= ". Do you want to " %>
             <%#= link_to "pop something in", reviews_path %>
             <%#= "to your own Address Book?" %>
@@ -93,13 +93,13 @@
 <!--         <div id = "right_bubble_div">
           <span id="right_bubble"> -->
             <!-- if the user is looking at their own Address Book, show this... -->
-            <%# if @user == current_user %>
+            <%# if @company == current_company %>
             <%#= "When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map -  20km around the address you gave when registering with Populisto."
             %>
 
             <!-- if the user is looking at someone else's Address Book, show this... -->
-            <%# elsif @user != current_user %>
-            <%#= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
+            <%# elsif @company != current_company %>
+            <%#= "#{@company.first_name.capitalize} " + "#{@company.last_name.capitalize}" %>
             <%#= "can see the address books of people within the circle, on the map."
             %>
             <%# end %>
@@ -111,7 +111,7 @@
 <%#=  I18n.t 'find_something.empty_user_owner' %>
 <%# else %>
 
-  <%#= @user.first_name.capitalize %>
+  <%#= @company.first_name.capitalize %>
   <%#= I18n.t 'helpers.s_page' %>
   <%#= I18n.t 'find_something.empty_user_other' %>
 <!-- </h3> -->
@@ -131,7 +131,7 @@
   <!-- show the followers/following link -->
   <!-- <div id="following"> -->
 
-<%#= render 'stats', :user => @user, :stats_user_id => @user.id %>
+<%#= render 'stats', :user => @company, :stats_user_id => @company.id %>
 <!-- </div> -->
 
 <!-- <div id="comp"> -->
@@ -165,7 +165,7 @@
 
     <%#= link_to "Pop something in",reviews_path %>
 
-    <%#= render 'follow_form', :user => @user %>
+    <%#= render 'follow_form', :user => @company %>
 
 
     <!-- this shows the user's address, with the option to toggle public or private -->
@@ -179,15 +179,15 @@
 <!-- <div class='find-something'> -->
 
   <!-- <div class="greetings"> -->
-    <%# if @user == current_user %>
-    <!-- <p><%#= "just here for testing:" + current_user.first_name %></p> -->
+    <%# if @company == current_company %>
+    <!-- <p><%#= "just here for testing:" + current_company.first_name %></p> -->
     <%#= I18n.t('find_something.greetings', :km => @kms_range) %>
-    <%#= "Hi " + current_user.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
+    <%#= "Hi " + current_company.first_name + ", " + I18n.t('find_something.greetings', :km => @kms_range) %>
     <%#=  %>
-    <%# elsif @user.address_visible %>
-    <%#="#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') + " #{@user.address}" %>
+    <%# elsif @company.address_visible %>
+    <%#="#{@company.first_name.capitalize}" + I18n.t('helpers.s_area') + " #{@company.address}" %>
     <%# else %>
-    <%#= "#{@user.first_name.capitalize}" + I18n.t('helpers.s_area') %>
+    <%#= "#{@company.first_name.capitalize}" + I18n.t('helpers.s_area') %>
     <%# end %>
 
 
@@ -216,8 +216,8 @@
       <%# end %>
     <!-- </div>  -->
     <!-- <div class="clearfix"></div> -->
-<!--     <div id="latitude" data-lat="<%# @user.lat %>">jjjjj</div>
-    <div id="longitude" data-lng="<%# @user.lng %>">kkkkk</div> -->
+<!--     <div id="latitude" data-lat="<%# @company.lat %>">jjjjj</div>
+    <div id="longitude" data-lng="<%# @company.lng %>">kkkkk</div> -->
 
 <!--     <div id="map_canvas">
 
@@ -232,11 +232,11 @@
 
 
     <!-- <div id='users-counter'> -->
-        <%#= @user.lat %>
-        <%#= @user.lng %>
+        <%#= @company.lat %>
+        <%#= @company.lng %>
    <!-- are these below from the controller? -->
-  <%#= @user_latitude %>
-  <%#= @user_longitude %>
+  <%#= @company_latitude %>
+  <%#= @company_longitude %>
 <!-- </div> -->
 <!-- <a href='#' id='stop-renewing'>
   Stop renewing
@@ -251,7 +251,7 @@ formatted correctly -->
  <!-- </div> -->
 
  <!-- <div id = "followers_following"> -->
- <%#= render 'follow_form', :user => @user %>
+ <%#= render 'follow_form', :user => @company %>
 <!-- </div> -->
 
 
@@ -264,7 +264,7 @@ formatted correctly -->
 
   <% if @reviews.any? %>
 
-    <% @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
+    <% @reviews.select { |review| review.visible_to?(current_company) }.each do |review| %>
 
     <div class="breadcrumb" id="review_<%= review.id %>">
     <%= render 'reviews/review', :review => review %>
@@ -277,7 +277,7 @@ formatted correctly -->
 
   <%# if @reviews.any? %>
 
-    <%# @reviews.select { |review| review.visible_to?(current_user) }.each do |review| %>
+    <%# @reviews.select { |review| review.visible_to?(current_company) }.each do |review| %>
     <%#= render 'reviews/review' %>
    <%# end %>
 

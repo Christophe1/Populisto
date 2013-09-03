@@ -1,16 +1,17 @@
 class UsersController < FrontEndController
 
-  # before_filter :authenticate_user!, :with_google_maps_api
+  before_filter :authenticate_user! #, :with_google_maps_api
   # before_filter :default_miles_range
-  before_filter :find_user
+  # before_filter :find_user
   # before_filter :load_data_for_checkbox
   # before_filter :fix_params, :only => :create
 
 
-  #def show
-  #review = @review.id
-  #   @reviews = @user.reviews
-  # end
+  def show
+    @user = User.find_by_slug(params[:id])
+    @review = Review.new
+    @reviews = @user.reviews
+  end
 
   #   def index
   #   @review = Review.new

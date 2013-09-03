@@ -35,6 +35,8 @@ class User < ActiveRecord::Base
   friendly_id :slug_name, :use => :slugged
   acts_as_gmappable :process_geocoding => false, :lat => 'lat', :lng => 'lng'
 
+  default_scope where(:is_company => false)
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :omniauthable, :validatable, :confirmable

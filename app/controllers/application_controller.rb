@@ -178,7 +178,11 @@ protected
   # Should be used by logged in users only
   #
   def landing_page
-    current_user.registration_complete? ? user_path(current_user) : map_path
+    if current_user
+      current_user.registration_complete? ? user_path(current_user) : map_path
+    elsif current_company
+      current_company.registration_complete? ? company_path(current_company) : map_path
+    end
   end
 
   helper_method :landing_page

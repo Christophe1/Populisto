@@ -2,14 +2,18 @@
 
   <div class="greetings">
 
+    <% if current_user %>
     <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %>
+    <% else %>
+    <%= I18n.t('map_page.greetings_1', :user_name => current_company.name) %>
+    <% end %>
     <br><br>
 
     <%= I18n.t('map_page.greetings_2') %>
   </div>
 
   <div class='address-area'>
-
+    <% if current_user %>
     <%= form_for current_user, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
       <%= f.hidden_field :city %>
@@ -18,11 +22,21 @@
 
       <%= hidden_field_tag :changed %>
     <% end %>
+    <% elsif current_company %>
+    <%= form_for current_company, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
+      <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+      <%= f.hidden_field :city %>
+      <%= f.hidden_field :lat  %>
+      <%= f.hidden_field :lng  %>
+
+      <%= hidden_field_tag :changed %>
+    <% end %>
+    <% end %>
 
   </div>
 
   <div id="map_canvas"></div>
-  
+
   <div id="info_window" style="display:none">
 
   <%#= link_to I18n.t('map.next_link'), '#', :class => 'btn', :id => 'map-next-link' %>
@@ -103,15 +117,15 @@
     autocomplete = new google.maps.places.Autocomplete(pac_input, options);
     autocomplete.bindTo('bounds', map);
     // $(autocomplete).trigger("click");
-    
+
     var contentstring = $('#info_window').html();
-    
+
     var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
     // for the 'x', to close the infoWindow, we give it the same behaviour as the 'No' link, in the infoWindow
-    google.maps.event.addListener(infowindow, 'closeclick', function() {   
+    google.maps.event.addListener(infowindow, 'closeclick', function() {
       $(".map-no-link").trigger("click");
-    });  
- 
+    });
+
     var marker = new google.maps.Marker({
       map: map
     });
@@ -134,11 +148,20 @@
       infowindow.open(map, marker);
     });
 
-    <% if current_user.address and current_user.lat %>
-      var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
-      var marker = new google.maps.Marker({map: map, position: currentlatlng});
-      map.setCenter(currentlatlng);
-      map.setZoom(11);
+    <% if current_user %>
+      <% if current_user.address and current_user.lat %>
+        var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
+        var marker = new google.maps.Marker({map: map, position: currentlatlng});
+        map.setCenter(currentlatlng);
+        map.setZoom(11);
+      <% end %>
+    <% elsif current_company %>
+    <% if current_company.address and current_company.lat %>
+        var currentlatlng = new google.maps.LatLng(<%= current_company.lat %>, <%= current_company.lng %>);
+        var marker = new google.maps.Marker({map: map, position: currentlatlng});
+        map.setCenter(currentlatlng);
+        map.setZoom(11);
+      <% end %>
     <% end %>
 
   }

@@ -28,27 +28,11 @@
 <!-- </div> -->
 
   <div class="login-page">
-
-      <p><b>Company account?</b> Click <%= link_to "here", new_company_session_path %></p>
-
-      <div class='facebook-section'>
-       <!-- <h2><%= I18n.t('sign_in.login_text') %></h2>-->
-
-        <%= fb_login_button(image_tag("Facebook-orig.png")) %>
-
-        <div class='fb-notes'>
-          <%= raw I18n.t('sign_in.login_notes') %>
-        </div>
-
-        <div class="or-devider">
-          <%= I18n.t('sign_in.or') %>
-        </div>
-
-      </div>
+      <p><b>User account?</b> Click <%= link_to "here", new_user_session_path %></p>
 
       <div class='sign-in-section'>
 
-          <%= simple_form_for(User.new, :as => :user, :url => session_path(:user), :html => {}) do |f| %>
+          <%= simple_form_for(Company.new, :as => :company, :url => session_path(:company), :html => {}) do |f| %>
 
             <div class="inputs">
     <%= f.input_field :email, :required => false, :autofocus => true, :placeholder => I18n.t('sign_in.email_address_placeholder') %>
@@ -63,13 +47,13 @@
 
 
               <%#= f.button :submit, I18n.t('sign_in.sign_up_button'), :class => 'btn btn-warning' %>
-              <%= link_to I18n.t('sign_in.sign_up_button'), new_user_registration_path, :class => "btn btn-warning" %>
+              <%= link_to I18n.t('sign_in.sign_up_button'), new_company_registration_path, :class => "btn btn-warning" %>
 
           <% end %>
         </span>
 
           <div class='links'>
-   <%= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
+   <%= link_to I18n.t('sign_in.forgot_password'), new_company_password_path %>
 
             <%#= link_to I18n.t('sign_in.sign_up'), new_user_registration_path %>
           </div>

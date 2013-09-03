@@ -21,7 +21,7 @@
   <%= render :partial => 'layouts/fb_init' %>
   <!-- <div class="container">  -->
 
-    <!-- If user is signed in and registered, show the signed_in_header - Your Address Book, Search box etc... 
+    <!-- If user is signed in and registered, show the signed_in_header - Your Address Book, Search box etc...
         we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
     <% if user_signed_in? && current_user.registration_complete? %>
     <%= render :partial => 'layouts/signed_in_header' %>
@@ -33,9 +33,14 @@
 
                 <!-- <div id = "user-map-page"> -->
       <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>
-
+    <%= link_to "Home", root_path %>
     <div class ='page-content'>
-
+      <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+      <% end %>
         <%#= render :partial => 'layouts/pop_in' %>
         <%= content_for?(:body) ? yield(:body) : yield %>
     </div>

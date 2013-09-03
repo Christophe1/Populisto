@@ -1,10 +1,10 @@
 class FrontEndController < ApplicationController
 
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
 
-  before_filter :force_address_step, :if => :user_signed_in?
+  # before_filter :force_address_step, :if => :user_signed_in?
 
-  before_filter :check_friendship_token
+  # before_filter :check_friendship_token
 
 
 
@@ -13,7 +13,11 @@ class FrontEndController < ApplicationController
   # Redirects user to Map page if address is not filled
   #
   def force_address_step
-    redirect_to landing_page unless current_user.registration_complete?
+    if current_user
+      redirect_to landing_page unless current_user.registration_complete?
+    elsif current_company
+      redirect_to company_landing_page unless current_company.registration_complete?
+    end
   end
 
   #  Before filter, which should be used in case you want to include Google's Maps API to your page
