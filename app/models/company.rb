@@ -35,4 +35,8 @@ class Company < ActiveRecord::Base
   def registration_complete?
     self.address.present?
   end
+
+  def front_name
+    name
+  end
 end
