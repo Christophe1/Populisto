@@ -36,7 +36,7 @@ class HomeController < FrontEndController
       end
     elsif current_company
       if params[:changed] == '1'
-        current_company.update_attributes(params[:user])
+        current_company.update_attributes(params[:company])
         redirect_to landing_page
       else
         flash[:alert] = I18n.t('map.address_validation')

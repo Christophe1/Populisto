@@ -140,8 +140,15 @@
       }
 
       marker.setPosition(place.geometry.location);
+      <% if current_user %>
       $('#user_lat').val(place.geometry.location.lat());
       $('#user_lng').val(place.geometry.location.lng());
+      $('#user_city').val(place.address_components[0] && place.address_components[0].short_name || '')
+      <% elsif current_company %>
+      $('#company_lat').val(place.geometry.location.lat());
+      $('#company_lng').val(place.geometry.location.lng());
+      $('#company_city').val(place.address_components[0] && place.address_components[0].short_name || '')
+      <% end %>
       $('#changed').val('1');
 
       //infowindow.setContent(place.name);
