@@ -79,12 +79,11 @@ end
 #'need assistance with some ruby array code, please'
 
 def visible_to?(resource)
-  if resource.class.name == "User"
-  self.user == resource #|| assuming they have an ID
-  elsif resource.class.name == "Company"
-  self.company == resource #|| assuming they have an ID
+  if self.visible && self.owner == resource #|| assuming they have an ID
+    true
+  else
+    false
   end
-  visible == true
 end
 
   # Gets genres list.

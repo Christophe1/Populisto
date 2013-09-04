@@ -62,7 +62,7 @@
 
     <div class="comment-content"><%= review.comment %></div>
 
-    <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
+    <%= render 'reviews/add_to_your_page', :review => review  unless current_resource == review.owner %>
 <div class = "binder">
   </div>
 

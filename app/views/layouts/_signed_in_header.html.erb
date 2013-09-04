@@ -1,105 +1,84 @@
 <div class="header">
-
   <!-- <div class='top-line'> -->
-
- <div class="populisto_logo">
+  <div class="populisto_logo">
     <%= link_to(image_tag('populisto_logo.png', :alt => t('application.title')), root_path) %>
   </div>
-    <!-- <div id='users-counter'> -->
-<!--         logged in user latitude: <%#= current_user.lat %>
-        logged in user longitude:  <%#= current_user.lng %> -->
-<!-- </div> -->
-
-<%#user is only signed in fully when they fully register - INCLUDING ADDRESS %>
-    <%
-      if current_user
-        resource = current_user
-      else
-        resource = current_company
-      end
-     %>
-
-    <% if resource.registration_complete? %>
-
-              <div class='search-box'>
-
-      <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {:class => 'form-inline'} do |f| %>
-
-        <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen,
-                    :group_method => :last, :prompt => false,
-                    :input_html => { :class => 'span5', :multiple => true },
-                    :label => false,
-                    :placeholder => t('find_something.search_placeholder') %>
-
-        <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button'%>
-
-      <% end %>
-
-
-
-    </div>
-
-              <div class="user-panel">
-          <%= fb_avatar(resource)  %>
-          <%= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
-          <%= resource.front_name if resource.front_name.present? %>
-          <%#= link_to "Pop something in", reviews_path  %>
-        </div>
-
-        <!-- <div class="welcome"> -->
-            <%#= friends_avatars(current_user, 4) %> <%#= welcome_text %>
-     <%# end %>
+  <!-- <div id='users-counter'> -->
+  <!--         logged in user latitude: <%#= current_user.lat %>
+  logged in user longitude:  <%#= current_user.lng %> -->
   <!-- </div> -->
-<!-- </div> -->
+  <%#user is only signed in fully when they fully register - INCLUDING ADDRESS %>
+  <%
+  if current_user
+    resource = current_user
+  else
+    resource = current_company
+  end
+  %>
+
+  <% if resource.registration_complete? %>
+  <div class='search-box'>
+    <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {:class => 'form-inline'} do |f| %>
+    <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen,
+    :group_method => :last, :prompt => false,
+    :input_html => { :class => 'span5', :multiple => true },
+    :label => false,
+    :placeholder => t('find_something.search_placeholder') %>
+    <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button'%>
+    <% end %>
+  </div>
+
+  <div class="user-panel">
+    <%= fb_avatar(resource)  %>
+    <%= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
+    <%= resource.front_name if resource.front_name.present? %>
+    <%#= link_to "Pop something in", reviews_path  %>
+  </div>
+
+  <!-- <div class="welcome"> -->
+  <%#= friends_avatars(current_user, 4) %> <%#= welcome_text %>
+  <%# end %>
+  <!-- </div> -->
+  <!-- </div> -->
 
 
 
   <%# if current_user.registration_complete? %>
-      <!-- <div class='second-line'> -->
+  <!-- <div class='second-line'> -->
 
 
 
 
-        <div id = "menu">
-        <ul id = "static_pages">
-          <script>
-          $('static_pages').on('click', function(e) {
- e.preventDefault();
- // do your js stuff
- $(window).scrollTop(0);
-});
-          </script>
+  <div id = "menu">
+    <ul id = "static_pages">
+      <script>
+        $('static_pages').on('click', function(e) {
+               e.preventDefault();
+         // do your js stuff
+         $(window).scrollTop(0);
+        });
+      </script>
 
-          <li><%= link_to "About Us",about_us_path %></li>
-          <li><%= link_to "FAQ", faq_path %></li>
-          <li><a href="#" class="email-invite-link">Invite Others (please!)</a></li>
-          <li><%= link_to "Contact Us", contact_us_path %></li>
-          <li><%= link_to "Your Address Book", resource %></li>
+      <li><%= link_to "About Us",about_us_path %></li>
+      <li><%= link_to "FAQ", faq_path %></li>
+      <li><a href="#" class="email-invite-link">Invite Others (please!)</a></li>
+      <li><%= link_to "Contact Us", contact_us_path %></li>
+      <li><%= link_to "Your Address Book", resource %></li>
 
-<!-- FaceBook Like Button -->
-<!-- <li><div class="fb-like" data-href="http://populisto.demohoster.com/" data-send="false" data-width="300" data-show-faces="false" data-layout="button_count"></div></li> -->
+      <!-- FaceBook Like Button -->
+      <!-- <li><div class="fb-like" data-href="http://populisto.demohoster.com/" data-send="false" data-width="300" data-show-faces="false" data-layout="button_count"></div></li> -->
 
 
-<li><div class="fb-like" data-href="https://www.facebook.com/Populisto?ref=hl" data-send="false" data-width="300" data-show-faces="false" data-layout="button_count"></div></li>
+      <li><div class="fb-like" data-href="https://www.facebook.com/Populisto?ref=hl" data-send="false" data-width="300" data-show-faces="false" data-layout="button_count"></div></li>
     </ul>
+  </div>
 
-          </div>
+  <%#= link_to I18n.t('layout.find_something_link'), find_path, :class => 'btn menu-item'  %>
 
-
-
-          </div>
-
+  <%#= link_to I18n.t('layout.your_page_link'), user_path(current_user), :class => 'btn menu-item' %>
 
 
-        <%#= link_to I18n.t('layout.find_something_link'), find_path, :class => 'btn menu-item'  %>
-
-        <%#= link_to I18n.t('layout.your_page_link'), user_path(current_user), :class => 'btn menu-item' %>
-
-
-      <!-- </div> -->
-
+  <!-- </div> -->
 
   <% end %>
-
-
-
+</div>

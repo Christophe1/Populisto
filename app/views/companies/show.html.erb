@@ -41,27 +41,18 @@
   </div>
 </div>
 
-    <div id="map_canvas">
-
-
-
-      <script>
-
-      $(function() {
-
-// this function can be found in draw_map.js.erb
-      initialize_google_maps();
-
-
-  });
-
-</script>
-
-    </div>
+<div id="map_canvas">
+  <script>
+    $(function() {
+    // this function can be found in draw_map.js.erb
+    initialize_google_maps();
+    });
+  </script>
+</div>
 
       <!-- Use the @company.lat and lng attributes to draw the map in the
       map_canvas div, above -->
-      <div id="user-position" class="hidden" data-lat="<%= @company.lat %>" data-lng="<%= @company.lng %>"></div>
+<div id="user-position" class="hidden" data-lat="<%= @company.lat %>" data-lng="<%= @company.lng %>"></div>
 
       <!-- <div id = "character_and_bubbles"> -->
 
@@ -255,7 +246,7 @@ formatted correctly -->
 <!-- </div> -->
 
 
- <div class="reviews" >
+<div class="reviews" >
   <!-- show the current user's Address Book entries or-->
   <!-- if current user goes to another person's Address Book , show the results on that person's Address Book  -->
   <!-- this is separate to doing a search -->
@@ -263,15 +254,12 @@ formatted correctly -->
   method in the reviews model- not showing another user's private reviews - and then display those results -->
 
   <% if @reviews.any? %>
-
-    <% @reviews.select { |review| review.visible_to?(current_company) }.each do |review| %>
-
-    <div class="breadcrumb" id="review_<%= review.id %>">
-    <%= render 'reviews/review', :review => review %>
-   <% end %>
-   </div>
-
-     <% else %>
+    <% @reviews.each do |review| %>
+      <div class="breadcrumb" id="review_<%= review.id %>">
+      <%= render 'reviews/review', :review => review %>
+      </div>
+    <% end %>
+  <% else %>
     <%= render :partial => 'layouts/empty_user_address_book' %>
   <%end %>
 
