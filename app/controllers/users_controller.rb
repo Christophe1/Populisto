@@ -8,9 +8,9 @@ class UsersController < FrontEndController
 
 
   def show
-    @user = User.find_by_slug(params[:id])
+    @resource = User.find_by_slug(params[:id])
     @review = Review.new
-    @reviews = @user.reviews
+    @reviews = @resource.reviews
   end
 
   #   def index
