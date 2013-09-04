@@ -61,30 +61,30 @@ class Review < ActiveRecord::Base
     name
   end
 
-def owner
-  if self.user.present?
-    return user
-  elsif self.company.present?
-    return company
+  def owner
+    if self.user.present?
+      return user
+    elsif self.company.present?
+      return company
+    end
   end
-end
 
-# if current_user id is the same as the person who
-# who made the review
-# and the review is set to 'public'
-# only then can every user see the review
-# otherwise, if it is private, only current_user can see it.
+  # if current_user id is the same as the person who
+  # who made the review
+  # and the review is set to 'public'
+  # only then can every user see the review
+  # otherwise, if it is private, only current_user can see it.
 
-#check out a cleaner way of doing this in stackoverflow, my question,
-#'need assistance with some ruby array code, please'
+  #check out a cleaner way of doing this in stackoverflow, my question,
+  #'need assistance with some ruby array code, please'
 
-def visible_to?(resource)
-  if self.visible && self.owner == resource #|| assuming they have an ID
-    true
-  else
-    false
+  def visible_to?(resource)
+    if self.visible || self.owner == resource #|| assuming they have an ID
+      true
+    else
+      false
+    end
   end
-end
 
   # Gets genres list.
   #

@@ -256,9 +256,11 @@ formatted correctly -->
   <% if @reviews.any? %>
 
     <% @reviews.each do |review| %>
-      <div class="breadcrumb" id="review_<%= review.id %>">
-      <%= render 'reviews/review', :review => review %>
-      </div>
+      <% if review.visible_to?(current_resource) %>
+        <div class="breadcrumb" id="review_<%= review.id %>">
+        <%= render 'reviews/review', :review => review %>
+        </div>
+      <% end %>
     <% end %>
   <% else %>
     <%= render :partial => 'layouts/empty_user_address_book' %>
