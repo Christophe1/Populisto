@@ -1,44 +1,33 @@
 <div class='find-something'>
-
   <!-- <div class="greetings"> -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <%#= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
-    <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
-<!--   </div>
   <br>
-  <br> -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%#= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
+  <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
+  <!--   </div>
+    <br>
+    <br> -->
     <%#= link_to ("Go here", "http://www.rosk.com/") %>
     <%#= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
-
-<!--   <div class="search-area">
-
-    <div class='search-box'>
-
-    </div>
-    <div class="clearfix"></div> -->
-
-<div id="map_canvas">
-  <!-- generated map goes in here -->
-</div>
-<!-- the code below is required for giving the map coordinates, above -->
-<div id="user-position" class="hidden" data-lat="<%= current_resource.lat %>" data-lng="<%= current_resource.lng %>"></div>
-
-    <div class="clearfix"></div>
-
+  <!--   <div class="search-area">
+  <div class='search-box'>
   </div>
+  <div class="clearfix"></div> -->
 
-
-
+  <div id="map_canvas">
+    <!-- generated map goes in here -->
+  </div>
+  <!-- the code below is required for giving the map coordinates, above -->
+  <div id="user-position" class="hidden" data-lat="<%= current_resource.lat %>" data-lng="<%= current_resource.lng %>"></div>
+  <div class="clearfix"></div>
+</div>
 <% if @reviews.present? %>
-  <%= render 'reviews' %>
+<%= render 'reviews' %>
 <% else %>
-  <%= render :partial => 'layouts/no_reviews_in_your_area' %>
-  <%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
+<%= render :partial => 'layouts/no_reviews_in_your_area' %>
+<%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
 <% end %>
-
-
