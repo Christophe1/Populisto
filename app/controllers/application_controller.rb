@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
 
   layout :layout_by_resource
 
-  # alias_method :devise_current_user, :current_user
   def current_resource
     if current_user
       current_user

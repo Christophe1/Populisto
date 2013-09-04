@@ -4,7 +4,7 @@ module SearchHelper
     my_area = []
     outside_area = []
     reviews.each do |review|
-      distance = current_user.distance_to(review.user)
+      distance = current_resource.distance_to(review.owner)
       # review.distance = distance
       distance <= @kms_range ? (my_area << review) : (outside_area << review)
     end
@@ -18,11 +18,11 @@ module SearchHelper
     others_reviews = []
 
     my_area_reviews.each do |review|
-      if current_user.id == review.user_id
+      if current_resource.id == review.owner.id
         my_reviews << review
-      elsif User.followers_for(current_user).pluck(:id).include? review.user_id
+      elsif User.followers_for(current_resource).pluck(:id).include? review.owner.id
         followers_reviews << review
-      elsif User.following_by(current_user).pluck(:id).include? review.user_id
+      elsif User.following_by(current_resource).pluck(:id).include? review.owner.id
         following_reviews << review
       else
         others_reviews << review

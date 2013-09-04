@@ -24,19 +24,19 @@
 </div>
   <!-- <div class="left-part"> -->
   <div id = "fb_avatar">
-    <%= fb_avatar(review.user) %>
+    <%= fb_avatar(review.owner) %>
     </div>
 
 
 
 <!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry. -->
-<div class = "address_entry_user_name">    
+<div class = "address_entry_user_name">
   <!-- not sure why, but need to use review.user.name and front_name to distinguish
   between regular and Facebook log in people. -->
       <%# if current_user.name == review.user.name || review.user.front_name %>
-      <%#= link_to "You", user_path(review.user), :class => "ajax" %> 
+      <%#= link_to "You", user_path(review.user), :class => "ajax" %>
       <%# else %>
-      <%= (link_to review.user.front_name, user_path(review.user), :class => "ajax") + "/" + review.categories_list %> 
+      <%= (link_to review.owner.front_name, user_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
       <%# end %>
 </div>
 
@@ -55,13 +55,13 @@
     <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
   </div>
 </div>
-    
+
 <div class="right_window">
 
-<div class="comments"><%= I18n.t('user.review.comments') %></div> 
+<div class="comments"><%= I18n.t('user.review.comments') %></div>
 
     <div class="comment-content"><%= review.comment %></div>
-    
+
     <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
 <div class = "binder">
   </div>

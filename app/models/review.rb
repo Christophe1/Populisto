@@ -61,6 +61,14 @@ class Review < ActiveRecord::Base
     name
   end
 
+def owner
+  if self.user.present?
+    return user
+  elsif self.company.present?
+    return company
+  end
+end
+
 # if current_user id is the same as the person who
 # who made the review
 # and the review is set to 'public'

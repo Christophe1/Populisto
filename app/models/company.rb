@@ -43,4 +43,26 @@ class Company < ActiveRecord::Base
   def invited_emails
     email_invites.pluck(:email).compact.map { |email| [email, email] }
   end
+
+  def facebook_followers_ids
+    FriendRelation.facebook.by_target_user(self.external_user_id).pluck(:source_user_id)
+  end
+
+  def followers_ids
+    @followers_ids ||= begin
+      FriendRelation.populisto.by_target_user(self.id).pluck(:source_user_id) +
+      FriendRelation.email.by_target_user(self.id).pluck(:source_user_id)
+    end
+  end
+
+  def facebook_followed_ids
+    FriendRelation.facebook.by_source_user(self.external_user_id).pluck(:target_user_id)
+  end
+
+  def followed_ids
+    @followed_users_ids ||= begin
+      FriendRelation.populisto.by_source_user(self.id).pluck(:target_user_id) +
+      FriendRelation.email.by_source_user(self.id).pluck(:target_user_id)
+    end
+  end
 end
