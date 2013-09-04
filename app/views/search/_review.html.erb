@@ -36,7 +36,7 @@
       <%# if current_user.name == review.user.name || review.user.front_name %>
       <%#= link_to "You", user_path(review.user), :class => "ajax" %>
       <%# else %>
-      <%= (link_to review.owner.front_name, user_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
+      <%= (link_to review.owner.front_name, review.owner, :class => "ajax") + "/" + review.categories_list %>
       <%# end %>
 </div>
 
