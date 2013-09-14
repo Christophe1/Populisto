@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
     @reviews = @user.reviews
   end
 
-      def index
+  def index
     @review = Review.new
   end
 
@@ -59,9 +59,9 @@ class ApplicationController < ActionController::Base
   #   render :layout => false
   # end
 
-    def find_user
-      @user = User.find_by_slug(params[:id])
-    end
+  def find_user
+    @user = User.find_by_slug(params[:id])
+  end
 
 
   def create
@@ -94,13 +94,13 @@ protected
     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
     @data = [[I18n.t('search.group.category'), categories]]
 
-    if current_user then
-      users_in_my_area = User.within(default_range, :origin => current_user)
-      users_outside_my_area = User.outside(default_range, :origin => current_user)
-      personal_contacts = current_user.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
+    if current_resource then
+      users_in_my_area = User.unscoped.within(default_range, :origin => current_resource)
+      users_outside_my_area = User.unscoped.outside(default_range, :origin => current_resource)
+      personal_contacts = current_resource.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
       # followers = users_in_my_area.followers_for(current_user)
       # following = users_in_my_area.following_by(current_user)
-      other = users_in_my_area - [current_user]
+      other = users_in_my_area - [current_resource]
 
       [other, users_outside_my_area].each do |users|
          users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.slug}"] }
@@ -148,11 +148,11 @@ protected
 
   # *******************************************************************************************************
 
-    def default_range
+  def default_range
     20
   end
 
- def new_range(old_range)
+  def new_range(old_range)
     {20 => 10, 10 => 20}[old_range]
   end
 
@@ -190,9 +190,9 @@ protected
   #
   def landing_page
     if current_user
-      current_user.registration_complete? ? user_path(current_user) : map_path
+      current_user.registration_complete? ? resource_home_path(current_user) : map_path
     elsif current_company
-      current_company.registration_complete? ? company_path(current_company) : map_path
+      current_company.registration_complete? ? resource_home_path(current_company) : map_path
     end
   end
 
@@ -213,9 +213,4 @@ protected
       "application"
     end
   end
-
-
-
 end
-
-

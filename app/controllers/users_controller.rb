@@ -8,7 +8,8 @@ class UsersController < FrontEndController
 
 
   def show
-    @resource = User.find_by_slug(params[:id])
+    param = params[:id] || params[:slug]
+    @resource = User.unscoped.find_by_slug(param)
     @review = Review.new
     @reviews = @resource.reviews
   end

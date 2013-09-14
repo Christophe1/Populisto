@@ -43,7 +43,7 @@ class ReviewsController < FrontEndController
 
   def repost
     @review = Review.find(params[:id])
-    @review.repost(current_user)
+    @review.repost(current_resource)
   end
 
   def reject

@@ -65,4 +65,10 @@ class Company < ActiveRecord::Base
       FriendRelation.email.by_source_user(self.id).pluck(:target_user_id)
     end
   end
+
+  def personal_reviews_contacts
+    arr = []
+    cat = Category.find_by_name("Personal Contact")
+    arr = cat.reviews.where(:user_id => self.id)
+  end
 end
