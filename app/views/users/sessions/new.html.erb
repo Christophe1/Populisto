@@ -1,6 +1,32 @@
+
   <!DOCTYPE html>
   <html>
   <head>
+
+<script>
+$().ready(function() {
+  // we want to show the html text in div #why_fb_log_in_text
+var thecontent = $('#why_fb_log_in_text').html();
+$('#why_fb_log_in').qtip({
+   content: thecontent,
+   show: 'mouseover',
+   hide: 'mouseout',
+  position: {
+      corner: {
+         target: 'bottomLeft',
+         tooltip: 'topRight'
+      }
+   },
+    style :{
+            background: '#FAF798',
+            width: 400
+            // tip: { corner: 'leftTop' }
+        }
+});
+});
+
+</script>
+
     <!-- <link rel="stylesheet" type="text/css" href="carousel.css"> -->
 
    <!-- // <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
@@ -31,13 +57,27 @@
 
       <p><b>Company account?</b> Click <%= link_to "here", new_company_session_path %></p>
 
-      <div class='facebook-section'>
-       <!-- <h2><%= I18n.t('sign_in.login_text') %></h2>-->
+<div class='facebook-section'>
 
-        <%= fb_login_button(image_tag("Facebook-orig.png")) %>
+<%= fb_login_button(image_tag("Facebook-orig.png")) %>
+
+      <div id = "why_fb_log_in">
+
+      Why Facebook log in
+<%= image_tag("why_fb_log_in.png") %>
+
+        </div>
+
+<!-- text for the qtip goes here, in this div, which is hidden -->
+                <div id = "why_fb_log_in_text">
+    <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
+    <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
+    <p>Facebook Log in means a quick log in, with one less password to remember.</p>
+        </div>
 
         <div class='fb-notes'>
-          <%= raw I18n.t('sign_in.login_notes') %>
+          <%#= raw I18n.t('sign_in.login_notes') %>
+          
         </div>
 
         <div class="or-devider">
@@ -54,10 +94,24 @@
     <%= f.input_field :email, :required => false, :autofocus => true, :placeholder => I18n.t('sign_in.email_address_placeholder') %>
               <br/>
               <%= f.input_field :password, :required => false,  :placeholder => I18n.t('sign_in.password_placeholder') %>
+              <!-- <div class='all_links'> -->
+              <div class='links1'>
               <%= f.input :remember_me, :as => :boolean, :label => false, :inline_label => 'Remember me' %>
+              </div>
+              <div class='links'>
+              <%= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
+              </div>
+              <!-- </div> -->
             </div>
+                      
+   <%#= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
+
+            <%#= link_to I18n.t('sign_in.sign_up'), new_user_registration_path %>
+          
    </br>
-   <span class="actions">
+   </br>
+
+   <div class="actions">
 
               <%= f.button :submit, I18n.t('sign_in.sign_in_button'), :class => 'btn btn-primary' %>
 
@@ -66,45 +120,11 @@
               <%= link_to I18n.t('sign_in.sign_up_button'), new_user_registration_path, :class => "btn btn-warning" %>
 
           <% end %>
-        </span>
-
-          <div class='links'>
-   <%= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
-
-            <%#= link_to I18n.t('sign_in.sign_up'), new_user_registration_path %>
-          </div>
+        </div>
 
       </div>
-
   </div>
 
-
-
-
-  <script>
-
-  $('#back').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-
-  $('#forward').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-  </script>
 
   <div id="iPad-promo">
     <!-- <li id="win_ipad"> -->
