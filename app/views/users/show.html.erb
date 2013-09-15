@@ -26,18 +26,22 @@
 
 <div id = "Address_book_heading">
   <div id = "Address_book_owner">
-    <% if current_user == @resource %>
+    <% if current_resource.name == @resource.name %>
     <%= "Your Address Book" %>
     <% else %>
-    <%= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book" %>
+      <% if @resource.is_company? %>
+        <%= "#{@resource.name}" + "'s Address Book" %>
+      <% else %>
+        <%= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book" %>
+      <% end %>
     <% end %>
   </div>
   <div id = "Address_book_area">
-    <% if current_user == @resource %>
+    <% if current_resource.name == @resource.name %>
     <%= "Your area:" %>
     <% else %>
       <% if @resource.is_company? %>
-        <%= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book" %>
+        <%= "#{@resource.name}" + "'s Address Book" %>
       <% else %>
         <%= "#{@resource.first_name.capitalize}" + "'s area:" %>
       <% end %>
