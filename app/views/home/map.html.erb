@@ -3,7 +3,7 @@
     <% if current_user %>
     <%= form_for current_user, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
       <div class="greetings">
-        <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %>
+        <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %><br><br>
         <%= I18n.t('map_page.greetings_2') %>
       </div>
       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>

@@ -122,7 +122,7 @@ en:
     empty_search_results: "No results have appeared for that search. Be a populisto and enter one yourself!"
   map_page:
     greetings_1: "Hi %{user_name}. Please tell us your address details."
-    greetings_2: "If you don't want to give your exact details that's ok, but the more accurate you are, the more effective your results will be when doing searches."
+    greetings_2: "If you don't want to give your exact details that's ok (it’s kept private, in any case), but the more accurate you are, the more effective your results will be, when looking for things in your area."
   write_review:
     text: 'Add something to Populisto!, the only Address Book you will ever need.<br></br>Share something with friends to help them find something, or store it personally for yourself.'
     submit_button: 'Post to Your Page'
