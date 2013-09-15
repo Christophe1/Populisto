@@ -2,12 +2,10 @@
 <html>
 <head>
   <title><%= t('application.title') %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <% if @include_goole_maps %>
   <!-- &libraries=places"></script> is used for the autodetect, in Address bar -->
   <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
-
-
   <% end %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag "application" %>
