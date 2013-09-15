@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130823222204) do
+ActiveRecord::Schema.define(:version => 20130902154249) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",               :default => "", :null => false
@@ -130,6 +130,8 @@ ActiveRecord::Schema.define(:version => 20130823222204) do
     t.string   "city"
     t.integer  "invites_count",                                                       :default => 0
     t.string   "slug"
+    t.boolean  "is_company",                                                          :default => false
+    t.boolean  "gmaps"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

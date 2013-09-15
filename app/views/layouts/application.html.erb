@@ -4,8 +4,8 @@
   <title><%= t('application.title') %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <% if @include_goole_maps %>
- <!-- &libraries=places"></script> is used for the autodetect, in Address bar -->
-   <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
+  <!-- &libraries=places"></script> is used for the autodetect, in Address bar -->
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
 
 
   <% end %>
@@ -15,33 +15,34 @@
   <!--[if lt IE 9]>
     <%#= stylesheet_link_tag 'ie', :media => 'all' %>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+    <![endif]-->
 </head>
 <body>
   <%= render :partial => 'layouts/fb_init' %>
   <!-- <div class="container">  -->
+  <!-- If user is signed in and registered, show the signed_in_header - Your Address Book, Search box etc...
+    we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
+  <% if user_signed_in? && current_user.registration_complete? || company_signed_in? && current_company.registration_complete? %>
+  <%= render :partial => 'layouts/signed_in_header' %>
+  <% else %>
+  <!-- If not signed in, then show the signed_out_header -->
+  <%= render :partial => 'layouts/signed_out_header' %>
+  <% end %>
 
-    <!-- If user is signed in and registered, show the signed_in_header - Your Address Book, Search box etc... 
-        we don't want to show all this on sign up page, map for choosing address, terms and conditions etc-->
-    <% if user_signed_in? && current_user.registration_complete? %>
-    <%= render :partial => 'layouts/signed_in_header' %>
-    <%# else %>
-    <!-- If not signed in, then show the signed_out_header -->
-    <%#= render :partial => 'layouts/signed_out_header' %>
-    <% end %>
-
-
-                <!-- <div id = "user-map-page"> -->
-      <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>
-
-    <div class ='page-content'>
-
-        <%#= render :partial => 'layouts/pop_in' %>
-        <%= content_for?(:body) ? yield(:body) : yield %>
+  <!-- <div id = "user-map-page"> -->
+  <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>
+  <%= link_to "Home", root_path %>
+  <div class ='page-content'>
+    <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <a class="close" data-dismiss="alert">×</a>
+      <%= msg %>
     </div>
-
+    <% end %>
+    <%#= render :partial => 'layouts/pop_in' %>
+    <%= content_for?(:body) ? yield(:body) : yield %>
+  </div>
   <!-- <div id = "footer" style = "background-color: blue;">My footer</div> -->
-   <!-- </div> -->
-
+  <!-- </div> -->
 </body>
 </html>

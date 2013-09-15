@@ -1,45 +1,39 @@
 
 
 <div class="left_window">
+  <!-- can be public or for your eyes only, change the colour accordingly -->
+  <div id="privacy_<%= review.id %>">
+    <% if review.visible == true %>
+      <script>
+        $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
+      </script>
+      <%= "Public" %>
+      <% else %>
+      <script>
+        $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
+      </script>
+      <%= "Your eyes only" %>
+    <% end %>
 
-<!-- can be public or for your eyes only, change the colour accordingly -->
-<div id="privacy_<%= review.id %>">
-  <% if review.visible == true %>
-
-  <script>
-  $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
-  </script>
-
-  <%= "Public" %>
-  <% else %>
-
-    <script>
-  $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
-  </script>
-
-            <%= "Your eyes only" %>
-            <% end %>
-
-              <!-- if the user is looking at someone else's Address Book, show this... -->
-            <%# elsif @user != current_user %>
-            <%#= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
-            <%#= "can see the address books of people within the circle, on the map."
-            %>
-            <%# end %>
-
-</div>
+                <!-- if the user is looking at someone else's Address Book, show this... -->
+              <%# elsif @user != current_user %>
+              <%#= "#{@user.first_name.capitalize} " + "#{@user.last_name.capitalize}" %>
+              <%#= "can see the address books of people within the circle, on the map."
+              %>
+              <%# end %>
+  </div>
 
   <div class="category_name">
     <%= review.categories_list %>
   </div>
 
-<div class="info">
-      <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
-      </br>
-      <strong><%= I18n.t('user.review.address') %></strong><%= review.address %><br>
-      </br>
-      <strong><%= I18n.t('user.review.phone') %></strong><%= review.phone %><br>
-      </br>
+  <div class="info">
+    <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
+    </br>
+    <strong><%= I18n.t('user.review.address') %></strong><%= review.address %><br>
+    </br>
+    <strong><%= I18n.t('user.review.phone') %></strong><%= review.phone %><br>
+    </br>
     <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
   </div>
 </div>
@@ -47,28 +41,21 @@
 
 
 <div class="right_window">
-<!--  the 'edit' link for a review is only available to current_user when he is looking at his page in
+  <!--  the 'edit' link for a review is only available to current_user when he is looking at his page in
   its entirety. If he does a search for 'plumber', and his entry comes up, he can't edit it
  from there. He has to go into his page.-->
 
-    <% if review.user == current_user %>
+  <% if review.owner == current_resource %>
     <!-- this was another way of doing the above, but I prefer the above.
     edit_enabled is defined in reviews_helper, commented out -->
     <%# if edit_enabled %>
 
     <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
   <% end %>
-
-
-
-
-    <div class="comments"><%= I18n.t('user.review.comments') %></div>
-    <div class="comment-content"><%= review.comment %></div>
-
+  <div class="comments"><%= I18n.t('user.review.comments') %></div>
+  <div class="comment-content"><%= review.comment %></div>
   <!-- show the 'add to your page' button, unless current user owns the review -->
   <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
 
   <div class="clearfix"></div>
-
-  </div>
 </div>
