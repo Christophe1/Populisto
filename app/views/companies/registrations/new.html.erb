@@ -45,19 +45,24 @@
 
           <div class="inputs">
             <%= f.input_field :name, :required => true, :autofocus => true, :placeholder => I18n.t('create_account.company_name') %>
-          </br>
+            </br>
             <%= f.input_field :email, :required => true, :placeholder => I18n.t('create_account.email_address') %>
-          </br>
+            </br>
             <%= f.input_field :password, :required => true, :placeholder => I18n.t('create_account.password') %>
-          </br>
+            </br>
             <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
+            <label>
+              Let people in your area find your business by letting them know what you do:
+              <%= check_box_tag 'categories_toggle' %>
+            </label>
+            <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {:multiple => true} %>
           </div>
-</br>
+          </br>
           <div class="actions">
             <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
           </div>
         <% end %>
-</br>
+        </br>
         <div class='links centralized'>
 
           <%= link_to I18n.t('sign_in.sign_in'), new_company_session_path %>

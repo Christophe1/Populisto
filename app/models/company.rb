@@ -12,7 +12,7 @@ class Company < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
 
   attr_accessible :email, :name, :first_name, :last_name, :password_confirmation, :password,
-                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city
+                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :category_ids
 
   has_many :reviews, :foreign_key => :user_id
 
@@ -23,6 +23,9 @@ class Company < ActiveRecord::Base
   has_many :genres
   has_many :film_users, :dependent => :destroy
   has_many :films, :through => :film_users
+
+  has_many :category_companies
+  has_many :categories, :through => :category_companies
 
   validates :name, :allow_blank => true, :length => { :maximum => 50 }
   validates_presence_of :name
