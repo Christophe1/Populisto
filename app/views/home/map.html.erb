@@ -24,10 +24,6 @@
     <% elsif current_company %>
     <%= form_for current_company, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
       <div class="categories_select">
-      <label>
-        Let people in your area find your business by letting them know what you do:
-        <%= check_box_tag 'categories_toggle' %>
-      </label>
       <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
       </div>
 
