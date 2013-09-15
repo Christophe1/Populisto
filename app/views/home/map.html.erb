@@ -19,16 +19,22 @@
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
-
       <%= hidden_field_tag :changed %>
     <% end %>
     <% elsif current_company %>
     <%= form_for current_company, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
+      <div class="categories_select">
+      <label>
+        Let people in your area find your business by letting them know what you do:
+        <%= check_box_tag 'categories_toggle' %>
+      </label>
+      <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
+      </div>
+
       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
-
       <%= hidden_field_tag :changed %>
     <% end %>
     <% end %>

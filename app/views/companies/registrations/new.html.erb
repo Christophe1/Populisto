@@ -51,11 +51,6 @@
             <%= f.input_field :password, :required => true, :placeholder => I18n.t('create_account.password') %>
             </br>
             <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
-            <label>
-              Let people in your area find your business by letting them know what you do:
-              <%= check_box_tag 'categories_toggle' %>
-            </label>
-            <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
           </div>
           </br>
           <div class="actions">
