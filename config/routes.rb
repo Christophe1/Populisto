@@ -9,7 +9,7 @@ QuestionnaireSite::Application.routes.draw do
   # get "user", :to => @user(current_user)
   get "render_index_review", :to => "reviews#render_index"
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :sessions => "sessions" }
   devise_scope :user do
     delete "sign_out", :to => "devise/sessions#destroy"
     get "login", :to => "devise/sessions#new"

@@ -1,4 +1,9 @@
-<p><%= link_to "Users List" %> | <%= link_to "Map View", map_view_admin_users_path %></p>
+<p>
+  <%= link_to "Users List" %> |
+  <%= link_to "Map View", map_view_admin_users_path %> |
+  Users: <b><%= @users.where(:is_company => false).count %></b> |
+  Companies: <b><%= @users.where(:is_company => true).count %></b>
+</p>
 <div class="users_list">
   <%= render 'users_list' %>
 </div>
