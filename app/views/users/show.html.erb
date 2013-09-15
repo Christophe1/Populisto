@@ -69,8 +69,8 @@ initialize_google_maps();
           <div id="top_bubble"> -->
             <!-- if the user is looking at their own Address Book, show this... -->
             <%# if @resource == current_user %>
-            <%#= "Would you like to " %>
-            <%#= link_to "pop something in", reviews_path %>
+            <%= "Would you like to " %>
+            <%= link_to "pop something in", reviews_path %>
             <%#= "to your Address Book? A butcher, a baker, a candlestick maker? Someone's skills worth knowing about? Let others in your community know about us!" %>
 
             <!-- if the user is looking at someone else's Address Book, show this... -->
