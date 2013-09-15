@@ -28,6 +28,7 @@ class Review < ActiveRecord::Base
   #has_many :users, :through => :film_users
 
   belongs_to :user
+  belongs_to :company, :foreign_key => :user_id
 
   validates :name, :presence => true, :length => { :maximum => 255 }
   validates :phone, :length => { :maximum => 30 }
@@ -60,20 +61,30 @@ class Review < ActiveRecord::Base
     name
   end
 
-# if current_user id is the same as the person who
-# who made the review
-# and the review is set to 'public'
-# only then can every user see the review
-# otherwise, if it is private, only current_user can see it.
+  def owner
+    if self.user.present?
+      return user
+    elsif self.company.present?
+      return company
+    end
+  end
 
-#check out a cleaner way of doing this in stackoverflow, my question,
-#'need assistance with some ruby array code, please'
+  # if current_user id is the same as the person who
+  # who made the review
+  # and the review is set to 'public'
+  # only then can every user see the review
+  # otherwise, if it is private, only current_user can see it.
 
-def visible_to?(user)
-  self.user.id == user.id || # assuming they have an ID
-  visible == true
-end
+  #check out a cleaner way of doing this in stackoverflow, my question,
+  #'need assistance with some ruby array code, please'
 
+  def visible_to?(resource)
+    if self.visible || self.owner == resource #|| assuming they have an ID
+      true
+    else
+      false
+    end
+  end
 
   # Gets genres list.
   #

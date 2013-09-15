@@ -1,5 +1,13 @@
 module ApplicationHelper
 
+  def current_resource
+    if current_user
+      current_user
+    elsif current_company
+      current_company
+    end
+  end
+
   # Determines current step by controller and action.
   #
   def current_step

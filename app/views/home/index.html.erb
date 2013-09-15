@@ -2,12 +2,15 @@
 
   <p><%= t('home.welcome') %></p>
 
-  <% if ENV["FACEBOOK_ID"] %>
-    <p><%= fb_login_button(image_tag("fblogin.png")) %></p>
-  <% end %>
+  <%# if ENV["FACEBOOK_ID"] %>
+    <p><%#= fb_login_button(image_tag("fblogin.png")) %></p>
+  <%# end %>
 
-  <p class="create-account-note"><%=raw t('home.create_account_note',
+<!--   <p class="create-account-note"><%#=raw t('home.create_account_note',
                                           :register => link_to(t('home.create_account'), new_user_registration_path, :class => 'coming-soon'),
-                                          :login    => link_to(t('home.login_text'), login_path)) %></p>
+                                          :login    => link_to(t('home.login_text'), login_path)) %></p> -->
+
+  <p><%= link_to t('home.create_account'), new_user_registration_path %></p>
+  <p><%= link_to "Login", login_path %></p>
 
 </div>

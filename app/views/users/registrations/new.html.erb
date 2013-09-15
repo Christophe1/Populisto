@@ -9,21 +9,21 @@
   </head>
   <body>
 
-  <!-- the container div, which holds the back and forward arrows on each side, and the 
+  <!-- the container div, which holds the back and forward arrows on each side, and the
   changing images, in the middle -->
   <div id = "carousel">
     <%= image_tag "1.1.png", :id => "rotate_images" %>
     <!-- <img id ="rotate_images" src="assets/1.1.png"/> -->
     <!-- back arrow -->
     <div id = "back">
-      <%= image_tag "arrow_back.png" %> 
+      <%= image_tag "arrow_back.png" %>
     <!-- <img src = "assets/arrow_back.png"> -->
-  </div>  
+  </div>
   <!-- forward arrow -->
     <div id = "forward">
       <%= image_tag "arrow_forward.png" %>
     <!-- <img src = "assets/arrow_forward.png"></div> -->
-   
+
   </div>
 </div>
 
@@ -31,6 +31,8 @@
 
 <div class="login-page">
 
+    <p>Do you represent a <b>Company</b> ?<br>
+      Click <%= link_to "here", new_company_registration_path %> to create a Company accout.</p>
     <div class='facebook-section'>
       <!--<h2><%= I18n.t('sign_in.login_text') %></h2>-->
 
@@ -83,7 +85,7 @@
         <% end %>
 </br>
         <div class='links centralized'>
-          
+
           <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
           <br><br>
 By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
@@ -101,7 +103,7 @@ By clicking "Create Account" you confirm that you accept the <%= link_to "Terms 
   </div>
     <!-- <p class="title">And...290513</p> -->
     <div id = "win_ipad_text">
-    Be in with the chance to win an iPad! 
+    Be in with the chance to win an iPad!
     </div>
       <%#= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"terms.html.erb\",'Terms and Conditions', 'width=300, height=600');" %>
    <div id = "ipad_image">
