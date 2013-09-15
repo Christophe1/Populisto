@@ -93,6 +93,7 @@ protected
   def load_data_for_checkbox
     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
     @data = [[I18n.t('search.group.category'), categories]]
+    @current_resource = current_resource
 
     if current_resource then
       users_in_my_area = User.unscoped.within(default_range, :origin => current_resource)
@@ -100,10 +101,11 @@ protected
       personal_contacts = current_resource.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
       # followers = users_in_my_area.followers_for(current_user)
       # following = users_in_my_area.following_by(current_user)
-      other = users_in_my_area - [current_resource]
+      this_user = User.unscoped.find(current_resource.id)
+      other = users_in_my_area - [this_user]
 
       [other, users_outside_my_area].each do |users|
-         users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.slug}"] }
+         users.map!{ |u| [u.front_name.to_s, "user_#{u.slug}"] }
         # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
         # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end

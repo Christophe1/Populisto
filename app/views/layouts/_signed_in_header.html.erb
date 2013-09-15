@@ -8,6 +8,7 @@
   logged in user longitude:  <%#= current_user.lng %> -->
   <!-- </div> -->
   <%#user is only signed in fully when they fully register - INCLUDING ADDRESS %>
+  <%= @current_resource.email %>
   <%
   if current_user
     resource = current_user
