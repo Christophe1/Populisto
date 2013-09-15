@@ -55,7 +55,7 @@
               Let people in your area find your business by letting them know what you do:
               <%= check_box_tag 'categories_toggle' %>
             </label>
-            <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {:multiple => true} %>
+            <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
           </div>
           </br>
           <div class="actions">
