@@ -1,11 +1,5 @@
 <div class='find-something'>
   <!-- <div class="greetings"> -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <%#= I18n.t('find_something.greetings', :km => @kms_range) %><br/>
   <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
   <!--   </div>
@@ -30,4 +24,10 @@
 <% else %>
 <%= render :partial => 'layouts/no_reviews_in_your_area' %>
 <%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
+<% end %>
+<% if @companies.any? %>
+  <h4>Found in companies</h4>
+  <% @companies.each do |company| %>
+    <p><%= link_to company.name, resource_home_path(company) %></p>
+  <% end %>
 <% end %>

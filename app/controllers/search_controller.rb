@@ -16,6 +16,7 @@
   def create
     @review = Review.new params[:review]
     @reviews = Review.scoped_by_search_params(params, current_resource)
+    @companies = Company.scoped_by_search_params(params, current_resource)
     render :action => :index
   end
 

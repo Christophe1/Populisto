@@ -26,6 +26,7 @@ class Company < ActiveRecord::Base
 
   has_many :category_companies
   has_many :categories, :through => :category_companies
+  scope :with_categories, includes(:categories)
 
   validates :name, :allow_blank => true, :length => { :maximum => 50 }
   validates_presence_of :name
@@ -73,5 +74,17 @@ class Company < ActiveRecord::Base
     arr = []
     cat = Category.find(1)
     arr = cat.reviews.where(:user_id => self.id)
+  end
+
+  class << self
+    def scoped_by_search_params(params, current_user)
+      if params[:review][:search_ids].present?
+        params = params[:review][:search_ids]
+
+        categories_ids = params.map{|id| id.delete('category_').to_i}
+        companies = Company.with_categories.where(:categories => {:id => categories_ids}).within(20, :origin => current_user) unless categories_ids.blank?
+        return reviews = (companies).uniq
+      end
+    end
   end
 end
