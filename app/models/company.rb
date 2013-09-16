@@ -71,7 +71,7 @@ class Company < ActiveRecord::Base
 
   def personal_reviews_contacts
     arr = []
-    cat = Category.unscoped.find(1)
+    cat = Category.find(1)
     arr = cat.reviews.where(:user_id => self.id)
   end
 end

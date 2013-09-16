@@ -19,7 +19,7 @@
         Select up to two categories that best describe your organization.
       </div>
       <div class="categories_select">
-      <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
+      <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
       </div>
       <div class="greetings">
         And please tell us your address details. The more accurate you are the more effective peoples' results will be, when looking for things you do.

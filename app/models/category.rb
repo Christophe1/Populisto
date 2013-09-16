@@ -21,7 +21,7 @@ class Category < ActiveRecord::Base
 
   has_many :category_reviews
   has_many :reviews, :through => :category_reviews
-  default_scope where("name != ?", "Personal Contact")
+  scope :filtered, where("name != ?", "Personal Contact")
 
   # Overrides genre string representation.
   #

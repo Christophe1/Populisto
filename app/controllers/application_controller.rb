@@ -91,7 +91,7 @@ protected
 
 #  divide the categories into 'Useful things' and 'Address Books in your area'
   def load_data_for_checkbox
-    categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
+    categories = Category.filtered.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
     @data = [[I18n.t('search.group.category'), categories]]
     @current_resource = current_resource
 
