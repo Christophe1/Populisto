@@ -1,28 +1,10 @@
 
 
-  <!-- the container div, which holds the back and forward arrows on each side, and the
-  changing images, in the middle -->
-  <div id = "carousel">
-    <%= image_tag "1.1.png", :id => "rotate_images" %>
-    <!-- <img id ="rotate_images" src="assets/1.1.png"/> -->
-    <!-- back arrow -->
-    <div id = "back">
-      <%= image_tag "arrow_back.png" %>
-    <!-- <img src = "assets/arrow_back.png"> -->
-  </div>
-  <!-- forward arrow -->
-    <div id = "forward">
-      <%= image_tag "arrow_forward.png" %>
-    <!-- <img src = "assets/arrow_forward.png"></div> -->
-
-  </div>
-</div>
-
-
-
 <div class="login-page">
-      <p>Are you <b>on your own</b> ?<br>
-      Click <%= link_to "here", new_user_registration_path %> to create a user accout.</p>
+<div id = "business-org-person-section">
+      <p><b>Want to sign up as a person?</b>
+      <%= link_to "Sign up here", new_user_registration_path %></p>
+      </div>
 
     <div class='sign-in-section'>
 
@@ -52,17 +34,19 @@
             </br>
             <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
           </div>
-          </br>
-          <div class="actions">
+          By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
+</br>
+</br>
+
+          <div class="create_account_button">
             <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
           </div>
         <% end %>
-        </br>
-        <div class='links centralized'>
+        <div class='already_member'>
 
-          <%= link_to I18n.t('sign_in.sign_in'), new_company_session_path %>
+          <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
           <br><br>
-By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
+
         </div>
 
 
@@ -70,42 +54,5 @@ By clicking "Create Account" you confirm that you accept the <%= link_to "Terms 
 
 </div>
 
-  <div id="iPad-promo">
-    <!-- <li id="win_ipad"> -->
-    <div id="smiley">
-    <%= image_tag("smiley.png") %>
-  </div>
-    <!-- <p class="title">And...290513</p> -->
-    <div id = "win_ipad_text">
-    Be in with the chance to win an iPad!
-    </div>
-      <%#= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"terms.html.erb\",'Terms and Conditions', 'width=300, height=600');" %>
-   <div id = "ipad_image">
-    <%#= image_tag "ipad.png" %>
-   </div>
- </div>
 
-   <script>
 
-  $('#back').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-
-  $('#forward').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-  </script>
