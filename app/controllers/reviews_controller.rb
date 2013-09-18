@@ -9,7 +9,7 @@ class ReviewsController < FrontEndController
     @review = Review.new
     @user_latitude = current_resource.lat
     @user_longitude = current_resource.lng
-    Category.order(:name).map{|c| @cats << c}
+    Category.filtered.order(:name).map{|c| @cats << c}
     first_cat = Category.unscoped.find(1)
     @cats.unshift(first_cat)
   end
