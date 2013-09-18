@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :init_review
 
-  layout :layout_by_resource
+  #layout :layout_by_resource
 
   def current_resource
     if current_user
@@ -208,11 +208,12 @@ protected
     @include_goole_maps = true
   end
 
-  def layout_by_resource
-    if devise_controller? && resource_name == :user
-      "devise"
-    else
-      "application"
-    end
-  end
+  # Used to switch layouts from main app to devise when needed, not used anymore
+  # def layout_by_resource
+  #   if devise_controller? && resource_name == :user
+  #     "devise"
+  #   else
+  #     "application"
+  #   end
+  # end
 end

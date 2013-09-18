@@ -25,7 +25,7 @@
 <%= render :partial => 'layouts/no_reviews_in_your_area' %>
 <%#= "No Address Book entries in your area for this, sorry. Do a Google Search for....?" %>
 <% end %>
-<% if @companies.any? %>
+<% if @companies.size > 0 %>
   <h4>Found in companies</h4>
   <% @companies.each do |company| %>
     <p><%= link_to company.name, resource_home_path(company) %></p>

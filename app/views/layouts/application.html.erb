@@ -29,7 +29,6 @@
 
   <!-- <div id = "user-map-page"> -->
   <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>
-  <%= link_to "Home", root_path %>
   <div class ='page-content'>
     <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
