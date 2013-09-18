@@ -1,11 +1,11 @@
 <!-- header, for the login and signup pages -->
 <div id="home_page_header">
   <div class = "populisto_logo2">
-    <%= image_tag 'populisto_logo.png' %>
+    <%= link_to(image_tag('populisto_logo.png', :alt => t('application.title')), root_path) %>
 
       <div id = "menu2">
     <ul id = "home_page_links">
-      
+
       <li><%#= link_to "Log In/Sign Up",login_path %></li>
       <li><%= link_to "About Us",about_us_path  %></li>
       <li><%= link_to "FAQ", faq_path  %></li>
