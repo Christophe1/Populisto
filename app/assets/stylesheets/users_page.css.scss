@@ -1,17 +1,10 @@
 
 
-
-#Address_book_heading {
-
-margin-top: 80px;
+#Address_book_area {
+margin-top: 60px; 
 margin-left: 320px;
-
-#Address_book_owner {
 font-size: 28px;
 }
-
-}
-
 
 
 #map_canvas {
@@ -21,7 +14,11 @@ margin-left: auto;
 margin-right: auto;
 }
 
-#character_and_bubbles {
+#Address_book_owner {
+font-size: 28px;
+}
+
+ #character_and_bubbles {
 margin-top:115px;
  width: 60%;
 
@@ -99,15 +96,15 @@ padding:20px;
     position: absolute;
     right: 100%;
 }
-/*
+
 #right_bubble:before {
     border-right: 25px solid hsla(0,0%,0%,.1);
     bottom: 50%;
     right: 100%; 
-} */
+} 
 }
 
-}
+}   
 
 #followers_following {
     padding-left:50px;

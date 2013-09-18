@@ -256,7 +256,7 @@ en:
     validation: "I'm sorry, but this user is not living within your 20km area."
   search:
     group:
-      category: "Useful things"
+      category: "Categories"
       following_in: "People you follow"
       followers_in: "People following you"
       other_people: "Address Books in your area"

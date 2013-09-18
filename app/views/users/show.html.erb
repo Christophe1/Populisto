@@ -22,28 +22,27 @@
   </div> -->
 
 
-<!-- draw the map, on the right of the screen -->
 
-<div id = "Address_book_heading">
-  <div id = "Address_book_owner">
-    <% if current_resource.name == @resource.name %>
-    <%= "Your Address Book" %>
-    <% else %>
-      <% if @resource.is_company? %>
-        <%= "#{@resource.name}" + "'s Address Book" %>
-      <% else %>
-        <%= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book" %>
-      <% end %>
-    <% end %>
-  </div>
+<!-- <div id = "Address_book_heading"> -->
+<!--   <div id = "Address_book_owner">
+    <%# if current_resource.name == @resource.name %>
+    <%#= "Your Address Book:" %>
+    <%# else %>
+      <%# if @resource.is_company? %>
+        <%#= "#{@resource.name}" + "'s Address Book:" %>
+      <%# else %>
+        <%#= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book:" %>
+      <%# end %>
+    <%# end %>
+  </div> -->
   <div id = "Address_book_area">
     <% if current_resource.name == @resource.name %>
-    <%= "Your area:" %>
+    <%= "Your Area:" %>
     <% else %>
       <% if @resource.is_company? %>
-        <%= "#{@resource.name}" + "'s Address Book" %>
+        <%= "#{@resource.name}" + "'s Area:" %>
       <% else %>
-        <%= "#{@resource.first_name.capitalize}" + "'s area:" %>
+        <%= "#{@resource.first_name.capitalize}" + "#{@resource.last_name.capitalize}" + "'s Area:" %>
       <% end %>
     <% end %>
   </div>
@@ -252,7 +251,17 @@ formatted correctly -->
  <!-- <div id = "followers_following"> -->
  <%#= render 'follow_form', :user => @resource %>
 <!-- </div> -->
-
+  <div id = "Address_book_owner">
+    <% if current_resource.name == @resource.name %>
+    <%= "Your Address Book:" %>
+    <% else %>
+      <% if @resource.is_company? %>
+        <%= "#{@resource.name}" + "'s Address Book:" %>
+      <% else %>
+        <%= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book:" %>
+      <% end %>
+    <% end %>
+  </div>
 
  <div class="reviews">
   <!-- show the current user's Address Book entries or-->
