@@ -30,9 +30,7 @@
     animation goes here
   </div>
   <div class="login-page">
-    <!-- <div id = "business-org-section"> -->
-      <!-- <b>Are you a business or organization?</b> Click <%#= link_to "here", new_company_session_path %> -->
-    <!-- </div> -->
+
     <div class='facebook-section'>
       <%= fb_login_button(image_tag("Facebook-orig.png")) %>
       <div id = "why_fb_log_in">
@@ -56,10 +54,10 @@
         <%= f.input_field :email, :required => false, :autofocus => true, :placeholder => I18n.t('sign_in.email_address_placeholder') %>
         <br/>
         <%= f.input_field :password, :required => false,  :placeholder => I18n.t('sign_in.password_placeholder') %>
-        <div class='links1'>
+        <div class='remember_me'>
           <%= f.input :remember_me, :as => :boolean, :label => false, :inline_label => 'Remember me' %>
         </div>
-        <div class='links'>
+        <div class='forgot_password'>
           <%= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
         </div>
       </div>
@@ -67,26 +65,17 @@
       <%#= link_to I18n.t('sign_in.sign_up'), new_user_registration_path %>
       </br>
       </br>
-      <div class="actions">
+      <div class="log_in_button">
         <%= f.button :submit, I18n.t('sign_in.sign_in_button'), :class => 'btn btn-primary' %>
         <%#= f.button :submit, I18n.t('sign_in.sign_up_button'), :class => 'btn btn-warning' %>
-        <%= link_to I18n.t('sign_in.sign_up_button'), new_user_registration_path, :class => "btn btn-warning" %>
+        
       <% end %>
     </div>
+    <div class = "sign_up">
+     Don't have an account? <%= link_to "Sign Up", new_user_registration_path %>
+    </div>
+
   </div>
-<!--   <div id="iPad-promo">
-  <li id="win_ipad"> -->
-    <!-- <div id="smiley"> -->
-    <%#= image_tag("smiley.png") %>
-    <!-- </div> -->
-    <!-- <p class="title">And...290513</p> -->
-    <!-- <div id = "win_ipad_text"> -->
-    <!-- Be in with the chance to win an iPad! -->
-    <!-- </div> -->
-    <%#= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"terms.html.erb\",'Terms and Conditions', 'width=300, height=600');" %>
-    <!-- <div id = "ipad_image"> -->
-    <%#= image_tag "ipad.png" %>
-    <!-- </div> -->
-    <!-- </div> -->
+
 </body>
 </html>

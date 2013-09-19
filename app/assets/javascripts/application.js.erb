@@ -1,7 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.blockUI
-//= require chosen.jquery
+//= require chosen-jquery
+//= require chosen
 //= require bootstrap-transition
 //= require bootstrap-alert
 //= require bootstrap-button
@@ -292,7 +293,7 @@ function showNewContent(container, content) {
 }
 
 function personal_contact() {
-    $("ul.chzn-choices").bind("DOMSubtreeModified", function() {
+    $("ul.chosen-choices").bind("DOMSubtreeModified", function() {
        radios = $(".new_review").find('input:radio');
        radio_1 = $(".share_button");
        radio_2 = $(".keep_private_button");
