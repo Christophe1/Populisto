@@ -66,31 +66,6 @@ display: inline;
 } 
 
 
-/* #iPad-promo {
-width: 450px;
-list-style: none;
-float: left;
-border: 1px solid #ebebeb;
-margin: 390px 0 0 -540px;
-padding: 10px;
-
-#smiley {
-float: left;
-margin-right: 22px;
-} 
-
-#win_ipad_text{
-font-size: 18px;
-padding-top: 12px;
-float: left;
-} 
-
-#ipad_image {
-  font-size: 1em;
-} 
-
-} */
-
 
 #animation_movie{
 float: left;
@@ -108,15 +83,14 @@ margin-right: 40px;
 margin-top: 20px;
 border: 1px solid #eee;
 
-#business-org-section {
-  margin-left: 40px;
+#business-org-person-section {
+  margin-left: 30px;
   margin-top: 20px;
 }
 
   .facebook-section {
     text-align: center;
     position: relative;
-    padding: 15px 15px 0;
 
     .fb-login {
       width: 315px;
@@ -196,24 +170,42 @@ border: 1px solid #eee;
       padding: 10px 5px 10px 5px;
     }
   }
-  .actions {
+  .log_in_button {
   /* display: block; */
 margin-left: auto;
 margin-right: auto;
-width: 146px;
+width: 66px;
+ 
+    }
+
+      .create_account_button {
+  /* display: block; */
+margin-left: auto;
+margin-right: auto;
+width: 116px;
  
     }
 
 
-    .links1 {
+    .remember_me {
       float:left;
     }
 
-    .links {
+    .forgot_password {
       float:right;
     }
-  
 
+    .sign_up {
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+    .already_member {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    }
 
 
 

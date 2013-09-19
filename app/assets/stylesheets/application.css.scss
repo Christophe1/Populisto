@@ -1,18 +1,19 @@
 /*
  *= require _bootstrap
  *= require chosen
+ *= require chosen_override
  *= require email_invitation
  *= require search
  *= require static_pages
  *= require_self
  *= require form
  *= require users_page
-*= require reviews
-*= require login_signup
-*= require ie
-*= require signed_in_header
-*= require give_address_and_map
-*= require qtip_tooltips
+  *= require reviews
+  *= require login_signup
+  *= require ie
+  *= require signed_in_header
+  *= require give_address_and_map
+  *= require qtip_tooltips
 
 */
 
@@ -52,9 +53,9 @@ html {
 }
 
 
-    
+
     /* margin: 0 auto; */
-    
+
 
 .control-group.chosen {
   .help-inline {
@@ -226,7 +227,7 @@ a.btn:focus {
   background-color: #fff;
   padding: 10px;
   @include border-radius(12px);
-  
+
 }
 
 
@@ -334,5 +335,23 @@ margin-bottom: 200px;
 
 }
 
+.categories_select {
+  width: 333px;
+  margin: auto;
+  margin-bottom: 25px;
+}
 
-
+// .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+//   font-size: 20px;
+//   padding: 5px;
+//   height: 15px;
+// }
+// .chosen-container-multi .chosen-choices li.search-choice {
+//   color: #333;
+//   line-height: 13px;
+//   cursor: default;
+//   height: 23px;
+//   line-height: 24px;
+//   font-size: 18px;
+// }
+// .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{top:8px;}

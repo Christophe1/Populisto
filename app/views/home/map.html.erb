@@ -1,34 +1,33 @@
 <div class='map-page'>
-
-  <div class="greetings">
-
-    <% if current_user %>
-    <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %>
-    <% else %>
-    <%= I18n.t('map_page.greetings_1', :user_name => current_company.name) %>
-    <% end %>
-    <br><br>
-
-    <%= I18n.t('map_page.greetings_2') %>
-  </div>
-
   <div class='address-area'>
     <% if current_user %>
     <%= form_for current_user, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
+      <div class="greetings">
+        <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %><br><br>
+        <%= I18n.t('map_page.greetings_2') %>
+      </div>
       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
-
       <%= hidden_field_tag :changed %>
     <% end %>
     <% elsif current_company %>
     <%= form_for current_company, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
+      <div class="greetings">
+        Hi <%= current_company.name %>.<br><br>
+        Select up to two categories that best describe your organization.
+      </div>
+      <div class="categories_select">
+      <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
+      </div>
+      <div class="greetings">
+        And please tell us your address details. The more accurate you are the more effective peoples' results will be, when looking for things you do.
+      </div>
       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
-
       <%= hidden_field_tag :changed %>
     <% end %>
     <% end %>

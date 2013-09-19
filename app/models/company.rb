@@ -12,7 +12,7 @@ class Company < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
 
   attr_accessible :email, :name, :first_name, :last_name, :password_confirmation, :password,
-                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city
+                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :category_ids
 
   has_many :reviews, :foreign_key => :user_id
 
@@ -23,6 +23,10 @@ class Company < ActiveRecord::Base
   has_many :genres
   has_many :film_users, :dependent => :destroy
   has_many :films, :through => :film_users
+
+  has_many :category_companies
+  has_many :categories, :through => :category_companies
+  scope :with_categories, includes(:categories)
 
   validates :name, :allow_blank => true, :length => { :maximum => 50 }
   validates_presence_of :name
@@ -68,7 +72,19 @@ class Company < ActiveRecord::Base
 
   def personal_reviews_contacts
     arr = []
-    cat = Category.find_by_name("Personal Contact")
+    cat = Category.find(1)
     arr = cat.reviews.where(:user_id => self.id)
+  end
+
+  class << self
+    def scoped_by_search_params(params, current_user)
+      if params[:review][:search_ids].present?
+        params = params[:review][:search_ids]
+
+        categories_ids = params.map{|id| id.delete('category_').to_i}
+        companies = Company.with_categories.where(:categories => {:id => categories_ids}).within(20, :origin => current_user) unless categories_ids.blank?
+        return reviews = (companies).uniq
+      end
+    end
   end
 end
