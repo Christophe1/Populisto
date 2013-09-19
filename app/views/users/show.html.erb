@@ -37,16 +37,15 @@
   </div> -->
   <div id = "Address_book_area">
     <% if current_resource.name == @resource.name %>
-    <%= "Your Area:" %>
+    <%= "Your Area:" %> <%= image_tag("why_fb_log_in.png") %>
     <% else %>
       <% if @resource.is_company? %>
         <%= "#{@resource.name}" + "'s Area:" %>
       <% else %>
-        <%= "#{@resource.first_name.capitalize}" + "#{@resource.last_name.capitalize}" + "'s Area:" %>
+        <%= "#{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + "'s Area:" %>
       <% end %>
     <% end %>
   </div>
-</div>
 
 <div id="map_canvas">
   <script>
@@ -258,7 +257,7 @@ formatted correctly -->
       <% if @resource.is_company? %>
         <%= "#{@resource.name}" + "'s Address Book:" %>
       <% else %>
-        <%= "#{@resource.first_name.capitalize} " + "#{@resource.last_name.capitalize}" + "'s Address Book:" %>
+        <%= "#{@resource.first_name.capitalize} " + " " + "#{@resource.last_name.capitalize}" + "'s Address Book:" %>
       <% end %>
     <% end %>
   </div>
