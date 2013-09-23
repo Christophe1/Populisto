@@ -14,6 +14,7 @@ class HomeController < FrontEndController
 
 
   def index
+    redirect_to login_path
     #render 'users/sessions/coming', :layout => 'devise'
     # render 'users/sessions/new', :layout => 'devise'
 
