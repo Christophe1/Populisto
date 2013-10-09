@@ -49,7 +49,7 @@ display: inline;
 .features img {
   float: left;
   margin: 0px;
-} 
+}
 
 .features p {
   margin: 0 0 0 68px;
@@ -63,7 +63,7 @@ display: inline;
 .features img2 {
   float: right;
   margin: 5px 0 0;
-} 
+}
 
 
 
@@ -74,7 +74,7 @@ width: 600px;
 height: 600px;
 
 }
-/*Facebook login, on the home page */
+/*Facebook login , on the home page */
 
 .login-page {
 width:370px;
@@ -153,10 +153,91 @@ border: 1px solid #eee;
 }
 
 
+
+/*Facebook signup, on the home page */
+
+.login-page-sign-up {
+width:370px;
+float: right;
+margin-right: 40px;
+margin-top: -60px;
+border: 1px solid #eee;
+
+#business-org-person-section {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+  .facebook-section {
+    text-align: center;
+    position: relative;
+
+    .fb-login {
+      width: 315px;
+      margin: 15px auto;
+      display: block;
+    }
+
+
+    .or-devider {
+      position: absolute;
+      bottom: -36px;
+      left: 160px;
+      background-color: white;
+      width: 40px;
+      height: 30px;
+      text-align: center;
+      @include border-radius(15px);
+      font-size: 17px;
+      line-height: 26px;
+    }
+  }
+
+  .sign-in-section {
+    .simple_form#new_user {
+      .error-explanation {
+        margin: 5px 0px 5px 0px;
+        background: #f2dede;
+        padding: 15px;
+        .error-message {
+          display: block;
+          color: #b94a48;
+        }
+      }
+    }
+  }
+
+  .sign-in {
+    text-align: center;
+
+    p {
+      font-size: 20px;
+    }
+
+    .create-account-note {
+      color: red;
+
+      a, a:visited {
+        color: red;
+        text-decoration: underline;
+      }
+    }
+
+    .not-on-facebook-note a {
+      color: blue;
+    }
+  }
+
+  border: 1px solid #eee;
+  @include border-radius(10px);
+}
+
+
 .sign-in-section {
   background-color: #DFDFDF;
   padding: 25px;
   padding-top: 22px;
+  padding-bottom: 10px;
   .explanation {
     text-align: center;
     margin: 7px;
@@ -175,7 +256,7 @@ border: 1px solid #eee;
 margin-left: auto;
 margin-right: auto;
 width: 66px;
- 
+
     }
 
       .create_account_button {
@@ -183,7 +264,7 @@ width: 66px;
 margin-left: auto;
 margin-right: auto;
 width: 116px;
- 
+
     }
 
 
@@ -200,7 +281,7 @@ width: 116px;
     margin-left: auto;
     margin-right: auto;
     }
-  
+
     .already_member {
     width: 200px;
     margin-left: auto;

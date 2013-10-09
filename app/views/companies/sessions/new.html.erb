@@ -9,23 +9,9 @@
 
   <body>
 
-  <!-- the container div, which holds the back and forward arrows on each side, and the
-  changing images, in the middle -->
-  <!-- <div id = "carousel"> -->
-    <%#= image_tag "1.1.png", :id => "rotate_images" %>
-    <!-- <img id ="rotate_images" src="assets/1.1.png"/> -->
-    <!-- back arrow -->
-    <!-- <div id = "back"> -->
-      <%#= image_tag "arrow_back.png" %>
-    <!-- <img src = "assets/arrow_back.png"> -->
-  <!-- </div>   -->
-  <!-- forward arrow -->
-    <!-- <div id = "forward"> -->
-      <%#= image_tag "arrow_forward.png" %>
-    <!-- <img src = "assets/arrow_forward.png"></div> -->
-
-  <!-- </div> -->
-<!-- </div> -->
+  <div id = "animation_movie">
+<iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
 
   <div class="login-page">
       <p><b>Not a business...just a regular person?</b> Click <%= link_to "here", new_user_session_path %></p>
@@ -62,48 +48,6 @@
 
   </div>
 
-
-
-
-  <script>
-
-  $('#back').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-
-  $('#forward').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-  </script>
-
-  <div id="iPad-promo">
-    <!-- <li id="win_ipad"> -->
-    <div id="smiley">
-    <%= image_tag("smiley.png") %>
-  </div>
-    <!-- <p class="title">And...290513</p> -->
-    <div id = "win_ipad_text">
-    Be in with the chance to win an iPad!
-    </div>
-      <%#= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"terms.html.erb\",'Terms and Conditions', 'width=300, height=600');" %>
-   <div id = "ipad_image">
-    <%#= image_tag "ipad.png" %>
-   </div>
- </div>
 
 
   </body>
