@@ -14,6 +14,10 @@ class Admin::ReviewsController < Admin::BaseController
     @review = Review.find(params[:id])
   end
 
+  def new
+    @review = Review.new
+  end
+
   def edit
     @review = Review.find(params[:id])
   end
@@ -21,14 +25,19 @@ class Admin::ReviewsController < Admin::BaseController
   def update
     @review = Review.find(params[:id])
     if @review.update_attributes(params[:review])
-      redirect_to admin_review_path(@review)
+      redirect_to admin_review_path(@review), :notice => "Review was successfully updated"
     else
       render :edit
     end
   end
 
-  def new
-    @review = Review.new
+  def create
+    @review = Review.create((params[:review] || {}).merge(:user_id => current_resource.id))
+    if @review.save
+      redirect_to admin_review_path(@review), :notice => I18n.t('write_review.review_successfully_created')
+    else
+      render :new
+    end
   end
 
   def destroy
