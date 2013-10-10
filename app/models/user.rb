@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
 
   has_many :friend_relations, :primary_key => :external_user_id,
            :foreign_key => "source_user_id", :dependent => :destroy
-  has_many :reviews
+  has_many :reviews, :dependent => :destroy
   has_many :email_invites, :foreign_key => :from_user_id, :dependent => :destroy
 
   has_many :genres
