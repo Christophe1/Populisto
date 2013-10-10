@@ -35,9 +35,10 @@
       <%# end %>
     <%# end %>
   </div> -->
+  <div id="your_area">
   <div id = "Address_book_area">
     <% if current_resource.name == @resource.name %>
-    <%= "Your Area:" %> <%= image_tag("why_fb_log_in.png") %>
+    <%= "Your Area:" %>
     <% else %>
       <% if @resource.is_company? %>
         <%= "#{@resource.name}" + "'s Area:" %>
@@ -45,6 +46,12 @@
         <%= "#{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + "'s Area:" %>
       <% end %>
     <% end %>
+  </div>
+
+
+    <div id = "area_help">
+      <%= image_tag("why_fb_log_in.png") %>
+    </div>
   </div>
 
 <div id="map_canvas">

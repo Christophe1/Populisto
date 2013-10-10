@@ -1,9 +1,22 @@
 
 
+#your_area {
+margin-top: 100px;
+margin-left: 240px;
+margin-bottom: 20px;
+
 #Address_book_area {
-margin-top: 60px; 
-margin-left: 320px;
 font-size: 28px;
+float: left;
+}
+
+#area_help {
+width: 30px;
+display: inline-block;
+position: relative;
+top:-15px;
+}
+
 }
 
 
@@ -100,11 +113,11 @@ padding:20px;
 #right_bubble:before {
     border-right: 25px solid hsla(0,0%,0%,.1);
     bottom: 50%;
-    right: 100%; 
-} 
+    right: 100%;
+}
 }
 
-}   
+}
 
 #followers_following {
     padding-left:50px;
@@ -123,7 +136,7 @@ padding-right: 20px;
 
 #follow_info {
 border:1px solid #a1a1a1;
-padding:10px 40px; 
+padding:10px 40px;
 background:#CCFFCC;
 width:250px;
 height: 53px;
@@ -153,7 +166,7 @@ padding: 15px; */
 float:left;
 #competition {
   border:1px solid #a1a1a1;
-padding:10px 40px; 
+padding:10px 40px;
 background:#CCFFCC;
 width:250px;
 border-radius:5px;
@@ -208,7 +221,7 @@ text-align: center;
         font-size: 30px;
         padding: 15px;
       }
-      
+
       #your_location {
         .location-label {
           margin-bottom: 0px;
@@ -225,7 +238,7 @@ text-align: center;
           margin: 1px 25px 0px 0px;
           font-size: 16px;
           padding-bottom: 6px;
-        } 
+        }
         #your_location_message{
           color: green;
         }

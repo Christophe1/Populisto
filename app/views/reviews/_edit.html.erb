@@ -73,13 +73,13 @@ $(document).ready(function() {
 
 
 $(document).ready(function()  {
-    var characters = 200 -  $('textarea').val().length;
+    var characters = 300 -  $('textarea').val().length;
     $(this).closest('.control-group').next(".char_count_label").append(characters);
     $('textarea').keyup(function(){
-        if($(this).val().length > 200){
-            $(this).val($(this).val().substr(0, 200));
+        if($(this).val().length > 300){
+            $(this).val($(this).val().substr(0, 300));
         }
-        var remaining = 200 -  $(this).val().length;
+        var remaining = 300 -  $(this).val().length;
         $(this).closest('.control-group').next(".char_count_label").html(remaining);
     });
 });

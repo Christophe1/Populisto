@@ -1,0 +1,624 @@
+Searching 642 files for "categories"
+
+/home/christophe/projects/Populisto/app/assets/stylesheets/application.css.scss:
+  336  }
+  337
+  338: .categories_select {
+  339    width: 333px;
+  340    margin: auto;
+
+/home/christophe/projects/Populisto/app/controllers/admin/categories_controller.rb:
+    1: class Admin::CategoriesController < Admin::BaseController
+    2    inherit_resources
+    3:   navigation_section :categories
+    4    paginated
+    5
+
+/home/christophe/projects/Populisto/app/controllers/admin/reviews_controller.rb:
+    4    paginated
+    5
+    6:   before_filter :load_categories
+    7    before_filter :with_google_maps_api, :only => [:edit, :new, :update]
+    8
+    .
+   33
+   34    def end_of_association_chain
+   35:     Review.with_user.with_categories
+   36    end
+   37
+   38    private
+   39
+   40:   def load_categories
+   41:     @categories = Category.all
+   42    end
+   43  end
+
+/home/christophe/projects/Populisto/app/controllers/application_controller.rb:
+   90
+   91
+   92: #  divide the categories into 'Useful things' and 'Address Books in your area'
+   93    def load_data_for_checkbox
+   94:     categories = Category.filtered.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
+   95:     @data = [[I18n.t('search.group.category'), categories]]
+   96      @current_resource = current_resource
+   97
+   ..
+  121    # ******************************************************************************************************
+  122
+  123:   # the code below divides the 'Chosen' box into the categories:
+  124    # Useful things, Followers, Following and Users in your area
+  125
+  126    # def load_data_for_checkbox
+  127:   #   # get all the categories
+  128:   #  categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
+  129:   #  # make @data be all the categories, or 'useful things', with the heading 'useful things'
+  130:   #   @data = [[I18n.t('search.group.category'), categories]]
+  131
+  132    #   if current_user then
+
+/home/christophe/projects/Populisto/app/controllers/search_controller.rb:
+   45   #so maybe it can be deleted
+   46     # def load_data_for_checkbox
+   47:    #  categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
+   48     #  users_in_my_area = User.within(default_range, :origin => current_user)
+   49     #  followers = users_in_my_area.followers_for(current_user)
+   ..
+   55     #   end
+   56
+   57:    #   @data = [[I18n.t('search.group.category'), categories],
+   58     #            [I18n.t('search.group.following_in'), following],
+   59     #            [I18n.t('search.group.followers_in'), followers],
+
+/home/christophe/projects/Populisto/app/controllers/users_controller.rb:
+   67
+   68  # def load_data_for_checkbox
+   69: #     categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
+   70  #     users_in_my_area = User.within(default_range, :origin => current_user)
+   71  #     followers = users_in_my_area.followers_for(current_user)
+   ..
+   77  #     end
+   78
+   79: #     @data = [[I18n.t('search.group.category'), categories],
+   80  #              [I18n.t('search.group.followers_in'), followers],
+   81  #              [I18n.t('search.group.following_in'), following],
+
+/home/christophe/projects/Populisto/app/helpers/reviews_helper.rb:
+   14    end
+   15
+   16:   def sorted_categories
+   17:     categories = []
+   18      first_in_list = Category.find_by_name("Personal Contact")
+   19:     # categories << first_in_list
+   20
+   21      Category.all.each do |cat|
+   22:       categories << cat
+   23      end
+   24
+   25:     return categories.unshift(categories.delete_at(categories.index(first_in_list)))
+   26    end
+   27
+
+/home/christophe/projects/Populisto/app/models/category.rb:
+    1  # == Schema Information
+    2  #
+    3: # Table name: categories
+    4  #
+    5  #  id   :integer(4)      not null, primary key
+    .
+   43
+   44      def all_cache_key
+   45:       'categories:all'
+   46      end
+   47
+
+/home/christophe/projects/Populisto/app/models/company.rb:
+   26
+   27    has_many :category_companies
+   28:   has_many :categories, :through => :category_companies
+   29:   scope :with_categories, includes(:categories)
+   30
+   31    validates :name, :allow_blank => true, :length => { :maximum => 50 }
+   ..
+   82          params = params[:review][:search_ids]
+   83
+   84:         categories_ids = params.map{|id| id.delete('category_').to_i}
+   85:         companies = Company.with_categories.where(:categories => {:id => categories_ids}).within(20, :origin => current_user) unless categories_ids.blank?
+   86          return reviews = (companies).uniq
+   87        end
+
+/home/christophe/projects/Populisto/app/models/review.rb:
+   23
+   24    has_many :category_reviews, :dependent => :destroy
+   25:   has_many :categories, :through => :category_reviews
+   26
+   27    #has_many :film_users, :dependent => :destroy
+   ..
+   46    default_scope :order => 'reviews.created_at DESC'
+   47    scope :start_with, lambda { |word| where("name like ?", "#{word}%") }
+   48:   scope :with_categories, includes(:categories)
+   49    scope :with_user, includes(:user)
+   50    scope :by_category, lambda { |category_id| where(:id => CategoryReview.where(:category_id => category_id).pluck(:review_id)) }
+   ..
+   89    # Gets genres list.
+   90    #
+   91:   def categories_list
+   92:     categories.map(&:name).join(", ")
+   93    end
+   94
+   95    def repost(other_user)
+   96      review = dup
+   97:     review.categories = categories
+   98      review.update_attributes(:user_id => other_user.id, :comment => nil, :repost_from => self.id)
+   99      review.save
+  ...
+  101
+  102    def is_personal_contact?
+  103:     self.categories.find_by_name("Personal Contact").present?
+  104    end
+  105
+  ...
+  113          params = params[:review][:search_ids]
+  114
+  115:         categories_ids = params.map{|id| id.delete('category_').to_i}
+  116:         categories_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+  117
+  118          users_ids = params.map{|id| id.delete('user_').to_i}
+  ...
+  122          personal_reviews = Review.where(:id => reviews_ids)
+  123
+  124:         return reviews = (personal_reviews + categories_reviews + user_reviews).uniq
+  125        end
+  126      end
+
+/home/christophe/projects/Populisto/app/views/admin/reviews/_form.html.erb:
+    1  <%= simple_form_for [:admin, @review], :html => { :class => 'form-horizontal' } do |f| %>
+    2
+    3:   <%= f.input :category_ids, :collection => @categories, :as => :chosen, :prompt => :false, :input_html => { :multiple => true }, :placeholder => 'Categories' %>
+    4    <%= f.input :name %>
+    5    <%= f.input :phone %>
+
+/home/christophe/projects/Populisto/app/views/admin/reviews/index.html.erb:
+    5          <th><%= resource_class.human_attribute_name(:id) %></th>
+    6          <th><%= resource_class.human_attribute_name(:name) %></th>
+    7:         <th><%= resource_class.human_attribute_name(:categories) %></th>
+    8          <th><%= resource_class.human_attribute_name(:comment) %></th>
+    9          <th width="80px"><%= resource_class.human_attribute_name(:created_at) %></th>
+   ..
+   16            <td><%= link_to item.id, admin_review_path(item) %></td>
+   17            <td><%= item.name %></td>
+   18:           <td><%= item.categories_list %></td>
+   19            <td><%= item.comment %></td>
+   20            <td><%= item.created_at.nice_time %></td>
+
+/home/christophe/projects/Populisto/app/views/admin/reviews/show.html.erb:
+    1  <p>
+    2    <strong><%= resource_class.human_attribute_name(:category) %>:</strong><br>
+    3:   <%= resource.categories_list %>
+    4  </p>
+    5  <p>
+
+/home/christophe/projects/Populisto/app/views/home/map.html.erb:
+   17        <div class="greetings">
+   18          Hi <%= current_company.name %>.<br><br>
+   19:         Select up to two categories that best describe your organization.
+   20        </div>
+   21:       <div class="categories_select">
+   22        <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
+   23        </div>
+
+/home/christophe/projects/Populisto/app/views/layouts/admin/_navigation.html.erb:
+    7            <ul class="nav">
+    8              <%= navigation_item(:users, admin_users_path) %>
+    9:             <%= navigation_item(:categories, admin_categories_path) %>
+   10              <%= navigation_item(:reviews, admin_reviews_path) %>
+   11            </ul>
+
+/home/christophe/projects/Populisto/app/views/reviews/_edit.html.erb:
+   14        <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
+   15              :input_html => { :multiple => true, :id => "#{@review.id}" },
+   16:             :label => I18n.t('write_review.categories_selector_label'),
+   17              :label_html => { :class => 'edit_form_titles' },
+   18              :error_html => { :class => 'cant_be_blank'}
+
+/home/christophe/projects/Populisto/app/views/reviews/_review.html.erb:
+   25
+   26    <div class="category_name">
+   27:     <%= review.categories_list %>
+   28    </div>
+   29
+
+/home/christophe/projects/Populisto/app/views/reviews/_review_main.html.erb:
+    2
+    3    <div class="category_name">
+    4:     <%#= review.categories_list %>
+    5    </div>
+    6
+
+/home/christophe/projects/Populisto/app/views/reviews/index.html.erb:
+   22      <div class="inputs">
+   23        <div id="except_comment">
+   24:       <%#= f.input :category_ids, :collection => sorted_categories, :as => :chosen, :prompt => false,
+   25              :input_html => { :multiple => true, :id => "#{@review.id}" },
+   26:             :label => I18n.t('write_review.categories_selector_label'),
+   27              :label_html => { :class => 'edit_form_titles' },
+   28              :error_html => { :class => 'cant_be_blank'}
+   29              %>
+   30:       <label><%= I18n.t('write_review.categories_selector_label') %></label>
+   31        <p><%= f.collection_select :category_ids, @cats, :id, :name, {:class => 'chosen-select'}, {:multiple => true} %></p>
+   32        <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+
+/home/christophe/projects/Populisto/app/views/search/_review.html.erb:
+   28            <%#= link_to "You", user_path(review.user), :class => "ajax" %>
+   29            <%# else %>
+   30:           <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
+   31            <%# end %>
+   32        </div>
+   33
+   34        <!-- <div class="category_name">
+   35:           <%#= "/" + review.categories_list %>
+   36            </div> -->
+   37        </br>
+
+/home/christophe/projects/Populisto/app/views/static_pages/contact_us.html.erb:
+    2    <h1>StaticPages#contact_us</h1>
+    3    <p>Find me in app/views/static_pages/contact_us.html.erb</p>
+    4:   Any bugs or erros? Andy categories you'd like added?
+    5  </div>
+    6
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+  133      close_popup_text: 'Close'
+  134      review_successfully_created: 'Review was successfully created'
+  135:     categories_selector_label: 'Categories'
+  136:     categories_selector_placeholder: 'Search Address Books of people in your area.'
+  137    find_something:
+  138      greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto. When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map.'
+  ...
+  163        profile: "Profile"
+  164        users: "Users"
+  165:       categories: "Categories"
+  166        reviews: "Reviews"
+  167      empty_list: "There are no items to display."
+  ...
+  257    search:
+  258      group:
+  259:       category: "Categories"
+  260        following_in: "People you follow"
+  261        followers_in: "People following you"
+
+/home/christophe/projects/Populisto/config/routes.rb:
+   74        end
+   75      end
+   76:     resources :categories
+   77      resources :reviews
+   78
+
+/home/christophe/projects/Populisto/db/migrate/20120726120232_create_categories.rb:
+    1: class CreateCategories < ActiveRecord::Migration
+    2
+    3    def change
+    4:     create_table :categories do |t|
+    5        t.string :name
+    6      end
+    7:     add_index :categories, :name, :name => 'idx_categories_on_name', :unique => true
+    8    end
+    9
+
+/home/christophe/projects/Populisto/db/schema.rb:
+   28    add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
+   29
+   30:   create_table "categories", :force => true do |t|
+   31      t.string "name"
+   32    end
+   33
+   34:   add_index "categories", ["name"], :name => "idx_categories_on_name", :unique => true
+   35
+   36    create_table "category_companies", :force => true do |t|
+
+/home/christophe/projects/Populisto/db/seeds.rb:
+    7  #end
+    8
+    9: # categories_file = File.join(Rails.root, 'config', 'categories.txt')
+   10: # if File.exists?(categories_file)
+   11: #   File.open(categories_file, 'r') do |f|
+   12  #     while category = f.gets
+   13  #       Category.create(:name => category)
+
+87 matches across 26 files
+
+
+Searching 642 files for "select some options"
+
+0 matches across 0 files
+
+
+Searching 642 files for "search address books"
+
+/home/christophe/projects/Populisto/app/assets/javascripts/chosen.js.coffee:
+   12
+   13    $("#review_search_ids").chosen
+   14:     placeholder_text_multiple: "Search Address Books"
+   15      options
+   16
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+  134      review_successfully_created: 'Review was successfully created'
+  135      categories_selector_label: 'Categories'
+  136:     categories_selector_placeholder: 'Search Address Books of people in your area.'
+  137    find_something:
+  138      greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto. When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map.'
+  ...
+  140      change_range_10: 'Change to 20km?'
+  141      search_help: 'Search the address books of people in your area.'
+  142:     search_placeholder: 'Search Address Books'
+  143      search_label: ''
+  144      button_text: 'Go'
+
+3 matches across 2 files
+
+
+Searching 642 files for "categories_selector_placeholder"
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+  134      review_successfully_created: 'Review was successfully created'
+  135      categories_selector_label: 'Categories'
+  136:     categories_selector_placeholder: 'Search Address Books of people in your area.'
+  137    find_something:
+  138      greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto. When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map.'
+
+1 match in 1 file
+
+
+Searching 642 files for "categories_selector_label"
+
+/home/christophe/projects/Populisto/app/views/reviews/_edit.html.erb:
+   14        <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
+   15              :input_html => { :multiple => true, :id => "#{@review.id}" },
+   16:             :label => I18n.t('write_review.categories_selector_label'),
+   17              :label_html => { :class => 'edit_form_titles' },
+   18              :error_html => { :class => 'cant_be_blank'}
+
+/home/christophe/projects/Populisto/app/views/reviews/index.html.erb:
+   24        <%#= f.input :category_ids, :collection => sorted_categories, :as => :chosen, :prompt => false,
+   25              :input_html => { :multiple => true, :id => "#{@review.id}" },
+   26:             :label => I18n.t('write_review.categories_selector_label'),
+   27              :label_html => { :class => 'edit_form_titles' },
+   28              :error_html => { :class => 'cant_be_blank'}
+   29              %>
+   30:       <label><%= I18n.t('write_review.categories_selector_label') %></label>
+   31        <p><%= f.collection_select :category_ids, @cats, :id, :name, {:class => 'chosen-select'}, {:multiple => true} %></p>
+   32        <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+  133      close_popup_text: 'Close'
+  134      review_successfully_created: 'Review was successfully created'
+  135:     categories_selector_label: 'Categories'
+  136      categories_selector_placeholder: 'Search Address Books of people in your area.'
+  137    find_something:
+
+4 matches across 3 files
+
+
+Searching 642 files for "enter address, town"
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+   27          notice: "%{resource_name} was updated successfully."
+   28    helpers:
+   29:     enter_a_location: "Enter address, town or village where you live."
+   30      cant_be_blank: " - can't be blank"
+   31      actions: "Actions"
+
+1 match in 1 file
+
+
+Searching 642 files for "enter_a_location:"
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+   27          notice: "%{resource_name} was updated successfully."
+   28    helpers:
+   29:     enter_a_location: "Enter address, town or village where you live."
+   30      cant_be_blank: " - can't be blank"
+   31      actions: "Actions"
+
+1 match in 1 file
+
+
+Searching 642 files for "enter_a_location"
+
+/home/christophe/projects/Populisto/app/views/admin/reviews/_form.html.erb:
+    4    <%= f.input :name %>
+    5    <%= f.input :phone %>
+    6:   <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location') %>
+    7    <%= f.hidden_field :lat  %>
+    8    <%= f.hidden_field :lng  %>
+
+/home/christophe/projects/Populisto/app/views/admin/users/_form.html.erb:
+    6    <%= f.input :password_confirmation %>
+    7    <%= f.input :provider %>
+    8:   <%= f.input :address, :required => true, :as => :string, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location') %>
+    9    <%= f.hidden_field :lat  %>
+   10    <%= f.hidden_field :lng  %>
+
+/home/christophe/projects/Populisto/app/views/home/map.html.erb:
+    7          <%= I18n.t('map_page.greetings_2') %>
+    8        </div>
+    9:       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+   10        <%= f.hidden_field :city %>
+   11        <%= f.hidden_field :lat  %>
+   ..
+   25          And please tell us your address details. The more accurate you are the more effective peoples' results will be, when looking for things you do.
+   26        </div>
+   27:       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+   28        <%= f.hidden_field :city %>
+   29        <%= f.hidden_field :lat  %>
+
+/home/christophe/projects/Populisto/app/views/reviews/_edit.html.erb:
+   21        <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+   22
+   23:       <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
+   24        <span id="address_validation"></span>
+   25
+   ..
+   84
+   85      // $('.edit_review_form form').submit(function() {
+   86:     //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
+   87      //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
+   88      //     return false;
+
+/home/christophe/projects/Populisto/app/views/reviews/index.html.erb:
+   32        <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+   33
+   34:       <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
+   35        <span id="address_validation"></span>
+   36
+   ..
+  109
+  110      // $('.edit_review_form form').submit(function() {
+  111:     //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
+  112      //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
+  113      //     return false;
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+   27          notice: "%{resource_name} was updated successfully."
+   28    helpers:
+   29:     enter_a_location: "Enter address, town or village where you live."
+   30      cant_be_blank: " - can't be blank"
+   31      actions: "Actions"
+
+9 matches across 6 files
+
+
+Searching 642 files for "enter_a_location"
+
+/home/christophe/projects/Populisto/app/views/admin/reviews/_form.html.erb:
+    4    <%= f.input :name %>
+    5    <%= f.input :phone %>
+    6:   <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location') %>
+    7    <%= f.hidden_field :lat  %>
+    8    <%= f.hidden_field :lng  %>
+
+/home/christophe/projects/Populisto/app/views/admin/users/_form.html.erb:
+    6    <%= f.input :password_confirmation %>
+    7    <%= f.input :provider %>
+    8:   <%= f.input :address, :required => true, :as => :string, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location') %>
+    9    <%= f.hidden_field :lat  %>
+   10    <%= f.hidden_field :lng  %>
+
+/home/christophe/projects/Populisto/app/views/home/map.html.erb:
+    7          <%= I18n.t('map_page.greetings_2') %>
+    8        </div>
+    9:       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+   10        <%= f.hidden_field :city %>
+   11        <%= f.hidden_field :lat  %>
+   ..
+   25          And please tell us your address details. The more accurate you are the more effective peoples' results will be, when looking for things you do.
+   26        </div>
+   27:       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+   28        <%= f.hidden_field :city %>
+   29        <%= f.hidden_field :lat  %>
+
+/home/christophe/projects/Populisto/app/views/reviews/_edit.html.erb:
+   21        <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+   22
+   23:       <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
+   24        <span id="address_validation"></span>
+   25
+   ..
+   84
+   85      // $('.edit_review_form form').submit(function() {
+   86:     //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
+   87      //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
+   88      //     return false;
+
+/home/christophe/projects/Populisto/app/views/reviews/index.html.erb:
+   32        <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+   33
+   34:       <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
+   35        <span id="address_validation"></span>
+   36
+   ..
+  109
+  110      // $('.edit_review_form form').submit(function() {
+  111:     //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
+  112      //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
+  113      //     return false;
+
+/home/christophe/projects/Populisto/config/locales/en.yml:
+   27          notice: "%{resource_name} was updated successfully."
+   28    helpers:
+   29:     enter_a_location: "Enter address, town or village where you live."
+   30      cant_be_blank: " - can't be blank"
+   31      actions: "Actions"
+
+9 matches across 6 files
+
+
+Searching 642 files for "char_count_label"
+
+/home/christophe/projects/Populisto/app/assets/stylesheets/form.css.scss:
+  129    }
+  130
+  131:   #char_count_label {
+  132  margin-left: 430px;
+  133  color: #808080;
+
+/home/christophe/projects/Populisto/app/assets/stylesheets/form_back_up.css.scss:
+   99  }
+  100
+  101: #review-page .review-form .rightGroups #char_count_label {
+  102      margin: 0 10px 0 0;
+  103      font-size: 10px;
+
+/home/christophe/projects/Populisto/app/assets/stylesheets/reviews.css.scss:
+  214    }
+  215
+  216:   .char_count_label {
+  217      margin-left: 430px;
+  218      color: #808080;
+
+/home/christophe/projects/Populisto/app/views/reviews/_edit.html.erb:
+   35        <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
+   36
+   37: <div class = "char_count_label"></div>
+   38
+   39          <!-- buttons: save, delete, share, keep private -->
+   ..
+   65  $(document).ready(function()  {
+   66      var characters = 300 -  $('textarea').val().length;
+   67:     $(this).closest('.control-group').next(".char_count_label").append(characters);
+   68      $('textarea').keyup(function(){
+   69          if($(this).val().length > 300){
+   ..
+   71          }
+   72          var remaining = 300 -  $(this).val().length;
+   73:         $(this).closest('.control-group').next(".char_count_label").html(remaining);
+   74      });
+   75  });
+
+/home/christophe/projects/Populisto/app/views/reviews/index.html.erb:
+   46        <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
+   47
+   48:               <div id = "char_count_label">
+   49        </div>
+   50
+   ..
+   82  $(document).ready(function()  {
+   83      var characters = 300;
+   84:     $("#char_count_label").append(characters);
+   85      $('textarea').keyup(function(){
+   86          if($(this).val().length > characters){
+   ..
+   88          }
+   89      var remaining = characters -  $(this).val().length;
+   90:     $("#char_count_label").html(remaining);
+   91      // if(remaining <= 10)
+   92      // {
+   93:     //     $("#char_count_label").css("color","red");
+   94      // }
+   95      // else
+   96      // {
+   97:     //     $("#char_count_label").css("color","black");
+   98      // }
+   99      });
+
+11 matches across 5 files
