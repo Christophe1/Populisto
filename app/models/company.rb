@@ -87,4 +87,13 @@ class Company < ActiveRecord::Base
       end
     end
   end
+
+  def distance_to(user_or_review)
+    return FAR_AWAY if [self.lat, self.lng, user_or_review.lat, user_or_review.lng].any?{|v| v.blank? }
+    a = Geokit::LatLng.new(self.lat, self.lng)
+    b = Geokit::LatLng.new(user_or_review.lat, user_or_review.lng)
+    a.distance_to(b, :units => :kms)
+  #rescue
+  #  FAR_AWAY
+  end
 end
