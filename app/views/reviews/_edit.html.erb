@@ -11,11 +11,7 @@
   <%= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
       <div id="except_comment">
-      <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
-            :input_html => { :multiple => true, :id => "#{@review.id}" },
-            :label => I18n.t('write_review.categories_selector_label'),
-            :label_html => { :class => 'edit_form_titles' },
-            :error_html => { :class => 'cant_be_blank'}
+      <%= chosen_select_for_category(f)
             %>
 
       <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
