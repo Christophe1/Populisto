@@ -10,7 +10,8 @@
         <th><%= resource_class.human_attribute_name(:provider) %></th>
         <th><%= resource_class.human_attribute_name(:external_user_id) %></th>
         <th><%= resource_class.human_attribute_name(:address) %></th>
-        <th><%= resource_class.human_attribute_name(:invites_count) %></th>
+        <th><%= resource_class.human_attribute_name(:invites) %></th>
+        <th><%= resource_class.human_attribute_name(:reviews) %></th>
         <th><%= resource_class.human_attribute_name(:created_at) %></th>
         <th><%=t '.actions', :default => t("helpers.actions") %></th>
       </tr>
@@ -27,6 +28,7 @@
           <td><%= item.external_user_id %></td>
           <td><%= item.address %></td>
           <td><%= item.invites_count %></td>
+          <td><%= item.reviews.count %></td>
           <td><%=l item.created_at %></td>
           <td>
             <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_resource_path(item), :class => 'btn btn-mini' %>
