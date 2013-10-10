@@ -18,6 +18,15 @@ class Admin::ReviewsController < Admin::BaseController
     @review = Review.find(params[:id])
   end
 
+  def update
+    @review = Review.find(params[:id])
+    if @review.update_attributes(params[:review])
+      redirect_to admin_review_path(@review)
+    else
+      render :edit
+    end
+  end
+
   def new
     @review = Review.new
   end
