@@ -308,13 +308,15 @@ function personal_contact() {
          radio_1.prop('checked',false);
          radio_2.prop('checked',true);
          labels.css('color', '#ADAAAB')
+         $('#review_category_ids_chosen .chosen-drop').css("display", "none");
        }
        else{
          // alert("not found");
          radios.attr("disabled", false);
          radio_1.prop('checked',true);
          radio_2.prop('checked',false);
-         labels.css('color', '#000')
+         labels.css('color', '#000');
+         $('#review_category_ids_chosen .chosen-drop').css("display", "inline");
        }
     });
 }
@@ -327,7 +329,7 @@ function disable_search() {
         }
         else{
             // alert("no");
-            $(".search-button").attr("disabled", "");
+            $(".search-button").attr("disabled", "disabled");
         }
     });
 }
