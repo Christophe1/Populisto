@@ -24,9 +24,11 @@
     :input_html => { :class => 'span5', :multiple => true },
     :label => false,
     :placeholder => t('find_something.search_placeholder') %>
-    <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button'%>
+    <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button', :disabled => true %>
     <% end %>
   </div>
+  <script type="text/javascript">
+  </script>
 
   <div class="user-panel">
     <%= fb_avatar(resource)  %>

@@ -14,10 +14,15 @@
   end
 
   def create
+    terms = params[:review][:search_ids]
+    if terms.any?
     @review = Review.new params[:review]
     @reviews = Review.scoped_by_search_params(params, current_resource)
     @companies = Company.scoped_by_search_params(params, current_resource) || []
     render :action => :index
+    else
+      redirect_to :back
+    end
   end
 
    def change_range

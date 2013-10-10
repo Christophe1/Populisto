@@ -262,6 +262,7 @@ $(function() {
     };
 
     personal_contact();
+    disable_search();
 });
 
 
@@ -315,5 +316,18 @@ function personal_contact() {
          radio_2.prop('checked',false);
          labels.css('color', '#000')
        }
+    });
+}
+
+function disable_search() {
+    $("ul.chosen-choices").bind("DOMSubtreeModified", function() {
+        if ( $('ul.chosen-choices li').size() > 1 ) {
+            // alert("yes");
+            $(".search-button").removeAttr("disabled");
+        }
+        else{
+            // alert("no");
+            $(".search-button").attr("disabled", "");
+        }
     });
 }
