@@ -200,7 +200,6 @@ en:
     callback_no_contacts: "You can import your contacts from another service."
     callback_close_link: "Close this window"
     icons_extra_text: "You’ll have full control over who you want to contact!"
-    icons_additional_text: "Each invite you send gains you a ticket for the raffle, to win an iPad. The more you send, the greater chance you have of winning.<br /><br />You can see the number of invites you've sent on the left of the screen. Winner will be announced in early June."
     invites_sent: "Invites sent: <b>%{number}</b>"
     outlook:
       step1: "Please provide a .csv file with contacts. You will be able to choose the ones you want to import on the next page"
