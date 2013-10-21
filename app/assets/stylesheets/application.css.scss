@@ -224,7 +224,7 @@ a.btn:focus {
 /* Container */
 #simplemodal-container {
   width: 550px;
-  height: 350px;
+  height: 250px;
   background-color: #fff;
   padding: 10px;
   @include border-radius(12px);
@@ -314,27 +314,36 @@ font-size: 18px;
 
 /* static pages */
 
-.static_pages_header, {
+div.background_static_pages
+{
+width:620px;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 25px;
+padding-bottom: 25px;
+background-color:rgb(253, 224, 180);
+margin-left:auto;
+margin-right:auto;
+margin-top: 60px;
+text-align: justify;
+border-radius:25px;
+
+.static_pages_header {
   font-size: 26px;
-  margin-left: 200px;
-  /* margin-top: 130px; */
+  padding-bottom: 30px;
+  }
 
   .static_pages_body{
-  /* margin-left: 200px; */
   font-size: 16px;
-  margin-top: 20px;
-  margin-right: 300px;
-  text-align: justify
 }
 
-.sign_up {
-  float: right;
-margin-top: 40px;
-margin-right: 300px;
-margin-bottom: 200px;
+.sign_up_t_and_c {
+font-size: 30px;
+margin-top: 60px;
+    }
 }
 
-}
+
 
 .categories_select {
   width: 333px;

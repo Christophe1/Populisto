@@ -17,16 +17,33 @@ padding-left: 10px;
 display:inline;
 
   #home_page_links {
-
 display: inline;
+width: 440px;
+padding-left: 10%;
 
 
-    li {
-
+  li {
       display: inline;
-      padding-right: 35px;
-      font-size: 16px
-    }
+      background-color:#4C95F1;
+      padding: 6px 0px 6px 0px;
+      font-size: 16px;
+      border-radius:10px;
+
+      a
+      {
+      padding: 6px 12px 6px 12px;
+      text-decoration:none;
+      color: #FFFFFF;
+
+      }
+
+
+      a:hover,a:active
+      {
+      background-color:#F5A225;
+      border-radius:10px;
+      }
+      }
 
   }
   }
@@ -158,6 +175,7 @@ border: 1px solid #eee;
 
 .login-page-sign-up {
 width:370px;
+line-height: 14px;
 float: right;
 margin-right: 40px;
 margin-top: -60px;
