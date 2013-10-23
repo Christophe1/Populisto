@@ -264,6 +264,7 @@ $(function() {
     personal_contact();
     disable_search();
     tooltip();
+    search_help_tooltip();
 });
 
 
@@ -299,6 +300,26 @@ function tooltip() {
     var thecontent = $('#your_area_help_text').html();
     $('#area_help').qtip({
             content: thecontent,
+            show: 'mouseover',
+            hide: 'mouseout',
+            position: {
+            corner: {
+            target: 'bottomLeft',
+            tooltip: 'topLeft'
+        }
+        },
+            style :{
+            background: '#FAF798',
+            width: 400
+        // tip: { corner: 'leftTop' }
+        }
+    });
+}
+
+function search_help_tooltip() {
+    var content = $('#search_box_help_content').html();
+    $('#search_box_help').qtip({
+            content: content,
             show: 'mouseover',
             hide: 'mouseout',
             position: {
