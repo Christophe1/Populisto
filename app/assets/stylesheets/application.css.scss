@@ -14,6 +14,7 @@
   *= require signed_in_header
   *= require give_address_and_map
   *= require qtip_tooltips
+  *= require empty_user
 
 */
 
@@ -321,12 +322,13 @@ padding-left: 50px;
 padding-right: 50px;
 padding-top: 25px;
 padding-bottom: 25px;
-background-color:rgb(253, 224, 180);
+background-color:#FDF6EA;
 margin-left:auto;
 margin-right:auto;
 margin-top: 60px;
 text-align: justify;
-border-radius:25px;
+border-radius:10px;
+border:2px solid #EBDDDD;
 
 .static_pages_header {
   font-size: 26px;

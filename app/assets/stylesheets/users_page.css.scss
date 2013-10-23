@@ -38,13 +38,32 @@ margin-left: auto;
 margin-right: auto;
 }
 
+.gmnoprint img {
+    max-width: none;
 }
 
+}
+
+div.background_your_address_book
+
+{
+
+width:820px;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 25px;
+padding-bottom: 25px;
+background-color: #EAF7FD;
+margin-left:auto;
+margin-right:auto;
+border-radius:10px;
+border:2px solid #EBDDDD;
+
 #Address_book_owner {
-margin-left: 90px;
 margin-top: 30px;
 margin-bottom: 40px;
 font-size: 28px;
+}
 }
 
  #character_and_bubbles {

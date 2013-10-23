@@ -50,7 +50,6 @@
   </div> -->
 
 
-
 <!-- <div id = "Address_book_heading"> -->
 <!--   <div id = "Address_book_owner">
     <%# if current_resource.name == @resource.name %>
@@ -63,8 +62,10 @@
       <%# end %>
     <%# end %>
   </div> -->
-
+       <!-- this shows the user's address, with the option to toggle public or private -->
+    <%#= render 'your_location' %>
   <div class = "background_your_area">
+
   <div id="your_area">
   <div id = "Address_book_area">
     <% if current_resource.name == @resource.name %>
@@ -85,7 +86,7 @@
           <!-- text for the qtip goes here, in this div, which is hidden -->
       <div id = "your_area_help_text">
             <% if current_resource.name == @resource.name %>
-    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto." %>
+    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto. Listings from your Facebook friends come up first (if you logged in with FB)." %>
     <% else %>
       <% if @resource.is_company? %>
         <%= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
@@ -217,8 +218,7 @@ initialize_google_maps();
     <%#= render 'follow_form', :user => @resource %>
 
 
-    <!-- this shows the user's address, with the option to toggle public or private -->
-    <%#= render 'your_location' %>
+
 
 
     <!-- <div class="clearfix"></div> -->
@@ -302,7 +302,18 @@ formatted correctly -->
  <!-- <div id = "followers_following"> -->
  <%#= render 'follow_form', :user => @resource %>
 <!-- </div> -->
-  <div id = "Address_book_owner">
+<div class = "background_your_address_book">
+
+ <div class="reviews">
+  <!-- show the current user's Address Book entries or-->
+  <!-- if current user goes to another person's Address Book , show the results on that person's Address Book  -->
+  <!-- this is separate to doing a search -->
+  <!-- go through all the user's entries, make sure they match up with the visible_to?
+  method in the reviews model- not showing another user's private reviews - and then display those results -->
+
+  <% if @reviews.any? %>
+<!-- if the person has reviews, show the 'Your Address Book' heading, and the reviews that follow -->
+    <div id = "Address_book_owner">
     <% if current_resource.name == @resource.name %>
     <%= "Your Address Book:" %>
     <% else %>
@@ -313,16 +324,7 @@ formatted correctly -->
       <% end %>
     <% end %>
   </div>
-
- <div class="reviews">
-  <!-- show the current user's Address Book entries or-->
-  <!-- if current user goes to another person's Address Book , show the results on that person's Address Book  -->
-  <!-- this is separate to doing a search -->
-  <!-- go through all the user's entries, make sure they match up with the visible_to?
-  method in the reviews model- not showing another user's private reviews - and then display those results -->
-
-  <% if @reviews.any? %>
-
+<!-- show the reviews -->
     <% @reviews.each do |review| %>
       <% if review.visible_to?(current_resource) %>
         <div class="breadcrumb" id="review_<%= review.id %>">
@@ -330,6 +332,7 @@ formatted correctly -->
         </div>
       <% end %>
     <% end %>
+    <!-- if the person has no reviews, show the layout, below -->
   <% else %>
     <%= render :partial => 'layouts/empty_user_address_book' %>
   <%end %>
@@ -350,6 +353,7 @@ formatted correctly -->
   <%# else %>
     <%#= render :partial => 'layouts/empty_user_address_book' %>
   <%# end %>
+</div>
 </div>
 
 </body>
