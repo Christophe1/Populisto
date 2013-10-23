@@ -37,14 +37,13 @@
 
       <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
       <%= render 'delete', :review => @review %>
-      <% unless @review.is_personal_contact? %>
-        <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-        <%= f.radio_button :visible, "false", :class => "keep_private_button private_#{@review.id}" %>
+        <div class="radio_buttons_<%= @review.id %>" style="<%= @review.is_personal_contact? ? "display:none;" : "" %>">
+          <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
+          <%= f.radio_button :visible, "false", :class => "keep_private_button private_#{@review.id}", :disabled => true %>
 
-        <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-        <%= f.radio_button :visible, "true" , :class => "share_button public_#{@review.id}" %>
-      <% end %>
-
+          <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
+          <%= f.radio_button :visible, "true" , :class => "share_button public_#{@review.id}", :disabled => true %>
+        </div>
 
       </div>
     <!-- </div> -->
@@ -116,6 +115,7 @@ function personal_contact_<%= @review.id %>() {
       radio_2 = $("#edit_review_<%= @review.id %> .private_<%= @review.id %>");
       radio_1.prop("checked", true);
       labels = $('#edit_review_<%= @review.id %> .private_<%= @review.id %>, .public_<%= @review.id %>');
+      radio_buttons = $('.radio_buttons_<%= @review.id %>');
 
       arr = $('#edit_review_<%= @review.id %> #review_category_ids').val();
       found = $.inArray('1', arr) > -1;
@@ -132,6 +132,7 @@ function personal_contact_<%= @review.id %>() {
           radio_1.prop('checked',true);
           radio_2.prop('checked',false);
           labels.css('color', '#000');
+          radio_buttons.css('display', 'block');
       }
   });
 }
