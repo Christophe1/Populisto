@@ -4,6 +4,7 @@
   <%= f.input :email, :required => true %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
+  <%= f.hidden_field :confirmed_at, :value => Time.now %>
   <%= f.input :provider %>
   <%= f.input :address, :required => true, :as => :string, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location') %>
   <%= f.hidden_field :lat  %>
@@ -15,7 +16,7 @@
   </div>
 <% end %>
 
-<script type="text/javascript">   
+<script type="text/javascript">
 
     function initialize_google_maps() {
       var input = document.getElementById('user_address');
