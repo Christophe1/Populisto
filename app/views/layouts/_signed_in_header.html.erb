@@ -27,8 +27,10 @@
     <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button', :disabled => true %>
     <% end %>
   </div>
-  <script type="text/javascript">
-  </script>
+  <div id = "search_box_help">
+    <%= image_tag("why_fb_log_in.png") %>
+  </div>
+
 
   <div class="user-panel">
     <%= fb_avatar(resource)  %>

@@ -25,14 +25,10 @@
   /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
 
   .search-box {
-   /* margin-top: 15px; */
 
+    display: inline-block;
 
       .controls {
-       /* width:50px;
-        margin-left: 390px;
-        margin-top: 18px; */
-
 
 
         .control-group.grouped_chosen {
@@ -50,6 +46,8 @@
         margin-top: 5px;
       }
 
+
+
       .control-label {
         display: none;
         float: none;
@@ -58,11 +56,14 @@
 
 
 
-
-
-  /*  @include clearfix(); */
-
     }
+
+         #search_box_help {
+      width: 30px;
+      display: inline-block;
+      position: relative;
+      top:-10px;
+      }
 
 
 
