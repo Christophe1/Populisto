@@ -294,30 +294,31 @@ function showNewContent(container, content) {
 }
 
 function personal_contact() {
-    $("ul.chosen-choices").bind("DOMSubtreeModified", function() {
-       radios = $(".new_review").find('input:radio');
-       radio_1 = $(".share_button");
-       radio_2 = $(".keep_private_button");
-       el = $.find('span:contains("Personal Contact")');
-       radio_1.prop("checked", true);
-       labels = $('.keep_private_label, .share_label').css('color','red');
+    $('#review_category_ids').on('change', function(event, params) {
+        // can now use params.selected and params.deselected
+        radios = $(".new_review").find('input:radio');
+        radio_1 = $(".share_button");
+        radio_2 = $(".keep_private_button");
+        radio_1.prop("checked", true);
+        labels = $('.keep_private_label, .share_label');
 
-       if(el.length != 0) {
-         // alert("found");
-         radios.attr("disabled", true);
-         radio_1.prop('checked',false);
-         radio_2.prop('checked',true);
-         labels.css('color', '#ADAAAB')
-         $('#review_category_ids_chosen .chosen-drop').css("display", "none");
-       }
-       else{
-         // alert("not found");
-         radios.attr("disabled", false);
-         radio_1.prop('checked',true);
-         radio_2.prop('checked',false);
-         labels.css('color', '#000');
-         $('#review_category_ids_chosen .chosen-drop').css("display", "inline");
-       }
+        arr = $('#review_category_ids').val();
+        found = $.inArray('1', arr) > -1;
+
+        if(found) {
+            radios.attr("disabled", true);
+            radio_1.prop('checked',false);
+            radio_2.prop('checked',true);
+            labels.css('color', '#ADAAAB');
+            $('#review_category_ids').val(1).trigger("chosen:updated");
+        }
+        else{
+            radios.attr("disabled", false);
+            radio_1.prop('checked',true);
+            radio_2.prop('checked',false);
+            labels.css('color', '#000');
+            // $('#review_category_ids_chosen .chosen-drop').css("display", "inline");
+        }
     });
 }
 

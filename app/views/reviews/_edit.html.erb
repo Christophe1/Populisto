@@ -39,10 +39,10 @@
       <%= render 'delete', :review => @review %>
       <% unless @review.is_personal_contact? %>
         <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-        <%= f.radio_button :visible, "false", :class => "keep_private_button" %>
+        <%= f.radio_button :visible, "false", :class => "keep_private_button private_#{@review.id}" %>
 
         <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-        <%= f.radio_button :visible, "true" , :class => "share_button" %>
+        <%= f.radio_button :visible, "true" , :class => "share_button public_#{@review.id}" %>
       <% end %>
 
 
@@ -108,6 +108,34 @@ $('input').on('keydown',function(e){
       }
 });
 
+function personal_contact_<%= @review.id %>() {
+  $('#edit_review_<%= @review.id %> #review_category_ids').on('change', function(event, params) {
+      // can now use params.selected and params.deselected
+      radios = $("#edit_review_<%= @review.id %>").find('input:radio');
+      radio_1 = $("#edit_review_<%= @review.id %> .public_<%= @review.id %>");
+      radio_2 = $("#edit_review_<%= @review.id %> .private_<%= @review.id %>");
+      radio_1.prop("checked", true);
+      labels = $('#edit_review_<%= @review.id %> .private_<%= @review.id %>, .public_<%= @review.id %>');
 
+      arr = $('#edit_review_<%= @review.id %> #review_category_ids').val();
+      found = $.inArray('1', arr) > -1;
+
+      if(found) {
+          radios.attr("disabled", true);
+          radio_1.prop('checked',false);
+          radio_2.prop('checked',true);
+          labels.css('color', '#ADAAAB');
+          $('#edit_review_<%= @review.id %> #review_category_ids').val(1).trigger("chosen:updated");
+      }
+      else{
+          radios.attr("disabled", false);
+          radio_1.prop('checked',true);
+          radio_2.prop('checked',false);
+          labels.css('color', '#000');
+      }
+  });
+}
+
+personal_contact_<%= @review.id %>();
 </script>
 <div class="clearfix"></div>
