@@ -5,44 +5,52 @@
   </div>
   <div class='email-invitation-form'>
     <div class="control-group">
-        <div class="email">
-      <% @contacts.each do |name, value| %>
-        <div class="email">
-          <%= check_box_tag "contacts[]", value, false, :id => value %>
-          <label for="<%= value %>"><%= name %></label>
-          <!-- if the contact in the user's address book is already a member of Populisto!
-          then say 'Already on Populisto!' -->
-          <% if !User.find_by_email(name).nil? %>
-          <div class ="already_user">
-          <%= "Already on Populisto!" %>
-          </div>
-        </div>
-      <% end %>
-      <% end %>
-      <% if @invited.present? %>
-        <h4><%= I18n.t('email_invites.already_invated') %></h4>
-        <% @invited.each do |contact, value| %>
-          <div class="invited-email">
-            <%= contact %>
+      <div class="email_list">
+        <!-- contacts -->
+        <% @contacts.each do |name, value| %>
+          <div class="email">
+            <%= check_box_tag "contacts[]", value, false, :id => value %>
+            <label for="<%= value %>"><%= name %></label>
+            <!-- if the contact in the user's address book is already a member of Populisto!
+            then say 'Already on Populisto!' -->
+            <% if !User.find_by_email(name).nil? %>
+              <div class ="already_user">
+                <%= "Already on Populisto!" %>
+              </div>
+            <% end %>
           </div>
         <% end %>
-      <% end %>
-    </div>
-  </div>
-  <div class="buttons">
-    <div class="pull-left">
-      <%= check_box_tag "select-all" %>
-      <%= label_tag "select-all", I18n.t('helpers.select_all') %>
-    </div>
-    <div id="popup-alert" class="pull-right"></div>
-    <div class="clearfix"></div>
-    <div>
-      <div class="pull-left">
-        <%= link_to I18n.t('helpers.links.back'), '#', :class => 'back-link', :id => 'go-back' %>
+        <!-- end contacts -->
+        <% if @invited.present? %>
+          <h4><%= I18n.t('email_invites.already_invated') %></h4>
+          <% @invited.each do |contact, value| %>
+            <div class="invited-email">
+              <%= contact %>
+            </div>
+          <% end %>
+        <% end %>
       </div>
-      <%= link_to I18n.t('helpers.links.next'), '#', :class => 'btn btn-primary', :id => 'btn-next' %>
-      <%= link_to I18n.t('email_invites.invite_cancel'), '#', :class => 'btn modal-popup-close' %>
     </div>
+  <div class="buttons">
+    <div class="row">
+      <div class="span12">
+        <div class="pull-left">
+          <%= check_box_tag "select-all" %>
+          <%= label_tag "select-all", I18n.t('helpers.select_all') %>
+        </div>
+        <div id="popup-alert" class="pull-right"></div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div>
+  <div class="pull-left">
+    <%= link_to I18n.t('helpers.links.back'), '#', :class => 'back-link', :id => 'go-back' %>
+  </div>
+  <div class="pull-right">
+    <%= link_to I18n.t('helpers.links.next'), '#', :class => 'btn btn-primary', :id => 'btn-next' %>
+    <%= link_to I18n.t('email_invites.invite_cancel'), '#', :class => 'btn modal-popup-close' %>
   </div>
 </div>
 
