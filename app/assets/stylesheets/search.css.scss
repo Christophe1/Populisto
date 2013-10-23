@@ -1,3 +1,92 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.find-something {
+  .greetings {
+    margin: 5px auto;
+    font-size: 16px;
+    padding-left: 300px;
+    padding-right: 350px;
+    padding-top: 20px;
+  }
+
+  #map_canvas {
+    height: 380px;
+    width: 470px;
+    margin: 0 auto;
+    img {
+      max-width: none;
+    }
+  }
+
+    #map_canvas2 {
+    height: 380px;
+    width: 470px;
+    margin: 0 auto;
+    img {
+      max-width: none;
+    }
+  }
+
+  .search-area {
+    width: 640px;
+    margin-top: -2em;
+    margin-left: 18em;
+    margin-bottom: 2em;
+  }
+
+  .area {
+    margin: 0 auto;
+    width: 870px;
+
+
+    .review {
+      background-color: #ffffff;
+
+      .left-part {
+        width: 70px;
+        float: left;
+        padding: 10px;
+      }
+
+      .right-part {
+        float: left;
+        padding: 10px;
+        width: 758px;
+
+        .review-text {
+          padding: 10px 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#you_search_results
+
+{
+    font-size:24px;
+    padding-bottom: 20px;
+}

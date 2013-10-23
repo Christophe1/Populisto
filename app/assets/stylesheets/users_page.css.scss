@@ -11,6 +11,7 @@ background-color: #FDF6EA;
 margin-left:auto;
 margin-right:auto;
 margin-top: 60px;
+margin-bottom: 30px;
 border-radius:10px;
 border:2px solid #EBDDDD;
 
@@ -52,7 +53,6 @@ width:820px;
 padding-left: 50px;
 padding-right: 50px;
 padding-top: 25px;
-padding-bottom: 25px;
 background-color: #EAF7FD;
 margin-left:auto;
 margin-right:auto;
@@ -61,8 +61,18 @@ border:2px solid #EBDDDD;
 
 #Address_book_owner {
 margin-top: 30px;
-margin-bottom: 40px;
+margin-bottom: 30px;
 font-size: 28px;
+height: 20px;
+
+#address_book_image
+
+{
+position: relative;
+top: -70px;
+margin-left: 60%;
+}
+
 }
 }
 

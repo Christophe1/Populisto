@@ -144,10 +144,10 @@ en:
     button_text: 'Go'
     my_area_title: 'In Your Area:'
     outside_area_title: 'Outside Your Area:'
-    my_reviews_title: 'Your Address book entries'
+    my_reviews_title: 'You:'
     followers_reviews_title: 'Address book entries by those following you'
     following_reviews_title: 'Address book entries by those you’re following'
-    others_reviews_title: 'Other address book entries'
+    others_reviews_title: 'Address Book entries in your area:'
     empty_user_owner: "You don't have anything in your address book."
     empty_user_other: " is empty."
     review:

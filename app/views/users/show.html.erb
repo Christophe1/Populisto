@@ -86,7 +86,7 @@
           <!-- text for the qtip goes here, in this div, which is hidden -->
       <div id = "your_area_help_text">
             <% if current_resource.name == @resource.name %>
-    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto. Listings from your Facebook friends come up first (if you logged in with FB)." %>
+    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
     <% else %>
       <% if @resource.is_company? %>
         <%= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
@@ -323,6 +323,9 @@ formatted correctly -->
         <%= "#{@resource.first_name.capitalize} " + " " + "#{@resource.last_name.capitalize}" + "'s Address Book:" %>
       <% end %>
     <% end %>
+    <div id = "address_book_image">
+      <%= link_to(image_tag('happy_characters_address_book.png', :size => "218x95")) %>
+  </div>
   </div>
 <!-- show the reviews -->
     <% @reviews.each do |review| %>
