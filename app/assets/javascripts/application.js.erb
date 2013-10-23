@@ -263,6 +263,7 @@ $(function() {
 
     personal_contact();
     disable_search();
+    tooltip();
 });
 
 
@@ -289,6 +290,27 @@ function showNewContent(container, content) {
             self.hide();
             toShow.data('step', lastStep + 1);
             toShow.html(content).show();
+        }
+    });
+}
+
+function tooltip() {
+    // we want to show the html text in div #why_fb_log_in_text
+    var thecontent = $('#your_area_help_text').html();
+    $('#area_help').qtip({
+            content: thecontent,
+            show: 'mouseover',
+            hide: 'mouseout',
+            position: {
+            corner: {
+            target: 'bottomLeft',
+            tooltip: 'topLeft'
+        }
+        },
+            style :{
+            background: '#FAF798',
+            width: 400
+        // tip: { corner: 'leftTop' }
         }
     });
 }
