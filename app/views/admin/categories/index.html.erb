@@ -4,6 +4,7 @@
       <tr>
         <th><%= resource_class.human_attribute_name(:id) %></th>
         <th><%= resource_class.human_attribute_name(:name) %></th>
+        <th><%= resource_class.human_attribute_name(:reviews_count) %></th>
         <th width="150px"><%=t '.actions', :default => t("helpers.actions") %></th>
       </tr>
     </thead>
@@ -12,6 +13,7 @@
         <tr>
           <td><%= link_to item.id, resource_path(item) %></td>
           <td><%= item.name %></td>
+          <td><%= item.reviews.count %></td>
           <td>
             <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_resource_path(item), :class => 'btn btn-mini' %>
             <%= link_to t('.view', :default => t("helpers.links.view")), resource_path(item), :class => 'btn btn-mini' %>
