@@ -315,34 +315,33 @@ font-size: 18px;
 
 /* static pages */
 
-div.background_static_pages
-{
-width:620px;
-padding-left: 50px;
-padding-right: 50px;
-padding-top: 25px;
-padding-bottom: 25px;
-background-color:#FDF6EA;
-margin-left:auto;
-margin-right:auto;
-margin-top: 60px;
-text-align: justify;
-border-radius:10px;
-border:2px solid #EBDDDD;
+div.background_static_pages{
+  width:620px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color:#FDF6EA;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 60px;
+  text-align: justify;
+  border-radius:10px;
+  border:2px solid #EBDDDD;
 
-.static_pages_header {
-  font-size: 26px;
-  padding-bottom: 30px;
+  .static_pages_header {
+    font-size: 26px;
+    padding-bottom: 30px;
   }
 
   .static_pages_body{
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
 
 .sign_up_t_and_c {
-font-size: 30px;
-margin-top: 60px;
-    }
+  font-size: 30px;
+  margin-top: 60px;
+  }
 }
 
 
