@@ -113,6 +113,8 @@ class Review < ActiveRecord::Base
         filtered_categories_reviews = []
         categories_ids = params.map{|id| id.delete('category_').to_i}
         categories_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+
+        # check if category review owner is in range of current user, if not, do not include the review in results
         categories_reviews.each do |rev|
           if rev.owner.distance_to(current_user) < 20
             filtered_categories_reviews << rev
