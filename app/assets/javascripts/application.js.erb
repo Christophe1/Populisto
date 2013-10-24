@@ -343,27 +343,30 @@ function search_help_tooltip() {
 function personal_contact() {
     $('#review_category_ids').on('change', function(event, params) {
         // can now use params.selected and params.deselected
-        radios = $(".new_review").find('input:radio');
+        // radios = $(".new_review").find('input:radio');
         radio_1 = $(".share_button");
         radio_2 = $(".keep_private_button");
         radio_1.prop("checked", true);
         labels = $('.keep_private_label, .share_label');
+        radios = $('.radios');
 
         arr = $('#review_category_ids').val();
         found = $.inArray('1', arr) > -1;
 
         if(found) {
-            radios.attr("disabled", true);
+            // radios.attr("disabled", true);
             radio_1.prop('checked',false);
             radio_2.prop('checked',true);
             labels.css('color', '#ADAAAB');
             $('#review_category_ids').val(1).trigger("chosen:updated");
+            radios.css('display', 'none');
         }
         else{
-            radios.attr("disabled", false);
+            // radios.attr("disabled", false);
             radio_1.prop('checked',true);
             radio_2.prop('checked',false);
             labels.css('color', '#000');
+            radios.css('display', 'block');
             // $('#review_category_ids_chosen .chosen-drop').css("display", "inline");
         }
     });

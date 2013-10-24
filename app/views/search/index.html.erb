@@ -49,12 +49,12 @@ initialize_google_maps();
 </div>
 </div>
 <% if @reviews.present? %>
-<div class = "background_your_address_book">
-<%= render 'reviews' %>
+  <div class = "background_your_address_book">
+    <%= render 'reviews' %>
+  </div>
 <% else %>
-<%= render :partial => 'layouts/no_reviews_in_your_area' %>
+  <%= render :partial => 'layouts/no_reviews_in_your_area' %>
 <% end %>
-</div>
 
 <!-- for business registration: -->
 <% if @companies.size > 0 %>

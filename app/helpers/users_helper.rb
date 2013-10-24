@@ -6,7 +6,7 @@ module UsersHelper
       user.first_name.capitalize + I18n.t('helpers.s_page')
     end
   end
-  
+
   def your_location(user)
     if user == current_user
       "Your area: #{user.address}"
@@ -28,6 +28,15 @@ module UsersHelper
       I18n.t('helpers.pop_something_in2')
     else
       ""
+    end
+  end
+
+  def resource_full_name(name)
+    new_name = name + "'"
+    if name.end_with?('s')
+      return new_name + " Address Book:"
+    else
+      return new_name + "s Address Book:"
     end
   end
 end

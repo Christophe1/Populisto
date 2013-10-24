@@ -39,10 +39,10 @@
       <%= render 'delete', :review => @review %>
         <div class="radio_buttons_<%= @review.id %>" style="<%= @review.is_personal_contact? ? "display:none;" : "" %>">
           <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-          <%= f.radio_button :visible, "false", :class => "keep_private_button private_#{@review.id}", :disabled => true %>
+          <%= f.radio_button :visible, "false", :class => "keep_private_button private_#{@review.id}" %>
 
           <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-          <%= f.radio_button :visible, "true" , :class => "share_button public_#{@review.id}", :disabled => true %>
+          <%= f.radio_button :visible, "true" , :class => "share_button public_#{@review.id}" %>
         </div>
 
       </div>
@@ -121,14 +121,13 @@ function personal_contact_<%= @review.id %>() {
       found = $.inArray('1', arr) > -1;
 
       if(found) {
-          radios.attr("disabled", true);
           radio_1.prop('checked',false);
           radio_2.prop('checked',true);
           labels.css('color', '#ADAAAB');
           $('#edit_review_<%= @review.id %> #review_category_ids').val(1).trigger("chosen:updated");
+          radio_buttons.css('display', 'none');
       }
       else{
-          radios.attr("disabled", false);
           radio_1.prop('checked',true);
           radio_2.prop('checked',false);
           labels.css('color', '#000');

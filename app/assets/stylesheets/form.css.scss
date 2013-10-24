@@ -1,189 +1,148 @@
-﻿
-
-  .review-text {
-    color: #333333;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-margin-top: 10px;
-font-size: 18px;
-line-height: 24px;
-width: 85%;
-margin-left: auto;
-margin-right: auto;
+﻿.review-text {
+  color: #333333;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-  .address_book_entry {
+.address_book_entry {
   /* background: #fbf6b2 url(formBg.png) 0 0 repeat-y;  */
   width: 850px;
   height: 300px;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-
-
-
   .breadcrumb {
-  background: url(formBg.png) 0 0 repeat-y;
-  height: 245px;
-  position: relative;
-  /* background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99); */
+    background: url(formBg.png) 0 0 repeat-y;
+    height: 245px;
+    position: relative;
+    /* background-image: -webkit-linear-gradient(top, #FFFF99, #FFFF99); */
   }
-
-
-
-
-
-  .breadcrumb:hover {
-  border-color:  #0099CC;
-  /*   opacity: 1.2; */
-
-
+ .breadcrumb:hover {
+    border-color:  #0099CC;
+    /*   opacity: 1.2; */
   }
-
-
-
-
-
-
 
   /*   ////////////////   The edit form, below  ///////////////////////  */
 
-  .edit_review_form {
-
-margin-top: -10px;
-
-
-
+.edit_review_form {
+  margin-top: -10px;
   form {
-   margin-top: -15px;
-
+    margin-top: -15px;
   }
   .inputs{
-  display: table-row;
-
-  #except_comment {
-  display: table-cell;
-  width:40%;
+    display: table-row;
+    #except_comment {
+      display: table-cell;
+      width:40%;
+    }
+    #comment{
+      padding-left: 30px;
+    }
   }
-
-  #comment{
-  padding-left: 30px;
-  }
-
-  }
-
 
   /* in edit mode, these are the things on the left - down to 'edit-label' */
 
   .edit_form_titles{
-  display: block;
-  margin-bottom: 0px;
-  color: #333333;
+    display: block;
+    margin-bottom: 0px;
+    color: #333333;
   }
 
   .cant_be_blank{
-font-size: 12px;
-margin-top: -18px;
-margin-left: 90px;
+    font-size: 12px;
+    margin-top: -18px;
+    margin-left: 90px;
   }
 
   #review_name, #review_phone, #review_address {
-  width: 333px;
+    width: 333px;
   }
   select {
-  width: 343px;
+    width: 343px;
   }
   .edit_review_info{
-
-  .edit-label{
-  display: block;
-  }
-
+    .edit-label{
+      display: block;
+    }
   }
 
   /* in edit mode, these are the things on the right - down to 'share_button' */
 
-    .cancel-edit{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #0099CC;
+  .cancel-edit{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #0099CC;
   }
 
   /* .right{
   margin-left:80px; */
 
-    .comments {
-font-size: 20px;
-margin-left: 117px;
-margin-top: 25px;
-}
+  .comments {
+    font-size: 20px;
+    margin-left: 117px;
+    margin-top: 25px;
+  }
 
   textarea {
-width: 70%;
-height: 105px;
-resize: none;
-margin-left: 115px;
-margin-top: 20px;
+    width: 70%;
+    height: 105px;
+    resize: none;
+    margin-left: 115px;
+    margin-top: 20px;
   }
 
   #char_count_label {
-margin-left: 430px;
-color: #808080;
-}
+    margin-left: 430px;
+    color: #808080;
+  }
 
 
 
 
   .control-group {
-  display:inline;
-  .controls {
-  display: inherit;
-  }
+    display:inline;
+    .controls {display: inherit;}
   }
   span#address_validation {
-  color: #B94A48;
+    color: #B94A48;
   }
 
   .edit_button_group{
-
-  /* put the save, delete buttons and radio buttons at the bottom of the Address book entry */
-
-position: absolute;
-bottom: 10px;
-margin-left: 80px;
-
-  .save_review{
-  float: right;
-
+    /* put the save, delete buttons and radio buttons at the bottom of the Address book entry */
+    position: absolute;
+    bottom: 10px;
+    margin-left: 80px;
+    width: 350px;
+    .save_review{
+      float: right;
+    }
+    .cancel_review {
+      float: right;
+      margin-right: 20px;
+      margin-top: 5px
+    }
+    .keep_private_label{
+      float: right;
+      margin: 5px 35px 0px 5px;
+    }
+    .keep_private_button{
+      float: right;
+      margin: 7px 0px 0px 20px;
+    }
+    .share_label{
+      float: right;
+      margin: 5px 0px 0px 5px;
+    }
+    .share_button{
+      float: right;
+      margin: 7px 0px 0px 55px;
+    }
   }
-  .cancel_review {
-float: right;
-margin-right: 20px;
-margin-top: 5px
-  }
-
-  .keep_private_label{
-float: right;
-margin: 5px 35px 0px 5px;
-  }
-  .keep_private_button{
-  float: right;
-  margin: 7px 0px 0px 20px;
-  }
-  .share_label{
-  float: right;
-  margin: 5px 0px 0px 5px;
-  }
-  .share_button{
-  float: right;
-  margin: 7px 0px 0px 55px;
-  }
-  }
-  /* } */
-
-  }
-
-  }
-
+}
+}
