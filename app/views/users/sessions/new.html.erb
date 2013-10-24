@@ -1,44 +1,15 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <script>
-    $().ready(function() {
-    // we want to show the html text in div #why_fb_log_in_text
-      var thecontent = $('#why_fb_log_in_text').html();
-      $('#why_fb_log_in').qtip({
-        content: thecontent,
-        show: 'mouseover',
-        hide: 'mouseout',
-        position: {
-          corner: {
-            target: 'bottomLeft',
-            tooltip: 'topRight'
-          }
-        },
-        style :{
-          background: '#FAF798',
-          width: 400
-      // tip: { corner: 'leftTop' }
-      }
-      });
-    });
-  </script>
-</head>
-<body>
-  <div id = "animation_movie">
+<div id = "animation_movie">
 <iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="login-page">
 
     <div class='facebook-section'>
       <%= fb_login_button(image_tag("Facebook-orig.png")) %>
-      <div id = "why_fb_log_in">
-        Why Facebook log in
-        <%= image_tag("why_fb_log_in.png") %>
+      <div id = "area_help">
+        Why Facebook log in <%= image_tag("why_fb_log_in.png") %>
       </div>
       <!-- text for the qtip goes here, in this div, which is hidden -->
-      <div id = "why_fb_log_in_text">
+      <div id = "your_area_help_text">
         <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
         <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
         <p>Facebook Log in means a quick log in, with one less password to remember. And your FB friends will come up top of the list.</p>
@@ -76,6 +47,3 @@
     </div>
 
   </div>
-
-</body>
-</html>

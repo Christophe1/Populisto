@@ -1,62 +1,27 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
-  <script>
-    $().ready(function() {
-    // we want to show the html text in div #why_fb_log_in_text
-      var thecontent = $('#why_fb_log_in_text').html();
-      $('#why_fb_log_in').qtip({
-        content: thecontent,
-        show: 'mouseover',
-        hide: 'mouseout',
-        position: {
-          corner: {
-            target: 'bottomLeft',
-            tooltip: 'topRight'
-          }
-        },
-        style :{
-          background: '#FAF798',
-          width: 400
-      // tip: { corner: 'leftTop' }
-      }
-      });
-    });
-  </script>
-
-  </head>
-  <body>
-
-      <div id = "animation_movie">
-<iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
+<div id = "animation_movie">
+  <iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="login-page-sign-up">
+  <div id = "business-org-person-section">
+    <!-- <b>Are you a business or organization?</b> <%= link_to "Sign up here", new_company_registration_path %> -->
   </div>
 
-<div class="login-page-sign-up">
-    <div id = "business-org-person-section">
-      <!-- <b>Are you a business or organization?</b> <%= link_to "Sign up here", new_company_registration_path %> -->
+  <div class='facebook-section'>
+    <%= fb_login_button(image_tag("Facebook-orig.png")) %>
+    <div id = "area_help">
+      Why Facebook log in
+      <%= image_tag("why_fb_log_in.png") %>
     </div>
-
-     <div class='facebook-section'>
-      <%= fb_login_button(image_tag("Facebook-orig.png")) %>
-      <div id = "why_fb_log_in">
-        Why Facebook log in
-        <%= image_tag("why_fb_log_in.png") %>
-      </div>
-      <!-- text for the qtip goes here, in this div, which is hidden -->
-      <div id = "why_fb_log_in_text">
-        <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
-        <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
-        <p>Facebook Log in means a quick log in, with one less password to remember. And your FB friends will come up top of the list.</p>
-      </div>
-
-
-
-
-      <div class="or-devider">
-        <%= I18n.t('sign_in.or') %>
-      </div>
-
+    <!-- text for the qtip goes here, in this div, which is hidden -->
+    <div id = "your_area_help_text">
+      <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
+      <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
+      <p>Facebook Log in means a quick log in, with one less password to remember. And your FB friends will come up top of the list.</p>
     </div>
+    <div class="or-devider">
+      <%= I18n.t('sign_in.or') %>
+    </div>
+  </div>
 
     <div class='sign-in-section'>
 
@@ -88,25 +53,16 @@
           </br>
             <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
           </div>
-By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
-</br>
-</br>
+            By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
+          </br>
+          </br>
           <div class="create_account_button">
             <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
           </div>
         <% end %>
         <div class='already_member'>
-
           <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
           <br><br>
-
         </div>
-
-
     </div>
-
 </div>
-
-
-
-
