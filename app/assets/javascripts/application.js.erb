@@ -263,8 +263,12 @@ $(function() {
 
     personal_contact();
     disable_search();
-    tooltip();
-    search_help_tooltip();
+    if ($('#area_help').length > 0){
+        tooltip();
+    }
+    if ($('#search_box_help').length > 0){
+        search_help_tooltip();
+    }
 });
 
 
