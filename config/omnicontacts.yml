@@ -7,8 +7,8 @@ development: &development
     app_id: ""
     app_secret: ""
   hotmail:
-    app_id: "00000000480E8657"
-    app_secret: "dzMLx3wNVyW8KBcIbvfpECpp2kE21cC3"
+    app_id: "0000000040106A39"
+    app_secret: "uLOxXxOYbGsoXLIQJExpuJNfRb1KdlAt"
 
 staging: &staging
   gmail:

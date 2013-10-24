@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="libraries/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="libraries/jquery.qtip-1.0.0-rc3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<script>
+$().ready(function() {
+// $(function(){
+$('#a_tip').qtip({
+   content: 'This is an active list element',
+   show: 'mouseover',
+   hide: 'mouseout',
+    style :{
+            background: '#FAF798',
+        }
+});
+});
+
+</script>
+</head>
+<body>
+
+<div id = "a_tip">
+Want a tip?
+</div>
+
+</body>
+</html>

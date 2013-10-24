@@ -1,6 +1,6 @@
 class HomeController < FrontEndController
 
-  skip_before_filter :authenticate_user!, :only => :index
+  before_filter :check_resource!, :except => :index
   before_filter :check_if_user_not_signed_in, :only => :index
   skip_before_filter :force_address_step, :only => [:index, :map, :update_address]
 
@@ -14,7 +14,8 @@ class HomeController < FrontEndController
 
 
   def index
-    render 'users/sessions/coming', :layout => 'devise'
+    redirect_to login_path
+    #render 'users/sessions/coming', :layout => 'devise'
     # render 'users/sessions/new', :layout => 'devise'
 
   #     @users_count = User.count
@@ -26,30 +27,52 @@ class HomeController < FrontEndController
   end
 
   def update_address
-    if params[:changed] == '1'
-      current_user.update_attributes(params[:user]) 
-      redirect_to landing_page
-    else
-      flash[:alert] = I18n.t('map.address_validation')
-      redirect_to landing_page
+    if current_user
+      if params[:changed] == '1'
+        current_user.update_attributes(params[:user])
+        redirect_to landing_page
+      else
+        flash[:alert] = I18n.t('map.address_validation')
+        redirect_to landing_page
+      end
+    elsif current_company
+      if params[:changed] == '1'
+        current_company.update_attributes(params[:company])
+        redirect_to landing_page
+      else
+        flash[:alert] = I18n.t('map.address_validation')
+        redirect_to landing_page
+      end
     end
   end
 
   private
 
   def check_if_user_not_signed_in
-    if user_signed_in?
-      if current_user.registration_complete?
-        redirect_to landing_page
-      else
-        redirect_to map_path
+    if current_user.present?
+      if user_signed_in?
+        if current_user.registration_complete?
+          redirect_to landing_page
+        else
+          redirect_to map_path
+        end
+      end
+    elsif current_company.present?
+      if company_signed_in?
+        if current_company.registration_complete?
+          redirect_to landing_page
+        else
+          redirect_to map_path
+        end
       end
     end
   end
 
   def update_distances_to_other_users
-    FriendRelation.update_distances(current_user)
+    if current_user
+      FriendRelation.update_distances(current_user)
+    elsif current_company
+      FriendRelation.update_distances(current_company)
+    end
   end
-
-
 end

@@ -11,7 +11,15 @@ class ApplicationController < ActionController::Base
 
   before_filter :init_review
 
-  layout :layout_by_resource
+  #layout :layout_by_resource
+
+  def current_resource
+    if current_user
+      current_user
+    elsif current_company
+      current_company
+    end
+  end
 
   def redirect_if_dot_ie
     if request.host == 'populisto.ie'
@@ -24,6 +32,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_resource!
+    current_user.present? || current_company.present? || redirect_to(root_path)
+  end
 
   def init_review
     @review = Review.new
@@ -34,7 +45,7 @@ class ApplicationController < ActionController::Base
     @reviews = @user.reviews
   end
 
-      def index
+  def index
     @review = Review.new
   end
 
@@ -48,9 +59,9 @@ class ApplicationController < ActionController::Base
   #   render :layout => false
   # end
 
-    def find_user
-      @user = User.find_by_slug(params[:id])
-    end
+  def find_user
+    @user = User.find_by_slug(params[:id])
+  end
 
 
   def create
@@ -80,19 +91,21 @@ protected
 
 #  divide the categories into 'Useful things' and 'Address Books in your area'
   def load_data_for_checkbox
-    categories = Category.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
+    categories = Category.filtered.fetch_all.map{|c| [c.name, "category_#{c.id}"] }
     @data = [[I18n.t('search.group.category'), categories]]
+    @current_resource = current_resource
 
-    if current_user then
-      users_in_my_area = User.within(default_range, :origin => current_user)
-      users_outside_my_area = User.outside(default_range, :origin => current_user)
-      personal_contacts = current_user.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
+    if current_resource then
+      users_in_my_area = User.unscoped.within(default_range, :origin => current_resource)
+      users_outside_my_area = User.unscoped.outside(default_range, :origin => current_resource)
+      personal_contacts = current_resource.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
       # followers = users_in_my_area.followers_for(current_user)
       # following = users_in_my_area.following_by(current_user)
-      other = users_in_my_area - [current_user]
+      this_user = User.unscoped.find(current_resource.id)
+      other = users_in_my_area - [this_user]
 
       [other, users_outside_my_area].each do |users|
-         users.map!{ |u| [u.front_name.to_s + '|', "user_#{u.slug}"] }
+         users.map!{ |u| [u.front_name.to_s, "user_#{u.slug}"] }
         # the code below was causing the 'Brooklyn' problem, in the drop down list, beside Jen
         # users.map!{ |u| [u.front_name.to_s + '|' + u.city.to_s, "user_#{u.id}"] }
       end
@@ -137,11 +150,11 @@ protected
 
   # *******************************************************************************************************
 
-    def default_range
+  def default_range
     20
   end
 
- def new_range(old_range)
+  def new_range(old_range)
     {20 => 10, 10 => 20}[old_range]
   end
 
@@ -178,7 +191,11 @@ protected
   # Should be used by logged in users only
   #
   def landing_page
-    current_user.registration_complete? ? user_path(current_user) : map_path
+    if current_user
+      current_user.registration_complete? ? resource_home_path(current_user) : map_path
+    elsif current_company
+      current_company.registration_complete? ? resource_home_path(current_company) : map_path
+    end
   end
 
   helper_method :landing_page
@@ -191,16 +208,12 @@ protected
     @include_goole_maps = true
   end
 
-  def layout_by_resource
-    if devise_controller? && resource_name == :user
-      "devise"
-    else
-      "application"
-    end
-  end
-
-
-
+  # Used to switch layouts from main app to devise when needed, not used anymore
+  # def layout_by_resource
+  #   if devise_controller? && resource_name == :user
+  #     "devise"
+  #   else
+  #     "application"
+  #   end
+  # end
 end
-
-

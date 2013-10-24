@@ -1,6 +1,7 @@
 /*
  *= require _bootstrap
  *= require chosen
+ *= require chosen_override
  *= require gmaps4rails
  *= require_self
 */
@@ -26,6 +27,7 @@ html, body {
   > .container {
       padding-top: ($navbarHeight + 10);
       padding-bottom: ($navbarHeight / 2);
+      width: 1100px;
   }
 }
 

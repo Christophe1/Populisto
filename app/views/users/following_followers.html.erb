@@ -2,18 +2,12 @@
   <div class="modal-popup-close" id="popup_close">
     <%= I18n.t('user.close') %>
   </div>
-  
   <div class="following_list">
-
     <%= users_followers.html_safe %>
-
     <%= render @following %>
   </div>
-
   <div class="followers_list" >
     <%= users_following.html_safe %>
-
     <%= render @followers %>
   </div>
-
 </div>

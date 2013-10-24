@@ -1,17 +1,20 @@
 /*
  *= require _bootstrap
  *= require chosen
+ *= require chosen_override
  *= require email_invitation
  *= require search
- *= require static_pages
  *= require_self
  *= require form
  *= require users_page
-*= require reviews
-*= require login_signup
-*= require ie
-*= require signed_in_header
-*= require give_address_and_map
+  *= require reviews
+  *= require login_signup
+  *= require ie
+  *= require signed_in_header
+  *= require give_address_and_map
+  *= require qtip_tooltips
+  *= require empty_user
+
 */
 
 @import "bootstrap/variables";
@@ -27,8 +30,8 @@ $wizardLastTabWidth:    ($gridRowWidth - $wizardTabsBorderWidth - $wizardTabWidt
 
 
 html {
-     overflow: -moz-scrollbars-vertical;
-     overflow: scroll;
+     // overflow: -moz-scrollbars-vertical;
+     // overflow: scroll;
 }
 
 
@@ -37,6 +40,7 @@ html {
 
 #correct_area {
   font-weight: bold;
+  font-size: 12px;
 }
 
 #no_link {
@@ -50,9 +54,9 @@ html {
 }
 
 
-    
+
     /* margin: 0 auto; */
-    
+
 
 .control-group.chosen {
   .help-inline {
@@ -220,11 +224,11 @@ a.btn:focus {
 /* Container */
 #simplemodal-container {
   width: 550px;
-  height: 350px;
+  height: 470px;
   background-color: #fff;
   padding: 10px;
   @include border-radius(12px);
-  
+
 }
 
 
@@ -310,27 +314,54 @@ font-size: 18px;
 
 /* static pages */
 
-.static_pages_header, {
-  font-size: 26px;
-  margin-left: 200px;
-  margin-top: 130px;
+div.background_static_pages{
+  width:620px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color:#FDF6EA;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 60px;
+  text-align: justify;
+  border-radius:10px;
+  border:2px solid #EBDDDD;
+
+  .static_pages_header {
+    font-size: 26px;
+    padding-bottom: 30px;
+  }
 
   .static_pages_body{
-  /* margin-left: 200px; */
-  font-size: 16px;
-  margin-top: 20px;
-  margin-right: 300px;
-  text-align: justify
-}
+    font-size: 16px;
+  }
 
-.sign_up {
-  float: right;
-margin-top: 40px;
-margin-right: 300px;
-margin-bottom: 200px;
-}
-
+.sign_up_t_and_c {
+  font-size: 30px;
+  margin-top: 60px;
+  }
 }
 
 
 
+.categories_select {
+  width: 333px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+// .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+//   font-size: 20px;
+//   padding: 5px;
+//   height: 15px;
+// }
+// .chosen-container-multi .chosen-choices li.search-choice {
+//   color: #333;
+//   line-height: 13px;
+//   cursor: default;
+//   height: 23px;
+//   line-height: 24px;
+//   font-size: 18px;
+// }
+// .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{top:8px;}

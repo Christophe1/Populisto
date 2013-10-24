@@ -9,13 +9,18 @@ QuestionnaireSite::Application.routes.draw do
   # get "user", :to => @user(current_user)
   get "render_index_review", :to => "reviews#render_index"
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :sessions => "sessions", :registrations => "registrations" }
   devise_scope :user do
     delete "sign_out", :to => "devise/sessions#destroy"
     get "login", :to => "devise/sessions#new"
   end
 
+
+  devise_for :companies
+  devise_scope :company do
+    delete "sign_out", :to => "devise/sessions#destroy"
+    get "login", :to => "devise/sessions#new"
+  end
 
   devise_for :admins, :path => "admin", :controllers => { :sessions => "admin/sessions" }
 
@@ -41,6 +46,9 @@ QuestionnaireSite::Application.routes.draw do
       get :repost, :reject, :edit
     end
   end
+
+  resources :companies
+
   resources :users do
     member do
       get :following_followers, :address_toggle
@@ -126,5 +134,9 @@ QuestionnaireSite::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
+
+  scope :constraint => {:slug => /[^\/]+/} do
+    match ':slug' => 'users#show', :as => :resource_home
+  end
 end

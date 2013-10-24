@@ -11,11 +11,7 @@
   <%= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
       <div id="except_comment">
-      <%= f.input :category_ids, :collection => Category.all, :as => :chosen, :prompt => false,
-            :input_html => { :multiple => true, :id => "#{@review.id}" },
-            :label => I18n.t('write_review.categories_selector_label'),
-            :label_html => { :class => 'edit_form_titles' },
-            :error_html => { :class => 'cant_be_blank'}
+      <%= chosen_select_for_category(f)
             %>
 
       <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
@@ -41,14 +37,13 @@
 
       <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
       <%= render 'delete', :review => @review %>
-      <% unless @review.is_personal_contact? %>
-        <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-        <%= f.radio_button :visible, "false", :class => "keep_private_button" %>
+        <div class="radio_buttons_<%= @review.id %>" style="<%= @review.is_personal_contact? ? "display:none;" : "" %>">
+          <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
+          <%= f.radio_button :visible, "false", :class => "keep_private_button private_#{@review.id}", :disabled => true %>
 
-        <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-        <%= f.radio_button :visible, "true" , :class => "share_button" %>
-      <% end %>
-
+          <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
+          <%= f.radio_button :visible, "true" , :class => "share_button public_#{@review.id}", :disabled => true %>
+        </div>
 
       </div>
     <!-- </div> -->
@@ -62,14 +57,28 @@
 // script section: character count, the choosen drop down and 'ENTER should act like TAB'
 
 
+$(document).ready(function() {
+  $('#company_category_ids, #review_<%= @review.id %> select').chosen({
+    placeholder_text_multiple: "Click here to pick a category",
+    width: '342px',
+    max_selected_options: 2,
+    no_results_text: 'No results matched',
+    allow_single_deselect: true
+  });
+  return $("#company_category_ids, #review_<%= @review.id %> select").bind("chosen:maxselected", function() {
+    return alert("Enter up to 2 things. For example, 'plasterer' and 'paver', for someone who might do both.");
+  });
+});
+
+
 $(document).ready(function()  {
-    var characters = 200 -  $('textarea').val().length;
+    var characters = 300 -  $('textarea').val().length;
     $(this).closest('.control-group').next(".char_count_label").append(characters);
     $('textarea').keyup(function(){
-        if($(this).val().length > 200){
-            $(this).val($(this).val().substr(0, 200));
+        if($(this).val().length > 300){
+            $(this).val($(this).val().substr(0, 300));
         }
-        var remaining = 200 -  $(this).val().length;
+        var remaining = 300 -  $(this).val().length;
         $(this).closest('.control-group').next(".char_count_label").html(remaining);
     });
 });
@@ -78,9 +87,9 @@ $(document).ready(function()  {
 // I took out the initialize_google_maps function here,
 // because it was clashing with the one in scripts.js
 // this is for the 'Chosen' drop down plug in.
-    $("#review_<%= @review.id %> select").each(function () {
-        $(this).attr('data-placeholder', $(this).attr('placeholder'));
-    }).chosen();
+    // $("#review_<%= @review.id %> select").each(function () {
+    //     $(this).attr('data-placeholder', $(this).attr('placeholder'));
+    // }).chosen();
 
     // $('.edit_review_form form').submit(function() {
     //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
@@ -98,6 +107,36 @@ $('input').on('keydown',function(e){
       }
 });
 
+function personal_contact_<%= @review.id %>() {
+  $('#edit_review_<%= @review.id %> #review_category_ids').on('change', function(event, params) {
+      // can now use params.selected and params.deselected
+      radios = $("#edit_review_<%= @review.id %>").find('input:radio');
+      radio_1 = $("#edit_review_<%= @review.id %> .public_<%= @review.id %>");
+      radio_2 = $("#edit_review_<%= @review.id %> .private_<%= @review.id %>");
+      radio_1.prop("checked", true);
+      labels = $('#edit_review_<%= @review.id %> .private_<%= @review.id %>, .public_<%= @review.id %>');
+      radio_buttons = $('.radio_buttons_<%= @review.id %>');
 
+      arr = $('#edit_review_<%= @review.id %> #review_category_ids').val();
+      found = $.inArray('1', arr) > -1;
+
+      if(found) {
+          radios.attr("disabled", true);
+          radio_1.prop('checked',false);
+          radio_2.prop('checked',true);
+          labels.css('color', '#ADAAAB');
+          $('#edit_review_<%= @review.id %> #review_category_ids').val(1).trigger("chosen:updated");
+      }
+      else{
+          radios.attr("disabled", false);
+          radio_1.prop('checked',true);
+          radio_2.prop('checked',false);
+          labels.css('color', '#000');
+          radio_buttons.css('display', 'block');
+      }
+  });
+}
+
+personal_contact_<%= @review.id %>();
 </script>
 <div class="clearfix"></div>

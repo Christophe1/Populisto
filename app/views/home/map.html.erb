@@ -1,28 +1,41 @@
 <div class='map-page'>
-
-  <div class="greetings">
-
-    <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %>
-    <br><br>
-
-    <%= I18n.t('map_page.greetings_2') %>
-  </div>
-
   <div class='address-area'>
-
+    <% if current_user %>
     <%= form_for current_user, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
+      <div class="greetings">
+        <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %><br><br>
+        <%= I18n.t('map_page.greetings_2') %>
+      </div>
       <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
-
       <%= hidden_field_tag :changed %>
+    <% end %>
+    <% elsif current_company %>
+    <%= form_for current_company, :url => update_address_path, :html => {:method => :post, :class => 'form-horizontal', :id => 'address_form'} do |f| %>
+      <div class="greetings">
+        Hi <%= current_company.name %>.<br><br>
+        Select up to two categories that best describe your organization.
+      </div>
+      <div class="categories_select">
+      <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
+      </div>
+      <div class="greetings">
+        And please tell us your address details. The more accurate you are the more effective peoples' results will be, when looking for things you do.
+      </div>
+      <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+      <%= f.hidden_field :city %>
+      <%= f.hidden_field :lat  %>
+      <%= f.hidden_field :lng  %>
+      <%= hidden_field_tag :changed %>
+    <% end %>
     <% end %>
 
   </div>
 
   <div id="map_canvas"></div>
-  
+
   <div id="info_window" style="display:none">
 
   <%#= link_to I18n.t('map.next_link'), '#', :class => 'btn', :id => 'map-next-link' %>
@@ -33,7 +46,6 @@
   Is this the correct area?
   </div>
 
-  <br><br><br>
 
   <%#= code below deals with the 'Yes' and 'No' links on the infoWindow.
   They go to the aplication.js file %>
@@ -103,15 +115,15 @@
     autocomplete = new google.maps.places.Autocomplete(pac_input, options);
     autocomplete.bindTo('bounds', map);
     // $(autocomplete).trigger("click");
-    
+
     var contentstring = $('#info_window').html();
-    
+
     var infowindow = new google.maps.InfoWindow({content: contentstring, width:1, height:1});
     // for the 'x', to close the infoWindow, we give it the same behaviour as the 'No' link, in the infoWindow
-    google.maps.event.addListener(infowindow, 'closeclick', function() {   
+    google.maps.event.addListener(infowindow, 'closeclick', function() {
       $(".map-no-link").trigger("click");
-    });  
- 
+    });
+
     var marker = new google.maps.Marker({
       map: map
     });
@@ -126,19 +138,35 @@
       }
 
       marker.setPosition(place.geometry.location);
+      <% if current_user %>
       $('#user_lat').val(place.geometry.location.lat());
       $('#user_lng').val(place.geometry.location.lng());
+      $('#user_city').val(place.address_components[0] && place.address_components[0].short_name || '')
+      <% elsif current_company %>
+      $('#company_lat').val(place.geometry.location.lat());
+      $('#company_lng').val(place.geometry.location.lng());
+      $('#company_city').val(place.address_components[0] && place.address_components[0].short_name || '')
+      <% end %>
       $('#changed').val('1');
 
       //infowindow.setContent(place.name);
       infowindow.open(map, marker);
     });
 
-    <% if current_user.address and current_user.lat %>
-      var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
-      var marker = new google.maps.Marker({map: map, position: currentlatlng});
-      map.setCenter(currentlatlng);
-      map.setZoom(11);
+    <% if current_user %>
+      <% if current_user.address and current_user.lat %>
+        var currentlatlng = new google.maps.LatLng(<%= current_user.lat %>, <%= current_user.lng %>);
+        var marker = new google.maps.Marker({map: map, position: currentlatlng});
+        map.setCenter(currentlatlng);
+        map.setZoom(11);
+      <% end %>
+    <% elsif current_company %>
+    <% if current_company.address and current_company.lat %>
+        var currentlatlng = new google.maps.LatLng(<%= current_company.lat %>, <%= current_company.lng %>);
+        var marker = new google.maps.Marker({map: map, position: currentlatlng});
+        map.setCenter(currentlatlng);
+        map.setZoom(11);
+      <% end %>
     <% end %>
 
   }

@@ -1,9 +1,8 @@
 <div id = "follow_info" id="<%= stats_user_id %>">
-
 	<div id = "user_name">
-  <%= @user.first_name + " " + @user.last_name %>
-</div>
-<div id="following_link">
-  <%= link_to "#{t('user.following_followers')}", '#', :remote_url => following_followers_user_path(user), :class => 'following_followers' %>
-</div>
+    <%= @user.first_name + " " + @user.last_name %>
+  </div>
+  <div id="following_link">
+    <%= link_to "#{t('user.following_followers')}", '#', :remote_url => following_followers_user_path(user), :class => 'following_followers' %>
+  </div>
 </div>

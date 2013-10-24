@@ -7,13 +7,13 @@ class Admin::UsersController < Admin::BaseController
   before_filter :find_user, :only => [:show]
 
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 30)
-    @json = User.all.to_gmaps4rails
+    @users = User.unscoped.paginate(:page => params[:page], :per_page => 30)
+    @json = User.unscoped.all.to_gmaps4rails
   end
 
   def update
     password_presence
-    @user = User.find(params[:id])
+    @user = User.unscoped.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = I18n.t('admin.profile.edit.success')
       redirect_to admin_user_path @user
@@ -27,14 +27,14 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def map_view
-    @json = User.all.to_gmaps4rails
+    @json = User.unscoped.all.to_gmaps4rails
   end
 
 
   protected
 
   def end_of_association_chain
-    User.with_films
+    User.unscoped.with_films
   end
 
   def password_presence

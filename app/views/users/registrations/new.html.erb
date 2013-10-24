@@ -1,50 +1,28 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
-
-    <!-- <link rel="stylesheet" type="text/css" href="carousel.css"> -->
-
-   <!-- // <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
-
-  </head>
-  <body>
-
-  <!-- the container div, which holds the back and forward arrows on each side, and the 
-  changing images, in the middle -->
-  <div id = "carousel">
-    <%= image_tag "1.1.png", :id => "rotate_images" %>
-    <!-- <img id ="rotate_images" src="assets/1.1.png"/> -->
-    <!-- back arrow -->
-    <div id = "back">
-      <%= image_tag "arrow_back.png" %> 
-    <!-- <img src = "assets/arrow_back.png"> -->
-  </div>  
-  <!-- forward arrow -->
-    <div id = "forward">
-      <%= image_tag "arrow_forward.png" %>
-    <!-- <img src = "assets/arrow_forward.png"></div> -->
-   
-  </div>
+<div id = "animation_movie">
+  <iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
+<div class="login-page-sign-up">
+  <div id = "business-org-person-section">
+    <!-- <b>Are you a business or organization?</b> <%= link_to "Sign up here", new_company_registration_path %> -->
+  </div>
 
-
-
-<div class="login-page">
-
-    <div class='facebook-section'>
-      <!--<h2><%= I18n.t('sign_in.login_text') %></h2>-->
-
-      <%= fb_login_button(image_tag("Facebook-orig.png")) %>
-
-      <div class='fb-notes'>
-        <%= raw I18n.t('sign_in.login_notes') %>
-      </div>
-
-      <div class="or-devider">
-        <%= I18n.t('sign_in.or') %>
-      </div>
-
+  <div class='facebook-section'>
+    <%= fb_login_button(image_tag("Facebook-orig.png")) %>
+    <!-- id area_help and your_area_help_text is required by javascript function -->
+    <div id = "area_help">
+      Why Facebook log in
+      <%= image_tag("why_fb_log_in.png") %>
     </div>
+    <!-- text for the qtip goes here, in this div, which is hidden -->
+    <div id = "your_area_help_text">
+      <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
+      <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
+      <p>Facebook Log in means a quick log in, with one less password to remember. And your FB friends will come up top of the list.</p>
+    </div>
+    <div class="or-devider">
+      <%= I18n.t('sign_in.or') %>
+    </div>
+  </div>
 
     <div class='sign-in-section'>
 
@@ -76,60 +54,16 @@
           </br>
             <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
           </div>
-</br>
-          <div class="actions">
+            By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
+          </br>
+          </br>
+          <div class="create_account_button">
             <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
           </div>
         <% end %>
-</br>
-        <div class='links centralized'>
-          
+        <div class='already_member'>
           <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
           <br><br>
-By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
         </div>
-
-
     </div>
-
 </div>
-
-  <div id="iPad-promo">
-    <!-- <li id="win_ipad"> -->
-    <div id="smiley">
-    <%= image_tag("smiley.png") %>
-  </div>
-    <!-- <p class="title">And...290513</p> -->
-    <div id = "win_ipad_text">
-    Be in with the chance to win an iPad! 
-    </div>
-      <%#= link_to "Terms and conditions apply", '#', :onclick => "javascript:window.open(\"terms.html.erb\",'Terms and Conditions', 'width=300, height=600');" %>
-   <div id = "ipad_image">
-    <%#= image_tag "ipad.png" %>
-   </div>
- </div>
-
-   <script>
-
-  $('#back').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('1.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-
-  $('#forward').on({
-      'click': function () {
-          var origsrc = $(rotate_images).attr('src');
-          var src = '';
-          if (origsrc == '<%= asset_path('1.1.png') %>') src = '<%= asset_path('2.1.png') %>';
-          if (origsrc == '<%= asset_path('2.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          if (origsrc == '<%= asset_path('3.1.png') %>') src = '<%= asset_path('3.1.png') %>';
-          $(rotate_images).attr('src', src);
-      }
-  });
-  </script>

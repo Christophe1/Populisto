@@ -98,6 +98,7 @@ en:
     email_address: "Email"
     password: "Password"
     password_confirmation: "Confirm password"
+    company_name: "Company name"
   layout:
     your_page_link: 'Your Page'
     find_something_link: 'Find Something'
@@ -121,9 +122,9 @@ en:
     empty_search_results: "No results have appeared for that search. Be a populisto and enter one yourself!"
   map_page:
     greetings_1: "Hi %{user_name}. Please tell us your address details."
-    greetings_2: "If you don't want to give your exact details that's ok, but the more accurate you are, the more effective your results will be when doing searches."
+    greetings_2: "If you don't want to give your exact details that's ok (it’s kept private, in any case), but the more accurate you are, the more effective your results will be, when looking for things in your area."
   write_review:
-    text: 'Add something to Populisto!, the only Address Book you will ever need.<br></br>Share something with friends to help them find something, or store it personally for yourself.'
+    text: 'Add something to Populisto! Share something with friends to help them find something, or store it personally for yourself.'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
     comment_label: 'Comments'
@@ -132,7 +133,7 @@ en:
     close_popup_text: 'Close'
     review_successfully_created: 'Review was successfully created'
     categories_selector_label: 'Categories'
-    categories_selector_placeholder: 'Search Address Books of people in your area.'
+    categories_selector_placeholder: 'Search'
   find_something:
     greetings: 'Your area is set to %{km}km around the location you gave when registering with Populisto. When you do a search, we’ll return the results from peoples’ address books, who live within the circle on the map.'
     change_range_20: 'Change to 10km?'
@@ -143,10 +144,10 @@ en:
     button_text: 'Go'
     my_area_title: 'In Your Area:'
     outside_area_title: 'Outside Your Area:'
-    my_reviews_title: 'Your Address book entries'
+    my_reviews_title: 'You:'
     followers_reviews_title: 'Address book entries by those following you'
     following_reviews_title: 'Address book entries by those you’re following'
-    others_reviews_title: 'Other address book entries'
+    others_reviews_title: 'Address Book entries in your area:'
     empty_user_owner: "You don't have anything in your address book."
     empty_user_other: " is empty."
     review:
@@ -156,7 +157,7 @@ en:
   facebook:
     apprequest:
       title: "Invite friends to Populisto!"
-      message: "Hey, lets share films to each other!"
+      message: "Check out this cool app, Populisto!"
   admin:
     sections:
       profile: "Profile"
@@ -199,7 +200,6 @@ en:
     callback_no_contacts: "You can import your contacts from another service."
     callback_close_link: "Close this window"
     icons_extra_text: "You’ll have full control over who you want to contact!"
-    icons_additional_text: "Each invite you send gains you a ticket for the raffle, to win an iPad. The more you send, the greater chance you have of winning.<br /><br />You can see the number of invites you've sent on the left of the screen. Winner will be announced in early June."
     invites_sent: "Invites sent: <b>%{number}</b>"
     outlook:
       step1: "Please provide a .csv file with contacts. You will be able to choose the ones you want to import on the next page"
@@ -255,7 +255,7 @@ en:
     validation: "I'm sorry, but this user is not living within your 20km area."
   search:
     group:
-      category: "Useful things"
+      category: "Categories"
       following_in: "People you follow"
       followers_in: "People following you"
       other_people: "Address Books in your area"

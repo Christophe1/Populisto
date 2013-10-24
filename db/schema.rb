@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130823222204) do
+ActiveRecord::Schema.define(:version => 20130915113506) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",               :default => "", :null => false
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(:version => 20130823222204) do
   end
 
   add_index "categories", ["name"], :name => "idx_categories_on_name", :unique => true
+
+  create_table "category_companies", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "company_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "category_reviews", :force => true do |t|
     t.integer "category_id"
@@ -130,6 +137,8 @@ ActiveRecord::Schema.define(:version => 20130823222204) do
     t.string   "city"
     t.integer  "invites_count",                                                       :default => 0
     t.string   "slug"
+    t.boolean  "is_company",                                                          :default => false
+    t.boolean  "gmaps"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

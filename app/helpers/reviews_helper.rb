@@ -25,4 +25,15 @@ module ReviewsHelper
     return categories.unshift(categories.delete_at(categories.index(first_in_list)))
   end
 
+  def chosen_select_for_category(f)
+    cats = []
+    Category.filtered.order(:name).map{|c| cats << c}
+    first_cat = Category.unscoped.find(1)
+    cats.unshift(first_cat)
+    f.input :category_ids, :collection => cats, :as => :chosen, :prompt => false,
+            :input_html => { :multiple => true },
+            :label => I18n.t('write_review.categories_selector_label'),
+            :label_html => { :class => 'edit_form_titles' },
+            :error_html => { :class => 'cant_be_blank'}
+  end
 end

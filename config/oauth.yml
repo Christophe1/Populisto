@@ -1,7 +1,7 @@
 development:
   facebook:
-    app_id: "244574445744603"
-    app_secret: "301bf4e3202cd8578e32232a4a3c2d59"
+    app_id: "144574445744603"
+    app_secret: "501bf4e3202cd8578e32232a4a3c2d59"
     options:
       scope: "email"
       display: "page"

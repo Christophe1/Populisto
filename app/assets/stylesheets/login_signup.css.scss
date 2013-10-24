@@ -1,70 +1,57 @@
 @import "compass/css3/border-radius";
 
 
-#carousel {
-position: relative;
-margin-top: 20px;
-float: left;
-/* margin-left: 80px; */
-height: 350px;
-width: 45%;
-}
-
-#back{
-position: absolute;
-left:0;
-top:175px;
-}
-
-#forward{
-position: absolute;
-right:0;
-top:175px;
-}
-
-
 /* css details for the list on the login - sign up page */
 
 #home_page_header {
- /* position: fixed; */
   width: 100%;
   height: 75px;
   top: 0;
 
   .populisto_logo2 {
-  width: 400px;
-margin-left: auto;
-margin-right: auto;
-}
+padding-top: 10px;
+padding-left: 10px;
 
+
+#menu2 {
+display:inline;
 
   #home_page_links {
-padding-top: 20px;
-width: 600px;
-margin-left: auto;
-margin-right: auto;
+display: inline;
+width: 440px;
+padding-left: 10%;
 
 
-    li {
-
+  li {
       display: inline;
-      /* list-style-type: none; */
-      padding-right: 35px;
-      font-size: 16px
-    }
+      background-color:#4C95F1;
+      padding: 6px 0px 6px 0px;
+      font-size: 16px;
+      border-radius:10px;
+
+      a
+      {
+      padding: 6px 12px 6px 12px;
+      text-decoration:none;
+      color: #FFFFFF;
+
+      }
+
+
+      a:hover,a:active
+      {
+      background-color:#F5A225;
+      border-radius:10px;
+      }
+      }
 
   }
-
+  }
+  }
   }
 
 
-.changing_images {
-  float: left;
-  padding-top: 30px;
-  padding-left: 90px;
-  width: 650px;
-  height: 350px;
-}
+
 
 .features {
   list-style:none;
@@ -79,7 +66,7 @@ margin-right: auto;
 .features img {
   float: left;
   margin: 0px;
-} 
+}
 
 .features p {
   margin: 0 0 0 68px;
@@ -93,37 +80,18 @@ margin-right: auto;
 .features img2 {
   float: right;
   margin: 5px 0 0;
-} 
-
-
-#iPad-promo {
-width: 450px;
-list-style: none;
-float: left;
-border: 1px solid #ebebeb;
-margin: 390px 0 0 -540px;
-padding: 10px;
-
-#smiley {
-float: left;
-margin-right: 22px;
-} 
-
-#win_ipad_text{
-font-size: 18px;
-padding-top: 12px;
-float: left;
-} 
-
-#ipad_image {
-  font-size: 1em;
-} 
-
 }
 
 
 
-/*Facebook login, on the home page */
+#animation_movie{
+float: left;
+margin-left: 100px;
+width: 600px;
+height: 600px;
+
+}
+/*Facebook login , on the home page */
 
 .login-page {
 width:370px;
@@ -132,10 +100,14 @@ margin-right: 40px;
 margin-top: 20px;
 border: 1px solid #eee;
 
+#business-org-person-section {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
   .facebook-section {
     text-align: center;
     position: relative;
-    padding: 15px 15px 0;
 
     .fb-login {
       width: 315px;
@@ -143,10 +115,87 @@ border: 1px solid #eee;
       display: block;
     }
 
-    .fb-notes {
-      font-size: 12px;
-      margin-bottom: 20px;
+
+    .or-devider {
+      position: absolute;
+      bottom: -36px;
+      left: 160px;
+      background-color: white;
+      width: 40px;
+      height: 30px;
+      text-align: center;
+      @include border-radius(15px);
+      font-size: 17px;
+      line-height: 26px;
     }
+  }
+
+  .sign-in-section {
+    .simple_form#new_user {
+      .error-explanation {
+        margin: 5px 0px 5px 0px;
+        background: #f2dede;
+        padding: 15px;
+        .error-message {
+          display: block;
+          color: #b94a48;
+        }
+      }
+    }
+  }
+
+  .sign-in {
+    text-align: center;
+
+    p {
+      font-size: 20px;
+    }
+
+    .create-account-note {
+      color: red;
+
+      a, a:visited {
+        color: red;
+        text-decoration: underline;
+      }
+    }
+
+    .not-on-facebook-note a {
+      color: blue;
+    }
+  }
+
+  border: 1px solid #eee;
+  @include border-radius(10px);
+}
+
+
+
+/*Facebook signup, on the home page */
+
+.login-page-sign-up {
+width:370px;
+line-height: 14px;
+float: right;
+margin-right: 40px;
+margin-top: -60px;
+border: 1px solid #eee;
+
+#business-org-person-section {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+  .facebook-section {
+    text-align: center;
+    position: relative;
+
+    .fb-login {
+      width: 315px;
+      margin: 15px auto;
+      display: block;
+    }
+
 
     .or-devider {
       position: absolute;
@@ -206,6 +255,7 @@ border: 1px solid #eee;
   background-color: #DFDFDF;
   padding: 25px;
   padding-top: 22px;
+  padding-bottom: 10px;
   .explanation {
     text-align: center;
     margin: 7px;
@@ -214,28 +264,46 @@ border: 1px solid #eee;
   .inputs {
     input.string, input.password {
       width: 300px;
-      height: 12px;
-      font-size: 14pt;
+      height: 20px;
+      font-size: 13pt;
       padding: 10px 5px 10px 5px;
     }
   }
-  .actions {
-  display: block;
+  .log_in_button {
+  /* display: block; */
 margin-left: auto;
 margin-right: auto;
-width: 146px;
-      /*text-align: right;*/
+width: 66px;
+
     }
 
-    .links {
-      color: #848484;
-      text-align: center;
-      a {
-        color: #848484;
-      }
+      .create_account_button {
+  /* display: block; */
+margin-left: auto;
+margin-right: auto;
+width: 116px;
+
     }
-    .links.centralized {
-      text-align: center;
+
+
+    .remember_me {
+      float:left;
+    }
+
+    .forgot_password {
+      float:right;
+    }
+
+    .sign_up {
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .already_member {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
     }
 
 

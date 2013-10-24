@@ -35,6 +35,8 @@ class User < ActiveRecord::Base
   friendly_id :slug_name, :use => :slugged
   acts_as_gmappable :process_geocoding => false, :lat => 'lat', :lng => 'lng'
 
+  default_scope where(:is_company => false)
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :omniauthable, :validatable, :confirmable
@@ -43,7 +45,7 @@ class User < ActiveRecord::Base
 
   has_many :friend_relations, :primary_key => :external_user_id,
            :foreign_key => "source_user_id", :dependent => :destroy
-  has_many :reviews
+  has_many :reviews, :dependent => :destroy
   has_many :email_invites, :foreign_key => :from_user_id, :dependent => :destroy
 
   has_many :genres
@@ -64,6 +66,7 @@ class User < ActiveRecord::Base
   scope :following_by,  lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followed_ids,  user.followed_ids] }
 
   self.per_page = 10
+
 
   def slug_name
     self.first_name + " " + self.last_name
@@ -305,7 +308,7 @@ class User < ActiveRecord::Base
 
   def personal_reviews_contacts
     arr = []
-    cat = Category.find_by_name("Personal Contact")
-    cat.reviews.where(:user_id => self.id)
+    cat = Category.find(1)
+    arr = cat.reviews.where(:user_id => self.id)
   end
 end

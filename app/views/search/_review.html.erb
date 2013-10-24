@@ -1,77 +1,59 @@
 <div class="reviews" >
+  <div class="breadcrumb" id="review_<%=review.id%>">
+    <div class="left_window">
+      <!-- can be public or for your eyes only, change the colour accordingly -->
+      <div id="privacy_<%= review.id %>">
+        <% if review.visible == true %>
+          <script>
+            $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
+          </script>
+          <%= "Public" %>
+        <% else %>
+          <script>
+            $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
+          </script>
+          <%= "Your eyes only" %>
+        <% end %>
+      </div>
 
-<div class="breadcrumb" id="review_<%=review.id%>">
+      <div id = "fb_avatar">
+        <%= fb_avatar(review.owner) %>
+      </div>
 
-<div class="left_window">
+      <!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry. -->
+      <div class = "address_entry_user_name">
+        <!-- not sure why, but need to use review.user.name and front_name to distinguish
+          between regular and Facebook log in people. -->
+          <%# if current_user.name == review.user.name || review.user.front_name %>
+          <%#= link_to "You", user_path(review.user), :class => "ajax" %>
+          <%# else %>
+          <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
+          <%# end %>
+      </div>
 
-<!-- can be public or for your eyes only, change the colour accordingly -->
-<div id="privacy_<%= review.id %>">
-  <% if review.visible == true %>
+      <!-- <div class="category_name">
+          <%#= "/" + review.categories_list %>
+          </div> -->
+      </br>
 
-  <script>
-  $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
-  </script>
-
-  <%= "Public" %>
-  <% else %>
-
-    <script>
-  $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
-  </script>
-
-            <%= "Your eyes only" %>
-            <% end %>
-</div>
-  <!-- <div class="left-part"> -->
-  <div id = "fb_avatar">
-    <%= fb_avatar(review.user) %>
+      <div class="info">
+        <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
+        </br>
+        <strong><%= I18n.t('user.review.address') %></strong><%= review.address %><br>
+        </br>
+        <strong><%= I18n.t('user.review.phone') %></strong><%= review.phone %><br>
+        </br>
+        <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
+      </div>
     </div>
 
-
-
-<!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry. -->
-<div class = "address_entry_user_name">    
-  <!-- not sure why, but need to use review.user.name and front_name to distinguish
-  between regular and Facebook log in people. -->
-      <%# if current_user.name == review.user.name || review.user.front_name %>
-      <%#= link_to "You", user_path(review.user), :class => "ajax" %> 
-      <%# else %>
-      <%= (link_to review.user.front_name, user_path(review.user), :class => "ajax") + "/" + review.categories_list %> 
-      <%# end %>
-</div>
-
-<!--     <div class="category_name">
-    <%#= "/" + review.categories_list %>
-    </div> -->
-</br>
-
-<div class="info">
-      <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
-      </br>
-      <strong><%= I18n.t('user.review.address') %></strong><%= review.address %><br>
-      </br>
-      <strong><%= I18n.t('user.review.phone') %></strong><%= review.phone %><br>
-      </br>
-    <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
+    <div class="right_window">
+      <div class="comments"><%= I18n.t('user.review.comments') %></div>
+      <div class="comment-content"><%= review.comment %></div>
+      <%= render 'reviews/add_to_your_page', :review => review  unless current_resource == review.owner %>
+      <div class = "binder"></div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- <hr style="margin: 0 30px;"/> -->
   </div>
-</div>
-    
-<div class="right_window">
-
-<div class="comments"><%= I18n.t('user.review.comments') %></div> 
-
-    <div class="comment-content"><%= review.comment %></div>
-    
-    <%= render 'reviews/add_to_your_page', :review => review  unless current_user == review.user %>
-<div class = "binder">
-  </div>
-
-  <div class="clearfix"></div>
-
-</div>
-
-  <!-- <hr style="margin: 0 30px;"/> -->
-
-</div>
-
 </div>

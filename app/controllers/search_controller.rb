@@ -3,21 +3,26 @@
 #into the application controller.rb. Hopefully it's redundant now, because I want
 #it to be - search is to be done from the header.
  class SearchController < FrontEndController
-
-
+   before_filter :check_resource!
    before_filter :with_google_maps_api
    before_filter :default_miles_range
    before_filter :load_data_for_checkbox
- before_filter :fix_params, :only => :create
+   before_filter :fix_params, :only => :create
 
   def index
     @review = Review.new
-   end
+  end
 
   def create
-    @review = Review.new params[:review]
-    @reviews = Review.scoped_by_search_params(params, current_user)
-    render :action => :index
+    terms = params[:review][:search_ids]
+    if terms.any?
+      @review = Review.new params[:review]
+      @reviews = Review.scoped_by_search_params(params, current_resource)
+      @companies = Company.scoped_by_search_params(params, current_resource) || []
+      render :action => :index
+    else
+      redirect_to :back
+    end
   end
 
    def change_range

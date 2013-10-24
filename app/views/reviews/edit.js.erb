@@ -1,4 +1,4 @@
-$('#review_<%=@review.id%>').html("<%= escape_javascript(render 'edit') %>")
+$('#review_<%=@review.id%>').html("<%= j(render 'edit') %>")
 $('#review_<%=@review.id %>').animate({height:'250px'}, 300);
 
 

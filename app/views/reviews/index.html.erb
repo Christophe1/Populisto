@@ -1,5 +1,6 @@
 <!-- This is the page where a person writes something up for their Address Book -->
 
+  <div class = "background_your_area" >
   <div class='review-text'>
 
     <%= raw I18n.t('write_review.text') %>
@@ -21,15 +22,15 @@
   <%#= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
       <div id="except_comment">
-      <%= f.input :category_ids, :collection => sorted_categories, :as => :chosen, :prompt => false,
+      <%#= f.input :category_ids, :collection => sorted_categories, :as => :chosen, :prompt => false,
             :input_html => { :multiple => true, :id => "#{@review.id}" },
             :label => I18n.t('write_review.categories_selector_label'),
             :label_html => { :class => 'edit_form_titles' },
             :error_html => { :class => 'cant_be_blank'}
             %>
+      <p><%= chosen_select_for_category(f) %></p>
 
       <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
-
       <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
       <span id="address_validation"></span>
 
@@ -71,6 +72,7 @@
 </div>
 </div>
 </div>
+</div>
 
 
 <script type="text/javascript">
@@ -79,7 +81,7 @@
 // script section: character count, the choosen drop down and ENTER should act like TAB
 
 $(document).ready(function()  {
-    var characters = 200;
+    var characters = 300;
     $("#char_count_label").append(characters);
     $('textarea').keyup(function(){
         if($(this).val().length > characters){
