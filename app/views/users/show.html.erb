@@ -1,3 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    $().ready(function() {
+    // we want to show the html text in div #why_fb_log_in_text
+      var thecontent = $('#your_area_help_text').html();
+      $('#area_help').qtip({
+        content: thecontent,
+        show: 'mouseover',
+        hide: 'mouseout',
+        position: {
+          corner: {
+            target: 'bottomLeft',
+            tooltip: 'topLeft'
+          }
+        },
+        style :{
+          background: '#FAF798',
+          width: 400
+      // tip: { corner: 'leftTop' }
+      }
+      });
+    });
+  </script>
+</head>
+<body>
+
 <!-- <div class="users-page"> -->
 
 
@@ -38,35 +67,35 @@
   <div class = "background_your_area">
 
   <div id="your_area">
-    <div id = "Address_book_area">
-      <% if current_resource.name == @resource.name %>
-      <%= "Your Area:" %>
+  <div id = "Address_book_area">
+    <% if current_resource.name == @resource.name %>
+    <%= "Your Area:" %>
+    <% else %>
+      <% if @resource.is_company? %>
+        <%= "#{@resource.name}" + "'s Area:" %>
       <% else %>
-        <% if @resource.is_company? %>
-          <%= "#{@resource.name}" + "'s Area:" %>
-        <% else %>
-          <%= "#{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + "'s Area:" %>
-        <% end %>
+        <%= "#{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + "'s Area:" %>
       <% end %>
-    </div>
+    <% end %>
+  </div>
 
 
     <div id = "area_help">
       <%= image_tag("why_fb_log_in.png") %>
     </div>
-      <!-- text for the qtip goes here, in this div, which is hidden -->
-    <div id="your_area_help_text">
-      <% if current_resource.name == @resource.name %>
-        <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
+          <!-- text for the qtip goes here, in this div, which is hidden -->
+      <div id = "your_area_help_text">
+            <% if current_resource.name == @resource.name %>
+    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
+    <% else %>
+      <% if @resource.is_company? %>
+        <%= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
       <% else %>
-        <% if @resource.is_company? %>
-          <%= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
-        <% else %>
-          <%= "When #{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + " searches Address Books, we give results from people who live within the circle on the map." %>
-        <% end %>
+        <%= "When #{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + " searches Address Books, we give results from people who live within the circle on the map." %>
       <% end %>
-      <p></p>
-    </div>
+    <% end %>
+        <p></p>
+      </div>
   </div>
 
 
@@ -329,3 +358,6 @@ formatted correctly -->
   <%# end %>
 </div>
 </div>
+
+</body>
+</html>

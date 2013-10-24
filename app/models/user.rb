@@ -67,6 +67,7 @@ class User < ActiveRecord::Base
 
   self.per_page = 10
 
+
   def slug_name
     self.first_name + " " + self.last_name
   end
