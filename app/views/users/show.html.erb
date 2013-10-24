@@ -281,18 +281,20 @@ formatted correctly -->
   <% if @reviews.any? %>
 <!-- if the person has reviews, show the 'Your Address Book' heading, and the reviews that follow -->
     <div id = "Address_book_owner">
-    <% if current_resource.name == @resource.name %>
+    <% if current_resource == @resource %>
     <%= "Your Address Book:" %>
     <% else %>
       <% if @resource.is_company? %>
-        <%= "#{@resource.name}" + "'s Address Book:" %>
+      <!-- resource full name considering if name ends with s -->
+        <%= resource_full_name(@resource.name) %>
       <% else %>
-        <%= "#{@resource.first_name.capitalize} " + " " + "#{@resource.last_name.capitalize}" + "'s Address Book:" %>
+      <!-- resource full name considering if name ends with s -->
+        <%= resource_full_name(@resource.front_name) %>
       <% end %>
     <% end %>
     <div id = "address_book_image">
       <%= image_tag('happy_characters_address_book.png', :size => "218x95") %>
-  </div>
+    </div>
   </div>
 <!-- show the reviews -->
     <% @reviews.each do |review| %>
