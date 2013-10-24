@@ -65,11 +65,24 @@ class User < ActiveRecord::Base
   scope :followers_for, lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followers_ids, user.followers_ids] }
   scope :following_by,  lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followed_ids,  user.followed_ids] }
 
+  # return all users except the one sent as param.. User.without_user(current_user)
+  scope :without_user, lambda{|user| user ? {:conditions => ["id != ?", user.id]} : {} }
+
   self.per_page = 10
 
 
   def slug_name
     self.first_name + " " + self.last_name
+  end
+
+  def self.in_area(user)
+    users = []
+    User.without_user(user).each do |u|
+      if u.distance_to(user) < 20
+        users << u
+      end
+    end
+    return users
   end
 
   class << self

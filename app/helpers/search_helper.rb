@@ -5,7 +5,7 @@ module SearchHelper
     outside_area = []
     reviews.each do |review|
       distance = current_resource.distance_to(review.owner)
-      # review.distance = distance
+      review.distance = distance
       distance <= @kms_range ? (my_area << review) : (outside_area << review)
     end
     return my_area, outside_area

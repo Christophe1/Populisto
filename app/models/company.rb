@@ -78,9 +78,7 @@ class Company < ActiveRecord::Base
 
   class << self
     def scoped_by_search_params(params, current_user)
-      if params[:review][:search_ids].present?
-        params = params[:review][:search_ids]
-
+      if params.present?
         categories_ids = params.map{|id| id.delete('category_').to_i}
         companies = Company.with_categories.where(:categories => {:id => categories_ids}).within(20, :origin => current_user) unless categories_ids.blank?
         return reviews = (companies).uniq
