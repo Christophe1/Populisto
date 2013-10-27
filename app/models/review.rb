@@ -69,6 +69,9 @@ class Review < ActiveRecord::Base
     end
   end
 
+  def owner_is?(current_resource)
+    self.user == current_resource
+  end
   # if current_user id is the same as the person who
   # who made the review
   # and the review is set to 'public'
@@ -110,24 +113,34 @@ class Review < ActiveRecord::Base
     #
     def scoped_by_search_params(params, current_user)
       if params.present?
-        filtered_categories_reviews = []
+        filtered_reviews = []
         categories_ids = params.map{|id| id.delete('category_').to_i}
-        categories_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+        all_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+        fb_friends_reviews = all_reviews.with_user.where(:users => {:id => current_user.facebook_friends.pluck(:id)})
 
         # check if category review owner is in range of current user, if not, do not include the review in results
-        categories_reviews.each do |rev|
+        # categories_reviews.each do |rev|
+        #   if rev.owner.distance_to(current_user) < 20
+        #     filtered_categories_reviews << rev
+        #   end
+        # end
+
+        # users_ids = params.map{|id| id.delete('user_').to_i}
+        # user_reviews = Review.where(:user_id => users_ids)
+
+        # reviews_ids = params.map{|id| id.delete('review_').to_i}
+        # personal_reviews = Review.where(:id => reviews_ids)
+
+        # return reviews = (personal_reviews + filtered_categories_reviews + user_reviews).uniq
+        reviews = (fb_friends_reviews + all_reviews).uniq
+
+        reviews.each do |rev|
           if rev.owner.distance_to(current_user) < 20
-            filtered_categories_reviews << rev
+            filtered_reviews << rev
           end
         end
 
-        users_ids = params.map{|id| id.delete('user_').to_i}
-        user_reviews = Review.where(:user_id => users_ids)
-
-        reviews_ids = params.map{|id| id.delete('review_').to_i}
-        personal_reviews = Review.where(:id => reviews_ids)
-
-        return reviews = (personal_reviews + filtered_categories_reviews + user_reviews).uniq
+        return filtered_reviews
       end
     end
 
