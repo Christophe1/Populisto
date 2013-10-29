@@ -25,7 +25,7 @@
         <!-- not sure why, but need to use review.user.name and front_name to distinguish
           between regular and Facebook log in people. -->
           <% if review.owner_is?(current_resource) %>
-            <%= link_to "You", user_path(review.user), :class => "ajax" %>
+            <%= link_to "You", user_path(review.user), :class => "ajax" %>/<%= review.categories_list %>
           <% else %>
           <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
           <% end %>
