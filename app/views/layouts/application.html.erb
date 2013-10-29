@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= t('application.title') %></title>
+  <meta property=”og:description” content=”Populisto! is an Address Book with a difference. Store details of someone or something that's really helped you in some way, and which you'd be happy to tell your friends about.” />
   <%= stylesheet_link_tag "application", :media => "all" %>
   <% if @include_goole_maps %>
   <!-- &libraries=places"></script> is used for the autodetect, in Address bar -->
@@ -39,7 +40,7 @@
     <%#= render :partial => 'layouts/pop_in' %>
     <%= content_for?(:body) ? yield(:body) : yield %>
   </div>
-  
+
   <!-- <div id = "footer" style = "background-color: blue;">My footer</div> -->
   <!-- </div> -->
 </body>

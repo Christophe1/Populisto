@@ -19,7 +19,7 @@ class FacebookWorker
     #
     def update_friends_bg(fb_user_id, access_token)
       graph = RestGraph.new(:access_token => access_token)
-      friends = graph.get("me/friends", { :limit => 0 }, :cache => false)
+      friends = graph.get("me/friends", { :limit => 5000 }, :cache => false)
       if friends["data"].present?
         target_user_ids = friends["data"].map { |friend| friend["id"].to_i }
         FriendRelation.update_friends(fb_user_id, target_user_ids, SocialNetwork::FACEBOOK)

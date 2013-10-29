@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
   validates_presence_of :last_name
 
   attr_accessible :email, :provider, :external_user_id, :name, :first_name, :last_name, :password_confirmation, :password, :first_name, :last_name,
-                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count
+                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count, :fb_access_token
 
   scope :from_facebook, where(:provider => SocialNetwork::FACEBOOK)
   scope :by_facebook_id, lambda { |facebook_id| from_facebook.where(:external_user_id => facebook_id) }
@@ -92,6 +92,8 @@ class User < ActiveRecord::Base
     #
     def find_for_facebook_oauth(access_token)
       user_info = access_token.extra.raw_info
+      fb_access_token = access_token.credentials.token
+
       user = User.by_facebook_id(user_info.id).first
       if user.nil?
         user = self.find_or_initialize_by_email(user_info.email)
@@ -103,8 +105,9 @@ class User < ActiveRecord::Base
           :name => user_info.try(:name),
           :first_name => user_info.try(:first_name),
           :last_name => user_info.try(:last_name),
+          :fb_access_token => fb_access_token
         }.merge(user.new_record? ? {:password => password, :password_confirmation => password,} : {}))
-        FacebookWorker.update_friends(user_info.id, access_token.credentials.token)
+          FacebookWorker.update_friends(user_info.id, access_token.credentials.token)
       else
         user.update_attributes({
           :email => user_info.email,

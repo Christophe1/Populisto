@@ -80,6 +80,7 @@
   .email-invitation-form {
 
     input, textarea {
+    resize:none;
       width: 515px;
     }
 
@@ -110,6 +111,12 @@
     #select-all {
       float: left;
       margin: 3px 5px;
+    }
+
+    #popup-alert {
+
+    float:left;
+    margin-left:20px;
     }
   }
 
