@@ -29,6 +29,9 @@
           <% else %>
           <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
           <% end %>
+          <div class="friends_of">
+               <%=  review.owner.facebook_friends.any? ? "Friend of #{friends_with_owner(review.owner)}" : "" %>
+          </div>
       </div>
 
       <!-- <div class="category_name">

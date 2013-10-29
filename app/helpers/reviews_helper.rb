@@ -6,6 +6,10 @@ module ReviewsHelper
 
 	#Update: I think it's actually important for some of the js.erb files.
 
+  def friends_with_owner(owner)
+       friends = owner.facebook_friends.map{|u| u.front_name}
+  end
+
   def review_block(review, options = {})
     options = {:review => review, :add_to_my_list => false}.merge(options)
     #  show the 'edit' link, if the current_user is looking at his own page
