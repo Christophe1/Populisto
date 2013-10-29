@@ -115,8 +115,14 @@ class Review < ActiveRecord::Base
       if params.present?
         filtered_reviews = []
         categories_ids = params.map{|id| id.delete('category_').to_i}
+        user_reviews = current_user.reviews.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
         all_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
         fb_friends_reviews = all_reviews.with_user.where(:users => {:id => current_user.facebook_friends.pluck(:id)})
+
+        reviews_of_friends_of_friends = []
+        current_user.facebook_friends.each do |friend|
+          reviews_of_friends_of_friends + friend.reviews.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+        end
 
         # check if category review owner is in range of current user, if not, do not include the review in results
         # categories_reviews.each do |rev|
@@ -132,7 +138,7 @@ class Review < ActiveRecord::Base
         # personal_reviews = Review.where(:id => reviews_ids)
 
         # return reviews = (personal_reviews + filtered_categories_reviews + user_reviews).uniq
-        reviews = (fb_friends_reviews + all_reviews).uniq
+        reviews = (user_reviews + fb_friends_reviews + reviews_of_friends_of_friends + all_reviews).uniq
 
         reviews.each do |rev|
           if rev.owner.distance_to(current_user) < 20
