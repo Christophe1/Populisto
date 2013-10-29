@@ -222,7 +222,7 @@ en:
     invite_email:
       subject: '%{name} invites you to Populisto!'
       header: 'Join Populisto today!'
-      body: "Hi. I'm inviting you to Populisto!, a new website that's just like the old address book we used to have in the 80s. So cool. Check it out. Makes life much easier. <br /><br />You could also be in with the chance to win an iPad.%{custom_part}"
+      body: "Hi. I'm inviting you to Populisto!, a new website that lets you search for useful things in the Address Books of friends and neighbours in your area. So cool. Check it out. Makes life much easier. <br /><br />%{custom_part}"
       custom_part: '<br/><br/>%{name} left a comment for you:<br/>%{body}'
       clich_here_link: '<a href="%{url}">Click here</a>'
     reminder_email:
