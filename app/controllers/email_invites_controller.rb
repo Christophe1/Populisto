@@ -3,7 +3,7 @@ class EmailInvitesController < ApplicationController
   include EmailInvitesExtension
 
   #before_filter :authenticate_user!, :except => :confirm
-  before_filter :check_resource!
+  before_filter :check_resource!, :except => :confirm
   before_filter :init_linkedin_client, :only => [:index, :create, :contacts_callback]
 
   layout false
