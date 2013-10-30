@@ -29,7 +29,7 @@ production:
     app_id: "734326590985.apps.googleusercontent.com"
     app_secret: "PAqi6DrjchOKPnsnFpY5dIm_"
   yahoo:
-    app_id: "dj0yJmk9M2VIM1Bvdk5mU0hsJmQ9WVdrOU1uSlpSMDFhTjJVbWNHbzlOalkwTURJNU$"
+    app_id: "dj0yJmk9M2VIM1Bvdk5mU0hsJmQ9WVdrOU1uSlpSMDFhTjJVbWNHbzlOalkwTURJNU1EWXkmcz1jb25zdW1lcnNlY3JldCZ4PTJj"
     app_secret: "f651f38d34a4d9a44f2e741955aa6c9cae230c7f"
   hotmail:
     app_id: "0000000048103829"
