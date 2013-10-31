@@ -6,8 +6,14 @@ module ReviewsHelper
 
 	#Update: I think it's actually important for some of the js.erb files.
 
-  def friends_with_owner(owner)
-       friends = owner.facebook_friends.map{|u| u.front_name}
+  def fb_friendship_relation(review, current_resource)
+    if current_resource.class.name == "User"
+      if current_resource.friend_of?(review.owner)
+        return "Fb friend"
+      else
+        current_resource.random_facebook_friends(3)
+      end
+    end
   end
 
   def review_block(review, options = {})

@@ -173,6 +173,12 @@ class User < ActiveRecord::Base
     !self.external_user_id.nil?
   end
 
+  # check if current user is friend with user
+  #
+  def friend_of?(user)
+    relation = self.facebook_friends.include?(user)
+  end
+
   # Gets facebook friends ids of current user.
   #
   # @return [Array] list of facebook ids.

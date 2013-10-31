@@ -28,10 +28,10 @@
             <%= link_to "You", user_path(review.user), :class => "ajax" %>/<%= review.categories_list %>
           <% else %>
           <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
+            <div class="friends_of">
+              <%= fb_friendship_relation(review, current_resource) %>
+            </div>
           <% end %>
-          <div class="friends_of">
-               <%=  review.owner.facebook_friends.any? ? "Friend of #{friends_with_owner(review.owner)}" : "" %>
-          </div>
       </div>
 
       <!-- <div class="category_name">
