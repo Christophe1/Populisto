@@ -31,54 +31,7 @@
   </div> -->
        <!-- this shows the user's address, with the option to toggle public or private -->
     <%#= render 'your_location' %>
-  <div class = "background_your_area">
 
-  <div id="your_area">
-  <div id = "Address_book_area">
-    <% if current_resource.name == @resource.name %>
-    <%= "Your Area:" %>
-    <% else %>
-      <% if @resource.is_company? %>
-        <%= "#{@resource.name}" + "'s Area:" %>
-      <% else %>
-        <%= "#{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + "'s Area:" %>
-      <% end %>
-    <% end %>
-  </div>
-
-    <!-- id area_help and your_area_help_text is required by javascript function -->
-    <div id = "area_help">
-      <%= image_tag("why_fb_log_in.png") %>
-    </div>
-          <!-- text for the qtip goes here, in this div, which is hidden -->
-      <div id = "your_area_help_text">
-            <% if current_resource.name == @resource.name %>
-    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
-    <% else %>
-      <% if @resource.is_company? %>
-        <%= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
-      <% else %>
-        <%= "When #{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + " searches Address Books, we give results from people who live within the circle on the map." %>
-      <% end %>
-    <% end %>
-        <p></p>
-      </div>
-  </div>
-
-
-<div id="map_canvas">
-  <script>
-  $(function() {
-// this function can be found in draw_map.js.erb
-initialize_google_maps();
-});
-  </script>
-</div>
-
-      <!-- Use the @resource.lat and lng attributes to draw the map in the
-      map_canvas div, above -->
-<div id="user-position" class="hidden" data-lat="<%= @resource.lat %>" data-lng="<%= @resource.lng %>"></div>
-</div>
 
       <!-- <div id = "character_and_bubbles"> -->
 
@@ -211,8 +164,7 @@ initialize_google_maps();
 
     <%#= link_to I18n.t("find_something.change_range_#{@kms_range}"), change_range_search_index_path(:current_range => @kms_range) %>
   <!-- </div> -->
-  <br>
-  <br>
+
     <%#= link_to ("Go here", "http://www.rosk.com/") %>
     <%#= link_button_to 'Log out', sign_out_path, :class => 'fb-logout', :method => :delete %>
 
@@ -269,6 +221,11 @@ formatted correctly -->
  <!-- <div id = "followers_following"> -->
  <%#= render 'follow_form', :user => @resource %>
 <!-- </div> -->
+  <br>
+  <br>
+    <br>
+  <br>
+
 <div class = "background_your_address_book">
 
  <div class="reviews">
@@ -326,4 +283,54 @@ formatted correctly -->
     <%#= render :partial => 'layouts/empty_user_address_book' %>
   <%# end %>
 </div>
+</div>
+
+
+<div class = "background_your_area">
+
+  <div id="your_area">
+  <div id = "Address_book_area">
+    <% if current_resource.name == @resource.name %>
+    <%= "Your Area:" %>
+    <% else %>
+      <% if @resource.is_company? %>
+        <%= "#{@resource.name}" + "'s Area:" %>
+      <% else %>
+        <%= "#{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + "'s Area:" %>
+      <% end %>
+    <% end %>
+  </div>
+
+    <!-- id area_help and your_area_help_text is required by javascript function -->
+    <div id = "area_help">
+      <%= image_tag("why_fb_log_in.png") %>
+    </div>
+          <!-- text for the qtip goes here, in this div, which is hidden -->
+      <div id = "your_area_help_text">
+            <% if current_resource.name == @resource.name %>
+    <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
+    <% else %>
+      <% if @resource.is_company? %>
+        <%= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
+      <% else %>
+        <%= "When #{@resource.first_name.capitalize}" + " " + "#{@resource.last_name.capitalize}" + " searches Address Books, we give results from people who live within the circle on the map." %>
+      <% end %>
+    <% end %>
+        <p></p>
+      </div>
+  </div>
+
+
+<div id="map_canvas">
+  <script>
+  $(function() {
+// this function can be found in draw_map.js.erb
+initialize_google_maps();
+});
+  </script>
+</div>
+
+      <!-- Use the @resource.lat and lng attributes to draw the map in the
+      map_canvas div, above -->
+<div id="user-position" class="hidden" data-lat="<%= @resource.lat %>" data-lng="<%= @resource.lng %>"></div>
 </div>
