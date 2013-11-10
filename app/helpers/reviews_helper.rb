@@ -7,11 +7,12 @@ module ReviewsHelper
 	#Update: I think it's actually important for some of the js.erb files.
 
   def fb_friendship_relation(review, current_resource)
+    owner = review.owner
     if current_resource.class.name == "User"
       if current_resource.friend_of?(review.owner)
-        return "Fb friend"
-      else
-        current_resource.random_facebook_friends(3)
+         return "Fb friend"
+       else
+         "Fb friend of: #{owner.random_facebook_friends(3)}" if owner.friend_relations.any?
       end
     end
   end
