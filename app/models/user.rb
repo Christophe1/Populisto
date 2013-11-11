@@ -107,7 +107,6 @@ class User < ActiveRecord::Base
           :last_name => user_info.try(:last_name),
           :fb_access_token => fb_access_token
         }.merge(user.new_record? ? {:password => password, :password_confirmation => password,} : {}))
-          FacebookWorker.update_friends(user_info.id, access_token.credentials.token)
       else
         user.update_attributes({
           :email => user_info.email,
@@ -116,6 +115,7 @@ class User < ActiveRecord::Base
           :last_name => user_info.try(:last_name)
         })
       end
+      FacebookWorker.update_friends(user_info.id, access_token.credentials.token)
       user
     end
 
