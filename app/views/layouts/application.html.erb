@@ -30,7 +30,7 @@
 
   <!-- <div id = "user-map-page"> -->
   <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>
-  <div class ='page-content'>
+  <div class ='<%= 'page-content' if action_name != 'new' %> <%= 'row-fluid' if action_name == 'new' %>'>
     <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
       <a class="close" data-dismiss="alert">×</a>
