@@ -25,7 +25,7 @@ var currentlatlng = new google.maps.LatLng( +lat, +lng );
       center: currentlatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP, // ROADMAP, SATELLITE, HYBRID
         streetViewControl: false,
-        minZoom: 1, 
+        minZoom: 1,
         // don't want people to be able to hone in on others' addresses too specifically.
         maxZoom: 13
       };
@@ -33,7 +33,7 @@ var currentlatlng = new google.maps.LatLng( +lat, +lng );
 
       var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-      // if you want a marker, get rid of the icon code, below. At present the 
+      // if you want a marker, get rid of the icon code, below. At present the
       //transparent image is used, from the assets folder.
       var marker = new google.maps.Marker({map: map, position: currentlatlng, icon:'<%= asset_path('1x1.png') %>'});
     // map.setCenter(currentlatlng);
@@ -46,13 +46,13 @@ var currentlatlng = new google.maps.LatLng( +lat, +lng );
         fillOpacity: 0,
         strokeWeight: 2,
         strokeOpacity: 0.7,
-        radius: 10000
+        radius: 20000
       });
       circle.bindTo('center', marker, 'position');
     }
 
 // function show_markers() {
-//   // console.log("show markers"); 
+//   // console.log("show markers");
 //   if (markers)
 //     for(i in markers) {
 //       markers[i].setMap(map);
