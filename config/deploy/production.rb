@@ -6,7 +6,7 @@ set :rvm_type, :user
 set :rvm_ruby_string, 'ruby-1.8.7-p374'
 
 set :user, 'populisto'
-set :password, "populisto3102"
+set :password, "charis3102"
 set :use_sudo, false
 
 set :ssh_options, { :forward_agent => true }
