@@ -4,7 +4,7 @@
 # http://en.wikipedia.org/wiki/Cron
 
 set :output, "log/cron_log.log"
-set :environment, 'development'
+set :environment, 'production'
 
 every :day, :at => '3:00 am' do
   # runner "EmailInvitesReminder.perform()"
