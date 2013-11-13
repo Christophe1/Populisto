@@ -1,5 +1,6 @@
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
+require "whenever/capistrano"
 
 set :stages, %w(staging production)
 set :default_stage, "staging"
@@ -11,6 +12,8 @@ set :repository,  "git@github.com:Christophe1/Populisto.git"
 set :deploy_via, :remote_cache
 
 set :bundle_without, [:development, :test]
+
+set :whenever_command, "bundle exec whenever"
 
 default_run_options[:pty] = true
 
