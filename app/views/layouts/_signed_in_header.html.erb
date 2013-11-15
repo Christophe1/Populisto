@@ -23,6 +23,19 @@
           <li><%= link_to "Your Address Book", resource_home_path(current_resource) %></li>
           <li><%= link_to "Pop Something In", reviews_path %></li>
         </ul>
+        <div class='search-box'>
+          <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {:class => 'form-inline'} do |f| %>
+            <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen, :group_method => :last, :prompt => false,
+            :input_html => { :class => 'span5', :multiple => true }, :label => false, :placeholder => t('find_something.search_placeholder') %>
+            <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button', :disabled => true %>
+            <div id = "search_box_help">
+              <%= image_tag("why_fb_log_in.png") %>
+            </div>
+            <div id="search_box_help_content">
+              Put in up to 2 categories, for example, 'Plumber, paver'.  Your FaceBook friends with Address Books come up first. You can also search by a person's name.
+            </div>
+          <% end %>
+        </div>
       </div>
 
       <div class="user-panel">
@@ -38,19 +51,5 @@
       </div>
   <% end %>
   <div style="clear:both;"></div>
-  <% if resource.registration_complete? %>
-    <div class='search-box'>
-      <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {:class => 'form-inline'} do |f| %>
-      <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen, :group_method => :last, :prompt => false,
-      :input_html => { :class => 'span5', :multiple => true }, :label => false, :placeholder => t('find_something.search_placeholder') %>
-      <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button', :disabled => true %>
-      <% end %>
-      <div id = "search_box_help">
-        <%= image_tag("why_fb_log_in.png") %>
-      </div>
-      <div id="search_box_help_content">
-        Put in up to 2 categories, for example, 'Plumber, paver'.  Your FaceBook friends with Address Books come up first. You can also search by a person's name.
-      </div>
-    </div>
-  <% end %>
+
 </div>

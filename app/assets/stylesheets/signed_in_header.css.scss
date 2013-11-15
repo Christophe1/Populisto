@@ -23,8 +23,9 @@
   /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
 
   .search-box {
-    width: 430px;
-    margin: auto;
+    width: 460px;
+    margin: 20px auto 0 auto;
+    .simple_form{margin-bottom: 0;}
       .controls {
         .control-group.grouped_chosen {
           float: left;
@@ -91,10 +92,11 @@
 
     .fb-logout:hover {
       text-decoration: underline;
+      transition: 0.25s;
     }
   }
 
-  #menu{float: left;width: 765px;}
+  #menu{float: left;width: 765px;margin-left: 65px;}
 
   #static_pages {
     margin: 15px 0 0 0;

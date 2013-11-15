@@ -103,7 +103,7 @@ class Review < ActiveRecord::Base
   end
 
   def is_personal_contact?
-    self.categories.find_by_name("Personal Contact").present?
+    self.categories.find_by_id(1).present?
   end
 
   class << self
@@ -132,7 +132,7 @@ class Review < ActiveRecord::Base
           end
         end
 
-        reviews = (user_reviews + fb_friends_reviews + reviews_of_friends_of_friends + all_reviews).uniq
+        reviews = (user_reviews + fb_friends_reviews + reviews_of_friends_of_friends).uniq
 
         reviews.each do |rev|
           if rev.owner.distance_to(current_user) < 20
@@ -140,7 +140,7 @@ class Review < ActiveRecord::Base
           end
         end
 
-        return filtered_reviews
+        return [filtered_reviews, all_reviews]
       end
     end
 
