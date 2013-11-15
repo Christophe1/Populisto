@@ -27,7 +27,7 @@ module ReviewsHelper
 
   def sorted_categories
     categories = []
-    first_in_list = Category.find_by_name("Personal Contact")
+    first_in_list = Category.find(1)
     # categories << first_in_list
 
     Category.all.each do |cat|

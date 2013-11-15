@@ -3,9 +3,14 @@
 </br>
 </br>
 
-<% if @reviews.present? %>
+<% if @all_reviews.present? %>
   <div class = "background_your_address_book">
-    <% @reviews.each do |review| %>
+    <h3>Friends in your area:</h3>
+    <% @fb_friends_reviews.each do |review| %>
+      <%= render 'review', :review => review %>
+    <% end %>
+    <h3>Others in your area:</h3>
+    <% @other_people_reviews.each do |review| %>
       <%= render 'review', :review => review %>
     <% end %>
   </div>

@@ -9,7 +9,7 @@ $(document).ready ->
 
   $('#company_category_ids, #review_category_ids').chosen
     placeholder_text_multiple: "Click here to pick a category"
-    width: '342px'
+    width: '352px'
     max_selected_options: 2
     no_results_text: 'No results matched'
     allow_single_deselect: true
