@@ -16,21 +16,16 @@
 
   .populisto_logo {
     float: left;
-    max-width: 50%;
    /* padding-top: 12px; */
-    padding-left: 12px;
-    padding-right: 80px;
+    padding: 0 12px;
   }
 
   /* below is a lot of the code for the search box; more is in bootstrap and choosen.css */
 
   .search-box {
-
-    display: inline-block;
-
+    width: 430px;
+    margin: auto;
       .controls {
-
-
         .control-group.grouped_chosen {
           float: left;
           display: inline;
@@ -41,32 +36,22 @@
           }
         }
       }
-
-        .search-button {
+      .search-button {
         margin-top: 5px;
       }
-
-
-
       .control-label {
         display: none;
         float: none;
         width: auto;
       }
-
-
-
     }
 
-         #search_box_help {
+    #search_box_help {
       width: 30px;
       display: inline-block;
       position: relative;
       top:-10px;
-      }
-
-
-
+    }
   .welcome {
     float: right;
     margin: 16px 5px 0 0;
@@ -109,11 +94,10 @@
     }
   }
 
+  #menu{float: left;width: 765px;}
 
   #static_pages {
-    width: 890px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 15px 0 0 0;
 
     li {
       display: inline;
@@ -144,8 +128,6 @@
   }
 
    .fb-like {
-  float:right;
-  padding-right: 45px;
  }
 
 
