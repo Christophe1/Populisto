@@ -1,3 +1,4 @@
+<% if review.visible_to?(current_resource) %>
 <div class="reviews" >
   <div class="breadcrumb" id="review_<%=review.id%>">
     <div class="left_window">
@@ -60,3 +61,4 @@
     <!-- <hr style="margin: 0 30px;"/> -->
   </div>
 </div>
+<% end %>

@@ -5,13 +5,18 @@
 
 <% if @all_reviews.present? %>
   <div class = "background_your_address_book">
-    <h3>Friends in your area:</h3>
-    <% @fb_friends_reviews.each do |review| %>
-      <%= render 'review', :review => review %>
+    <%  if @fb_friends_reviews.any? %>
+      <h3>Friends in your area:</h3>
+      <% @fb_friends_reviews.each do |review| %>
+        <%= render 'review', :review => review %>
+      <% end %>
     <% end %>
-    <h3>Others in your area:</h3>
-    <% @other_people_reviews.each do |review| %>
-      <%= render 'review', :review => review %>
+
+    <% if @other_people_reviews.any? %>
+      <h3>Others in your area:</h3>
+      <% @other_people_reviews.each do |review| %>
+        <%= render 'review', :review => review %>
+      <% end %>
     <% end %>
   </div>
 <% else %>

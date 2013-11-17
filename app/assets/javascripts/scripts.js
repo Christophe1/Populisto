@@ -2,14 +2,14 @@
 //I want to load content into the '.page-content' class, with ajax
 
 
-//console.log('load ajax when document starts. This always works.'); 
-var ajax_loaded = (function(response) {        
+//console.log('load ajax when document starts. This always works.');
+var ajax_loaded = (function(response) {
 
   $(".page-content")
 
-  .html($(response).filter(".page-content"));       
+  .html($(response).filter(".page-content"));
 
-  $(".page-content .ajax").on("click",ajax_load); 
+  $(".page-content .ajax").on("click",ajax_load);
 
 
 
@@ -18,7 +18,7 @@ var ajax_loaded = (function(response) {
 
 if ($("#map_canvas").length > 0)
 {
-  // console.log('ajax 2 - map_canvas is detected'); 
+  // console.log('ajax 2 - map_canvas is detected');
   initialize_google_maps();
 
 }
@@ -27,12 +27,12 @@ if ($("#map_canvas").length > 0)
 //on the 'Pop Something in Page', call the required functions
 if ($(".leftGroups").length > 0)
 {
-      //start 'google maps address bar'. 
-      // console.log('address bar'); 
+      //start 'google maps address bar'.
+      // console.log('address bar');
        initialize_maps_address();
 
        //start 'chosen', selection box.
-      // console.log('chosen'); 
+      // console.log('chosen');
        initialize_chosen();
 
      }
@@ -45,64 +45,64 @@ if ($(".leftGroups").length > 0)
 //use the ajax function below for submitting forms
 
 var form_submit = (function(e) {
-  console.log('form_submit is working. This always works.');         
-  e.preventDefault();               
+  console.log('form_submit is working. This always works.');
+  e.preventDefault();
 
-  var url = $(this).attr("action");       
-  var method = $(this).attr("method");      
+  var url = $(this).attr("action");
+  var method = $(this).attr("method");
 
 
-  var data = {}                 
+  var data = {}
   $(this).find("input, textarea, select").each(function(i){
-    var name = $(this).attr("name");      
-    var value = $(this).val();          
+    var name = $(this).attr("name");
+    var value = $(this).val();
 
-    data[name] =value;              
+    data[name] =value;
 
-  }); 
+  });
 
 //call the ajax_loaded function
-$.ajax({                    
-  "url": url,                 
-  "type": method,                
-  "data": data,               
+$.ajax({
+  "url": url,
+  "type": method,
+  "data": data,
   "success": ajax_loaded,
  // function{$('html, body').animate({ scrollTop: 0 }, 0);}
-  "error": function () {alert("You are not logged in.");}    
+  "error": function () {alert("You are not logged in.");}
 });
 
 
 });
 
-//the function below is called by links that are described 
-//with the class 'ajax', or are in the div 'menu' 
+//the function below is called by links that are described
+//with the class 'ajax', or are in the div 'menu'
 
-var history = [];                 
+var history = [];
 
-// var current_url_method;               
+// var current_url_method;
 
-var ajax_load = (function(e) {  
-
-
-  //console.log('load ajax on clicks. This always works.');         
-  e.preventDefault();               
+var ajax_load = (function(e) {
 
 
-  history.push(this);               
-  var url =$(this).attr("href");          
-  var method = $(this).attr("data-method");   
+  //console.log('load ajax on clicks. This always works.');
+  e.preventDefault();
 
-  // if (current_url_method != url + method) {   
-  //   console.log('You got to the url + method part. But sometimes I dont get this far.'); 
-  //   current_url_method = url + method;      
 
-  $.ajax({                  
-    url: url,               
-    type: method,  
-    // async: false,                       
+  history.push(this);
+  var url =$(this).attr("href");
+  var method = $(this).attr("data-method");
+
+  // if (current_url_method != url + method) {
+  //   console.log('You got to the url + method part. But sometimes I dont get this far.');
+  //   current_url_method = url + method;
+
+  $.ajax({
+    url: url,
+    type: method,
+    // async: false,
     success: ajax_loaded
-    
-    // $('html, body').animate({ scrollTop: 0 }, 0);       
+
+    // $('html, body').animate({ scrollTop: 0 }, 0);
   });
    // }
 
@@ -138,13 +138,13 @@ $(".search-box form").on("submit", form_submit);
 $(function() {
     // this needs to be here because when user first enters Populisto!
     // no links have been clicked, ajax isn't triggered, so we get a blank
-    // map page. 
+    // map page.
 
     if ($("#map_canvas").length > 0)
     {
-      // console.log('map canvas detected'); 
+      // console.log('map canvas detected');
       initialize_google_maps();
-      
+
     }
 
   });
@@ -159,7 +159,7 @@ var markers = [];
 
 function initialize_google_maps() {
 
-  console.log('initialized google maps'); 
+  console.log('initialized google maps');
     var user_longitude = $("#user-position").attr("data-lng");
     var user_latitude = $("#user-position").attr("data-lat");
 
@@ -167,13 +167,13 @@ function initialize_google_maps() {
 
 
 
-    var zoom = 10;
+    var zoom = 9;
     var myOptions = {
       zoom: zoom,
       center: currentlatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP, // ROADMAP, SATELLITE, HYBRID
         streetViewControl: false,
-        minZoom: 1, 
+        minZoom: 1,
         // don't want people to be able to hone in on others' addresses too specifically.
         maxZoom: 13
       };
@@ -202,7 +202,7 @@ function initialize_google_maps() {
     }
 
 // function show_markers() {
-//   // console.log("show markers"); 
+//   // console.log("show markers");
 //   if (markers)
 //     for(i in markers) {
 //       markers[i].setMap(map);
