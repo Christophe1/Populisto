@@ -2,10 +2,16 @@
 </br>
 </br>
 </br>
-
-<% if @all_reviews.present? %>
+<% if @all_reviews.any? %>
   <div class = "background_your_address_book">
-    <%  if @fb_friends_reviews.any? %>
+    <% if @user_reviews.any? %>
+      <h3>Your reviews:</h3>
+      <% @user_reviews.each do |review| %>
+        <%= render 'review', :review => review %>
+      <% end %>
+    <% end %>
+
+    <% if @fb_friends_reviews.any? %>
       <h3>Friends in your area:</h3>
       <% @fb_friends_reviews.each do |review| %>
         <%= render 'review', :review => review %>

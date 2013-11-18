@@ -113,10 +113,12 @@ class Review < ActiveRecord::Base
     #
     def scoped_by_search_params(params, current_user)
       if params.present?
+        users = User.in_range(0..20, :units => :kms, :origin => [current_user.lat, current_user.lng]).where("id<>?", current_user.id)
+
         filtered_reviews = []
         categories_ids = params.map{|id| id.delete('category_').to_i}
         user_reviews = current_user.reviews.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
-        all_reviews = Review.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+        all_reviews = Review.where(:user_id => users.map{|u| u.id}).where(:visible => true).with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
         fb_friends_reviews = all_reviews.with_user.where(:users => {:id => current_user.facebook_friends.pluck(:id)})
 
         reviews_of_friends_of_friends = []
@@ -127,20 +129,13 @@ class Review < ActiveRecord::Base
              # find all reviews of a friend by categories id
              ff.reviews.with_categories.where(:categories => {:id => categories_ids}).each do |rev|
                 #move the review into array
-                reviews_of_friends_of_friends << rev
+                reviews_of_friends_of_friends << rev unless rev.owner == current_user
              end
           end
         end
 
-        reviews = (user_reviews + fb_friends_reviews + reviews_of_friends_of_friends).uniq
-
-        reviews.each do |rev|
-          if rev.owner.distance_to(current_user) < 20
-            filtered_reviews << rev
-          end
-        end
-
-        return [filtered_reviews, all_reviews]
+        other_reviews = all_reviews - user_reviews - (fb_friends_reviews + reviews_of_friends_of_friends)
+        return [user_reviews, fb_friends_reviews + reviews_of_friends_of_friends, other_reviews]
       end
     end
 

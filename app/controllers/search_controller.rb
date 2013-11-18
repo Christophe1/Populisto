@@ -17,9 +17,11 @@
     terms = params[:review][:search_ids]
     if terms.any?
       @review = Review.new params[:review]
-      @all_reviews = Review.scoped_by_search_params(terms, current_resource)
-      @fb_friends_reviews = @all_reviews[0]
-      @other_people_reviews = @all_reviews[1] - @all_reviews[0]
+      returned_reviews = Review.scoped_by_search_params(terms, current_resource)
+      @all_reviews = returned_reviews[0] + returned_reviews[1] + returned_reviews[2]
+      @user_reviews = returned_reviews[0]
+      @fb_friends_reviews = returned_reviews[1]
+      @other_people_reviews = returned_reviews[2]
       @companies = Company.scoped_by_search_params(terms, current_resource) || []
       render :action => :index
     else
