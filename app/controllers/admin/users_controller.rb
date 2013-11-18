@@ -33,9 +33,9 @@ class Admin::UsersController < Admin::BaseController
 
   protected
 
-  def end_of_association_chain
-    User.unscoped.with_films
-  end
+  # def end_of_association_chain
+  #   User.unscoped.with_films
+  # end
 
   def password_presence
     if params[:user][:password].blank? && params[:user][:password_confirmation].blank?

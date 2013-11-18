@@ -21,8 +21,6 @@ class Company < ActiveRecord::Base
   has_many :email_invites, :foreign_key => :from_user_id, :dependent => :destroy
 
   has_many :genres
-  has_many :film_users, :dependent => :destroy
-  has_many :films, :through => :film_users
 
   has_many :category_companies
   has_many :categories, :through => :category_companies

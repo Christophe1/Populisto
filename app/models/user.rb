@@ -49,8 +49,6 @@ class User < ActiveRecord::Base
   has_many :email_invites, :foreign_key => :from_user_id, :dependent => :destroy
 
   has_many :genres
-  has_many :film_users, :dependent => :destroy
-  has_many :films, :through => :film_users
 
   validates :name, :allow_blank => true, :length => { :maximum => 50 }
   validates_presence_of :first_name
@@ -61,7 +59,6 @@ class User < ActiveRecord::Base
 
   scope :from_facebook, where(:provider => SocialNetwork::FACEBOOK)
   scope :by_facebook_id, lambda { |facebook_id| from_facebook.where(:external_user_id => facebook_id) }
-  scope :with_films, includes(:films)
   scope :followers_for, lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followers_ids, user.followers_ids] }
   scope :following_by,  lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followed_ids,  user.followed_ids] }
 

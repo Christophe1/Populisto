@@ -8,17 +8,18 @@ module ApplicationHelper
     end
   end
 
+  # commented out on 18.11.2013
   # Determines current step by controller and action.
   #
-  def current_step
-    if params[:controller] == "home"
-      :sign_in
-    elsif params[:controller] == "my_films"
-      :my_page
-    elsif params[:controller] == "films"
-      :see_friends_films
-    end
-  end
+  # def current_step
+  #   if params[:controller] == "home"
+  #     :sign_in
+  #   elsif params[:controller] == "my_films"
+  #     :my_page
+  #   elsif params[:controller] == "films"
+  #     :see_friends_films
+  #   end
+  # end
 
   # Determines whether step specified is current step.
   #
@@ -100,15 +101,16 @@ module ApplicationHelper
     link_to(user_name(user), "http://www.facebook.com/profile.php?id=#{user.external_user_id}", { :target => '_blank' }.merge(options))
   end
 
+  # commented on 18.11.2013
   # Generates html markup for film comments title.
   #
   # @param film_user [FilmUser] film user object.
   #
   # @return [String] html markup.
   #
-  def film_review_title(film_user)
-    I18n.t('films.review_title', :user => fb_profile_link(film_user.user), :genres => film_user.genres_list).html_safe
-  end
+  # def film_review_title(film_user)
+  #   I18n.t('films.review_title', :user => fb_profile_link(film_user.user), :genres => film_user.genres_list).html_safe
+  # end
 
   # Generates html markup for mutual friends indicator.
   #
