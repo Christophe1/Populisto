@@ -133,9 +133,9 @@ class Review < ActiveRecord::Base
              end
           end
         end
-
-        other_reviews = all_reviews - user_reviews - (fb_friends_reviews + reviews_of_friends_of_friends)
-        return [user_reviews, fb_friends_reviews + reviews_of_friends_of_friends, other_reviews]
+        facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends).uniq
+        other_reviews = all_reviews - user_reviews - facebook_reviews
+        return [user_reviews, facebook_reviews, other_reviews]
       end
     end
 

@@ -5,7 +5,7 @@
 <% if @all_reviews.any? %>
   <div class = "background_your_address_book">
     <% if @user_reviews.any? %>
-      <h3>Your reviews:</h3>
+      <h3>Your Address Book:</h3>
       <% @user_reviews.each do |review| %>
         <%= render 'review', :review => review %>
       <% end %>
