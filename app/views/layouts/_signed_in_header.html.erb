@@ -10,7 +10,7 @@
 <div class="header">
   <div class="populisto_logo">
     <div><%= link_to(image_tag('populisto_logo_for_web1.png', :alt => t('application.title')), root_path) %></div>
-    <div class="fb-like" data-href="<%= Rails.env.development? ? 'https://www.facebook.com/Populisto?ref=hl' : 'https://www.facebook.com/Populisto?ref=hl' %>" data-width="300" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    <!-- <div class="fb-like" data-href="<%#= Rails.env.development? ? 'https://www.facebook.com/Populisto?ref=hl' : 'https://www.facebook.com/Populisto?ref=hl' %>" data-width="300" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div> -->
   </div>
 
   <% if resource.registration_complete? %>
