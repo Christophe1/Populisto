@@ -29,13 +29,14 @@
   <%= render :partial => 'layouts/no_reviews_in_your_area' %>
 <% end %>
 
-<!-- for business registration: -->
-<% if @companies.size > 0 %>
-  <h4>Found in companies</h4>
-  <% @companies.each do |company| %>
-    <p><%= link_to company.name, resource_home_path(company) %></p>
-  <% end %>
-<% end %>
+
+<!-- Companies not used yet - for business registration: -->
+<%# if @companies.size > 0 %>
+  <!-- <h4>Found in companies</h4> -->
+  <%# @companies.each do |company| %>
+    <!-- <p><%#= link_to company.name, resource_home_path(company) %></p> -->
+  <%# end %>
+<%# end %>
 
 
 
