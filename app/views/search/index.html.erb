@@ -5,21 +5,21 @@
 <% if @all_reviews.any? %>
   <div class = "background_your_address_book">
     <% if @user_reviews.any? %>
-      <h3>Your Address Book:</h3>
+      <div class = "search_headings">Your Address Book:</div>
       <% @user_reviews.each do |review| %>
         <%= render 'review', :review => review %>
       <% end %>
     <% end %>
 
     <% if @fb_friends_reviews.any? %>
-      <h3>Friends in your area:</h3>
+      <div class = "search_headings">Friends in your area:</div>
       <% @fb_friends_reviews.each do |review| %>
         <%= render 'review', :review => review %>
       <% end %>
     <% end %>
 
     <% if @other_people_reviews.any? %>
-      <h3>Others in your area:</h3>
+      <div class = "search_headings">Others in your area:</div>
       <% @other_people_reviews.each do |review| %>
         <%= render 'review', :review => review %>
       <% end %>

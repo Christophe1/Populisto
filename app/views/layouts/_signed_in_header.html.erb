@@ -9,7 +9,7 @@
 
 <div class="header">
   <div class="populisto_logo">
-    <%= link_to(image_tag('populisto_logo_for_web.png', :alt => t('application.title')), root_path) %>
+    <%= link_to(image_tag('populisto_logo_for_web1.png', :alt => t('application.title')), root_path) %>
   </div>
 
   <% if resource.registration_complete? %>
@@ -18,7 +18,8 @@
         <ul id = "static_pages">
           <li><%= link_to "Create Contacts", reviews_path %></li>
           <li><%= link_to "Your Address Book", resource_home_path(current_resource) %></li>
-          <li><a href="#" class="email-invite-link">Invite Others (please!)</a></li>
+          <li><a href="#" class="">Invite Others (please!)</a></li>
+          <!-- <li><a href="#" class="email-invite-link">Invite Others (please!)</a></li> -->
           <li><%= link_to "About Us",about_us_path %></li>
           <li><%= link_to "FAQ", faq_path %></li>
           <li><%= link_to "Contact Us", contact_us_path %></li>
@@ -48,7 +49,7 @@
           <%= link_button_to 'Log out', destroy_company_session_path, :class => 'fb-logout', :method => :delete %>
         <% end %>
         <%= resource.front_name if resource.front_name.present? %>
-        <div class="fb-like" data-href="<%= Rails.env.development? ? 'https://www.facebook.com/Populisto?ref=hl' : 'https://www.facebook.com/Populisto?ref=hl' %>" data-width="300" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+        <!-- <div class="fb-like" data-href="<%= Rails.env.development? ? 'https://www.facebook.com/Populisto?ref=hl' : 'https://www.facebook.com/Populisto?ref=hl' %>" data-width="300" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div> -->
       </div>
       </div>
   <% end %>
