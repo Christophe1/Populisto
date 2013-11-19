@@ -17,12 +17,19 @@
     terms = params[:review][:search_ids]
     if terms.any?
       @review = Review.new params[:review]
+      @fb_friends_reviews = []
+      @other_people_reviews = []
       returned_reviews = Review.scoped_by_search_params(terms, current_resource)
       @all_reviews = returned_reviews[0] + returned_reviews[1] + returned_reviews[2]
       @user_reviews = returned_reviews[0]
-      @fb_friends_reviews = returned_reviews[1]
-      @other_people_reviews = returned_reviews[2]
-      @companies = Company.scoped_by_search_params(terms, current_resource) || []
+      returned_reviews[1].each do |rev|
+        @fb_friends_reviews << rev if rev.visible_to(current_resource)
+      end
+      returned_reviews[2].each do |rev|
+        @other_people_reviews << rev if rev.visible_to(current_resource)
+      end
+      # companies not used yet
+      #@companies = Company.scoped_by_search_params(terms, current_resource) || []
       render :action => :index
     else
       redirect_to :back
