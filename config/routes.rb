@@ -2,7 +2,7 @@ QuestionnaireSite::Application.routes.draw do
 
   get "about_us", :to => "static_pages#about_us"
   get "contact_us", :to => "static_pages#contact_us"
-  get "faq", :to => "static_pages#faq"
+  get "blog", :to => "static_pages#blog"
   get "competition_terms", :to => "static_pages#competition_terms"
   get "t_and_c", :to => "static_pages#terms_and_conditions"
   # get "log_in", :to => "users/sessions#new"
