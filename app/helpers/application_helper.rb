@@ -82,7 +82,7 @@ module ApplicationHelper
   #
   def fb_avatar(user, options = {})
     if user.provider == "facebook"
-      image_tag("http://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options))
+      image_tag("https://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options))
     else
       image_tag("no_avatar.jpg")
     end
@@ -98,7 +98,7 @@ module ApplicationHelper
   # @return [String] html markup.
   #
   def fb_profile_link(user, options = {})
-    link_to(user_name(user), "http://www.facebook.com/profile.php?id=#{user.external_user_id}", { :target => '_blank' }.merge(options))
+    link_to(user_name(user), "https://www.facebook.com/profile.php?id=#{user.external_user_id}", { :target => '_blank' }.merge(options))
   end
 
   # commented on 18.11.2013
