@@ -6,7 +6,6 @@
   end
   %>
 
-
 <div class="header">
   <div class="populisto_logo">
     <div><%= link_to(image_tag('populisto_logo_for_web1.png', :alt => t('application.title')), root_path) %></div>
@@ -19,7 +18,7 @@
         <ul id = "static_pages">
           <li><%= link_to "Create Contacts", reviews_path %></li>
           <li><%= link_to "Your Address Book", resource_home_path(current_resource) %></li>
-          <li><a href="#" class="">Invite Others (please!)</a></li>
+          <li><a href="javascript:alert('Coming soon....');">Invite Others (please!)</a></li>
           <!-- <li><a href="#" class="email-invite-link">Invite Others (please!)</a></li> -->
           <li><%= link_to "About Us",about_us_path %></li>
           <li><%= link_to "Blog", blog_path %></li>
