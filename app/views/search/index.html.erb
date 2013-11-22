@@ -63,7 +63,7 @@
     <!-- text for the qtip goes here, in this div, which is hidden -->
     <div id = "your_area_help_text">
       <%# if current_resource.name == @resource.name %>
-        <%= "When you search Address Books, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
+        <%= "When you search Address Books in your area, we’ll give results from people who live within the circle on the map -  20km around the address you gave when registering with Populisto! Listings from your Facebook friends come up first (if you logged in with FB)." %>
       <%# else %>
         <%# if @resource.is_company? %>
           <%#= "When #{@resource.name}" + " searches Address Books, we give results from people who live within the circle on the map." %>
