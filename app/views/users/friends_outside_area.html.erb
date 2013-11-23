@@ -1,5 +1,7 @@
 <div class="your_page">
-  <h3>Populisto! users outside your area:</h3>
+  <h2>Populisto! users outside your area:</h2>
+  <small>(If you’re looking for someone outside your area who you’re not friends with on Facebook, just type their name in the ‘Search Address Books’ bar to see if they’re on Populisto!)
+</small>
   <p></p>
   <ul class="nav nav-tabs nav-stacked">
     <% @friends.each_with_index do |f, index| %>
@@ -12,7 +14,7 @@
             </div>
             <div class="span6">
               <div><%= f.front_name %> - Fb friend</div>
-              <div>Has <%= pluralize(f.reviews_count, 'entry') %></div>
+              <div>Has <%= pluralize(f.reviews.count, 'entry') %></div>
               <div>Categories: <%= f.reviews.map{|r| r.categories.uniq.join(', ')}.join(', ') %></div>
             </div>
           </div>

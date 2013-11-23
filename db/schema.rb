@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131026191346) do
+ActiveRecord::Schema.define(:version => 20131122223704) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",               :default => "", :null => false
@@ -56,12 +56,44 @@ ActiveRecord::Schema.define(:version => 20131026191346) do
 
   add_index "email_invites", ["token"], :name => "index_email_invites_on_token"
 
+  create_table "films", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "films_genres", :force => true do |t|
+    t.integer "film_id"
+    t.integer "genre_id"
+  end
+
+  create_table "films_users", :force => true do |t|
+    t.integer  "film_id"
+    t.integer  "user_id"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "films_users_genres", :force => true do |t|
+    t.integer "film_user_id"
+    t.integer "genre_id"
+  end
+
   create_table "friend_relations", :force => true do |t|
     t.string  "provider"
     t.integer "source_user_id", :limit => 8
     t.integer "target_user_id", :limit => 8
     t.float   "distance",                    :default => 100000.0, :null => false
   end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "genres", ["name"], :name => "idx_on_name", :unique => true
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
@@ -108,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20131026191346) do
     t.boolean  "is_company",                                                          :default => false
     t.boolean  "gmaps"
     t.string   "fb_access_token"
+    t.integer  "reviews_count",                                                       :default => 0
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
