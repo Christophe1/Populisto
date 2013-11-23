@@ -1,0 +1,51 @@
+<div class="your_page">
+  <h2>Populisto! users inside your area:</h2>
+  <% if @friends.any? %>
+    <p></p>
+    <h5>Friends in your area on Populisto!</h5>
+    <ul class="nav nav-tabs nav-stacked">
+      <% @friends.each_with_index do |f, index| %>
+        <li>
+          <%= link_to address_book_path(f) do %>
+            <div class="pull-left"><%= index + 1 %></div>
+            <div class="span8">
+              <div class="span1">
+                <%= fb_avatar(f) %>
+              </div>
+              <div class="span6">
+                <div><%= f.front_name %> - <%= fb_friends_relation(f, current_resource) %></div>
+                <div>Has <%= pluralize(f.reviews_count, 'entry') %></div>
+                <div>Categories: <%= f.reviews.map{|r| r.categories.uniq.join(', ')}.join(', ') %></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @others.any? %>
+    <p></p>
+    <h5>Others in your area</h5>
+    <ul class="nav nav-tabs nav-stacked">
+      <% @others.each_with_index do |f, index| %>
+        <li>
+          <%= link_to address_book_path(f) do %>
+            <div class="pull-left"><%= index + 1 %></div>
+            <div class="span8">
+              <div class="span1">
+                <%= fb_avatar(f) %>
+              </div>
+              <div class="span6">
+                <div><%= f.front_name %></div>
+                <div>Has <%= pluralize(f.reviews_count, 'entry') %></div>
+                <div>Categories: <%= f.reviews.map{|r| r.categories.uniq.join(', ')}.join(', ') %></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

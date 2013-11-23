@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
   validates_presence_of :last_name
 
   attr_accessible :email, :provider, :external_user_id, :name, :first_name, :last_name, :password_confirmation, :password, :first_name, :last_name,
-                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count, :fb_access_token
+                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count, :fb_access_token, :reviews_count
 
   scope :from_facebook, where(:provider => SocialNetwork::FACEBOOK)
   scope :by_facebook_id, lambda { |facebook_id| from_facebook.where(:external_user_id => facebook_id) }

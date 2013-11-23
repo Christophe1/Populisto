@@ -10,13 +10,50 @@ class UsersController < FrontEndController
   def show
     param = params[:id] || params[:slug]
     @resource = User.unscoped.find_by_slug(param)
+    if @resource == current_resource
+      @review = Review.new
+      @reviews_count = @resource.reviews_count
+      @users_in_area_count = User.in_area(current_resource).count
+      @friends = facebook_friends_outside_area
+    else
+      redirect_to address_book_path(@resource)
+    end
+  end
+
+  def address_book
+    param = params[:id] || params[:slug]
+    @resource = User.unscoped.find_by_slug(param)
     @review = Review.new
     @reviews = @resource.reviews
   end
 
-  #   def index
-  #   @review = Review.new
-  # end
+  def users_in_area
+    @friends = []
+    @others = []
+    users = (current_resource.facebook_friends + current_resource.facebook_neighbors).uniq
+    users.each do |user|
+      if current_resource.distance_to(user) < 20
+        @friends << user
+      end
+    end
+
+    others = User.within(20, :units => :km, :origin => [current_resource.lat, current_resource.lng])
+    @others = others - @friends - current_resource.to_a
+  end
+
+  def friends_outside_area
+    @friends = facebook_friends_outside_area
+  end
+
+  def facebook_friends_outside_area
+    friends_outside_area = []
+    current_resource.facebook_friends.each do |u|
+      if u.distance_to(current_resource) > 20
+        friends_outside_area << u
+      end
+    end
+    friends_outside_area
+  end
 
   def address_toggle
     @user.update_attributes(:address_visible => params[:value]) if @user == current_user

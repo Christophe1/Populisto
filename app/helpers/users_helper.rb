@@ -39,4 +39,13 @@ module UsersHelper
       return new_name + "s Address Book:"
     end
   end
+
+  def fb_friends_relation(user, current_user)
+    if user.friend_of?(current_user)
+      return 'Fb friend'
+    else
+      friends = (current_user.facebook_friends & user.facebook_friends).join(', ')
+      "Fb friend of: #{friends}" if friends.any?
+    end
+  end
 end
