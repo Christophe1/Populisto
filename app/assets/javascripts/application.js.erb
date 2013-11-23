@@ -360,6 +360,7 @@ function personal_contact() {
             labels.css('color', '#ADAAAB');
             $('#review_category_ids').val(1).trigger("chosen:updated");
             radios.css('display', 'none');
+            $('div.private_entry').html('Private Entry');
         }
         else{
             // radios.attr("disabled", false);
@@ -367,6 +368,7 @@ function personal_contact() {
             radio_2.prop('checked',false);
             labels.css('color', '#000');
             radios.css('display', 'block');
+            $('div.private_entry').html('');
             // $('#review_category_ids_chosen .chosen-drop').css("display", "inline");
         }
     });

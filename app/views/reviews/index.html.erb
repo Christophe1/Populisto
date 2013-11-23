@@ -1,123 +1,94 @@
 <!-- This is the page where a person writes something up for their Address Book -->
-
-  <div class = "background_your_area" >
+<div class = "background_your_area" >
   <div class='review-text'>
-
     <%= raw I18n.t('write_review.text') %>
-
   </div>
+  <div class="address_book_entry" >
+    <div class="edit_review_form">
+      <div class="breadcrumb">
+        <!-- <div class="cancel-edit" id="<%= @review.id %>"> -->
+        <%#= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
+        <!-- </div> -->
 
-<div class="address_book_entry" >
-
-<div class="edit_review_form">
-<div class="breadcrumb">
-
-  <!-- <div class="cancel-edit" id="<%= @review.id %>"> -->
-
-    <%#= link_to I18n.t('user.review.edit.cancel'), review_path(@review), :remote => true %>
-
-  <!-- </div> -->
-
-  <%= simple_form_for(@review) do |f| %>
-  <%#= simple_form_for(@review, :remote => true) do |f| %>
-    <div class="inputs">
-      <div id="except_comment">
-      <%#= f.input :category_ids, :collection => sorted_categories, :as => :chosen, :prompt => false,
-            :input_html => { :multiple => true, :id => "#{@review.id}" },
-            :label => I18n.t('write_review.categories_selector_label'),
-            :label_html => { :class => 'edit_form_titles' },
-            :error_html => { :class => 'cant_be_blank'}
-            %>
-      <p><%= chosen_select_for_category(f) %></p>
-
-      <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
-      <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
-      <span id="address_validation"></span>
-
-      <%= f.input :phone  %>
-
-      <%= f.hidden_field :lat  %>
-      <%= f.hidden_field :lng  %>
+        <%= simple_form_for(@review) do |f| %>
+          <div class="inputs">
+            <div id="except_comment">
+            <p><%= chosen_select_for_category(f) %></p>
+            <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+            <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
+            <span id="address_validation"></span>
+            <%= f.input :phone  %>
+            <%= f.hidden_field :lat  %>
+            <%= f.hidden_field :lng  %>
+            </div>
+            <!-- <div class="right"> -->
+            <!-- <div class="comments"><%#= I18n.t('user.review.comments') %></div>  -->
+            <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
+            <div id = "char_count_label"></div>
+            <!-- buttons: save, delete, share, keep private -->
+            <div class="edit_button_group">
+              <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
+              <%= link_to I18n.t('write_review.cancel_button'), landing_page, :class => "cancel_review" %>
+              <!-- div.private_entry used to display Private notice when Personal Contact is selected -->
+              <div class="private_entry"></div>
+              <span class="radios">
+                <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
+                <%= f.radio_button :visible, "false", :class => "keep_private_button", :checked => false %>
+                <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
+                <%= f.radio_button :visible, "true" , :class => "share_button", :checked => true %>
+              </span>
+            </div>
+            <!-- </div> -->
+          </div>
+        <% end %>
       </div>
-
-      <!-- <div class="right"> -->
-      <!-- <div class="comments"><%#= I18n.t('user.review.comments') %></div>  -->
-
-      <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
-
-              <div id = "char_count_label">
-      </div>
-      <!-- buttons: save, delete, share, keep private -->
-      <div class="edit_button_group">
-        <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
-        <%= link_to I18n.t('write_review.cancel_button'), landing_page, :class => "cancel_review" %>
-        <%#= render 'delete', :review => @review %>
-        <span class="radios">
-        <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
-        <%= f.radio_button :visible, "false", :class => "keep_private_button", :checked => false %>
-
-        <%= f.label I18n.t('helpers.links.share') , :class => "share_label" %>
-        <%= f.radio_button :visible, "true" , :class => "share_button", :checked => true %>
-        </span>
-      </div>
-    <!-- </div> -->
     </div>
-  <% end %>
-</div>
-</div>
-</div>
+  </div>
 </div>
 
 
 <script type="text/javascript">
-
 // There's 3 functions in this
 // script section: character count, the choosen drop down and ENTER should act like TAB
-
 $(document).ready(function()  {
-    var characters = 300;
-    $("#char_count_label").append(characters);
-    $('textarea').keyup(function(){
-        if($(this).val().length > characters){
-        $(this).val($(this).val().substr(0, characters));
-        }
-    var remaining = characters -  $(this).val().length;
-    $("#char_count_label").html(remaining);
-    // if(remaining <= 10)
-    // {
-    //     $("#char_count_label").css("color","red");
-    // }
-    // else
-    // {
-    //     $("#char_count_label").css("color","black");
-    // }
-    });
+  var characters = 300;
+  $("#char_count_label").append(characters);
+  $('textarea').keyup(function(){
+      if($(this).val().length > characters){
+      $(this).val($(this).val().substr(0, characters));
+      }
+  var remaining = characters -  $(this).val().length;
+  $("#char_count_label").html(remaining);
+  // if(remaining <= 10)
+  // {
+  //     $("#char_count_label").css("color","red");
+  // }
+  // else
+  // {
+  //     $("#char_count_label").css("color","black");
+  // }
+  });
 });
-
 
 // I took out the initialize_google_maps function here,
 // because it was clashing with the one in scripts.js
+  $("#review_<%= @review.id %> select").each(function () {
+    $(this).attr('data-placeholder', $(this).attr('placeholder'));
+  }).chosen();
 
-    $("#review_<%= @review.id %> select").each(function () {
-        $(this).attr('data-placeholder', $(this).attr('placeholder'));
-    }).chosen();
-
-    // $('.edit_review_form form').submit(function() {
-    //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
-    //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
-    //     return false;
-    //   }
-    // });
+  // $('.edit_review_form form').submit(function() {
+  //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {
+  //     $('#address_validation').html("<%= escape_javascript I18n.t('helpers.cant_be_blank') %>");
+  //     return false;
+  //   }
+  // });
 
 // on ENTER, go to the next TAB
 $('input').on('keydown',function(e){
-    var keyCode = e.keyCode || e.which;
-     if(e.keyCode === 13) {
-      e.preventDefault();
-      $('input')[$('input').index(this)+1].focus();
-      }
+  var keyCode = e.keyCode || e.which;
+   if(e.keyCode === 13) {
+    e.preventDefault();
+    $('input')[$('input').index(this)+1].focus();
+  }
 });
-
-
 </script>
-
