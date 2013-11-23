@@ -27,7 +27,7 @@ class Review < ActiveRecord::Base
   #has_many :film_users, :dependent => :destroy
   #has_many :users, :through => :film_users
 
-  belongs_to :user #, :counter_cache => true
+  belongs_to :user, :counter_cache => true
   belongs_to :company, :foreign_key => :user_id
 
   validates :name, :presence => true, :length => { :maximum => 255 }

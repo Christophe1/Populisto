@@ -12,7 +12,7 @@ class UsersController < FrontEndController
     @resource = User.unscoped.find_by_slug(param)
     if @resource == current_resource
       @review = Review.new
-      @reviews_count = @resource.reviews.count
+      @reviews_count = @resource.reviews_count
       @users_in_area_count = User.in_area(current_resource).count
       @friends = facebook_friends_outside_area
     else
