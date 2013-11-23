@@ -23,6 +23,35 @@
   <%= resource.external_user_id %>
 </p>
 <p>
+  <strong><%= resource_class.human_attribute_name(:last_sign_in_at) %></strong><br>
+  <%= l resource.last_sign_in_at, :format => :long if resource.last_sign_in_at? %>
+</p>
+<p>
+  <strong><%= resource_class.human_attribute_name(:current_sign_in_at) %></strong><br>
+  <%= l resource.current_sign_in_at, :format => :long if resource.current_sign_in_at? %>
+</p>
+<p>
+  <strong><%= resource_class.human_attribute_name(:last_sign_in_ip) %></strong><br>
+  <%= resource.last_sign_in_ip %>
+</p>
+<p>
+  <strong><%= resource_class.human_attribute_name(:current_sign_in_ip) %></strong><br>
+  <%= resource.current_sign_in_ip %>
+</p>
+<p>
+  <strong><%= resource_class.human_attribute_name(:sign_in_count) %></strong><br>
+  <%= resource.sign_in_count %>
+</p>
+<p>
+  <strong><%= resource_class.human_attribute_name(:activated) %></strong><br>
+  <%= resource.activated %>
+</p>
+<p>
+  <strong><%= resource_class.human_attribute_name(:activated_at) %></strong><br>
+  <%= l resource.activated_at, :format => :long if resource.activated_at? %>
+</p>
+
+<p>
   <strong><%= resource_class.human_attribute_name(:facebook_friends) %>:</strong><br>
   <%= render("friends", :collection => resource.facebook_friends) %>
 </p>

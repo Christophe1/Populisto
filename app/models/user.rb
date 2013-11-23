@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :omniauthable, :validatable, :confirmable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :omniauthable, :validatable, :confirmable, :trackable
 
   acts_as_mappable :default_units => :kms, :default_formula => :sphere
 
@@ -55,7 +55,9 @@ class User < ActiveRecord::Base
   validates_presence_of :last_name
 
   attr_accessible :email, :provider, :external_user_id, :name, :first_name, :last_name, :password_confirmation, :password, :first_name, :last_name,
-                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count, :fb_access_token, :reviews_count
+                  :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count, :fb_access_token, :reviews_count,
+                  :last_sign_in_at, :current_sign_in_at, :last_sign_in_ip, :current_sign_in_ip, :sign_in_count,
+                  :activated, :activated_at
 
   scope :from_facebook, where(:provider => SocialNetwork::FACEBOOK)
   scope :by_facebook_id, lambda { |facebook_id| from_facebook.where(:external_user_id => facebook_id) }

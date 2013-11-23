@@ -15,7 +15,6 @@
             <div class="span6">
               <div><%= f.front_name %> - Fb friend</div>
               <div>Has <%= pluralize(f.reviews_count, 'entry') %></div>
-              <div>Categories: <%= f.reviews.map{|r| r.categories.uniq.join(', ')}.join(', ') %></div>
             </div>
           </div>
           <div class="clearfix"></div>
