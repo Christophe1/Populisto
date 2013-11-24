@@ -7,13 +7,14 @@
     <%= fb_login_button(image_tag("Facebook-orig.png")) %>
     <!-- id area_help and your_area_help_text is required by javascript function -->
     <div id = "area_help">
-      Why Facebook log in <%= image_tag("why_fb_log_in.png") %>
+      Advantages of Facebook log in <%= image_tag("why_fb_log_in.png") %>
     </div>
       <!-- text for the qtip goes here, in this div, which is hidden -->
     <div id = "your_area_help_text">
+      <p>Facebook Log in means a quick log in, with one less password to remember, and your FB friends come top of the list.</p>
       <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
       <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
-      <p>Facebook Log in means a quick log in, with one less password to remember. And your FB friends will come up top of the list.</p>
+
     </div>
     <div class="or-devider">
       <%= I18n.t('sign_in.or') %>

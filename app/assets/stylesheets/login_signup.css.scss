@@ -99,8 +99,8 @@ text-align: center;
 // width:370px;
 // float: right;
 // margin-right: 40px;
-margin-top: 20px;
-border: 1px solid #eee;
+//margin-top: 20px;
+height: 110px;
 
 #business-org-person-section {
   margin-left: 30px;
@@ -110,6 +110,8 @@ border: 1px solid #eee;
   .facebook-section {
     text-align: center;
     position: relative;
+        margin-left: 6px;
+margin-right: 6px;
 
     .fb-login {
       margin: 15px auto;
@@ -119,15 +121,16 @@ border: 1px solid #eee;
 
     .or-devider {
       position: relative;
-      bottom: -15px;
+      //bottom: -15px;
       background-color: white;
-      width: 40px;
+     // width: 40px;
       margin:auto;
       height: 30px;
       text-align: center;
       @include border-radius(15px);
       font-size: 17px;
       line-height: 26px;
+      margin-top: 50px
     }
   }
 
@@ -176,7 +179,8 @@ border: 1px solid #eee;
     }
   }
 
-  border: 1px solid #eee;
+  //border: 1px solid #eee;
+  border: 2px solid #F5A46E;
   @include border-radius(10px);
 }
 
@@ -190,7 +194,8 @@ line-height: 14px;
 float: right;
 margin-right: 40px;
 margin-top: -60px;
-border: 1px solid #eee;
+//border: 1px solid #eee;
+border: 2px solid #F5A46E;
 
 #business-org-person-section {
   margin-left: 30px;
@@ -200,6 +205,8 @@ border: 1px solid #eee;
   .facebook-section {
     text-align: center;
     position: relative;
+    margin-left: 6px;
+margin-right: 6px;
 
     .fb-login {
       // width: 315px;
@@ -210,7 +217,6 @@ border: 1px solid #eee;
 
     .or-devider {
       position: relative;
-      bottom: -15px;
       background-color: white;
       width: 40px;
       margin: auto;
@@ -319,5 +325,5 @@ width: 116px;
 
 
 
-    @include border-radius(0 0 8px 8px);
+    @include border-radius(8px 8px 8px 8px);
   }

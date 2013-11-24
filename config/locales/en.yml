@@ -83,7 +83,7 @@ en:
   sign_in:
     login_text: 'Log in to Populisto!'
     login_notes: "- We won't automatically post to your wall<br/>- One less password to remember"
-    or: "Or"
+    or: "Or log in with email:"
     sign_in_button: "LOG IN"
     sign_up_button: "SIGN UP"
     email_address_placeholder: 'Email Address'

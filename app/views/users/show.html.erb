@@ -1,21 +1,36 @@
+
+<div class = "top_of_page_right">
+ <h2>Help your friends find what they need, and store your contacts. <%= link_to 'Pop something in!', reviews_path %></h2>
+</div>
+
+<div class = "green_arrow">
+   <%= image_tag("green_arrow2.png")  %>
+ </div>
+
+ <div class = "top_of_page">
+ <h2>Your friends, their recommendations... search categories, or type the name of a friend to see if they're on Populisto!</h2>
+</div>
+
+
+
+
 <div class = "your_page">
-  <h3>Your page</h3>
+
+
+  <h1>Your page</h1>
   <p></p>
   <table class="table">
     <tr>
-      <td>In your Address Book you have:</td>
-      <td><%= link_to pluralize(@reviews_count, 'entry'), address_book_path(current_resource) %></td>
+      <td><h3>In your Address Book you have:</h3></td>
+      <td><h3><%= link_to pluralize(@reviews_count, 'entry'), address_book_path(current_resource) %></h3></td>
     </tr>
     <tr>
-      <td>Populisto! users in your area:</td>
-      <td><%= link_to pluralize(@users_in_area_count, 'people'), users_in_area_path(current_resource) %></td>
+      <td><h3>Populisto! users in your area:</h3></td>
+      <td><h3><%= link_to pluralize(@users_in_area_count, 'people'), users_in_area_path(current_resource) %></h3></td>
     </tr>
     <tr>
-      <td>Populisto! users outside your area:</td>
-      <td><%= link_to pluralize(@friends.count, 'friend'), friends_outside_area_path(current_resource) %></td>
+      <td><h3>Populisto! users outside your area:</h3></td>
+      <td><h3><%= link_to pluralize(@friends.count, 'friend'), friends_outside_area_path(current_resource) %></h3></td>
     </tr>
   </table>
-  <div>
-    Help friends & businesses in your community. <%= link_to 'Pop something in!', reviews_path %>
-  </div>
 </div>

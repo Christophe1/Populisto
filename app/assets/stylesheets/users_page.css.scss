@@ -289,6 +289,28 @@ text-align: center;
 
 */
 
+.top_of_page{
+  margin-top:100px;
+  width: 457px;
+  font-size: 27px;
+  //display: inline-block;
+}
+
+.green_arrow {
+  margin-top: 50px;
+margin-right: 140px;
+float: right;
+}
+
+.top_of_page_right{
+  margin-top:100px;
+  width: 457px;
+  font-size: 27px;
+  float:right;
+  //display: inline-block;
+}
+
+
 .your_page{
   width:820px;
   padding-left: 50px;
@@ -298,7 +320,7 @@ text-align: center;
   background-color: #FDF6EA;
   margin-left:auto;
   margin-right:auto;
-  margin-top: 200px;
+  margin-top: 35px;
   margin-bottom: 30px;
   border-radius:10px;
   border:2px solid #EBDDDD;
