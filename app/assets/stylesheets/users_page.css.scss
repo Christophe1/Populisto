@@ -45,6 +45,35 @@ margin-right: auto;
 
 }
 
+#your_area {
+
+#Address_book_area {
+// font-size: 28px;
+float: left;
+}
+
+#area_help {
+width: 30px;
+display: inline-block;
+position: relative;
+top:-15px;
+}
+
+}
+
+
+#map_canvas {
+height: 380px;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.gmnoprint img {
+    max-width: none;
+}
+
+
 div.background_your_address_book{
 width:820px;
 padding: 25px 50px;
