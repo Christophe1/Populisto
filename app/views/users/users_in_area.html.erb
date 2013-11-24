@@ -1,9 +1,9 @@
 <div class="your_page">
-  <h2>Populisto! users inside your area</h2>
-  <small>(Your area is 20km around the address you gave on registration)</small>
+  <h2>Populisto! users in your area</h2>
+
   <% if @friends.any? %>
     <p></p>
-    <h5>Friends in your area on Populisto!</h5>
+    <h3>Friends in your area on Populisto!</h3>
     <ul class="nav nav-tabs nav-stacked">
       <% @friends.each_with_index do |f, index| %>
         <li>
@@ -26,7 +26,7 @@
   <% end %>
   <% if @others.any? %>
     <p></p>
-    <h5>Others in your area</h5>
+    <h3>Others in your area</h3>
     <ul class="nav nav-tabs nav-stacked">
       <% @others.each_with_index do |f, index| %>
         <li>

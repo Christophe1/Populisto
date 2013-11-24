@@ -45,7 +45,7 @@ module UsersHelper
       return 'Fb friend'
     else
       friends = (current_user.facebook_friends & user.facebook_friends).join(', ')
-      "Fb friend of: #{friends}" if friends.any?
+      "Facebook friend of: #{friends}" if friends.any?
     end
   end
 end
