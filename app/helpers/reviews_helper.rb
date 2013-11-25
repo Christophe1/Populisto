@@ -10,8 +10,8 @@ module ReviewsHelper
     owner = review.owner
     if current_resource.class.name == "User"
       if current_resource.friend_of?(review.owner)
-         return "Fb friend"
-       else
+         return "Facebook friend"
+       elsee
           friends = (current_resource.facebook_friends & owner.facebook_friends).join(', ')
          "Facebook friend of: #{friends}" if friends.any?
       end

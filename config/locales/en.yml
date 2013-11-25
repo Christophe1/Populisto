@@ -26,7 +26,7 @@ en:
       update:
         notice: "%{resource_name} was updated successfully."
   helpers:
-    enter_a_location: "Enter address, town or village where they live."
+    enter_a_location: "Enter address, town or village where you live."
     cant_be_blank: " - can't be blank"
     actions: "Actions"
     time_ago: "%{time} ago"
@@ -121,7 +121,7 @@ en:
     review_title: "%{user} about %{genres}"
     empty_search_results: "No results have appeared for that search. Be a populisto and enter one yourself!"
   map_page:
-    greetings_1: "Hi %{user_name}. Please tell us your address details."
+    greetings_1: "Hi %{user_name}. Please tell Populisto! your address details."
     greetings_2: "If you don't want to give your exact details that's ok (it’s kept private, in any case), but the more accurate you are, the more effective your results will be, when looking for things in your area."
   write_review:
     text: 'Add something to Populisto! Share something with friends to help them find something, or store it personally for yourself.'

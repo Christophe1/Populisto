@@ -353,18 +353,18 @@ div.private_entry{
   margin: auto;
   margin-bottom: 25px;
 }
-
-// .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
-//   font-size: 20px;
-//   padding: 5px;
-//   height: 15px;
-// }
-// .chosen-container-multi .chosen-choices li.search-choice {
-//   color: #333;
-//   line-height: 13px;
-//   cursor: default;
-//   height: 23px;
-//   line-height: 24px;
-//   font-size: 18px;
-// }
-// .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{top:8px;}
+.alert-success {
+  background-color: #A7D594;
+  border-color: #d6e9c6;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+}
+.alert-error {
+  background-color: #CC5E5E;
+  border-color: #eed3d7;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 0 0;
+}
