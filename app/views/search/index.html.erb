@@ -20,6 +20,13 @@
       <% end %>
     <% end %>
 
+    <% if @fb_friends_reviews_outside.any? %>
+      <div class = "search_headings">Friends outside your area:</div>
+      <% @fb_friends_reviews_outside.each do |review| %>
+        <%= render 'review', :review => review %>
+      <% end %>
+    <% end %>
+
     <% if @other_people_reviews.any? %>
       <div class = "search_headings">Others in your area:</div>
       <% @other_people_reviews.each do |review| %>
