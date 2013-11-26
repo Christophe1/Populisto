@@ -6,7 +6,7 @@
         <%= I18n.t('map_page.greetings_1', :user_name => current_user.first_name) %><br><br>
         <%= I18n.t('map_page.greetings_2') %>
       </div>
-      <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+      <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location_map')  %>
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
@@ -24,7 +24,7 @@
       <div class="greetings">
         And please tell us your address details. The more accurate you are the more effective peoples' results will be, when looking for things you do.
       </div>
-      <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location')  %>
+      <%= f.text_field :address, :id => 'address_autocomplete', :placeholder => I18n.t('helpers.enter_a_location_map')  %>
       <%= f.hidden_field :city %>
       <%= f.hidden_field :lat  %>
       <%= f.hidden_field :lng  %>
