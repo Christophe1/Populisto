@@ -1,12 +1,12 @@
 /*
- *= require _bootstrap
- *= require chosen
- *= require chosen_override
- *= require email_invitation
- *= require search
- *= require_self
- *= require form
- *= require users_page
+  *= require _bootstrap
+  *= require chosen
+  *= require chosen_override
+  *= require email_invitation
+  *= require search
+  *= require_self
+  *= require form
+  *= require users_page
   *= require reviews
   *= require login_signup
   *= require ie
@@ -14,7 +14,7 @@
   *= require give_address_and_map
   *= require qtip_tooltips
   *= require empty_user
-
+  *= require tablets
 */
 
 @import "bootstrap/variables";
