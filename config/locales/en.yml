@@ -158,7 +158,7 @@ en:
   facebook:
     apprequest:
       title: "Invite friends to Populisto!"
-      message: "Hi. I'm inviting you to Populisto!, an online address book where you can see your friends recommendations, help your friends find what they need - it's a good place to store your contacts too. So cool. Check it out. Makes life easier. "
+      message: "Populisto! us an online address book where you can see your friends recommendations and help your friends find what they need. So cool. Check it out."
   admin:
     sections:
       profile: "Profile"
