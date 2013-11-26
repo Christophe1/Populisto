@@ -21,14 +21,12 @@
         <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
       </div>
       <div class="or-devider">
-        <%= I18n.t('sign_in.or') %>
+        <%= I18n.t('sign_in.create_account_text') %>
       </div>
     </div>
 
     <div class='sign-in-section'>
-      <div class="explanation">
-        <%= I18n.t('sign_in.create_account_text') %>
-      </div>
+
       <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => ''}) do |f| %>
         <%= f.error_notification %>
         <% if resource.errors.present? %>
