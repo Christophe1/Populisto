@@ -189,12 +189,12 @@ margin-right: 6px;
 /*Facebook signup, on the home page */
 
 .login-page-sign-up {
+height: 110px;
 width:370px;
 line-height: 14px;
 float: right;
 margin-right: 40px;
 margin-top: -60px;
-//border: 1px solid #eee;
 border: 2px solid #F5A46E;
 
 #business-org-person-section {
@@ -218,7 +218,7 @@ margin-right: 6px;
     .or-devider {
       position: relative;
       background-color: white;
-      width: 40px;
+      width: 300px;
       margin: auto;
       height: 30px;
       text-align: center;
@@ -263,7 +263,7 @@ margin-right: 6px;
     }
   }
 
-  border: 1px solid #eee;
+
   @include border-radius(10px);
 }
 
