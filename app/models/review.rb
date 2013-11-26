@@ -113,13 +113,26 @@ class Review < ActiveRecord::Base
     #
     def scoped_by_search_params(params, current_user)
       if params.present?
-        users = User.in_range(0..20, :units => :kms, :origin => [current_user.lat, current_user.lng]).where("id<>?", current_user.id)
+        users_in_area = User.in_range(0..20, :units => :kms, :origin => [current_user.lat, current_user.lng]).where("id<>?", current_user.id)
 
         filtered_reviews = []
         categories_ids = params.map{|id| id.delete('category_').to_i}
         user_reviews = current_user.reviews.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
-        all_reviews = Review.where(:user_id => users.map{|u| u.id}).where(:visible => true).with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+        all_reviews = Review.where(:user_id => users_in_area.map{|u| u.id}).where(:visible => true).with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
         fb_friends_reviews = all_reviews.with_user.where(:users => {:id => current_user.facebook_friends.pluck(:id)})
+
+        #start reviews_outside_area - this will display resutls from fb friends outside area
+        friends_outside_area = []
+        users_outside_area = User.all - users_in_area
+        users_outside_area.each do |user|
+          if user.friend_of?(current_user)
+            friends_outside_area << user
+          end
+        end
+        reviews_outside_area = Review.where(:user_id => friends_outside_area.map{|u| u.id}).where(
+          :visible => true).with_categories.where(
+          :categories => {:id => categories_ids}) unless categories_ids.blank?
+        #end reviews_outside_area
 
         reviews_of_friends_of_friends = []
         # get friends of current user
@@ -135,7 +148,7 @@ class Review < ActiveRecord::Base
         end
         facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends).uniq
         other_reviews = all_reviews - user_reviews - facebook_reviews
-        return [user_reviews, facebook_reviews, other_reviews]
+        return [user_reviews, facebook_reviews, other_reviews, reviews_outside_area]
       end
     end
 

@@ -19,10 +19,14 @@
       @review = Review.new params[:review]
       @fb_friends_reviews = []
       @other_people_reviews = []
+      @fb_friends_reviews_outside = []
       returned_reviews = Review.scoped_by_search_params(terms, current_resource)
       @user_reviews = returned_reviews[0]
       returned_reviews[1].each do |rev|
         @fb_friends_reviews << rev if rev.visible_to?(current_resource)
+      end
+      returned_reviews[3].each do |rev|
+        @fb_friends_reviews_outside << rev if rev.visible_to?(current_resource)
       end
       returned_reviews[2].each do |rev|
         @other_people_reviews << rev if rev.visible_to?(current_resource)
