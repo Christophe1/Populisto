@@ -13,6 +13,8 @@ $(document).ready ->
     max_selected_options: 2
     no_results_text: 'No results matched'
     allow_single_deselect: true
+    enable_split_word_search: true
+    search_contains: true
 
 
 
@@ -21,6 +23,8 @@ $(document).ready ->
     max_selected_options: 2
     no_results_text: 'No results matchedjyaaa'
     allow_single_deselect: true
+    enable_split_word_search: true
+    search_contains: true
 
 
   $("#company_category_ids, #review_category_ids, #review_search_ids").bind "chosen:maxselected", ->
