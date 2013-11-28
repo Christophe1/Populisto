@@ -132,7 +132,7 @@ en:
     comment_popup_link_text: 'See samples of stuff written up just perfectly'
     perfect_example: 'Add example to translations file - en.yml'
     close_popup_text: 'Close'
-    review_successfully_created: 'Review was successfully created'
+    review_successfully_created: 'Your Address Book has been successfully updated'
     categories_selector_label: 'Categories'
     categories_selector_placeholder: 'Search'
   find_something:
