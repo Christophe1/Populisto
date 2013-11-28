@@ -46,7 +46,12 @@ class UsersController < FrontEndController
 
   def facebook_friends_outside_area
     friends_outside_area = []
-    friends_outside_area = User.beyond(20, :units => :km, :origin => current_resource)
+    users = User.beyond(20, :units => :km, :origin => current_resource)
+    users.each do |u|
+      if u.friend_of?(current_resource)
+        friends_outside_area << u
+      end
+    end
   end
 
   def address_toggle
