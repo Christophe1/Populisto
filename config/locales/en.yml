@@ -125,7 +125,7 @@ en:
     greetings_1: "Hi %{user_name}. Please tell Populisto! your address details."
     greetings_2: "If you don't want to give your exact details that's ok (it’s kept private, in any case), but the more accurate you are, the more effective your results will be, when looking for things in your area."
   write_review:
-    text: 'Add something to Populisto! Share something with friends to help them find something,  or store it personally for yourself. </br></br>   (Any category suggestions? Email me at harris.christophe@gmail.com)'
+    text: 'Add something to Populisto! Share something with friends to help them find something,  or store it personally for yourself. </br></br>   (Any category suggestions? Email me at admin@populisto.ie)'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
     comment_label: 'Comments'
