@@ -30,7 +30,7 @@
     </tr>
     <tr>
       <td><h3>Populisto! users outside your area:</h3></td>
-      <td><h3><%= link_to pluralize(@friends.count, 'friend'), friends_outside_area_path(current_resource) %></h3></td>
+      <td><h3><%= link_to pluralize(@friends_outside.count, 'friend'), friends_outside_area_path(current_resource) %></h3></td>
     </tr>
   </table>
   </br>

@@ -4,7 +4,7 @@
 </small>
   <p></p>
   <ul class="nav nav-tabs nav-stacked">
-    <% @friends.each_with_index do |f, index| %>
+    <% @friends_outside.each_with_index do |f, index| %>
       <li>
         <%= link_to address_book_path(f) do %>
           <div class="pull-left"><%= index + 1 %></div>

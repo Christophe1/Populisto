@@ -14,7 +14,12 @@ class UsersController < FrontEndController
       @review = Review.new
       @reviews_count = @resource.reviews_count
       @users_in_area_count = User.in_area(current_resource).count
-      @friends = facebook_friends_outside_area
+      @friends_outside = []
+      User.beyond(20, :units => :km, :origin => current_resource).each do |usr|
+        if usr.friend_of?(current_resource)
+          @friends_outside << usr
+        end
+      end
     else
       redirect_to address_book_path(@resource)
     end
@@ -41,15 +46,10 @@ class UsersController < FrontEndController
   end
 
   def friends_outside_area
-    @friends = facebook_friends_outside_area
-  end
-
-  def facebook_friends_outside_area
-    friends_outside_area = []
-    users = User.beyond(20, :units => :km, :origin => current_resource)
-    users.each do |u|
-      if u.friend_of?(current_resource)
-        friends_outside_area << u
+    @friends_outside = []
+    User.beyond(20, :units => :km, :origin => current_resource).each do |usr|
+      if usr.friend_of?(current_resource)
+        @friends_outside << usr
       end
     end
   end
