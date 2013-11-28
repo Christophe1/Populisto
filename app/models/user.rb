@@ -75,12 +75,7 @@ class User < ActiveRecord::Base
   end
 
   def self.in_area(user)
-    users = []
-    User.without_user(user).each do |u|
-      if u.distance_to(user) < 20
-        users << u
-      end
-    end
+    users = User.in_range(0..20, :units => :km, :origin => user) - user.to_a
     return users
   end
 
