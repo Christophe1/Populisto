@@ -30,15 +30,14 @@ class UsersController < FrontEndController
   def users_in_area
     @friends = []
     @others = []
-    users = (current_resource.facebook_friends + current_resource.facebook_neighbors).uniq
-    users.each do |user|
-      if current_resource.distance_to(user) < 20
-        @friends << user
+    users_in_area = User.in_area(current_resource)
+    users_in_area.each do |u|
+      if u.friend_of?(current_resource)
+        @friends << u
+      else
+        @others << u
       end
     end
-
-    others = User.within(20, :units => :km, :origin => [current_resource.lat, current_resource.lng])
-    @others = others - @friends - current_resource.to_a
   end
 
   def friends_outside_area
@@ -47,12 +46,7 @@ class UsersController < FrontEndController
 
   def facebook_friends_outside_area
     friends_outside_area = []
-    current_resource.facebook_friends.each do |u|
-      if u.distance_to(current_resource) > 20
-        friends_outside_area << u
-      end
-    end
-    friends_outside_area
+    friends_outside_area = User.beyond(20, :units => :km, :origin => current_resource)
   end
 
   def address_toggle

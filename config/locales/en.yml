@@ -27,7 +27,7 @@ en:
         notice: "%{resource_name} was updated successfully."
   helpers:
     enter_a_location_map: "Enter address, town or village where you live."
-    enter_a_location: "Enter address, town or village where they live."
+    enter_a_location: "Enter address, town or village where they are based."
     cant_be_blank: " - can't be blank"
     actions: "Actions"
     time_ago: "%{time} ago"
