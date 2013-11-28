@@ -28,6 +28,7 @@ class Company < ActiveRecord::Base
 
   validates :name, :allow_blank => true, :length => { :maximum => 50 }
   validates_presence_of :name
+  scope :with_entries, where('reviews_count > ?', 0 )
 
 
   def slug_name

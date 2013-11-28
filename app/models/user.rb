@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
   scope :by_facebook_id, lambda { |facebook_id| from_facebook.where(:external_user_id => facebook_id) }
   scope :followers_for, lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followers_ids, user.followers_ids] }
   scope :following_by,  lambda { |user| where ['external_user_id IN (?) OR id IN (?)', user.facebook_followed_ids,  user.followed_ids] }
-
+  scope :with_entries, where('reviews_count > ?', 0 )
   # return all users except the one sent as param.. User.without_user(current_user)
   scope :without_user, lambda{|user| user ? {:conditions => ["users.id != ?", user.id]} : {} }
 
