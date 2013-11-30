@@ -113,42 +113,32 @@ class Review < ActiveRecord::Base
     #
     def scoped_by_search_params(params, current_user)
       if params.present?
-        users_in_area = User.in_area(current_user)
-
-        filtered_reviews = []
         categories_ids = params.map{|id| id.delete('category_').to_i}
-        user_reviews = current_user.reviews.with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
-        all_reviews = Review.where(:user_id => users_in_area.map{|u| u.id}).where(:visible => true).with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
-        fb_friends_reviews = all_reviews.with_user.where(:users => {:id => current_user.facebook_friends.pluck(:id)})
+        all_reviews = Review.where(:visible => true).with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+        all_users = User.where(:id => all_reviews.map{|r| r.user_id})
+        users_in_area = all_users.in_range(0..20, :units => :km, :origin => current_user)
+        users_outside_area = all_users - users_in_area
 
-        #start reviews_outside_area - this will display results from fb friends outside area
-        friends_outside_area = []
-        users_outside_area = User.beyond(20, :units => :km, :origin => current_user)
-        users_outside_area.each do |user|
-          if user.friend_of?(current_user)
-            friends_outside_area << user
-          end
-        end
-        reviews_outside_area = Review.where(:user_id => friends_outside_area.map{|u| u.id}).where(
-          :visible => true).with_categories.where(
-          :categories => {:id => categories_ids}) unless categories_ids.blank?
-        #end reviews_outside_area
+        friends = current_user.facebook_friends_ids
 
-        reviews_of_friends_of_friends = []
-        # get friends of current user
-        current_user.facebook_friends.each do |friend|
-          # find fb friends of a friend
-          friend.facebook_friends.in_range(0..20, :units => :km, :origin => current_user).each do |ff|
-             # find all reviews of a friend by categories id
-             ff.reviews.with_categories.where(:categories => {:id => categories_ids}).each do |rev|
-                #move the review into array
-                reviews_of_friends_of_friends << rev unless rev.owner == current_user
-             end
-          end
-        end
+        user_reviews = all_reviews.where(:user_id => current_user.id)
+        fb_friends = current_user.facebook_friends
+
+        friends_inside_area = fb_friends.in_range(0..20, :units => :km, :origin => current_user)
+        friends_outside_area = fb_friends - friends_inside_area
+
+        fb_friends_reviews = all_reviews.where(:user_id => friends_inside_area.map{|u| u.id})
+
+        # reviews of friends outside area
+        reviews_outside_area = all_reviews.where(:user_id => friends_outside_area.map{|u| u.id})
+        # end reviews_outside_area
+
+        friends_of_friend = fb_friends.in_range(0..20, :units => :km, :origin => current_user)
+        reviews_of_friends_of_friends = all_reviews.where(:user_id => friends_of_friend.map{|u| u.id})
+
         facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends).uniq
         other_reviews = all_reviews - user_reviews - facebook_reviews - reviews_outside_area
-        return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews, ]
+        return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews]
       end
     end
 
