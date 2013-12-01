@@ -32,19 +32,17 @@ class UsersController < FrontEndController
   end
 
   def users_in_area
-    @friends = []
-    @others = []
     users_in_area = User.with_entries.in_area(current_resource)
     friends = current_resource.facebook_friends.in_range(0..20, :units => :km, :origin => current_resource)
     all_friends = []
     friends.each do |f|
-      all_friends << f.facebook_friends
-      all_freinds << f
+      f.facebook_friends.each do |ff|
+        all_friends << ff
+        all_friends << f
+      end
     end
-    @friends = all_freinds
-    @others = users_in_area - all_freinds
-  end
-
+    @friends = all_friends.uniq
+    @others = users_in_area - all_friends
   end
 
   def friends_outside_area
