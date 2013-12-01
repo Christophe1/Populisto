@@ -42,10 +42,10 @@ module UsersHelper
 
   def fb_friends_relation(user, current_user)
     if user.friend_of?(current_user)
-      return 'Facebook friend'
+      return '(Facebook friend)'
     else
       friends = (current_user.facebook_friends & user.facebook_friends).join(', ')
-      "Facebook friend of: #{friends}" if friends.any?
+      "(Facebook friend of: #{friends})" if friends.any?
     end
   end
 end
