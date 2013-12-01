@@ -41,7 +41,7 @@ class UsersController < FrontEndController
         all_friends << f
       end
     end
-    @friends = all_friends.uniq - current_resource
+    @friends = all_friends.uniq - current_resource.to_a
     @others = users_in_area - all_friends
   end
 
