@@ -37,8 +37,8 @@ class UsersController < FrontEndController
     all_friends = []
     friends.each do |f|
       f.facebook_friends.each do |ff|
-        all_friends << ff
-        all_friends << f
+        all_friends << ff  if ff.reviews_count > 0
+        all_friends << f if f.reviews_count > 0
       end
     end
     @friends = all_friends.uniq - current_resource.to_a
