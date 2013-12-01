@@ -6,16 +6,15 @@ class UsersController < FrontEndController
   # before_filter :load_data_for_checkbox
   # before_filter :fix_params, :only => :create
 
-
   def show
     param = params[:id] || params[:slug]
     @resource = User.unscoped.find_by_slug(param)
     if @resource == current_resource
       @review = Review.new
       @reviews_count = @resource.reviews_count
-      @users_in_area_count = User.in_area(current_resource).count
+      @users_in_area_count = User.with_entries.in_area(current_resource).count
       @friends_outside = []
-      User.beyond(20, :units => :km, :origin => current_resource).each do |usr|
+      User.with_entries.beyond(20, :units => :km, :origin => current_resource).each do |usr|
         if usr.friend_of?(current_resource)
           @friends_outside << usr
         end
@@ -35,7 +34,7 @@ class UsersController < FrontEndController
   def users_in_area
     @friends = []
     @others = []
-    users_in_area = User.in_area(current_resource)
+    users_in_area = User.with_entries.in_area(current_resource)
     users_in_area.each do |u|
       if u.friend_of?(current_resource)
         @friends << u
@@ -47,7 +46,7 @@ class UsersController < FrontEndController
 
   def friends_outside_area
     @friends_outside = []
-    User.beyond(20, :units => :km, :origin => current_resource).each do |usr|
+    User.with_entries.beyond(20, :units => :km, :origin => current_resource).each do |usr|
       if usr.friend_of?(current_resource)
         @friends_outside << usr
       end
