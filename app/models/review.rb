@@ -131,14 +131,16 @@ class Review < ActiveRecord::Base
         reviews_outside_area = all_reviews.where(:user_id => friends_outside_area.map{|u| u.id})
         # end reviews_outside_area
 
-        friends_of_friend = fb_friends.in_range(0..20, :units => :km, :origin => current_user)
-        reviews_of_friends_of_friends = all_reviews.where(:user_id => friends_of_friend.map{|u| u.id})
+        friends_of_friend = []
+        friends_inside_area.each do |f|
+          friends_of_friend << f.facebook_friends.map{|u| u.id}
+        end
+        reviews_of_friends_of_friends = all_reviews.where(:user_id => friends_of_friend.uniq)
 
-        facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends).uniq
+        facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends - user_reviews).uniq
         other_reviews = all_reviews - user_reviews - facebook_reviews - reviews_outside_area
         return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews]
       end
-    end
 
     def from_users_followed_by(user)
       followed_user_ids = "SELECT target_user_id FROM friend_relations
