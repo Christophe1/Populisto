@@ -1,21 +1,3 @@
-<div class="reviews" >
-  <div class="breadcrumb" id="review_<%=review.id%>">
-    <div class="left_window">
-      <!-- can be public or for your eyes only, change the colour accordingly -->
-      <div id="privacy_<%= review.id %>">
-        <% if review.visible == true %>
-          <script>
-            $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
-          </script>
-          <%= "Public" %>
-        <% else %>
-          <script>
-            $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
-          </script>
-          <%= "Your eyes only" %>
-        <% end %>
-      </div>
-
       <div id = "fb_avatar">
         <%= fb_avatar(review.owner) %>
       </div>
@@ -25,14 +7,37 @@
         <!-- not sure why, but need to use review.user.name and front_name to distinguish
           between regular and Facebook log in people. -->
           <% if review.owner_is?(current_resource) %>
-            <%= link_to "You", user_path(review.user), :class => "ajax" %>/<%= review.categories_list %>
+            <%= (link_to "You", user_path(review.user), :class => "ajax") + " recommend:" %>
           <% else %>
-          <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + "/" + review.categories_list %>
+          <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + " recommends:"  %>
             <div class="friends_of">
               <%= fb_friendship_relation(review, current_resource) %>
             </div>
           <% end %>
       </div>
+
+<div class="reviews" >
+  <div class="breadcrumb" id="review_<%=review.id%>">
+    <div class="left_window">
+      <div class = "category_name">
+      <%= review.categories_list %>
+    </div>
+      <!-- can be public or for your eyes only, change the colour accordingly -->
+      <div id="privacy_<%= review.id %>">
+        <% if review.visible == true %>
+          <script>
+            $("#privacy_<%= review.id %>").css({'color':'green', 'float': 'right'})
+          </script>
+          <%= "Shared" %>
+        <% else %>
+          <script>
+            $("#privacy_<%= review.id %>").css({'color':'#990000', 'float': 'right'})
+          </script>
+          <%= "Your eyes only" %>
+        <% end %>
+      </div>
+
+
 
       <!-- <div class="category_name">
           <%#= "/" + review.categories_list %>

@@ -25,25 +25,25 @@
 
 .left_window {
   width:360px;
-  float: left;
+   float: left;
 
 
-  #fb_avatar{
+ /* #fb_avatar{
     float: left;
     padding-right: 10px;
-  }
+  }  */
 
   #privacy {
     float:right;
   }
 
-/* this div is only visible in reviews from 'Search' */
+/* this div is only visible in reviews from 'Search'
 .address_entry_user_name{
   font-size: 18px;
   padding-top: 20px;
-}
+}    */
 
-.category_name{
+ .category_name{
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 20px;
