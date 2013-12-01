@@ -36,10 +36,10 @@ class UsersController < FrontEndController
     friends = current_resource.facebook_friends.in_range(0..20, :units => :km, :origin => current_resource)
     all_friends = []
     friends.each do |f|
-      f.facebook_friends.each do |ff|
+      f.facebook_friends.in_range(0..20, :units => :km, :origin => current_user).each do |ff|
         all_friends << ff  if ff.reviews_count > 0
-        all_friends << f if f.reviews_count > 0
       end
+      all_friends << f if f.reviews_count > 0
     end
     @friends = all_friends.uniq - current_resource.to_a
     @others = users_in_area - all_friends

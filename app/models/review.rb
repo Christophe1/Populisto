@@ -133,7 +133,7 @@ class Review < ActiveRecord::Base
 
         friends_of_friend = []
         friends_inside_area.each do |f|
-          friends_of_friend << f.facebook_friends.map{|u| u.id}
+          friends_of_friend << f.facebook_friends.in_range(0..20, :units => :km, :origin => current_user).map{|u| u.id}
         end
         reviews_of_friends_of_friends = all_reviews.where(:user_id => friends_of_friend.uniq)
 
