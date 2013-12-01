@@ -141,6 +141,7 @@ class Review < ActiveRecord::Base
         other_reviews = all_reviews - user_reviews - facebook_reviews - reviews_outside_area
         return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews]
       end
+    end
 
     def from_users_followed_by(user)
       followed_user_ids = "SELECT target_user_id FROM friend_relations
