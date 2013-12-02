@@ -7,9 +7,8 @@ set :output, "log/cron_log.log"
 set :environment, 'production'
 
 # every :day, :at => '3:00 am' do
-every 5.days  do
-  # runner "EmailInvitesReminder.perform()"
-  runner "EmailInvitesReminder.perform"
+every 5.days, :at => '3:00 am' do
+  runner "EmailInvitesReminder.perform()"
 end
 
 # Learn more: http://github.com/javan/whenever
