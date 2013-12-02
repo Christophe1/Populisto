@@ -13,22 +13,13 @@ can find them easily next time round, and let your friends know about them.
 
 <script type="text/javascript">
   $( ".share_link" ).click(function() {
-    FB.ui(
-      {
-        method: 'feed',
-        name: 'Ask a friend.',
-        link: 'https://populisto.com/',
-        picture: 'https://populisto.com/assets/populisto_logo_for_web1.png',
-        caption: 'Ask your friend on Facebook for what you are looking for.',
-        description: "... and if you find something good don't forget to add it to your address book."
-      },
-      function(response) {
-        if (response && response.post_id) {
-          alert('Post was published.');
-        } else {
-          alert('Post was not published.');
-        }
-      }
-    );
+    FB.ui({
+      method: 'feed',
+      name: 'Ask a friend.',
+      link: 'https://populisto.com/',
+      picture: 'https://populisto.com/assets/populisto_logo_for_web1.png',
+      caption: 'Ask your friend on Facebook for what you are looking for.',
+      description: "... and if you find something good don't forget to add it to your address book."
+    });
   });
 </script>
