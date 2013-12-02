@@ -1,7 +1,5 @@
 <div class ="centre_text">
-	Sorry, no results for this yet. Maybe you'd like to <%= link_to 'ask your friends on Facebook', "https://www.facebook.com/sharer/sharer.php?u=http://populisto.com", :target => "_blank" %> for what you're looking for?
-
-
+	Sorry, no results for this yet. Maybe you'd like to <%= link_to 'ask your friends on Facebook', "#", :class => 'share_link' %> for what you're looking for?
     <p></p>
     </br>
    If you do find someone who you're happy with,
@@ -11,6 +9,26 @@ please
  to your Address Book, so you
 can find them easily next time round, and let your friends know about them.
 </br>
-
-
 </div>
+
+<script type="text/javascript">
+  $( ".share_link" ).click(function() {
+    FB.ui(
+      {
+        method: 'feed',
+        name: 'Ask a friend.',
+        link: 'https://populisto.com/',
+        picture: 'https://populisto.com/assets/populisto_logo_for_web1.png',
+        caption: 'Ask your friend on Facebook for what you are looking for.',
+        description: "... and if you find something good don't forget to add it to your address book."
+      },
+      function(response) {
+        if (response && response.post_id) {
+          alert('Post was published.');
+        } else {
+          alert('Post was not published.');
+        }
+      }
+    );
+  });
+</script>
