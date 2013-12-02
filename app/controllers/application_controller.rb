@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
 
   # before_filter :authenticate_user!
   before_filter :redirect_if_dot_ie
-  before_filter :redirect_to_https
   before_filter :with_google_maps_api
   before_filter :default_miles_range
   before_filter :load_data_for_checkbox
@@ -13,10 +12,6 @@ class ApplicationController < ActionController::Base
   before_filter :init_review
 
   #layout :layout_by_resource
-
-  def redirect_to_https
-      redirect_to :protocol => "https://" unless (request.ssl? || request.local?)
-  end
 
   def current_resource
     if current_user
