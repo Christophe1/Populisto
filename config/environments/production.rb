@@ -28,14 +28,24 @@ QuestionnaireSite::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   # config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
+  # config.action_mailer.smtp_settings = {
+  #   :address => "smtp.gmail.com",
+  #   :port => 587,
+  #   :domain => "populisto.com",
+  #   :authentication => "plain",
+  #   :enable_starttls_auto => true,
+  #   :user_name => ENV["GMAIL_USERNAME"],
+  #   :password => ENV["GMAIL_PASSWORD"]
+  # }
+
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV["SENDGRID_USERNAME"],
+    :password => ENV["SENDGRID_PASSWORD"],
+    :domain => 'populisto.com',
+    :address => 'smtp.sendgrid.net',
     :port => 587,
-    :domain => "populisto.com",
-    :authentication => "plain",
-    :enable_starttls_auto => true,
-    :user_name => ENV["GMAIL_USERNAME"],
-    :password => ENV["GMAIL_PASSWORD"]
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
   # Defaults to Rails.root.join("public/assets")
