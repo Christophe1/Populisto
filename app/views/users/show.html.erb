@@ -21,7 +21,7 @@
   <p></p>
   <table class="table">
     <tr>
-      <td><h3>In your Address Book you have:</h3></td>
+      <td><h3>In <%= link_to ('your Address Book',address_book_path(current_resource))  %> you have:</h3></td>
       <td><h3><%= link_to pluralize(@reviews_count, 'entry'), address_book_path(current_resource) %></h3></td>
     </tr>
     <tr>

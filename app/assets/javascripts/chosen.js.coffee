@@ -19,7 +19,7 @@ $(document).ready ->
 
 
   $("#review_search_ids").chosen
-    placeholder_text_multiple: "Search Address Books"
+    placeholder_text_multiple: "Search Peoples' Address Books/ Categories"
     max_selected_options: 2
     no_results_text: 'No results matchedjyaaa'
     allow_single_deselect: true
