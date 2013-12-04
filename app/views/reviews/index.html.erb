@@ -14,16 +14,16 @@
           <div class="inputs">
             <div id="except_comment">
             <p><%= chosen_select_for_category(f) %></p>
-            <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+            <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'},:placeholder => I18n.t('helpers.name')   %>
             <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
             <span id="address_validation"></span>
-            <%= f.input :phone  %>
+            <%= f.input :phone, :placeholder => I18n.t('helpers.phone')  %>
             <%= f.hidden_field :lat  %>
             <%= f.hidden_field :lng  %>
             </div>
             <!-- <div class="right"> -->
             <!-- <div class="comments"><%#= I18n.t('user.review.comments') %></div>  -->
-            <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' } %>
+            <%= f.input :comment, :input_html => { :wrap => :soft, :rows => 2, :maxlength => 300}, :label => 'Comments:', :label_html => { :class => 'comments' }, :placeholder => I18n.t('helpers.comments')  %>
             <div id = "char_count_label"></div>
             <!-- buttons: save, delete, share, keep private -->
             <div class="edit_button_group">
