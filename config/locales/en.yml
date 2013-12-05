@@ -128,7 +128,7 @@ en:
     greetings_1: "Hi %{user_name}. Please tell Populisto! your address details."
     greetings_2: "If you don't want to give your exact details that's ok (it’s kept private, in any case), but the more accurate you are, the more effective your results will be, when looking for things in your area."
   write_review:
-    text: 'Your Address Book is a place for storing details and helping people find great gems around the area, everything from great coffee to great carpentry. </br></br>   (Any category suggestions? Email me at admin@populisto.ie)'
+    text: 'Your Address Book is a place for storing details and helping people find great gems around the area, everything from great coffee to great carpentry.'
     submit_button: 'Post to Your Page'
     cancel_button: 'Cancel'
     comment_label: 'Comments'

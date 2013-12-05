@@ -23,6 +23,11 @@ class ReviewsController < FrontEndController
     end
   end
 
+  def suggest_category
+    categories = params[:category]
+    ReviewEmail.suggest_category(current_resource, categories).deliver
+  end
+
   def show
     @review = Review.find(params[:id])
   end

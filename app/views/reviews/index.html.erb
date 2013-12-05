@@ -1,7 +1,16 @@
 <!-- This is the page where a person writes something up for their Address Book -->
 <div class = "background_your_area" >
   <div class='review-text'>
-    <%= raw I18n.t('write_review.text') %>
+    <%= I18n.t('write_review.text') %> <br><br>
+    (Any category suggestions? Email me at <span class="email">admin@populisto.ie</span>)
+    <div class="notices"></div>
+    <div class="well suggest_categories">
+      <%= form_tag(suggest_category_path, {:id => 'suggest', :class => 'form-inline', :remote => true, :method => :get}) do %>
+        <%= text_field_tag :category, '',:placeholder => 'Categories', :class => "input-xlarge" %>
+        <%= hidden_field_tag :email, '', :value => current_resource.email %>
+        <%= submit_tag 'Send', :class => 'btn btn-primary' %> <a class="btn hide_form">Cancel</a>
+      <% end %>
+    </div>
   </div>
   <div class="address_book_entry" >
     <div class="edit_review_form">
@@ -75,6 +84,14 @@ $(document).ready(function()  {
   $("#review_<%= @review.id %> select").each(function () {
     $(this).attr('data-placeholder', $(this).attr('placeholder'));
   }).chosen();
+
+  $( ".email" ).click(function() {
+      $('.suggest_categories').css('display',"block");
+  });
+
+  $( ".hide_form" ).click(function() {
+      $('.suggest_categories').css('display',"none");
+  });
 
   // $('.edit_review_form form').submit(function() {
   //   if ($('#review_address').val() == "<%= escape_javascript I18n.t('helpers.enter_a_location') %>") {

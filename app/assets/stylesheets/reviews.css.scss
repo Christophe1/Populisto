@@ -270,3 +270,15 @@
 }
 
 .friends_of{font-size: 12px;}
+.notices {
+  font-size: 14px;
+  color: green;
+  height: 20px;
+}
+.suggest_categories {
+  display: none;
+  padding-bottom: 0;
+  .close_well{
+    cursor: pointer;
+  }
+}

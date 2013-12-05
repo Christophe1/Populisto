@@ -31,6 +31,7 @@ QuestionnaireSite::Application.routes.draw do
   get ':id/friends_outside_area' => 'users#friends_outside_area', :as => :friends_outside_area
   post "home/update_address", :as  => :update_address
   match "canvas" => "canvas#index"
+  match 'suggest_category' => 'reviews#suggest_category'
 
   match "/contacts/:importer/callback" => "email_invites#contacts_callback", :as => :contacts_callback
   match "/contacts/failure" => "email_invites#contacts_callback_failure", :as => :contacts_callback_failure
