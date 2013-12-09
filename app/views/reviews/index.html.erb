@@ -1,16 +1,9 @@
 <!-- This is the page where a person writes something up for their Address Book -->
-<div class = "background_your_area" >
+<div class = "background_your_area main_content" >
   <div class='review-text'>
     <%= I18n.t('write_review.text') %> <br><br>
     (Any category suggestions? <span class="email">Send here.</span>)
-    <div class="notices"></div>
-    <div class="well suggest_categories">
-      <%= form_tag(suggest_category_path, {:id => 'suggest', :class => 'form-inline', :remote => true, :method => :get}) do %>
-        <%= text_field_tag :category, '',:placeholder => 'Categories', :class => "input-xlarge" %>
-        <%= hidden_field_tag :email, '', :value => current_resource.email %>
-        <%= submit_tag 'Send', :class => 'btn btn-primary' %> <a class="btn hide_form">Cancel</a>
-      <% end %>
-    </div>
+        <%=  render 'suggest_category' %>
   </div>
   <div class="address_book_entry" >
     <div class="edit_review_form">

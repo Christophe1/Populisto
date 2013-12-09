@@ -28,6 +28,10 @@ class ReviewsController < FrontEndController
     ReviewEmail.suggest_category(current_resource, categories).deliver
   end
 
+  def suggest_category_form
+
+  end
+
   def show
     @review = Review.find(params[:id])
   end

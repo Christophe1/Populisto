@@ -47,9 +47,13 @@ class UsersController < FrontEndController
 
   def friends_outside_area
     @friends_outside = []
-    User.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
+    @others_outside  = []
+    users = User.with_entries.beyond(20.01, :units => :km, :origin => current_resource)
+    users.each do |usr|
       if usr.friend_of?(current_resource)
         @friends_outside << usr
+      else
+        @others_outside << usr
       end
     end
   end

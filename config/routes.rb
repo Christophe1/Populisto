@@ -32,6 +32,7 @@ QuestionnaireSite::Application.routes.draw do
   post "home/update_address", :as  => :update_address
   match "canvas" => "canvas#index"
   match 'suggest_category' => 'reviews#suggest_category'
+  get 'suggest_category_form' => 'reviews#suggest_category_form'
 
   match "/contacts/:importer/callback" => "email_invites#contacts_callback", :as => :contacts_callback
   match "/contacts/failure" => "email_invites#contacts_callback_failure", :as => :contacts_callback_failure

@@ -27,7 +27,7 @@
 
         </ul>
         <div class='search-box'>
-          <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {:class => 'form-inline'} do |f| %>
+          <%= simple_form_for @review, :url => search_index_path, :method => :post, :html => {:class => 'form-inline search_form'} do |f| %>
             <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen, :group_method => :last, :prompt => false,
             :input_html => { :class => 'span5', :multiple => true }, :label => false, :placeholder => t('find_something.search_placeholder') %>
             <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button', :disabled => true %>

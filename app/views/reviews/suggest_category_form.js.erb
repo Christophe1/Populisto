@@ -1,0 +1,6 @@
+<% if  params[:show_for] == 'other' %>
+$('.main_content').html("<%= j render('reviews/suggest_category') %>");
+$('.suggest_categories').css('display', 'block');
+<% else %>
+$('.suggest_categories').css('display', 'block');
+<% end %>
