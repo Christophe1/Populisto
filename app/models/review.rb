@@ -123,7 +123,7 @@ class Review < ActiveRecord::Base
         fb_friends = current_user.facebook_friends
 
         friends_inside_area = fb_friends.in_range(0..20, :units => :km, :origin => current_user)
-        friends_outside_area = fb_friends - friends_inside_area
+        friends_outside_area = fb_friends.beyond(20.01, :units => :km, :origin => current_user) #fb_friends - friends_inside_area
 
         fb_friends_reviews = all_reviews.where(:user_id => friends_inside_area.map{|u| u.id})
 

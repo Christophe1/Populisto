@@ -14,7 +14,7 @@ class UsersController < FrontEndController
       @reviews_count = @resource.reviews_count
       @users_in_area_count = User.with_entries.in_area(current_resource).count
       @friends_outside = []
-      User.with_entries.beyond(20, :units => :km, :origin => current_resource).each do |usr|
+      User.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
         if usr.friend_of?(current_resource)
           @friends_outside << usr
         end
@@ -47,7 +47,7 @@ class UsersController < FrontEndController
 
   def friends_outside_area
     @friends_outside = []
-    User.with_entries.beyond(20, :units => :km, :origin => current_resource).each do |usr|
+    User.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
       if usr.friend_of?(current_resource)
         @friends_outside << usr
       end
