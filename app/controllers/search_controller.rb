@@ -32,7 +32,7 @@
       returned_reviews[3].each do |rev|
         @other_people_reviews << rev if rev.visible_to?(current_resource)
       end
-         @all_reviews =@user_reviews + @fb_friends_reviews + @other_people_reviews
+         @all_reviews =@user_reviews + @fb_friends_reviews + @other_people_reviews +  @fb_friends_reviews_outside
       # companies not used yet
       #@companies = Company.scoped_by_search_params(terms, current_resource) || []
       render :action => :index
