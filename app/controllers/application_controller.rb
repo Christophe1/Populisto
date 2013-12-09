@@ -96,7 +96,7 @@ protected
     @current_resource = current_resource
 
     if current_resource then
-      users_in_my_area = User.unscoped.with_entries.within(default_range, :origin => current_resource)
+      users_in_my_area = User.unscoped.with_entries.in_area(current_resource)
       users_outside_my_area = User.unscoped.with_entries.beyond(default_range, :origin => current_resource)
       personal_contacts = current_resource.personal_reviews_contacts.map{|c| [c.name, "review_#{c.id}"] }
       # followers = users_in_my_area.followers_for(current_user)
