@@ -23,7 +23,9 @@
           <td><%= item.first_name %></td>
           <td><%= item.last_name %></td>
           <td><%= item.lat %> <%= item.lng %></td>
-          <td><%= item.email %></td>
+          <td>
+            <%= item.confirmed? ? item.email : "<span style='color:red;'>#{item.email}</span>".html_safe %>
+          </td>
           <td><%= item.provider %></td>
           <td><%= item.external_user_id %></td>
           <td><%= item.address %></td>

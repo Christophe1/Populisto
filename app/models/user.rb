@@ -69,13 +69,16 @@ class User < ActiveRecord::Base
 
   self.per_page = 10
 
+  def confirmed?
+    self.confirmed_at.present? ? true : false
+  end
 
   def slug_name
     self.first_name + " " + self.last_name
   end
 
   def self.in_area(user)
-    users = User.in_range(0..20, :units => :km, :origin => user) - user.to_a
+    users = User.within(20, :units => :km, :origin => user) - user.to_a
     return users
   end
 

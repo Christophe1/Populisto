@@ -2,7 +2,7 @@
 <div class = "background_your_area" >
   <div class='review-text'>
     <%= I18n.t('write_review.text') %> <br><br>
-    (Any category suggestions? Email me at <span class="email">admin@populisto.ie</span>)
+    (Any category suggestions? <span class="email">Send here.</span>)
     <div class="notices"></div>
     <div class="well suggest_categories">
       <%= form_tag(suggest_category_path, {:id => 'suggest', :class => 'form-inline', :remote => true, :method => :get}) do %>
