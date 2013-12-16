@@ -1,1 +1,1 @@
-$('.follow_book').html('<%= link_to "Unfollow this Address Book", unfollow_user_path(@user), :remote => true %>');
+$('.follow_<%= @user.id %>').html('<%= link_to "Unfollow this Address Book", unfollow_user_path(@user), :remote => true %>');

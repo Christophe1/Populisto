@@ -27,7 +27,7 @@ named commented_code so you can have a copy of it -->
           <!-- resource full name considering if name ends with s -->
             <%= resource_full_name(@resource.front_name) %>
           <% end %>
-          <div class="follow_book">
+          <div class="follow_book follow_<%= @resource.id %>">
             <%= link_to_follow_toggle(@resource) %>
           </div>
         <% end %>
