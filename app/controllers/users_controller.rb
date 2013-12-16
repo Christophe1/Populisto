@@ -34,6 +34,7 @@ class UsersController < FrontEndController
   def users_in_area
     users_in_area = User.with_entries.in_area(current_resource)
     friends = current_resource.facebook_friends.in_range(0..20, :units => :km, :origin => current_resource)
+    @app_friends = current_user.populisto_friends.in_range(0..20, :units => :km, :origin => current_resource)
     all_friends = []
     friends.each do |f|
       f.facebook_friends.in_range(0..20, :units => :km, :origin => current_user).each do |ff|
@@ -41,17 +42,21 @@ class UsersController < FrontEndController
       end
       all_friends << f if f.reviews_count > 0
     end
-    @friends = all_friends.uniq - current_resource.to_a
-    @others = users_in_area - all_friends
+    @friends = (all_friends).uniq - current_resource.to_a
+    @others = users_in_area - @friends - @app_friends
   end
 
   def friends_outside_area
     @friends_outside = []
     @others_outside  = []
-    users = User.with_entries.beyond(20.01, :units => :km, :origin => current_resource)
-    users.each do |usr|
+    @app_friends_outside = []
+    @users = User.with_entries.beyond(20.01, :units => :km, :origin => current_resource)
+
+    @users.each do |usr|
       if usr.friend_of?(current_resource)
         @friends_outside << usr
+      elsif usr.populisto_friend?(current_resource)
+        @app_friends_outside << usr
       else
         @others_outside << usr
       end

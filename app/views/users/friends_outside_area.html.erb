@@ -3,12 +3,29 @@
   <div class = "outside_area">
     (Type the name of a person in the ‘Search Address Books’ bar to see if they’re on Populisto!)
   </div>
+  <% if @users.any? %>
   <h3>Friends outside area</h3>
   <ul class="nav nav-tabs nav-stacked">
-    <% @friends_outside.each_with_index do |f, index| %>
+    <% @app_friends_outside.each_with_index do |f, index| %>
       <li>
         <%= link_to address_book_path(f) do %>
           <div class="pull-left"><%= index + 1 %></div>
+          <div class="span8">
+            <div class="span1">
+              <%= fb_avatar(f) %>
+            </div>
+            <div class="span6">
+              <div><%= f.front_name %> - <%= fb_friendship_relation(f) %></div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        <% end %>
+      </li>
+    <% end %>
+    <% @friends_outside.each_with_index do |f, index| %>
+      <li>
+        <%= link_to address_book_path(f) do %>
+          <div class="pull-left"><%= index + @app_friends_outside.count + 1 %></div>
           <div class="span8">
             <div class="span1">
               <%= fb_avatar(f) %>
@@ -22,23 +39,26 @@
       </li>
     <% end %>
   </ul>
-  <h3>Others outside your area</h3>
-  <ul class="nav nav-tabs nav-stacked">
-    <% @others_outside.each_with_index do |f, index| %>
-      <li>
-        <%= link_to address_book_path(f) do %>
-          <div class="pull-left"><%= index + 1 %></div>
-          <div class="span8">
-            <div class="span1">
-              <%= fb_avatar(f) %>
+  <% if @others_outside.any? %>
+    <h3>Others outside your area</h3>
+    <ul class="nav nav-tabs nav-stacked">
+      <% @others_outside.each_with_index do |f, index| %>
+        <li>
+          <%= link_to address_book_path(f) do %>
+            <div class="pull-left"><%= index + 1 %></div>
+            <div class="span8">
+              <div class="span1">
+                <%= fb_avatar(f) %>
+              </div>
+              <div class="span6">
+                <div><%= f.front_name %></div>
+              </div>
             </div>
-            <div class="span6">
-              <div><%= f.front_name %></div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+            <div class="clearfix"></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% end %>
 </div>

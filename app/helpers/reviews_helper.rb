@@ -6,15 +6,14 @@ module ReviewsHelper
 
 	#Update: I think it's actually important for some of the js.erb files.
 
-  def fb_friendship_relation(review, current_resource)
-    owner = review.owner
+  def fb_friendship_relation(user)
     if current_resource.class.name == "User"
-      if current_resource.populisto_friend?(review.owner)
+      if current_resource.populisto_friend?(user)
         '(Following)'
-      elsif current_resource.friend_of?(review.owner)
+      elsif current_resource.friend_of?(user)
          return "(Facebook friend)"
        else
-          friends = (current_resource.facebook_friends & owner.facebook_friends).join(', ')
+          friends = (current_resource.facebook_friends & user.facebook_friends).join(', ')
          "(Facebook friend of: #{friends})" if friends.any?
       end
     end

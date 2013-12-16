@@ -11,7 +11,7 @@
           <% else %>
           <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + " recommends:"  %>
             <div class="friends_of">
-              <%= fb_friendship_relation(review, current_resource) %>
+              <%= fb_friendship_relation(review.owner) %>
             </div>
           <% end %>
       </div>
