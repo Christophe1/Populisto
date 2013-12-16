@@ -176,6 +176,10 @@ class User < ActiveRecord::Base
     relation = self.facebook_friends.include?(user)
   end
 
+  def populisto_friend?(user)
+    relation = self.populisto_friends.include?(user)
+  end
+
   # Gets facebook friends ids of current user.
   #
   # @return [Array] list of facebook ids.
@@ -184,6 +188,13 @@ class User < ActiveRecord::Base
     @facebook_friends_ids ||= begin
       FriendRelation.facebook.by_source_user(self.external_user_id).pluck(:target_user_id) +
       FriendRelation.facebook.by_target_user(self.external_user_id).pluck(:source_user_id)
+    end
+  end
+
+  def populisto_friends_ids
+    @populisto_friends_ids ||= begin
+      FriendRelation.populisto.by_source_user(self.id).pluck(:target_user_id) +
+      FriendRelation.populisto.by_target_user(self.id).pluck(:source_user_id)
     end
   end
 
@@ -230,6 +241,10 @@ class User < ActiveRecord::Base
   #
   def facebook_friends
     @facebook_friends ||= User.where(:external_user_id => facebook_friends_ids)
+  end
+
+  def populisto_friends
+    @populisto_friends ||= User.where(:id => populisto_friends_ids)
   end
 
   # Gets all friends of current user

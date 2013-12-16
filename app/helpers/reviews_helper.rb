@@ -9,7 +9,9 @@ module ReviewsHelper
   def fb_friendship_relation(review, current_resource)
     owner = review.owner
     if current_resource.class.name == "User"
-      if current_resource.friend_of?(review.owner)
+      if current_resource.populisto_friend?(review.owner)
+        '(Following)'
+      elsif current_resource.friend_of?(review.owner)
          return "(Facebook friend)"
        else
           friends = (current_resource.facebook_friends & owner.facebook_friends).join(', ')

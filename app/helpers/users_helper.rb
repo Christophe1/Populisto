@@ -1,4 +1,12 @@
 module UsersHelper
+  def link_to_follow_toggle(user)
+    if current_user.populisto_friend?(user)
+      link_to 'Unfollow this Address Book', unfollow_user_path(user), :remote => true
+    else
+      link_to 'Follow this Address Book', follow_user_path(user), :remote => true
+    end
+  end
+
   def your_page(user)
     if user == current_user
       I18n.t('helpers.your_page')

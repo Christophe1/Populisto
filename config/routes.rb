@@ -57,6 +57,8 @@ QuestionnaireSite::Application.routes.draw do
   resources :users do
     member do
       get :following_followers, :address_toggle
+      get :follow
+      get :unfollow
     end
   end
   resources :friend_relations, :only => [:create, :destroy]

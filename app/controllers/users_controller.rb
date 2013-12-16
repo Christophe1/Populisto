@@ -58,6 +58,22 @@ class UsersController < FrontEndController
     end
   end
 
+  def follow
+    @user = User.find_by_slug(params[:id])
+    relation = FriendRelation.where(:provider => SocialNetwork::POPULISTO,
+                      :source_user_id => current_resource.id, :target_user_id => @user.id)
+    unless relation.present?
+      current_resource.follow!(@user)
+    end
+  end
+
+  def unfollow
+    @user = User.find_by_slug(params[:id])
+    relation = FriendRelation.where(:provider => SocialNetwork::POPULISTO,
+      :source_user_id => current_resource.id, :target_user_id => @user.id).first
+    relation.destroy
+  end
+
   def address_toggle
     @user.update_attributes(:address_visible => params[:value]) if @user == current_user
   end
