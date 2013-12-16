@@ -130,6 +130,7 @@ class Review < ActiveRecord::Base
                               populisto_friends.beyond(20.01, :units => :km, :origin => current_user)
 
         fb_friends_reviews = all_reviews.where(:user_id => friends_inside_area.map{|u| u.id})
+        in_area_reviews = all_reviews.where(:user_id => users_in_area.map{|u| u.id})
 
         # reviews of friends outside area
         reviews_outside_area = all_reviews.where(:user_id => friends_outside_area.map{|u| u.id})
@@ -142,7 +143,7 @@ class Review < ActiveRecord::Base
         reviews_of_friends_of_friends = all_reviews.where(:user_id => friends_of_friend.uniq)
 
         facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends - user_reviews).uniq
-        other_reviews = all_reviews - user_reviews - facebook_reviews - reviews_outside_area
+        other_reviews = in_area_reviews - facebook_reviews
         return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews]
       end
     end
