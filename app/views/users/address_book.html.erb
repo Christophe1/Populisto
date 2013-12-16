@@ -28,7 +28,7 @@ named commented_code so you can have a copy of it -->
             <%= resource_full_name(@resource.front_name) %>
           <% end %>
           <div class="follow_book follow_<%= @resource.id %>">
-            <%= link_to_follow_toggle(@resource) %>
+            <%= link_to_follow_toggle(@resource) unless current_resource.friend_of?(@resource) %>
           </div>
         <% end %>
         <div id = "address_book_image">

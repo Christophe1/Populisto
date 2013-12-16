@@ -10,7 +10,9 @@
             <%= (link_to "You", user_path(review.user), :class => "ajax") + " recommend:" %>
           <% else %>
           <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + " recommends:"  %>
-            <span class="pull-right follow_<%= review.user.id %>"><%= link_to_follow_toggle(review.user) %></span>
+            <span class="pull-right follow_<%= review.user.id %> follow">
+              <%= link_to_follow_toggle(review.user) %>
+            </span>
             <div class="friends_of">
               <%= fb_friendship_relation(review.owner) %>
             </div>

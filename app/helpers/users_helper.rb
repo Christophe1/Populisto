@@ -1,9 +1,9 @@
 module UsersHelper
   def link_to_follow_toggle(user)
     if current_user.populisto_friend?(user)
-      link_to 'Unfollow this Address Book', unfollow_user_path(user), :remote => true
+      link_to 'Unfollow this Address Book', unfollow_user_path(user), :remote => true unless current_resource.friend_of?(user)
     else
-      link_to 'Follow this Address Book', follow_user_path(user), :remote => true
+      link_to 'Follow this Address Book', follow_user_path(user), :remote => true unless current_resource.friend_of?(user)
     end
   end
 
