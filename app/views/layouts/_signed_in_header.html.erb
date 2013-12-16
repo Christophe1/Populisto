@@ -31,12 +31,7 @@
             <%= f.input :search_ids, :collection => @data, :as => :grouped_chosen, :group_method => :last, :prompt => false,
             :input_html => { :class => 'span5', :multiple => true }, :label => false, :placeholder => t('find_something.search_placeholder') %>
             <%= f.button :submit, :value => t('find_something.button_text'), :class => 'btn-primary search-button', :disabled => true %>
-            <div id = "search_box_help">
-              <%= image_tag("why_fb_log_in.png") %>
-            </div>
-            <div id="search_box_help_content">
-              Put in up to 2 categories, for example, 'Plumber, paver'.  Your FaceBook friends with Address Books come up first. You can also search by a person's name.
-            </div>
+
           <% end %>
         </div>
       </div>
