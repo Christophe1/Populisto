@@ -53,6 +53,9 @@ $(function() {
             // $.get(url, ajax_loaded);
 
         }
+        if (object.selected && object.selected.match("^category_")) {
+            $('.search_form').submit();
+        }
     });
 
     $('a.fb-login').click(function(e) {
