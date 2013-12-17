@@ -38,15 +38,25 @@ QuestionnaireSite::Application.configure do
   #   :password => ENV["GMAIL_PASSWORD"]
   # }
 
-  ActionMailer::Base.smtp_settings = {
-    :user_name => ENV["SENDGRID_USERNAME"],
-    :password => ENV["SENDGRID_PASSWORD"],
-    :domain => 'populisto.com',
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
+  # ActionMailer::Base.smtp_settings = {
+  #   :user_name => ENV["SENDGRID_USERNAME"],
+  #   :password => ENV["SENDGRID_PASSWORD"],
+  #   :domain => 'populisto.com',
+  #   :address => 'smtp.sendgrid.net',
+  #   :port => 587,
+  #   :authentication => :plain,
+  #   :enable_starttls_auto => true
+  # }
+
+   config.action_mailer.smtp_settings = {
+     :address => "smtp.elasticemail.com",
+     :port => 2525,
+     :domain => "populisto.com",
+     :authentication => "plain",
+     :enable_starttls_auto => true,
+     :user_name => "a7f018c8-6361-4bc0-9054-cf98326b2ee7",
+     :password => "a7f018c8-6361-4bc0-9054-cf98326b2ee7"
+   }
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
