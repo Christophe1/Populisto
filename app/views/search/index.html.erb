@@ -12,17 +12,23 @@
       <% end %>
     <% end %>
 
-    <% if @fb_friends_reviews.any? %>
+    <% if @fb_friends_reviews.any? || @populisto_friends_reviews.any? %>
       <div class = "search_headings">Friends in your area:</div>
-      <% @fb_friends_reviews.each do |review| %>
+      <% @populisto_friends_reviews.each do |review| %>
         <%= render 'review', :review => review %>
+      <% end %>
+      <% @fb_friends_reviews.each do |review| %>
+        <%= render 'fb_review', :review => review %>
       <% end %>
     <% end %>
 
-    <% if @fb_friends_reviews_outside.any? %>
+    <% if @fb_friends_reviews_outside.any? || @populisto_friends_outside_reviews.any? %>
       <div class = "search_headings">Friends outside your area:</div>
-      <% @fb_friends_reviews_outside.each do |review| %>
+      <% @populisto_friends_outside_reviews.each do |review| %>
         <%= render 'review', :review => review %>
+      <% end %>
+      <% @fb_friends_reviews_outside.each do |review| %>
+        <%= render 'fb_review', :review => review %>
       <% end %>
     <% end %>
 

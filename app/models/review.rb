@@ -123,17 +123,19 @@ class Review < ActiveRecord::Base
         fb_friends = current_user.facebook_friends
         populisto_friends = current_user.populisto_friends
 
-        friends_inside_area = fb_friends.in_range(0..20, :units => :km, :origin => current_user) +
-                              populisto_friends.in_range(0..20, :units => :km, :origin => current_user)
+        friends_inside_area = fb_friends.in_range(0..20, :units => :km, :origin => current_user)
+        friends_outside_area = fb_friends.beyond(20.01, :units => :km, :origin => current_user)
 
-        friends_outside_area = fb_friends.beyond(20.01, :units => :km, :origin => current_user) +
-                              populisto_friends.beyond(20.01, :units => :km, :origin => current_user)
+        populisto_friends_in_area = populisto_friends.in_range(0..20, :units => :km, :origin => current_user)
+        populisto_friends_outside_area = populisto_friends.beyond(20.01, :units => :km, :origin => current_user)
 
         fb_friends_reviews = all_reviews.where(:user_id => friends_inside_area.map{|u| u.id})
+        p_friends_reviews = all_reviews.where(:user_id => populisto_friends_in_area.map{|u| u.id})
         in_area_reviews = all_reviews.where(:user_id => users_in_area.map{|u| u.id})
 
         # reviews of friends outside area
         reviews_outside_area = all_reviews.where(:user_id => friends_outside_area.map{|u| u.id})
+        p_reviews_outside_area = all_reviews.where(:user_id => populisto_friends_outside_area.map{|u| u.id})
         # end reviews_outside_area
 
         friends_of_friend = []
@@ -143,8 +145,8 @@ class Review < ActiveRecord::Base
         reviews_of_friends_of_friends = all_reviews.where(:user_id => friends_of_friend.uniq)
 
         facebook_reviews = (fb_friends_reviews + reviews_of_friends_of_friends - user_reviews).uniq
-        other_reviews = in_area_reviews - facebook_reviews - user_reviews
-        return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews]
+        other_reviews = in_area_reviews - p_friends_reviews - facebook_reviews - user_reviews
+        return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews, p_friends_reviews, p_reviews_outside_area]
       end
     end
 

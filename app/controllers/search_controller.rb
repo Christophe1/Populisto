@@ -20,6 +20,8 @@
       @fb_friends_reviews = []
       @other_people_reviews = []
       @fb_friends_reviews_outside = []
+      @populisto_friends_reviews = []
+      @populisto_friends_outside_reviews = []
       returned_reviews = Review.scoped_by_search_params(terms, current_resource)
 
       @user_reviews = returned_reviews[0]
@@ -32,7 +34,13 @@
       returned_reviews[3].each do |rev|
         @other_people_reviews << rev if rev.visible_to?(current_resource)
       end
-         @all_reviews =@user_reviews + @fb_friends_reviews + @other_people_reviews +  @fb_friends_reviews_outside
+      returned_reviews[4].each do |rev|
+        @populisto_friends_reviews << rev if rev.visible_to?(current_resource)
+      end
+      returned_reviews[5].each do |rev|
+        @populisto_friends_outside_reviews << rev if rev.visible_to?(current_resource)
+      end
+      @all_reviews = @user_reviews + @fb_friends_reviews + @other_people_reviews +  @fb_friends_reviews_outside + @populisto_friends_reviews + @populisto_friends_outside_reviews
       # companies not used yet
       #@companies = Company.scoped_by_search_params(terms, current_resource) || []
       render :action => :index

@@ -1,18 +1,11 @@
 <div id = "fb_avatar">
   <%= fb_avatar(review.owner) %>
 </div>
-
-      <!-- Render 'You', if it's the current user, or else the name of the person who owns the Address Book entry. -->
 <div class = "address_entry_user_name">
-  <!-- not sure why, but need to use review.user.name and front_name to distinguish
-    between regular and Facebook log in people. -->
   <% if review.owner_is?(current_resource) %>
     <%= (link_to "You", user_path(review.user), :class => "ajax") + " recommend:" %>
   <% else %>
   <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + " recommends:"  %>
-    <span class="pull-right follow_<%= review.user.id %> follow">
-      <%= link_to_follow_toggle(review.user) %>
-    </span>
     <div class="friends_of">
       <%= fb_friendship_relation(review.owner) %>
     </div>
@@ -40,13 +33,7 @@
         <% end %>
       </div>
       <div class="clearfix"></div>
-
-
-      <!-- <div class="category_name">
-          <%#= "/" + review.categories_list %>
-          </div> -->
       </br>
-
       <div class="info">
         <strong><%= I18n.t('user.review.name') %></strong><%= review.name %><br>
         </br>
@@ -57,7 +44,6 @@
         <div class = "posted_at"><%= time_ago_in_words(review.created_at) %> ago.</div>
       </div>
     </div>
-
     <div class="right_window">
       <div class="comments"><%= I18n.t('user.review.comments') %></div>
       <div class="comment-content"><%= review.comment %></div>
@@ -65,6 +51,5 @@
       <div class = "binder"></div>
       <div class="clearfix"></div>
     </div>
-    <!-- <hr style="margin: 0 30px;"/> -->
   </div>
 </div>
