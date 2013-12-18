@@ -44,6 +44,7 @@
     </div>
     <% end %>
     <%#= render :partial => 'layouts/pop_in' %>
+    <div class="prizes"><%=  link_to "Prizes to win!",  blog_path %></div>
     <%= content_for?(:body) ? yield(:body) : yield %>
   </div>
 

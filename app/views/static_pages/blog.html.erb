@@ -3,17 +3,25 @@
   Blog
 </div>
   <div class = "static_pages_body">
-8/12/2013
-</br></br>
-
-    19/11/2013
-    </br></br>
-        My first ever post here. Yahoo! As part of Bank of Ireland Enterprise week I'll
-        be in the Sutton branch tomorrow, showing off Populisto! to customers going about
-        their business.
-    </br></br>
-
-        I'll be there from 12.30pm to 2.30pm. No internet access for me so it
-        should be interesting. Oh well, will have to improvise!
-  </div>
+    <div class="art3">
+      <%= render 'blog3' %>
+    </div>
+    <hr>
+    <div class="art2">
+      <%= render 'blog2' %>
+    </div>
+    <hr>
+    <div class="art1">
+      <%= render 'blog1' %>
+    </div>
 </div>
+<script type="text/javascript">
+  if ($('.art<%= params[:art_id] %>').length > 0) {
+    $(function(){
+      $('html, body').animate({
+          scrollTop: $('.art<%= params[:art_id] %>').offset().top
+      }, 'fast');
+      return false;
+    });
+  }
+</script>
