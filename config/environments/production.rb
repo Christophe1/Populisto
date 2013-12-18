@@ -48,15 +48,25 @@ QuestionnaireSite::Application.configure do
   #   :enable_starttls_auto => true
   # }
 
-   config.action_mailer.smtp_settings = {
-     :address => "smtp.elasticemail.com",
-     :port => 2525,
-     :domain => "populisto.com",
-     :authentication => "plain",
-     :enable_starttls_auto => true,
-     :user_name => "a7f018c8-6361-4bc0-9054-cf98326b2ee7",
-     :password => "a7f018c8-6361-4bc0-9054-cf98326b2ee7"
-   }
+  # config.action_mailer.smtp_settings = {
+  #   :address => "smtp.elasticemail.com",
+  #   :port => 2525,
+  #   :domain => "populisto.com",
+  #   :authentication => "plain",
+  #   :enable_starttls_auto => true,
+  #   :user_name => "a7f018c8-6361-4bc0-9054-cf98326b2ee7",
+  #   :password => "a7f018c8-6361-4bc0-9054-cf98326b2ee7"
+  # }
+
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.mandrillapp.com",
+    :port => 587,
+    :domain => "populisto.com",
+    :authentication => "plain",
+    :enable_starttls_auto => true,
+    :user_name => ENV["MANDRILL_USER"],
+    :password => ENV["MANDRILL_PASS"],
+  }
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
