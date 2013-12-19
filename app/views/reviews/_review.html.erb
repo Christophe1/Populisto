@@ -38,8 +38,11 @@
     <!-- this was another way of doing the above, but I prefer the above.
     edit_enabled is defined in reviews_helper, commented out -->
     <%# if edit_enabled %>
-    <%= render 'delete', :review => @review %>
-    <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true, :class => "edit_review_link" %>
+    <div class="pull-right">
+      <%= link_to I18n.t('user.review.edit.edit'), edit_review_path(review), :remote => true %> |
+      <%= link_to I18n.t('user.review.delete') , review,  :method => :delete, :confirm => I18n.t('helpers.links.confirmation'), :remote => true %>
+    </div>
+
   <% end %>
   <div class="comments"><%= I18n.t('user.review.comments') %></div>
   <div class="comment-content"><%= review.comment %></div>
