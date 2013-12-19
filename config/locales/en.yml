@@ -204,7 +204,7 @@ en:
     callback_header: "We can't find any contacts for you."
     callback_no_contacts: "You can import your contacts from another service."
     callback_close_link: "Close this window"
-    icons_extra_text: "You’ll have full control over who you want to contact!"
+    icons_extra_text: "You select who you want, we don't spam. You’ll have full control over who you want to contact!"
     invites_sent: "Invites sent: <b>%{number}</b>"
     outlook:
       step1: "Please provide a .csv file with contacts. You will be able to choose the ones you want to import on the next page"
