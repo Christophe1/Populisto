@@ -6,12 +6,16 @@
 #home_page_header {
   width: 100%;
   height: 95px;
+  background-color: #ffffff;
   top: 0;
   position: fixed;
   border-color: #eeeeee;
   border-width: 0 0 1px 0;
   border-style: solid;
   background: #fff;
+  z-index: 1000;
+
+
   .populisto_logo2 {
 padding-top: 10px;
 padding-left: 10px;
