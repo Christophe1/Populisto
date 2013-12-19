@@ -4,6 +4,16 @@ hr {
     background: #4D4D5B;
     font-size: 0;
     border: 0;
+    margin-bottom: 23px;
+    margin-top: 44px;
+}
+
+hr2 {
+    height: 1px;
+    color: #4D4D5B;
+    background: #4D4D5B;
+    font-size: 0;
+    border: 0;
 }
 
 .sponsor_image{
@@ -24,12 +34,29 @@ margin: 0 20px 32px 0;
 }
 
 
-.him_and_her {
+.for_her {
 
 font-size: 34px;
 padding-top: 26px;
 padding-bottom: 31px;
 color: #CC0066;
+}
+
+.for_him  {
+
+font-size: 34px;
+padding-top: 26px;
+padding-bottom: 31px;
+color: #122FFF;
+}
+
+.for_superquinn {
+
+font-size: 27px;
+line-height: 33px;
+padding-top: 26px;
+padding-bottom: 31px;
+color: #0DA82C;
 }
 
 .competition_border
@@ -38,6 +65,7 @@ color: #CC0066;
 border:2px solid #E9AC8F;
 padding:10px 40px;
 border-radius:5px;
+margin-bottom: 43px;
 }
 
 

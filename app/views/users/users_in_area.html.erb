@@ -3,7 +3,7 @@
 
   <% if @friends.any? %>
     <p></p>
-    <h3>Friends in your area</h3>
+    <h3>See what stuff your friends recommend</h3>
     <ul class="nav nav-tabs nav-stacked">
       <% @app_friends.each_with_index do |f, index| %>
         <li>
@@ -45,7 +45,7 @@
   <% end %>
   <% if @others.any? %>
     <p></p>
-    <h3>Others in your area</h3>
+    <h3>See what stuff others in your area recommend</h3>
     <ul class="nav nav-tabs nav-stacked">
       <% @others.each_with_index do |f, index| %>
         <li>
