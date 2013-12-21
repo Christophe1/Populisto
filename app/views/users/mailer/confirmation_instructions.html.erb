@@ -2,4 +2,8 @@
 
 <p>Please confirm your account by clicking on the link below:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p>
+  <%#= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %>
+  <!-- used link this way to force use of www and https in url -->
+  <%= link_to 'Confirm my account', "https://www.populisto.com/users/confirmation?confirmation_token=#{@resource.confirmation_token}" %>
+</p>
