@@ -193,8 +193,8 @@ class User < ActiveRecord::Base
 
   def populisto_friends_ids
     @populisto_friends_ids ||= begin
-      FriendRelation.populisto.by_source_user(self.id).pluck(:target_user_id) +
-      FriendRelation.populisto.by_target_user(self.id).pluck(:source_user_id)
+      FriendRelation.populisto.by_source_user(self.id).pluck(:target_user_id) #+
+      #FriendRelation.populisto.by_target_user(self.id).pluck(:source_user_id)
     end
   end
 
