@@ -1,5 +1,6 @@
 <p>Hi <%= @resource.front_name %>, thanks for joining Populisto!</p>
-
-<p>Please confirm your account by clicking on the link below:</p>
+<p>Please confirm your account by clicking on the link below. We hope it's something you'll find useful. Your friends, their recommendations,and a good place to store your contacts.</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p>See you soon!,</p>
+The Populisto! Team.
