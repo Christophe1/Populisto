@@ -38,15 +38,15 @@ QuestionnaireSite::Application.configure do
   #   :password => ENV["GMAIL_PASSWORD"]
   # }
 
-  # ActionMailer::Base.smtp_settings = {
-  #   :user_name => ENV["SENDGRID_USERNAME"],
-  #   :password => ENV["SENDGRID_PASSWORD"],
-  #   :domain => 'populisto.com',
-  #   :address => 'smtp.sendgrid.net',
-  #   :port => 587,
-  #   :authentication => :plain,
-  #   :enable_starttls_auto => true
-  # }
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV["SENDGRID_USERNAME"],
+    :password => ENV["SENDGRID_PASSWORD"],
+    :domain => 'populisto.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   # config.action_mailer.smtp_settings = {
   #   :address => "smtp.elasticemail.com",
@@ -58,15 +58,15 @@ QuestionnaireSite::Application.configure do
   #   :password => "a7f018c8-6361-4bc0-9054-cf98326b2ee7"
   # }
 
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.mandrillapp.com",
-    :port => 587,
-    :domain => "populisto.com",
-    :authentication => "plain",
-    :enable_starttls_auto => true,
-    :user_name => ENV["MANDRILL_USER"],
-    :password => ENV["MANDRILL_PASS"],
-  }
+  # config.action_mailer.smtp_settings = {
+  #   :address => "smtp.mandrillapp.com",
+  #   :port => 587,
+  #   :domain => "populisto.com",
+  #   :authentication => "plain",
+  #   :enable_starttls_auto => true,
+  #   :user_name => ENV["MANDRILL_USER"],
+  #   :password => ENV["MANDRILL_PASS"],
+  # }
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
