@@ -42,8 +42,9 @@ class UsersController < FrontEndController
       end
       all_friends << f if f.reviews_count > 0
     end
-    @friends = (all_friends).uniq - current_resource.to_a
-    @others = users_in_area - @friends - @app_friends
+    @all_friends = @app_friends + all_friends
+    @friends = all_friends.uniq - current_resource.to_a
+    @others = users_in_area -@all_friends # - @app_friends
   end
 
   def friends_outside_area
