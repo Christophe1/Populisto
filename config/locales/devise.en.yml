@@ -50,7 +50,7 @@ en:
       failure: 'Could not authorize you from %{kind} because "%{reason}".'
     mailer:
       confirmation_instructions:
-        subject: 'Sorry from Populisto!:(...here's your confirmation instructions again'
+        subject: "Sorry from Populisto!:(...here's your confirmation instructions again"
       reset_password_instructions:
         subject: 'Reset password instructions'
       unlock_instructions:
