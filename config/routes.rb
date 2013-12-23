@@ -79,6 +79,7 @@ QuestionnaireSite::Application.routes.draw do
     resources :users do
       collection do
         get "map_view"
+        get 'emails'
       end
     end
     resources :categories
