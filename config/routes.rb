@@ -49,6 +49,7 @@ QuestionnaireSite::Application.routes.draw do
   resources :reviews do
     member do
       get :repost, :reject, :edit
+      get :owner
     end
   end
 

@@ -53,6 +53,16 @@ $(function() {
             // $.get(url, ajax_loaded);
 
         }
+        if (object.selected && object.selected.match("^review_")) {
+            id = object.selected.replace('review_', '/');
+            // window.location.href = 'reviews' + id + '/owner';
+            // $.get("reviews" + id + "/owner");
+            <% if Rails.env.development? %>
+              window.location.replace("http://populisto.md:3000/reviews" + id + "/owner");
+            <% else %>
+              window.location.replace("https://populisto.com/reviews" + id + "/owner");
+            <% end %>
+        }
         if (object.selected && object.selected.match("^category_")) {
             $('.search_form').submit();
         }

@@ -64,4 +64,8 @@ class ReviewsController < FrontEndController
     current_user.reject @review
   end
 
+  # this will redirect to review owner when personal contact is selected
+  def owner
+    redirect_to address_book_path(Review.find(params[:id]).owner)
+  end
 end
