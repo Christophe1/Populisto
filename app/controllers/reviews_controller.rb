@@ -33,7 +33,7 @@ class ReviewsController < FrontEndController
   end
 
   def show
-    @review = Review.find(params[:id])
+    @review = current_resource.reviews.find(params[:id])
   end
 
   def edit
@@ -62,10 +62,5 @@ class ReviewsController < FrontEndController
   def reject
     @review = Review.find(params[:id])
     current_user.reject @review
-  end
-
-  # this will redirect to review owner when personal contact is selected
-  def owner
-    redirect_to address_book_path(Review.find(params[:id]).owner)
   end
 end
