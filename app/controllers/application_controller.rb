@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   # before_filter :authenticate_user!
-  before_filter :ensure_domain
+  before_filter :https_redirect
   before_filter :redirect_if_dot_ie
   before_filter :with_google_maps_api
   before_filter :default_miles_range
@@ -11,14 +11,6 @@ class ApplicationController < ActionController::Base
   before_filter :fix_params, :only => :create
 
   before_filter :init_review
-
-  APP_DOMAIN = 'www.populisto.com'
-
-  def ensure_domain
-    if request.env['HTTP_HOST'] != APP_DOMAIN
-      redirect_to "https://#{APP_DOMAIN}", :status => 301 if Rails.env.production?
-    end
-  end
 
   #layout :layout_by_resource
 
@@ -86,6 +78,19 @@ class ApplicationController < ActionController::Base
   end
 
 protected
+  def https_redirect
+    if ENV["ENABLE_HTTPS"] == "yes"
+      if request.ssl? && !use_https? || !request.ssl? && use_https?
+        protocol = request.ssl? ? "http" : "https"
+        flash.keep
+        redirect_to protocol: "#{protocol}://", status: :moved_permanently
+      end
+    end
+  end
+
+  def use_https?
+    true # Override in other controllers
+  end
 
   def default_miles_range
     @kms_range = (cookies[:kms_range] || default_range).to_i
