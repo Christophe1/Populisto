@@ -1,14 +1,14 @@
 <p>Hi <%= @resource.front_name %>, thanks for joining Populisto!</p>
 <p>
-<p>First of all, we're extremely sorry you most likely couldn't log in to the site. This was due to a final change we made elsewhere, just before putting the site live, and it impacted on the log in, which we discovered later. </p>
+<p>First of all, sorry you most likely couldn't log in to the site when you tried. We made a change elsewhere, just before putting the site live, and it impacted on the log in, which we discovered later. (Lucky we have Beta written in there, eh?) </p>
 
-<p>Please confirm your account by clicking on the link below. We hope Populisto! is something you'll find useful. Your friends, their recommendations,and a good place to store your contacts.</p>
+<p>Please confirm your account by clicking on the link below. We hope Populisto! is something you'll find useful. Have all your contacts stored in one place and search your friends contacts for things they're happy to recommend.</p>
 <p>
   <%#= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %>
   <!-- used link this way to force use of www and https in url -->
   <%= link_to 'Confirm my account', "https://www.populisto.com/users/confirmation?confirmation_token=#{@resource.confirmation_token}" %>
 </p>
-<p>See you soon!,</p>
+<p>Regards,</p>
 The Populisto! Team.
 
 
