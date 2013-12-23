@@ -58,9 +58,9 @@ $(function() {
             // window.location.href = 'reviews' + id + '/owner';
             // $.get("reviews" + id + "/owner");
             <% if Rails.env.development? %>
-              window.location.replace("http://populisto.md:3000/reviews" + id + "/owner");
+              window.location.replace("http://populisto.md:3000/reviews" + id);
             <% else %>
-              window.location.replace("https://populisto.com/reviews" + id + "/owner");
+              window.location.replace("https://populisto.com/reviews" + id);
             <% end %>
         }
         if (object.selected && object.selected.match("^category_")) {

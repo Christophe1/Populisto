@@ -30,6 +30,17 @@ class Admin::UsersController < Admin::BaseController
     @json = User.unscoped.all.to_gmaps4rails
   end
 
+  def emails
+    @confirmed = []
+    @unconfrimed = []
+    User.all.each do |user|
+      if user.confirmed?
+        @confirmed << user.email
+      else
+        @unconfrimed << user.email
+      end
+    end
+  end
 
   protected
 

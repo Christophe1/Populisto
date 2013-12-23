@@ -1,0 +1,14 @@
+<div class="span12">
+  <div class="span4">
+    <h3>Confirmed emails</h3>
+    <% @confirmed.each do |email| %>
+      <%= email %><br>
+    <% end %>
+  </div>
+  <div class="span4">
+    <h3>Unconfirmed emails</h3>
+    <% @unconfrimed.each do |email| %>
+      <%= email %><br>
+    <% end %>
+  </div>
+</div>
