@@ -69,7 +69,7 @@ en:
       share: "Share"
       keep_private: "Private"
       add_to_your_page: "Add to your Address Book"
-      add_to_your_page_confirmation: "You're about to add these details to your Address Book.\n\nThe comments part won't be added. It's up to you to give your own comments.\n\nPlease do add them when you're ready, as it gives a more constructive experience to others, if you make it public."
+      add_to_your_page_confirmation: "You're about to add these details to your Address Book.\n\nThe comments part won't be added. It's up to you to give your own comments.\n\nPlease do add them when you're ready, as it gives a more constructive experience to others, if you share it."
       remove_from_your_page: "Remove from your Address Book"
       next: "Next"
   wizard:
