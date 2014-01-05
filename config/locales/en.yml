@@ -178,7 +178,7 @@ en:
         current_password_hint: "we need your current password to confirm your changes"
         success: "User was updated successfully."
   email_invites:
-    check_importer_header: "Let people know of Populisto! by:"
+    check_importer_header: "Recommend Populisto! to others by:"
     select_contacts_header: "Select contacts to invite"
     custom_message_header: "Message:"
     select_contacts_info_text: "We found <b>%{count}</b> contacts for you. Select the ones you'd like to invite to Populisto! and click the \"<b>Next</b>\" button."
