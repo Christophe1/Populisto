@@ -1,59 +1,6 @@
-
 </br>
-<% if @all_reviews.any? %>
-<div id = "heading_above_search">Not what you're looking for? Maybe you could <%= link_to 'try your friends on Facebook', "#", :class => 'share_link' %></div>
-  <div class = "background_your_address_book">
-    <% if @user_reviews.any? %>
-      <div class = "search_headings">Your Address Book:</div>
-      <% @user_reviews.each do |review| %>
-        <%= render 'review', :review => review %>
-      <% end %>
-    <% end %>
-
-    <% if @fb_friends_reviews.any? || @populisto_friends_reviews.any? %>
-      <div class = "search_headings">Friends in your area:</div>
-      <% @populisto_friends_reviews.each do |review| %>
-        <%= render 'review', :review => review %>
-      <% end %>
-      <% @fb_friends_reviews.each do |review| %>
-        <%= render 'fb_review', :review => review %>
-      <% end %>
-    <% end %>
-
-    <% if @fb_friends_reviews_outside.any? || @populisto_friends_outside_reviews.any? %>
-      <div class = "search_headings">Friends outside your area:</div>
-      <% @populisto_friends_outside_reviews.each do |review| %>
-        <%= render 'review', :review => review %>
-      <% end %>
-      <% @fb_friends_reviews_outside.each do |review| %>
-        <%= render 'fb_review', :review => review %>
-      <% end %>
-    <% end %>
-
-    <% if @other_people_reviews.any? %>
-      <div class = "search_headings">Others in your area:</div>
-      <% @other_people_reviews.each do |review| %>
-        <%= render 'review', :review => review %>
-      <% end %>
-    <% end %>
-  </div>
-<% else %>
-  <%= render :partial => 'layouts/no_reviews_in_your_area' %>
-<% end %>
-
-<script type="text/javascript">
-  $( ".share_link" ).click(function() {
-    FB.ui({
-      method: 'feed',
-      name: 'Ask a friend.',
-      link: 'https://populisto.com/',
-      picture: 'https://populisto.com/assets/populisto_logo_for_web1.png',
-      caption: 'Ask your friends on Facebook for what you are looking for.',
-      description: "... and if you find something good don't forget to add it to your address book!"
-    });
-  });
-</script>
-
+<%= render 'search_results_for_users' if current_user %>
+<%= render 'search_results_for_companies' if current_company %>
 
 <!-- Companies not used yet - for business registration: -->
 <%# if @companies.size > 0 %>

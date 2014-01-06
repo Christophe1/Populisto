@@ -50,7 +50,7 @@
         <% else %>
           <%= link_button_to 'Log out', destroy_company_session_path, :class => 'fb-logout', :method => :delete %>
         <% end %>
-        <%= resource.front_name if resource.front_name.present? %>
+        <p><%= resource.front_name if resource.front_name.present? %></p>
       </div>
       </div>
   <% end %>

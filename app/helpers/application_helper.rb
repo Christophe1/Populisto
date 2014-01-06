@@ -81,8 +81,12 @@ module ApplicationHelper
   # @return [String] html markup.
   #
   def fb_avatar(user, options = {})
-    if user.provider == "facebook"
-      image_tag("https://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options))
+    if user.class.name == 'User'
+      if user.provider == "facebook"
+        image_tag("https://graph.facebook.com/#{user.external_user_id}/picture?type=square", { :alt => user_name(user), :class => 'fb-avatar' }.merge(options))
+      else
+        image_tag("no_avatar.jpg", :size => '50x50')
+      end
     else
       image_tag("no_avatar.jpg", :size => '50x50')
     end

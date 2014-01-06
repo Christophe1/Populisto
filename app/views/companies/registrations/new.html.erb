@@ -1,61 +1,53 @@
-<div id = "animation_movie">
-  <div class = "visit_us_now">
-
-Search recommendations in your area and create your own address book
-</div>
-<iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
+<div class="span12 login">
+  <div class="span8 animation_movie">
+    <div class = "visit_us_now">
+      Search recommendations in your area and create your own address book
+    </div>
+    <iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
   </div>
 
-<div class="login-page">
-<div id = "business-org-person-section">
-      <p><b>Want to sign up as a person?</b>
-      <%= link_to "Sign up here", new_user_registration_path %></p>
-      </div>
-
+  <div class="span3 login-page-sign-up">
+    <div id = "business-org-person-section">
+      <p>
+        <b>Want to sign up as a person?</b>
+        <%= link_to "Sign up here", new_user_registration_path %>
+      </p>
+    </div>
     <div class='sign-in-section'>
-
-        <div class="explanation">
-          <%= I18n.t('sign_in.create_account_text') %>
-        </div>
-
-        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => ''}) do |f| %>
-          <%= f.error_notification %>
-
-          <% if resource.errors.present? %>
-            <div class="error-explanation">
-              <% resource.errors.each do |field, errors| %>
-                <% Array(errors).each do |error_message| %>
-                  <span class="error-message"><%= "- #{field} #{error_message}" %></span>
-                <% end %>
+      <div class="explanation">
+        <%= I18n.t('sign_in.create_account_text') %>
+      </div>
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => ''}) do |f| %>
+        <%= f.error_notification %>
+        <% if resource.errors.present? %>
+          <div class="error-explanation">
+            <% resource.errors.each do |field, errors| %>
+              <% Array(errors).each do |error_message| %>
+                <span class="error-message"><%= "- #{field} #{error_message}" %></span>
               <% end %>
-            </div>
-          <% end %>
-
-          <div class="inputs">
-            <%= f.input_field :name, :required => true, :autofocus => true, :placeholder => I18n.t('create_account.company_name') %>
-            </br>
-            <%= f.input_field :email, :required => true, :placeholder => I18n.t('create_account.email_address') %>
-            </br>
-            <%= f.input_field :password, :required => true, :placeholder => I18n.t('create_account.password') %>
-            </br>
-            <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
-          </div>
-          By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
-</br>
-</br>
-
-          <div class="create_account_button">
-            <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
+            <% end %>
           </div>
         <% end %>
-        <div class='already_member'>
-
-          <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
-          <br><br>
-
+        <div class="inputs">
+          <%= f.input_field :name, :required => true, :autofocus => true, :placeholder => I18n.t('create_account.company_name') %>
+          </br>
+          <%= f.input_field :email, :required => true, :placeholder => I18n.t('create_account.email_address') %>
+          </br>
+          <%= f.input_field :password, :required => true, :placeholder => I18n.t('create_account.password') %>
+          </br>
+          <%= f.input_field :password_confirmation, :required => true, :placeholder => I18n.t('create_account.password_confirmation') %>
         </div>
-
-
+        By clicking "Create Account" you confirm that you accept the <%= link_to "Terms and Conditions.", t_and_c_path %>
+        </br>
+        </br>
+        <div class="create_account_button">
+          <%= f.button :submit, I18n.t('home.register.create_account_button'), :class => 'btn btn-warning' %>
+        </div>
+      <% end %>
+      <div class='already_member'>
+        <%= link_to I18n.t('sign_in.sign_in'), new_user_session_path %>
+        <br><br>
+      </div>
     </div>
-
+  </div>
 </div>

@@ -16,31 +16,11 @@
   def create
     terms = params[:review][:search_ids]
     if terms.any?
-      @review = Review.new params[:review]
-      @fb_friends_reviews = []
-      @other_people_reviews = []
-      @fb_friends_reviews_outside = []
-      @populisto_friends_reviews = []
-      @populisto_friends_outside_reviews = []
-      returned_reviews = Review.scoped_by_search_params(terms, current_resource)
-
-      @user_reviews = returned_reviews[0]
-      returned_reviews[1].each do |rev|
-         @fb_friends_reviews << rev if rev.visible_to?(current_resource)
+      if current_user
+        search_for_users(terms)
+      elsif
+        search_for_companies(terms)
       end
-      returned_reviews[2].each do |rev|
-         @fb_friends_reviews_outside << rev if rev.visible_to?(current_resource)
-      end
-      returned_reviews[3].each do |rev|
-        @other_people_reviews << rev if rev.visible_to?(current_resource)
-      end
-      returned_reviews[4].each do |rev|
-        @populisto_friends_reviews << rev if rev.visible_to?(current_resource)
-      end
-      returned_reviews[5].each do |rev|
-        @populisto_friends_outside_reviews << rev if rev.visible_to?(current_resource)
-      end
-      @all_reviews = @user_reviews + @fb_friends_reviews + @other_people_reviews +  @fb_friends_reviews_outside + @populisto_friends_reviews + @populisto_friends_outside_reviews
       # companies not used yet
       #@companies = Company.scoped_by_search_params(terms, current_resource) || []
       render :action => :index
@@ -49,25 +29,69 @@
     end
   end
 
-   def change_range
-     current_range = (params[:current_range] || default_range).to_i
-     cookies[:kms_range] = new_range(current_range)
-     redirect_to :action => :index
-   end
+  def search_for_users(terms)
+    @review = Review.new params[:review]
+    @fb_friends_reviews = []
+    @other_people_reviews = []
+    @fb_friends_reviews_outside = []
+    @populisto_friends_reviews = []
+    @populisto_friends_outside_reviews = []
+    returned_reviews = Review.scoped_by_search_params(terms, current_resource)
 
-   protected
+    @user_reviews = returned_reviews[0]
+    returned_reviews[1].each do |rev|
+       @fb_friends_reviews << rev if rev.visible_to?(current_resource)
+    end
+    returned_reviews[2].each do |rev|
+       @fb_friends_reviews_outside << rev if rev.visible_to?(current_resource)
+    end
+    returned_reviews[3].each do |rev|
+      @other_people_reviews << rev if rev.visible_to?(current_resource)
+    end
+    returned_reviews[4].each do |rev|
+      @populisto_friends_reviews << rev if rev.visible_to?(current_resource)
+    end
+    returned_reviews[5].each do |rev|
+      @populisto_friends_outside_reviews << rev if rev.visible_to?(current_resource)
+    end
+    @all_reviews = @user_reviews + @fb_friends_reviews + @other_people_reviews +  @fb_friends_reviews_outside + @populisto_friends_reviews + @populisto_friends_outside_reviews
+  end
 
-   def default_miles_range
-     @kms_range = (cookies[:kms_range] || default_range).to_i
-   end
+  def search_for_companies(terms)
+    @review = Review.new params[:review]
+    @users_in_area = []
+    @users_outside_area = []
+    returned_reviews = Review.scoped_by_search_params_for_company(terms, current_resource)
 
-   private
+    @user_reviews = returned_reviews[0]
+    returned_reviews[1].each do |rev|
+       @users_in_area << rev if rev.visible_to?(current_resource)
+    end
+    returned_reviews[2].each do |rev|
+       @users_outside_area << rev if rev.visible_to?(current_resource)
+    end
+    @all_reviews = returned_reviews
+  end
 
-   def fix_params
-     params[:review] ||= {}
-     params[:review][:search_ids] ||= []
-     params[:review][:search_ids].reject!(&:blank?)
-   end
+  def change_range
+    current_range = (params[:current_range] || default_range).to_i
+    cookies[:kms_range] = new_range(current_range)
+    redirect_to :action => :index
+  end
+
+  protected
+
+  def default_miles_range
+    @kms_range = (cookies[:kms_range] || default_range).to_i
+  end
+
+  private
+
+  def fix_params
+    params[:review] ||= {}
+    params[:review][:search_ids] ||= []
+    params[:review][:search_ids].reject!(&:blank?)
+  end
 
  #I added the method below to the users_controller,
  #updating for search box in the header,

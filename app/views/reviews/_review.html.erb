@@ -34,7 +34,8 @@
   <!--  the 'edit' link for a review is only available to current_user when he is looking at his page in
   its entirety. If he does a search for 'plumber', and his entry comes up, he can't edit it
  from there. He has to go into his page.-->
-  <% if review.owner == current_resource %>
+  <% if review.owner_is?(current_resource.id) %>
+
     <!-- this was another way of doing the above, but I prefer the above.
     edit_enabled is defined in reviews_helper, commented out -->
     <%# if edit_enabled %>

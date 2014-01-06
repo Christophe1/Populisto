@@ -28,7 +28,8 @@ class Review < ActiveRecord::Base
   #has_many :users, :through => :film_users
 
   belongs_to :user, :counter_cache => true
-  belongs_to :company, :foreign_key => :user_id
+  # belongs_to :company, :foreign_key => :user_id, :counter_cache => true
+  belongs_to :company, :class_name => :user_id, :counter_cache => true
 
   validates :name, :presence => true, :length => { :maximum => 255 }
   validates :phone, :length => { :maximum => 30 }
@@ -62,15 +63,16 @@ class Review < ActiveRecord::Base
   end
 
   def owner
-    if self.user.present?
-      return user
-    elsif self.company.present?
-      return company
-    end
+    # if self.user.present?
+    #   return user
+    # elsif self.company.present?
+    #   return company
+    # end
+    User.unscoped.where(:id => self.id).first
   end
 
-  def owner_is?(current_resource)
-    self.user == current_resource
+  def owner_is?(current_resource_id)
+    self.user_id == current_resource_id
   end
   # if current_user id is the same as the person who
   # who made the review
@@ -82,7 +84,7 @@ class Review < ActiveRecord::Base
   #'need assistance with some ruby array code, please'
 
   def visible_to?(resource)
-    if self.visible || self.owner == resource #|| assuming they have an ID
+    if self.visible || self.user_id == resource.id #|| assuming they have an ID
       true
     else
       false
@@ -148,6 +150,19 @@ class Review < ActiveRecord::Base
         other_reviews = in_area_reviews - p_friends_reviews - facebook_reviews - user_reviews
         return [user_reviews, facebook_reviews, reviews_outside_area, other_reviews, p_friends_reviews, p_reviews_outside_area]
       end
+    end
+
+    def scoped_by_search_params_for_company(params, current_user)
+      categories_ids = params.map{|id| id.delete('category_').to_i}
+      all_reviews = Review.where(:visible => true).with_categories.where(:categories => {:id => categories_ids}) unless categories_ids.blank?
+      all_users = User.unscoped.where(:id => all_reviews.map{|r| r.user_id})
+      users_in_area = all_users.in_range(0..20, :units => :km, :origin => current_user)
+      users_outside_area = all_users - users_in_area
+
+      user_reviews = all_reviews.where(:user_id => current_user.id)
+      reviews_inside_area = []
+      reviews_outside_area = []
+      return [user_reviews, reviews_inside_area, reviews_outside_area]
     end
 
     def from_users_followed_by(user)
