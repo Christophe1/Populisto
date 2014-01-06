@@ -4,8 +4,8 @@
 <div class = "address_entry_user_name">
   <!-- not sure why, but need to use review.user.name and front_name to distinguish
     between regular and Facebook log in people. -->
-  <% if @review.owner_is?(current_resource) %>
-    <%= (link_to "Your", user_path(@review.user), :class => "ajax") + " entry:" %>
+  <% if @review.owner_is?(current_resource.id) %>
+    <%= (link_to "Your", current_resource, :class => "ajax") + " entry:" %>
   <% else %>
   <%= (link_to @review.owner.front_name, resource_home_path(@review.owner), :class => "ajax") + " recommends:"  %>
     <span class="pull-right follow_<%= review.user.id %> follow">
@@ -59,7 +59,7 @@
     <div class="right_window">
       <div class="comments"><%= I18n.t('user.review.comments') %></div>
       <div class="comment-content"><%= @review.comment %></div>
-      <%= render 'reviews/add_to_your_page', :review => @review  unless current_resource == @review.owner %>
+      <%= render 'reviews/add_to_your_page', :review => @review  unless @review.owner_is?(current_resource.id) %>
       <div class = "binder"></div>
       <div class="clearfix"></div>
     </div>

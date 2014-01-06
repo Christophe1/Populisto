@@ -27,9 +27,11 @@ named commented_code so you can have a copy of it -->
           <!-- resource full name considering if name ends with s -->
             <%= resource_full_name(@resource.front_name) %>
           <% end %>
+          <% if current_user %>
           <div class="follow_book follow_<%= @resource.id %>">
             <%= link_to_follow_toggle(@resource) unless current_resource.friend_of?(@resource) %>
           </div>
+          <% end %>
         <% end %>
         <div id = "address_book_image">
           <%= image_tag('happy_characters_address_book.png', :size => "218x95") %>

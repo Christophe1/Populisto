@@ -69,6 +69,17 @@ class Company < ActiveRecord::Base
     end
   end
 
+  def populisto_friends_ids
+    @populisto_friends_ids ||= begin
+      FriendRelation.populisto.by_source_user(self.id).pluck(:target_user_id) #+
+      #FriendRelation.populisto.by_target_user(self.id).pluck(:source_user_id)
+    end
+  end
+
+  def populisto_friends
+    @populisto_friends ||= User.where(:id => populisto_friends_ids)
+  end
+
   def personal_reviews_contacts
     arr = []
     cat = Category.find(1)

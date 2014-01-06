@@ -9,7 +9,7 @@ class UsersController < FrontEndController
   def show
     param = params[:id] || params[:slug]
     @resource = User.unscoped.find_by_slug(param)
-    if @resource == current_resource
+    # if @resource == current_resource
       @review = Review.new
       @reviews_count = @resource.reviews_count
       @users_in_area_count = User.with_entries.in_area(current_resource).count
@@ -19,9 +19,9 @@ class UsersController < FrontEndController
           @friends_outside << usr
         end
       end
-    else
-      redirect_to address_book_path(@resource)
-    end
+    # else
+      # redirect_to address_book_path(@resource)
+    # end
   end
 
   def address_book
