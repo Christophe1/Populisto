@@ -19,7 +19,9 @@
         Select up to two categories that best describe your organization.
       </div>
       <div class="categories_select">
-      <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true} %>
+        <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true, :required => true} %>
+        <br><br>
+        <%= f.text_field :phone, :placeholder => 'Phone number', :class => 'phone_field' %>
       </div>
         <div class="phone_number">
        <br><br>

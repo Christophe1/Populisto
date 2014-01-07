@@ -9,19 +9,15 @@ class UsersController < FrontEndController
   def show
     param = params[:id] || params[:slug]
     @resource = User.unscoped.find_by_slug(param)
-    # if @resource == current_resource
-      @review = Review.new
-      @reviews_count = @resource.reviews_count
-      @users_in_area_count = User.with_entries.in_area(current_resource).count
-      @friends_outside = []
-      User.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
-        if usr.friend_of?(current_resource)
-          @friends_outside << usr
-        end
+    @review = Review.new
+    @reviews_count = @resource.reviews_count
+    @users_in_area_count = User.with_entries.in_area(current_resource).count
+    @friends_outside = []
+    User.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
+      if usr.friend_of?(current_resource)
+        @friends_outside << usr
       end
-    # else
-      # redirect_to address_book_path(@resource)
-    # end
+    end
   end
 
   def address_book

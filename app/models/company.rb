@@ -11,10 +11,10 @@ class Company < ActiveRecord::Base
   default_scope where(:is_company => true)
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
 
-  attr_accessible :email, :name, :first_name, :last_name, :password_confirmation, :password,
+  attr_accessible :email, :name, :first_name, :last_name, :password_confirmation, :password, :phone,
                   :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :category_ids
 
-  has_many :reviews, :foreign_key => :user_id
+  has_many :reviews, :class_name => "Company", :foreign_key => :user_id
 
   has_many :friend_relations, :primary_key => :external_user_id,
            :foreign_key => "source_user_id", :dependent => :destroy

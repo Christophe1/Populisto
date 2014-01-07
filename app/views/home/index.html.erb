@@ -1,16 +1,56 @@
-<div class="sign-in">
+<div class="span12 login">
 
-  <p><%= t('home.welcome') %></p>
+<div class = "span8 animation_movie">
+<div class = "visit_us_now">
 
-  <%# if ENV["FACEBOOK_ID"] %>
-    <!-- <p><%#= fb_login_button(image_tag("fblogin.png")) %></p> -->
-  <%# end %>
+Search recommendations in your area and create your own address book
+</div>
+  <iframe width="480" height="390" src="//www.youtube.com/embed/uN2ME2OkKTk?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="span3 login-page">
+  <div class='facebook-section'>
+    <%= fb_login_button(image_tag("Facebook-orig.png")) %>
+    <!-- id area_help and your_area_help_text is required by javascript function -->
+    <div id = "area_help">
+      Advantages of Facebook log in <%= image_tag("why_fb_log_in.png") %>
+    </div>
+      <!-- text for the qtip goes here, in this div, which is hidden -->
+    <div id = "your_area_help_text">
+      <p>Facebook Log in means a quick log in, with one less password to remember, and your FB friends come top of the list.</p>
+      <p>Logging in for the first time, you'll get the message,'Populisto would like to access your public profile, friend list and email address.'</p>
+      <p>This is just standard Facebook stuff. <b>We won't contact any of your friends, we won't automatically post to your wall, your email will be kept private. </b></p>
 
-<!--   <p class="create-account-note"><%#=raw t('home.create_account_note',
-                                          :register => link_to(t('home.create_account'), new_user_registration_path, :class => 'coming-soon'),
-                                          :login    => link_to(t('home.login_text'), login_path)) %></p> -->
-
-  <!-- <p><%#= link_to t('home.create_account'), new_user_registration_path %></p> -->
-<!--   <p><%#= link_to "Login", login_path %></p> -->
-
+    </div>
+    <div class="or-devider">
+      <%= I18n.t('sign_in.or') %>
+    </div>
+  </div>
+  <div class='sign-in-section'>
+    <%= simple_form_for(User.new, :as => :user, :url => session_path(:user), :html => {:class => 'form'}) do |f| %>
+      <div class="control-group">
+        <%= f.input_field :email, :required => false, :autofocus => true, :placeholder => I18n.t('sign_in.email_address_placeholder'), :class => 'inputs' %>
+      </div>
+      <div class="control-group">
+        <%= f.input_field :password, :required => false,  :placeholder => I18n.t('sign_in.password_placeholder'), :class => 'inputs' %>
+      </div>
+      <div class="control-group remember">
+        <div class='remember_me'>
+          <%= f.input :remember_me, :as => :boolean, :label => false, :inline_label => 'Remember me' %>
+        </div>
+        <div class='forgot_password'>
+          <%= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
+        </div>
+      </div>
+        <%#= link_to I18n.t('sign_in.forgot_password'), new_user_password_path %>
+        <%#= link_to I18n.t('sign_in.sign_up'), new_user_registration_path %>
+      <div class="log_in_button">
+        <%= f.button :submit, I18n.t('sign_in.sign_in_button'), :class => 'btn btn-primary' %>
+        <%#= f.button :submit, I18n.t('sign_in.sign_up_button'), :class => 'btn btn-warning' %>
+      </div>
+    <% end %>
+    <div class = "sign_up">
+     Don't have an account? <%= link_to "Sign Up", new_user_registration_path %>
+    </div>
+  </div>
+</div>
 </div>
