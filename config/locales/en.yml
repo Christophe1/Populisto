@@ -102,7 +102,7 @@ en:
     email_address: "Email"
     password: "Password"
     password_confirmation: "Confirm password"
-    company_name: "Company name"
+    company_name: "Business name"
   layout:
     your_page_link: 'Your Page'
     find_something_link: 'Find Something'

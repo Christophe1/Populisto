@@ -1,6 +1,6 @@
 <p>Welcome <%= @resource.name %>!</p>
 
-<p>Please confirm your account by clicking on the link below. We hope Populisto! is something you'll find useful. Have all your contacts stored in one place, and see what Populisto! members are recommending.</p>
+<p>Please confirm your account by clicking on the link below. We hope Populisto! is something you'll find useful. Have all your contacts stored in one place, and set up some details so people can recommend you easily and quickly.</p>
 <p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

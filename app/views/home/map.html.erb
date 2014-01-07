@@ -20,13 +20,14 @@
       </div>
       <div class="categories_select">
         <%= f.collection_select :category_ids, Category.filtered.order(:name), :id, :name, {:class => 'chosen-select'}, {:multiple => true, :required => true} %>
-        <br><br>
-        <%= f.text_field :phone, :placeholder => 'Phone number', :class => 'phone_field' %>
-      </div>
-        <div class="phone_number">
+                <div class="phone_number">
        <br><br>
         Phone number, with area code:
       </div>
+        <br><br>
+        <%= f.text_field :phone, :placeholder => 'Phone number', :class => 'phone_field' %>
+      </div>
+
       <div class="greetings">
         And please tell Populisto! your address details, so people will know where you're located.
       </div>
