@@ -36,7 +36,7 @@
 
   <!-- <div id = "user-map-page"> -->
   <%#= render :partial => 'layouts/user_page_with_map' if @show_map %>
-  <div class ='<%= 'page-content' if action_name != 'new' %> <%= 'row-fluid' if action_name == 'new' %>'>
+  <div class ='row-fluid <%= 'page-content' if action_name == 'map' %>'>
     <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
       <a class="close" data-dismiss="alert">×</a>
@@ -45,9 +45,9 @@
     <% end %>
     <%#= render :partial => 'layouts/pop_in' %>
 
-    <div class="prizes"><%=  link_to "Prizes to win!",  blog_path %></div>
-
-    <%= content_for?(:body) ? yield(:body) : yield %>
+    <div class="prizes"><%= link_to "Prizes to win!", blog_path %></div>
+    <%#= content_for?(:body) ? yield(:body) : yield %>
+    <%= yield %>
   </div>
 
   <!-- <div id = "footer" style = "background-color: blue;">My footer</div> -->

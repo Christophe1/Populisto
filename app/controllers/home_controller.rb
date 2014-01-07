@@ -14,9 +14,9 @@ class HomeController < FrontEndController
 
 
   def index
-    redirect_to login_path
+    # redirect_to login_path
     #render 'users/sessions/coming', :layout => 'devise'
-    # render 'users/sessions/new', :layout => 'devise'
+    render 'users/sessions/new'
 
   #     @users_count = User.count
   # gon.watch.users_count = @users_counts
@@ -27,22 +27,16 @@ class HomeController < FrontEndController
   end
 
   def update_address
-    if current_user
-      if params[:changed] == '1'
-        current_user.update_attributes(params[:user])
-        redirect_to landing_page
-      else
-        flash[:alert] = I18n.t('map.address_validation')
-        redirect_to landing_page
+    if params[:changed] == '1'
+      if current_user
+        current_resource.update_attributes(params[:user])
+      elsif current_company
+        current_resource.update_attributes(params[:company])
       end
-    elsif current_company
-      if params[:changed] == '1'
-        current_company.update_attributes(params[:company])
-        redirect_to landing_page
-      else
-        flash[:alert] = I18n.t('map.address_validation')
-        redirect_to landing_page
-      end
+      redirect_to landing_page
+    else
+      flash[:alert] = I18n.t('map.address_validation')
+      redirect_to landing_page
     end
   end
 
