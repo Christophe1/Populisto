@@ -6,7 +6,8 @@ class ReviewsController < FrontEndController
 
   def index
     @cats = []
-    @review = Review.new
+    user = User.unscoped.find(current_resource.id)
+    @review = user.reviews.new
     @user_latitude = current_resource.lat
     @user_longitude = current_resource.lng
     Category.filtered.order(:name).map{|c| @cats << c}

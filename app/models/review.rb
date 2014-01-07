@@ -28,8 +28,7 @@ class Review < ActiveRecord::Base
   #has_many :users, :through => :film_users
 
   belongs_to :user, :counter_cache => true
-  # belongs_to :company, :foreign_key => :user_id, :counter_cache => true
-  belongs_to :company, :class_name => :user_id, :counter_cache => true
+  belongs_to :company, :foreign_key => :user_id, :counter_cache => true
 
   validates :name, :presence => true, :length => { :maximum => 255 }
   validates :phone, :length => { :maximum => 30 }
@@ -63,12 +62,12 @@ class Review < ActiveRecord::Base
   end
 
   def owner
-    # if self.user.present?
-    #   return user
-    # elsif self.company.present?
-    #   return company
-    # end
-    User.unscoped.where(:id => self.id).first
+    if self.user.present?
+      return self.user
+    elsif self.company.present?
+      return self.company
+    end
+    # return User.unscoped.where(:id => self.id).first
   end
 
   def owner_is?(current_resource_id)

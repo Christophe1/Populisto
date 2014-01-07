@@ -6,20 +6,13 @@ class HomeController < FrontEndController
 
   before_filter :with_google_maps_api, :only => :map
 
-  after_filter :update_distances_to_other_users, :only => :update_address
+  # after_filter :update_distances_to_other_users, :only => :update_address
+  # TODO undefined method `lat' for nil:NilClass when using the above filter
 
   #before_filter :load_data_for_checkbox
 
-
-
-
   def index
-    # redirect_to login_path
-    #render 'users/sessions/coming', :layout => 'devise'
     render 'users/sessions/new'
-
-  #     @users_count = User.count
-  # gon.watch.users_count = @users_counts
   end
 
   def map
