@@ -13,9 +13,4 @@ class CategoryReview < ActiveRecord::Base
 
   validates :review, :presence => true
   validates :category, :presence => true
-
-
-
-
 end
-

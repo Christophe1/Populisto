@@ -98,8 +98,8 @@ class Review < ActiveRecord::Base
 
   def repost(other_user)
     review = dup
-    review.categories = categories
-    review.update_attributes(:user_id => other_user.id, :comment => nil, :repost_from => self.id)
+    review.categories = Category.where(:id => 1)
+    review.update_attributes(:user_id => other_user.id, :comment => nil, :repost_from => self.id, :visible => false)
     review.save
   end
 
