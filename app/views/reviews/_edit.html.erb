@@ -7,8 +7,8 @@
   <%= simple_form_for(@review, :remote => true) do |f| %>
     <div class="inputs">
       <div id="except_comment">
-        <%= chosen_select_for_category(f) %>
         <%= f.input :name, :required => true, :label_html => { :class => 'edit_form_titles' }, :error_html => { :class => 'cant_be_blank'} %>
+        <%= chosen_select_for_category(f) %>
         <%= f.input :address, :input_html => { :onkeydown=>"if(event.keyCode==13){return false;}" }, :placeholder => I18n.t('helpers.enter_a_location'), :label_html => { :class => 'edit_form_titles' } %>
         <span id="address_validation"></span>
         <%= f.input :phone  %>
