@@ -26,7 +26,7 @@ en:
       update:
         notice: "%{resource_name} was updated successfully."
   helpers:
-    enter_a_location_map: "Enter address, town or village where you live."
+    enter_a_location_map: "Enter address, town or village."
     name: "Required"
     enter_a_location: "Not required, but helpful - where they are based."
     phone: "Not required, but helpful"
@@ -68,8 +68,8 @@ en:
       unfollow: "Unfollow"
       share: "Share"
       keep_private: "Private"
-      add_to_your_page: "Add to your Address Book"
-      add_to_your_page_confirmation: "You're about to add these details to your Address Book.\n\nThe comments part won't be added. It's up to you to give your own comments.\n\nPlease do add them when you're ready, as it gives a more constructive experience to others, if you share it."
+      add_to_your_page: "Recommend this!"
+      add_to_your_page_confirmation: "You're about to add these details to your Address Book.\n\nIt will be For your eyes only, until you pick who to share it with.\n\nAnd please give some comments, as it gives a more constructive experience to others."
       remove_from_your_page: "Remove from your Address Book"
       next: "Next"
   wizard:
