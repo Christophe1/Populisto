@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :provider, :external_user_id, :name, :first_name, :last_name, :password_confirmation, :password, :first_name, :last_name,
                   :remember_me, :address, :confirmed_at, :lng, :lat, :address_visible, :city, :invites_count, :fb_access_token, :reviews_count,
-                  :last_sign_in_at, :current_sign_in_at, :last_sign_in_ip, :current_sign_in_ip, :sign_in_count,
+                  :last_sign_in_at, :current_sign_in_at, :last_sign_in_ip, :current_sign_in_ip, :sign_in_count, :phone,
                   :activated, :activated_at
 
   scope :from_facebook, where(:provider => SocialNetwork::FACEBOOK)

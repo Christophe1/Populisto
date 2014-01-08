@@ -11,15 +11,25 @@ class Admin::UsersController < Admin::BaseController
     @json = User.unscoped.all.to_gmaps4rails
   end
 
+  def show
+    @user = User.unscoped.find(params[:id])
+  end
+
+  def edit
+    @user = User.unscoped.find(params[:id])
+  end
+
   def update
     password_presence
     @user = User.unscoped.find(params[:id])
-    if @user.update_attributes(params[:user])
-      flash[:notice] = I18n.t('admin.profile.edit.success')
-      redirect_to admin_user_path @user
-    else
-      render :edit
-    end
+    @user.save!(:validate => false)
+    redirect_to admin_user_path(@user)
+    # if @user.update_attributes(params[:user])
+    #   flash[:notice] = I18n.t('admin.profile.edit.success')
+    #   redirect_to admin_user_path @user
+    # else
+    #   render :edit
+    # end
   end
 
   def destroy
