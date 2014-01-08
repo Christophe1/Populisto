@@ -47,7 +47,11 @@ named commented_code so you can have a copy of it -->
       <% end %>
       <!-- if the person has no reviews, show the layout, below -->
     <% else %>
-      <%= render :partial => 'layouts/empty_user_address_book' %>
+      <% if current_user %>
+        <%= render :partial => 'layouts/empty_user_address_book' %>
+      <% elsif current_company %>
+        <%= render :partial => 'layouts/empty_company_address_book' %>
+      <% end %>
     <%end %>
   </div>
 </div>

@@ -28,19 +28,26 @@ class UsersController < FrontEndController
   end
 
   def users_in_area
-    users_in_area = User.with_entries.in_area(current_resource)
-    friends = current_resource.facebook_friends.in_range(0..20, :units => :km, :origin => current_resource)
-    @app_friends = current_user.populisto_friends.in_range(0..20, :units => :km, :origin => current_resource)
-    all_friends = []
-    friends.each do |f|
-      f.facebook_friends.in_range(0..20, :units => :km, :origin => current_user).each do |ff|
-        all_friends << ff  if ff.reviews_count > 0
+    users_in_area = User.unscoped.with_entries.in_area(current_resource)
+    if current_user
+      friends = current_resource.facebook_friends.in_range(0..20, :units => :km, :origin => current_resource)
+      @app_friends = current_user.populisto_friends.in_range(0..20, :units => :km, :origin => current_resource)
+      all_friends = []
+      friends.each do |f|
+        f.facebook_friends.in_range(0..20, :units => :km, :origin => current_user).each do |ff|
+          all_friends << ff  if ff.reviews_count > 0
+        end
+        all_friends << f if f.reviews_count > 0
       end
-      all_friends << f if f.reviews_count > 0
+      @all_friends = @app_friends + all_friends
+      @friends = all_friends.uniq - current_resource.to_a
+      @others = users_in_area -@all_friends # - @app_friends
+    elsif current_company
+      @app_friends = []
+      @all_friends = []
+      @friends = []
+      @others = users_in_area - User.unscoped.find(current_company.id).to_a # removing logged in company from list
     end
-    @all_friends = @app_friends + all_friends
-    @friends = all_friends.uniq - current_resource.to_a
-    @others = users_in_area -@all_friends # - @app_friends
   end
 
   def friends_outside_area
