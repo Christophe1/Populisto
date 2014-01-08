@@ -11,12 +11,16 @@ class UsersController < FrontEndController
     @resource = User.unscoped.find_by_slug(param)
     @review = Review.new
     @reviews_count = @resource.reviews_count
-    @users_in_area_count = User.with_entries.in_area(current_resource).count
+    @users_in_area_count = (User.unscoped.with_entries.in_area(current_resource) - User.unscoped.find(current_resource.id).to_a).count
     @friends_outside = []
-    User.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
-      if usr.friend_of?(current_resource)
-        @friends_outside << usr
+    if current_user
+      User.unscoped.with_entries.beyond(20.01, :units => :km, :origin => current_resource).each do |usr|
+        if usr.friend_of?(current_resource)
+          @friends_outside << usr
+        end
       end
+    elsif current_company
+      @users_outside = User.unscoped.with_entries.beyond(20.01, :units => :km, :origin => current_resource)
     end
   end
 
@@ -46,7 +50,7 @@ class UsersController < FrontEndController
       @app_friends = []
       @all_friends = []
       @friends = []
-      @others = users_in_area - User.unscoped.find(current_company.id).to_a # removing logged in company from list
+      @others = users_in_area - User.unscoped.find(current_resource.id).to_a # removing current logged in company from list
     end
   end
 
@@ -65,6 +69,10 @@ class UsersController < FrontEndController
         @others_outside << usr
       end
     end
+  end
+
+  def users_outside_area
+    @users_outside = User.unscoped.with_entries.beyond(20.01, :units => :km, :origin => current_resource)
   end
 
   def follow

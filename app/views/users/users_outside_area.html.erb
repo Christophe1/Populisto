@@ -1,0 +1,27 @@
+<div class="your_page">
+  <h2>Populisto! users outside your area</h2>
+  <div class = "outside_area">
+    (Type the name of a person in the ‘Search Address Books’ bar to see if they’re on Populisto!)
+  </div>
+  <% if @users_outside.any? %>
+    <h3>Others outside your area</h3>
+    <ul class="nav nav-tabs nav-stacked">
+      <% @users_outside.each_with_index do |f, index| %>
+        <li>
+          <%= link_to address_book_path(f) do %>
+            <div class="pull-left"><%= index + 1 %></div>
+            <div class="span8">
+              <div class="span1">
+                <%= fb_avatar(f) %>
+              </div>
+              <div class="span6">
+                <div><%= f.front_name %></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

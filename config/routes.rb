@@ -29,6 +29,7 @@ QuestionnaireSite::Application.routes.draw do
   get ':id/address_book' => 'users#address_book', :as => :address_book
   get ':id/users_in_area' => 'users#users_in_area', :as => :users_in_area
   get ':id/friends_outside_area' => 'users#friends_outside_area', :as => :friends_outside_area
+  get ':id/users_outside_area' => 'users#users_outside_area', :as => :users_outside_area
   post "home/update_address", :as  => :update_address
   match "canvas" => "canvas#index"
   match 'suggest_category' => 'reviews#suggest_category'
