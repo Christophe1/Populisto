@@ -61,7 +61,7 @@ class ApplicationController < ActionController::Base
   # end
 
   def find_user
-    @user = User.find_by_slug(params[:id])
+    @user = User.unscoped.find_by_slug(params[:id])
   end
 
 

@@ -4,7 +4,7 @@ class Admin::UsersController < Admin::BaseController
   paginated
 
   before_filter :with_google_maps_api, :only => [:edit, :new]
-  before_filter :find_user, :only => [:show]
+  before_filter :find_user, :only => [:show, :destroy]
 
   def index
     @users = User.unscoped.paginate(:page => params[:page], :per_page => 30)
