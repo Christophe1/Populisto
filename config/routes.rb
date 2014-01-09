@@ -1,5 +1,12 @@
 QuestionnaireSite::Application.routes.draw do
 
+  namespace :api do
+    namespace :v1 do
+      resources :users
+      resources :companies
+    end
+  end
+
   get "about_us", :to => "static_pages#about_us"
   get "contact_us", :to => "static_pages#contact_us"
   get "blog", :to => "static_pages#blog"

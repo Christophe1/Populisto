@@ -56,6 +56,7 @@ gem 'forgery', '~> 0.5.0'
 gem 'factory_girl_rails', '~> 1.7.0'
 gem "amoeba", "~> 1.2.1"
 gem 'whenever', :require => false
+gem 'active_model_serializers', '=0.8.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

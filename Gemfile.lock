@@ -22,6 +22,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (3.2.3)
       activesupport (= 3.2.3)
       builder (~> 3.0.0)
@@ -340,6 +342,7 @@ PLATFORMS
 
 DEPENDENCIES
   SystemTimer (~> 1.2.3)
+  active_model_serializers (= 0.8.1)
   amoeba (~> 1.2.1)
   annotate
   best_in_place (~> 1.1.2)
