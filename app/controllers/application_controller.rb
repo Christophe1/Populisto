@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 
+# helper :all ???
   protect_from_forgery
 
   # before_filter :authenticate_user!
@@ -13,6 +14,20 @@ class ApplicationController < ActionController::Base
   before_filter :init_review
 
   #layout :layout_by_resource
+
+
+private
+
+def mobile_device?
+request.user_agent =~ /Mobile|webOS/
+end
+helper_method :mobile_device?
+
+def prepare_for_mobile
+request.format = :mobile if mobile_device?
+end
+
+
 
   def current_resource
     if current_user

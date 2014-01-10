@@ -22,7 +22,7 @@
       <!-- buttons: save, delete, share, keep private -->
       <div class="edit_button_group">
         <%= f.submit I18n.t('helpers.links.save'), :class => 'btn btn-success save_review'%>
-        <%#= render 'delete', :review => @review %>
+        <%= render 'delete', :review => @review %>
         <div class="private_entry entry_<%= @review.id %>"></div>
         <div class="radio_buttons_<%= @review.id %>" style="<%= @review.is_personal_contact? ? "display:none;" : "" %>">
           <%= f.label I18n.t('helpers.links.keep_private'), :class => "keep_private_label" %>
