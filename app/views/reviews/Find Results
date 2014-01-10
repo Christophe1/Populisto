@@ -1,0 +1,35 @@
+Searching 628 files for "not what you're looking"
+
+/home/christophe/projects/Populisto/app/views/search/index.html.erb:
+    4  </br>
+    5  <% if @all_reviews.any? %>
+    6: <div id = "heading_above_search">Not what you're looking for? Maybe you could <%= link_to 'try your friends on Facebook', "#", :class => 'share_link' %></div>
+    7    <div class = "background_your_address_book">
+    8      <% if @user_reviews.any? %>
+
+1 match in 1 file
+
+
+Searching 629 files for "not what you're looking"
+
+/home/christophe/projects/Populisto/app/views/search/index.html.erb:
+    2  </br>
+    3  <% if @all_reviews.any? %>
+    4: <div id = "heading_above_search">Not what you're looking for? Maybe you could <%= link_to 'try your friends on Facebook', "#", :class => 'share_link' %></div>
+    5    <div class = "background_your_address_book">
+    6      <% if @user_reviews.any? %>
+
+1 match in 1 fildelete
+e
+
+
+Searching 629 files for "dash board"
+
+/home/christophe/projects/Populisto/app/views/layouts/_signed_in_header.html.erb:
+   18          <ul id = "static_pages">
+   19            <li><%= link_to "Create Contacts", reviews_path %></li>
+   20:           <li><%= link_to "Home", resource_home_path(current_resource) %></li>
+   21            <!-- <li><a href="javascript:alert('Coming soon....');">Invite Others (please!)</a></li> -->
+   22            <li><a href="#" class="email-invite-link">Invite Others</a></li>
+
+1 match in 1 file
