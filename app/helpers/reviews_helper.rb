@@ -13,7 +13,7 @@ module ReviewsHelper
       elsif current_resource.friend_of?(user)
          return "(Facebook friend)"
        else
-          friends = (current_resource.facebook_friends & user.facebook_friends).join(', ')
+          friends = (current_resource.facebook_friends.map{|f| f.front_name} & user.facebook_friends.map{|f| f.front_name}).join(', ')
          "(Facebook friend of: #{friends})" if friends.any?
       end
     end

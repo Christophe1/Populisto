@@ -136,9 +136,9 @@ class User < ActiveRecord::Base
 
   # Overrides user string representation.
   #
-  def to_s
-    name || email
-  end
+  # def to_s
+  #   name || email
+  # end
 
   # Gets user first name.
   #
