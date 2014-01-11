@@ -15,20 +15,6 @@ class ApplicationController < ActionController::Base
 
   #layout :layout_by_resource
 
-
-private
-
-def mobile_device?
-request.user_agent =~ /Mobile|webOS/
-end
-helper_method :mobile_device?
-
-def prepare_for_mobile
-request.format = :mobile if mobile_device?
-end
-
-
-
   def current_resource
     if current_user
       current_user
@@ -91,6 +77,17 @@ end
     cookies[:kms_range] = new_range(current_range)
     redirect_to :action => :index
   end
+
+private
+
+def mobile_device?
+  request.user_agent =~ /Mobile|webOS/
+end
+helper_method :mobile_device?
+
+def prepare_for_mobile
+  request.format = :mobile if mobile_device?
+end
 
 protected
   def https_redirect
