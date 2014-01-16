@@ -4,7 +4,13 @@ module Api
 
       def index
         # @users = User.unscoped.all
-        @users = User.all
+        if params[:created_from].present?
+          created_from = Time.at(params[:created_from].to_i).to_datetime
+          @users = User.where('created_at > ?', created_from)
+        else
+          @users = User.all
+        end
+
         respond_to do |format|
           format.json { render :json => @users }
         end
