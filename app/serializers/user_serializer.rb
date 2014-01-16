@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :avatar #, :entries_count, :avatar
+  attributes :id, :first_name, :last_name, :avatar, :is_company, :phone #, :entries_count, :avatar
 
 
   # due to the difference between 1.8 and 1.9 with respect to #id and
