@@ -3,7 +3,8 @@ module Api
     class UsersController < ApplicationController
 
       def index
-        @users = User.unscoped.all
+        # @users = User.unscoped.all
+        @users = User.all
         respond_to do |format|
           format.json { render :json => @users }
         end

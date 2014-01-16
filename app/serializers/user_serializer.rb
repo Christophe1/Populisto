@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :first_name, :last_name, :entries_count, :avatar
+  attributes :id, :first_name, :last_name, :avatar #, :entries_count, :avatar
 
 
   # due to the difference between 1.8 and 1.9 with respect to #id and
@@ -19,7 +19,7 @@ class UserSerializer < ActiveModel::Serializer
     end
   end
 
-  def entries_count
-    object.reviews_count
-  end
+  # def entries_count
+  #   object.reviews_count
+  # end
 end
