@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :https_redirect
   before_filter :redirect_if_dot_ie
   before_filter :prepare_for_mobile
+  before_filter :redirect_if_mobile
   before_filter :with_google_maps_api
   before_filter :default_miles_range
   before_filter :load_data_for_checkbox
@@ -32,6 +33,12 @@ class ApplicationController < ActionController::Base
         redirect = request.path
       end
       redirect_to "http://populisto.com#{redirect}"
+    end
+  end
+
+  def redirect_if_mobile
+    if mobile_device?
+      redirect_to root_path
     end
   end
 
@@ -92,6 +99,7 @@ private
   def prepare_for_mobile
     session[:mobile_param] = params[:mobile] if params[:mobile]
     request.format = :mobile if mobile_device?
+    redirect_to root_path
   end
 
 protected

@@ -1,4 +1,6 @@
 class SessionsController < Devise::SessionsController
+  skip_before_filter :redirect_if_mobile
+
   # POST /resource/sign_in
   def create
     unless User.find_by_email(params[:user][:email])
