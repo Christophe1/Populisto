@@ -6,9 +6,9 @@ module Api
         # @users = User.unscoped.all
         if params[:created_from].present?
           created_from = Time.at(params[:created_from].to_i).to_datetime
-          @users = User.unscoped.where('created_at > ?', created_from)
+          @users = User.unscoped.where('created_at > ?', created_from).paginate(:page => params[:page], :per_page => 20)
         else
-          @users = User.unscoped.all
+          @users = User.unscoped.all.paginate(:page => params[:page], :per_page => 20)
         end
 
         respond_to do |format|
