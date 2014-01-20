@@ -1,12 +1,18 @@
+require 'will_paginate/array'
+
 module Api
   module V1
     class UsersController < ApplicationController
 
       def index
         # @users = User.unscoped.all
-        if params[:created_from].present?
+        if params[:query].present?
           created_from = Time.at(params[:created_from].to_i).to_datetime
-          @users = User.unscoped.where('created_at > ?', created_from).paginate(:page => params[:page], :per_page => 20)
+          @users = User.unscoped
+          @users = @users.where('first_name LIKE ? or last_name LIKE ?', "%#{params[:query][:name]}%", "%#{params[:query][:name]}%") if params[:query][:name].present?
+          @users = @users.where('created_at > ?', params[:query][:created_from]) if params[:query][:created_from].present?
+          @users = @users.paginate(:page => params[:page], :per_page => 20) if params[:query][:page].present?
+          @users = @users
         else
           @users = User.unscoped.all.paginate(:page => params[:page], :per_page => 20)
         end
