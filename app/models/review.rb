@@ -159,8 +159,8 @@ class Review < ActiveRecord::Base
       users_outside_area = all_users - users_in_area
 
       user_reviews = all_reviews.where(:user_id => current_user.id)
-      reviews_inside_area = []
-      reviews_outside_area = []
+      reviews_inside_area = all_reviews.where(:user_id => users_in_area.map{|u| u.id})
+      reviews_outside_area = all_reviews.where(:user_id => users_outside_area.map{|u| u.id})
       return [user_reviews, reviews_inside_area, reviews_outside_area]
     end
 

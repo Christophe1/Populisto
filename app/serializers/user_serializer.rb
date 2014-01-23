@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :first_name, :last_name, :entries_count, :avatar
+  attributes :id, :fn, :ln, :avt, :is_c, :phn #, :entries_count, :avatar
 
 
   # due to the difference between 1.8 and 1.9 with respect to #id and
@@ -11,15 +11,33 @@ class UserSerializer < ActiveModel::Serializer
     object.read_attribute_for_serialization(:id)
   end
 
-  def avatar
+  def fn
+    object.first_name
+  end
+
+  def ln
+    object.last_name
+  end
+
+  def phn
+    object.phone
+  end
+
+  def is_c
+    object.is_company
+  end
+
+  def avt
     if object.provider == "facebook"
       "https://graph.facebook.com/#{object.external_user_id}/picture?type=square"
     else
-      ActionController::Base.helpers.image_path("no_avatar.jpg")
+      image_path = ActionController::Base.helpers.image_path("no_avatar.jpg")
+      host = Rails.application.routes.url_helpers.root_url(:host => 'populisto.com', :protocol => 'https')
+      return URI.join(host, image_path).to_s
     end
   end
 
-  def entries_count
-    object.reviews_count
-  end
+  # def entries_count
+  #   object.reviews_count
+  # end
 end

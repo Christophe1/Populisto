@@ -3,6 +3,7 @@ class HomeController < FrontEndController
   before_filter :check_resource!, :except => :index
   before_filter :check_if_user_not_signed_in, :only => :index
   skip_before_filter :force_address_step, :only => [:index, :map, :update_address]
+  skip_before_filter :redirect_if_mobile
 
   before_filter :with_google_maps_api, :only => :map
 

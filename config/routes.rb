@@ -2,8 +2,7 @@ QuestionnaireSite::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users
-      resources :companies
+      resources :users, :only => [:index, :show], :via => [:get, :post]
     end
   end
 
