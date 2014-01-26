@@ -1,22 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title><%= t('application.title') %>
-  </title>
-  <meta property=”og:description” content=”Populisto! The address book with a difference.
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>jQuery Mobile Bootstrap Theme</title>
+         <%= stylesheet_link_tag "mobile" %>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
 
-Have your contacts stored in one place and search your friends contacts for things theyre happy to recommend.” />
-<%= csrf_meta_tags %>
+            <div data-role="content" data-theme="a">
 
-</head>
-<body>
-  <center>Mobile site is in development. Please be patient!</center>
-  <!-- <div id="in_dev"> Mobile site is in development. Please be patient!</div> -->
-<!--   <ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#news">News</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#about">About</a></li>
-</ul> -->
-</body>
+                <%= yield %>
+
+                <a href="index.html" data-role="button" data-theme="e">Log In with Facebook</a>
+                <a href="index.html" data-role="button" data-theme="e">Log In</a>
+                <a href="index.html" data-role="button" data-theme="e">Sign Up</a>
+                <a href="index.html" data-role="button" data-theme="e">Use without Signing Up</a>
+                <a href="index.html" data-role="button" data-theme="e">About Us</a>
+                <a href="index.html" data-role="button" data-theme="e">Terms and Conditions</a>
+
+<!--                 <a href="index.html" data-role="button" data-theme="e">Log In</a>
+                <a href="index.html" data-role="button" data-theme="a" data-icon="search">Swatch B</a>
+                <a href="index.html" data-role="button" data-theme="c" data-icon="check">Swatch C</a>
+                <a href="index.html" data-role="button" data-theme="d" data-icon="info">Swatch D</a>
+                <a href="index.html" data-role="button" data-theme="e" data-icon="arrow-d">Swatch E</a>
+                <a href="index.html" data-role="button" data-theme="f" data-icon="delete">Swatch F</a> -->
+
+
+
+                </div>
+        </div>
+    </body>
 </html>
+
