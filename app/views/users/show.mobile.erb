@@ -1,0 +1,23 @@
+<%= link_to 'Pop something in!', reviews_path %>
+
+  <h1>You:</h1>
+  <p></p>
+  <table class="table">
+    <tr>
+      <td><h3>In <%= link_to ('your Address Book',address_book_path(current_resource))  %> you have:</h3></td>
+      <td><h3><%= link_to pluralize(@reviews_count, 'entry'), address_book_path(current_resource) %></h3></td>
+    </tr>
+    <tr>
+      <td><h3>Populisto! users in your area:</h3></td>
+      <td><h3><%= link_to pluralize(@users_in_area_count, 'people'), users_in_area_path(current_resource) %></h3></td>
+    </tr>
+    <tr>
+      <td><h3>Populisto! users outside your area:</h3></td>
+      <td>
+        <h3>
+          <%= link_to pluralize(@friends_outside.count, 'friend'), friends_outside_area_path(current_resource) if current_user %>
+          <%= link_to pluralize(@users_outside.count, 'people'), users_outside_area_path(current_resource) if current_company %>
+        </h3>
+      </td>
+    </tr>
+  </table>

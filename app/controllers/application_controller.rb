@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :https_redirect
   before_filter :redirect_if_dot_ie
   before_filter :prepare_for_mobile
-  before_filter :redirect_if_mobile
+  #before_filter :redirect_if_mobile
   before_filter :with_google_maps_api
   before_filter :default_miles_range
   before_filter :load_data_for_checkbox

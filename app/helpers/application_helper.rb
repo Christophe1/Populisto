@@ -63,6 +63,9 @@ module ApplicationHelper
     link_to(text, user_omniauth_callback_path(:facebook), { 'class' => 'fb-login', 'data-scope' => OAUTH_CONFIG['facebook']['options']['scope'] }.merge(options))
   end
 
+  def fb_login_mobile_button(text, options = {})
+    link_to(text, user_omniauth_callback_path(:facebook), { 'data-role' => 'button', 'data-theme' => 'e', 'data-scope' => OAUTH_CONFIG['facebook']['options']['scope'] }.merge(options))
+  end
   # Returns user name or 'me' if user is currently logged in.
   #
   # @param user [User] application user.
