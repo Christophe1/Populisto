@@ -47,7 +47,7 @@ $(function() {
             // and uncomment the last 3 lines of this routine.
             name = object.selected.replace('user_', '/');
             <% if Rails.env.development? %>
-              window.location = ("http://populisto.md:3000" + name + '/address_book');
+              window.location = ("http://testhost.t.proxylocal.com" + name + '/address_book');
             <% else %>
               window.location = ("https://populisto.com" + name + '/address_book');
             <% end %>
@@ -63,7 +63,7 @@ $(function() {
             // window.location.href = 'reviews' + id + '/owner';
             // $.get("reviews" + id + "/owner");
             <% if Rails.env.development? %>
-              window.location = ("http://populisto.md:3000/reviews" + id);
+              window.location = ("http://testhost.t.proxylocal.com//reviews" + id);
             <% else %>
               window.location = ("https://populisto.com/reviews" + id);
             <% end %>

@@ -5,7 +5,7 @@
   <% if review.owner_is?(current_resource) %>
     <%= (link_to "You", user_path(review.user), :class => "ajax") + " recommend:" %>
   <% else %>
-  <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + " recommends:"  %>
+  <%= (link_to review.owner.front_name, address_book_path(review.owner), :class => "ajax") + " recommends:"  %>
     <div class="friends_of">
       <%= fb_friendship_relation(review.owner) %>
     </div>

@@ -7,7 +7,7 @@
   <% if review.owner_is?(current_resource.id) %>
     <%= (link_to "You", current_resource, :class => "ajax") + " recommend:" %>
   <% else %>
-  <%= (link_to review.owner.front_name, resource_home_path(review.owner), :class => "ajax") + " recommends:"  %>
+  <%= (link_to review.owner.front_name, address_book_path(review.owner), :class => "ajax") + " recommends:"  %>
     <span class="pull-right follow_<%= review.owner.id %> follow">
       <%= link_to_follow_toggle(review.user) if current_user %>
     </span>
